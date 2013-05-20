@@ -12,7 +12,7 @@
 <div ng-controller="PhoneCtrl">
     <p>Select a device:</p>
     <p>
-        <select ng-model="phoneChoiceSelected">
+        <select ng-model="phoneChoice">
             <option>iPhone 4</option>
             <option>iPhone 5</option>
             <option>Nexus 4</option>
@@ -22,14 +22,22 @@
 
     <p>Select orientation:</p>
     <p>
-        <select ng-model="phoneOrientationSelected" ng-options="orientations.value as orientations.text for i in orientations"></select>
+        <select ng-model="phoneOrientation">
+            <option>Horizontal</option>
+            <option>Vertical</option>
+        </select>
     </p>
 
     <!-- Display selected device here -->
-    <img ng-show="phoneChoice" src="images/{{ phoneOrientationSelected | lowercase }}/{{ phoneChoiceSelected | removespaces | lowercase }}.png">
+    <div ng-show="phoneOrientation">
+        <div ng-show="phoneChoice">
 
-    <!-- Display label here -->
-    <p><span ng-show="phoneChoice">{{ phoneChoice | removespaces | lowercase }}</span></p>
+            <img ng-show="phoneChoice" src="images/{{ phoneOrientation | lowercase }}/{{ phoneChoice | removespaces | lowercase }}.png">
+            <!-- Display label here -->
+            <p><span ng-show="phoneChoice">{{ phoneChoice }} - {{ phoneOrientation }}</span></p>
+        
+        </div>
+    </div>
 
 </div>
 
