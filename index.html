@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script type="text/javascript" src="components/angular/angular.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/filters.js"></script>
+    <link rel="stylesheet" href="css/test.css"/>
+</head>
+<body>
+
+<h1>Device selector</h1>
+<div ng-controller="PhoneCtrl">
+    <p>Select a device:</p>
+    <p>
+        <select ng-model="phoneChoiceSelected">
+            <option>iPhone 4</option>
+            <option>iPhone 5</option>
+            <option>Nexus 4</option>
+            <option>iPad 3</option>
+        </select>
+    </p>
+
+    <p>Select orientation:</p>
+    <p>
+        <select ng-model="phoneOrientationSelected" ng-options="orientations.value as orientations.text for i in orientations"></select>
+    </p>
+
+    <!-- Display selected device here -->
+    <img ng-show="phoneChoice" src="images/{{ phoneOrientationSelected | lowercase }}/{{ phoneChoiceSelected | removespaces | lowercase }}.png">
+
+    <!-- Display label here -->
+    <p><span ng-show="phoneChoice">{{ phoneChoice | removespaces | lowercase }}</span></p>
+
+</div>
+
+</body>
+</html>
