@@ -2,14 +2,14 @@
 angular.module('myApp', ['filters']);
 
 /**
- * Truncate Filter
+ * Remove whitespace filter
  * @Param text
  * @return string
  */
 angular.module('filters', []).
-    filter('removespaces', function () {
+    filter('removewhitespace', function () {
         return function(text) {
 
-            return String(text).replace(" ","");
+            return String(text).replace(/ /g,"")
         };
     });

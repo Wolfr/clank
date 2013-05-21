@@ -26,7 +26,7 @@
         <div ng-show="deviceChoice">
 
             <!-- Display selected device here -->
-            <img ng-show="deviceChoice" src="images/{{ deviceOrientation | lowercase }}/{{ deviceChoice | removespaces | lowercase }}.png">
+            <img ng-show="deviceChoice" src="images/{{ deviceOrientation | lowercase }}/{{ deviceChoice | removewhitespace | lowercase }}.png">
 
             <!-- Display label here -->
             <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>

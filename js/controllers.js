@@ -4,6 +4,7 @@ function DeviceCtrl($scope) {
 
     // Devices
     $scope.devices = [
+        'my device with',
         'iPhone 4',
         'iPhone 5',
         'Nexus 4',
