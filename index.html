@@ -10,26 +10,26 @@
 
 <h1>Device selector</h1>
 
-<div ng-controller="PhoneCtrl">
+<div ng-controller="DeviceCtrl">
 
     <p>Select a device:</p>
     <p>
-        <select ng-model="phoneChoice" ng-options="p for p in phones"></select>
+        <select ng-model="deviceChoice" ng-options="p for p in devices"></select>
     </p>
 
     <p>Select orientation:</p>
     <p>
-        <select ng-model="phoneOrientation" ng-options="p for p in phoneOrientations"></select>
+        <select ng-model="deviceOrientation" ng-options="p for p in deviceOrientations"></select>
     </p>
 
-    <div ng-show="phoneOrientation">
-        <div ng-show="phoneChoice">
+    <div ng-show="deviceOrientation">
+        <div ng-show="deviceChoice">
 
             <!-- Display selected device here -->
-            <img ng-show="phoneChoice" src="images/{{ phoneOrientation | lowercase }}/{{ phoneChoice | removespaces | lowercase }}.png">
+            <img ng-show="deviceChoice" src="images/{{ deviceOrientation | lowercase }}/{{ deviceChoice | removespaces | lowercase }}.png">
 
             <!-- Display label here -->
-            <p><span ng-show="phoneChoice">{{ phoneChoice }} - {{ phoneOrientation }}</span></p>
+            <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>
         
         </div>
     </div>

@@ -1,24 +1,24 @@
 var myApp = angular.module('myApp',[]);
 
-function PhoneCtrl($scope) {
+function DeviceCtrl($scope) {
 
     // Devices
-    $scope.phones = [
+    $scope.devices = [
         'iPhone 4',
         'iPhone 5',
         'Nexus 4',
         'iPad 3'
     ];
 
-    $scope.phoneChoice = $scope.phones[0]; // iPhone4
+    $scope.deviceChoice = $scope.devices[0]; // iPhone4
 
     // Orientations
 
-    $scope.phoneOrientations = [
+    $scope.deviceOrientations = [
       'Horizontal',
       'Vertical'
     ];
 
-    $scope.phoneOrientation = $scope.phoneOrientations[0]; // vertical
+    $scope.deviceOrientation = $scope.deviceOrientations[0]; // vertical
 
 }
