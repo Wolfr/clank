@@ -19,10 +19,7 @@
 
     <p>Select orientation:</p>
     <p>
-        <select ng-model="phoneOrientation">
-            <option>Horizontal</option>
-            <option>Vertical</option>
-        </select>
+        <select ng-model="phoneOrientation" ng-options="p for p in phoneOrientations"></select>
     </p>
 
     <div ng-show="phoneOrientation">
