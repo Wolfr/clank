@@ -9,7 +9,9 @@
 <body>
 
 <h1>Device selector</h1>
+
 <div ng-controller="PhoneCtrl">
+
     <p>Select a device:</p>
     <p>
         <select ng-model="phoneChoice">
@@ -28,11 +30,12 @@
         </select>
     </p>
 
-    <!-- Display selected device here -->
     <div ng-show="phoneOrientation">
         <div ng-show="phoneChoice">
 
+            <!-- Display selected device here -->
             <img ng-show="phoneChoice" src="images/{{ phoneOrientation | lowercase }}/{{ phoneChoice | removespaces | lowercase }}.png">
+
             <!-- Display label here -->
             <p><span ng-show="phoneChoice">{{ phoneChoice }} - {{ phoneOrientation }}</span></p>
         
