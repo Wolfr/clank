@@ -28,6 +28,33 @@
   <div class="frame">
     <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}});" data-device="{{ deviceChoice | lowercase | removewhitespace }}-{{ deviceOrientation | lowercase }}">
       <div class="device-body">
+
+        
+        <div class="ios-status" ng-show="os">
+          <span>
+            <span class="carrier">Carrier</span>
+            <span>Wifi</span>
+          </span>
+          <span class="clock">5:00 PM</span>
+          <span>
+            <span>3G</span>
+            <span>Battery</span>
+          </span>
+        </div>
+
+        <div class="android-status" ng-show="os">
+          <span>
+            <span>X</span>
+            <span>X</span>
+            <span>X</span>
+          </span>
+          <span>
+            <span>Bluetooth</span>
+            <span>Battery</span>
+            <span>20:49</span>
+          </span>
+        </div>
+
       </div>
     </div>
   </div>

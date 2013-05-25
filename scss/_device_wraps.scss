@@ -31,11 +31,8 @@
 
 }
 
-
 .phone-wrap {
   position: relative;
-
-  
 }
 
 .phone-wrap {
@@ -47,10 +44,10 @@
     width: 396px;
     height: 734px;
     background: url(../images/portrait/iphone4.png) no-repeat 0 0;
-    padding: 147px 0 0 1px;
+    padding: 127px 0 0 2px;
     .device-body {
       width: 320px;
-      height: 460px;
+      height: 480px;
     }
   }
   &[data-device="iphone4-landscape"] {

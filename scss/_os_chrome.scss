@@ -1,0 +1,44 @@
+.ios-status,
+.android-status {
+  // Style
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  line-height: 20px;
+
+  width: 98%;
+  padding: 0 1%;
+
+  // Layout 
+  display: flex;
+  flex-direction: row;
+
+  & > span {
+    flex: auto;
+    justify-content: space-around;
+  }
+
+  span:first-child {
+    text-align: left;
+  }
+  
+  span:last-child {
+    text-align: right;
+  }
+  
+}
+
+.ios-status {
+  font-weight: 700;
+  font-family: Helvetica;
+  height: 20px;
+}
+
+.android-status {
+  font-family: Roboto;
+  
+  background: #000;
+  color: #FFF;
+  height: 24px;
+  line-height: 24px;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/prefix-free/prefixfree.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/application.css"/>
+</head>
+<body ng-controller="DeviceCtrl">
+
+  <p>iOS status bar</p>
+
+  <div class="ios-status">
+    <span>
+      <span class="carrier">Carrier</span>
+      <span>Wifi</span>
+    </span>
+    <span class="clock">5:00 PM</span>
+    <span>
+      <span>3G</span>
+      <span>Battery</span>
+    </span>
+  </div>
+  
+  <p>Android status bar</p>
+
+  <div class="android-status">
+    <span>
+      <span>Notification</span>
+      <span>Notification</span>
+      <span>Notification</span>
+    </span>
+    <span>
+      <span>Bluetooth</span>
+      <span>Battery</span>
+      <span>20:49</span>
+    </span>
+  </div>
+
+</body>
+</html>
