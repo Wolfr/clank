@@ -1,1 +1,6 @@
 Run "bower install" to start
+
+Browser support: Chrome only for now
+
+* Safari functional (flexbox broken)
+* Firefox not functional (HTML5 range input broken)
