@@ -1,0 +1,254 @@
+/* line 1, ../scss/_base.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, ../scss/_base.scss */
+html {
+  background: #ffffff;
+  /* Old browsers */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  /* W3C */
+}
+
+/* line 12, ../scss/_base.scss */
+body {
+  text-align: center;
+  font-family: "Roboto", Arial;
+  font-size: 13px;
+}
+
+/* line 18, ../scss/_base.scss */
+input, select, textarea, option {
+  font-family: "Roboto", Arial;
+}
+
+/*
+  Alternate clearfix that does not rely on overflow: hidden;
+*/
+/* line 7, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone4"] .device-body, .phone-wrap[data-device="iphone5"] .device-body, .phone-wrap[data-device="iphone4-landscape"] .device-body, .phone-wrap[data-device="iphone5-landscape"] .device-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/* line 11, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4"] .device-body, .phone-wrap[data-device="nexus4-landscape"] .device-body {
+  font-family: 'Roboto', 'Droid Sans', sans-serif;
+}
+
+/* line 16, ../scss/_device_wraps.scss */
+.device-body {
+  margin: 0 auto;
+  position: relative;
+  overflow: scroll;
+}
+
+/* line 23, ../scss/_device_wraps.scss */
+.frame {
+  height: 100%;
+  width: 100%;
+  /* Flexbox hawtness */
+  display: box;
+  display: flexbox;
+  box-align: center;
+  flex-align: center;
+  box-pack: center;
+  flex-pack: center;
+}
+
+/* line 35, ../scss/_device_wraps.scss */
+.phone-wrap {
+  position: relative;
+}
+
+/* line 41, ../scss/_device_wraps.scss */
+.phone-wrap {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-y: hidden;
+  position: relative;
+}
+/* line 46, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone4-portrait"] {
+  width: 396px;
+  height: 734px;
+  background: url(../images/portrait/iphone4.png) no-repeat 0 0;
+  padding: 147px 0 0 1px;
+}
+/* line 51, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone4-portrait"] .device-body {
+  width: 320px;
+  height: 460px;
+}
+/* line 56, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone4-landscape"] {
+  padding: 57px 0 0;
+  width: 734px;
+  height: 396px;
+  background: url(../images/landscape/iphone4.png) no-repeat 0 0;
+}
+/* line 61, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone4-landscape"] .device-body {
+  width: 480px;
+  height: 300px;
+}
+/* line 66, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone5-portrait"] {
+  width: 396px;
+  height: 822px;
+  background: url(../images/portrait/iphone5.png) no-repeat 0 0;
+  padding: 147px 0 0 0;
+}
+/* line 71, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone5-portrait"] .device-body {
+  width: 320px;
+  height: 548px;
+}
+/* line 76, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone5-landscape"] {
+  padding: 58px 0 0;
+  width: 822px;
+  height: 396px;
+  background: url(../images/landscape/iphone5.png) no-repeat 0 0;
+}
+/* line 81, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="iphone5-landscape"] .device-body {
+  width: 568px;
+  height: 300px;
+}
+/* line 86, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-portrait"] {
+  width: 434px;
+  height: 849px;
+  background: url(../images/portrait/nexus4.png) no-repeat 0 0;
+  padding: 107px 0 0;
+}
+/* line 91, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-portrait"] .device-body {
+  width: 366px;
+  height: 604px;
+}
+/* line 96, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-landscape"] {
+  padding: 34px 0 0;
+  width: 849px;
+  height: 434px;
+  background: url(../images/landscape/nexus4.png) no-repeat 0 0;
+}
+/* line 101, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-landscape"] .device-body {
+  width: 604px;
+  height: 366px;
+  position: relative;
+  right: 15px;
+}
+/* line 108, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="ipad3-portrait"] {
+  width: 970px;
+  height: 1260px;
+  background: url(../images/portrait/ipad3.png) no-repeat 0 0;
+  padding: 137px 0 0;
+}
+/* line 114, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="ipad3-portrait"] .device-body {
+  width: 768px;
+  height: 1004px;
+}
+/* line 119, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="ipad3-landscape"] {
+  padding: 118px 0 0;
+  width: 1260px;
+  height: 970px;
+  background: url(../images/landscape/ipad3.png) no-repeat 0 0;
+}
+/* line 124, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="ipad3-landscape"] .device-body {
+  width: 1024px;
+  height: 748px;
+}
+/* line 129, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus7-portrait"] {
+  width: 970px;
+  height: 1260px;
+  background: url(../images/portrait/nexus7.png) no-repeat center center;
+  padding: 134px 0 0;
+  background-size: contain;
+}
+/* line 135, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus7-portrait"] .device-body {
+  width: 608px;
+  height: 972px;
+}
+/* line 140, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus7-landscape"] {
+  width: 1260px;
+  height: 970px;
+  background: url(../images/landscape/nexus7.png) no-repeat center center;
+  background-size: contain;
+  padding: 176px 0 0;
+}
+/* line 146, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus7-landscape"] .device-body {
+  width: 972px;
+  height: 608px;
+}
+
+/* line 1, ../scss/_controls.scss */
+.controls {
+  z-index: 2;
+  line-height: 44px;
+  height: 44px;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  /* flexbox setup */
+  display: flex;
+  flex-direction: row;
+}
+/* line 5, ../scss/_controls.scss */
+.controls label {
+  line-height: 44px;
+}
+/* line 8, ../scss/_controls.scss */
+.controls select {
+  margin-top: 12px;
+}
+/* line 17, ../scss/_controls.scss */
+.controls.top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  top: 0;
+}
+/* line 21, ../scss/_controls.scss */
+.controls.bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  bottom: 0;
+}
+/* line 24, ../scss/_controls.scss */
+.controls.bottom p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 36, ../scss/_controls.scss */
+.controls.top > div {
+  flex: auto;
+  justify-content: center;
+  line-height: 24px;
+  display: flex;
+}
+
+/* line 43, ../scss/_controls.scss */
+.controls label {
+  margin-right: 3px;
+}
+/* line 45, ../scss/_controls.scss */
+.controls label:after {
+  content: ":";
+}

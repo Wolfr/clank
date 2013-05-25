@@ -7,21 +7,23 @@ function DeviceCtrl($scope) {
         'iPhone 4',
         'iPhone 5',
         'Nexus 4',
+        'Nexus 7',
         'iPad 3'
     ];
 
-    $scope.deviceChoice = $scope.devices[0]; // iPhone4
+    $scope.deviceChoice = $scope.devices[0]; // Set default
 
     // Orientations
 
     $scope.deviceOrientations = [
-      'Horizontal',
-      'Vertical'
+      'Portrait',
+      'Landscape'
     ];
 
-    $scope.deviceOrientation = $scope.deviceOrientations[0]; // vertical
+    $scope.deviceOrientation = $scope.deviceOrientations[0]; // Set default
 
     // Size default
+
     $scope.deviceSize = 1;
 
 }

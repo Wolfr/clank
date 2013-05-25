@@ -1,0 +1,151 @@
+// Device wraps
+
+.phone-wrap {
+  &[data-device="iphone4"] .device-body,
+  &[data-device="iphone5"] .device-body,
+  &[data-device="iphone4-landscape"] .device-body,
+  &[data-device="iphone5-landscape"] .device-body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  &[data-device="nexus4"] .device-body,
+  &[data-device="nexus4-landscape"] .device-body {
+    font-family: 'Roboto', 'Droid Sans', sans-serif;
+  }
+}
+
+.device-body {
+  margin: 0 auto;
+  position: relative;
+  // background: red;
+  overflow: scroll;
+}
+
+.frame {
+  height: 100%;
+  width: 100%;
+  
+  /* Flexbox hawtness */
+  display: box; display: flexbox;
+  box-align: center; flex-align: center;
+  box-pack: center; flex-pack: center;
+
+}
+
+
+.phone-wrap {
+  position: relative;
+
+  
+}
+
+.phone-wrap {
+  @include box-sizing(border-box);
+  margin: 0 auto;
+  overflow-y: hidden;
+  position: relative;
+  &[data-device="iphone4-portrait"] {
+    width: 396px;
+    height: 734px;
+    background: url(../images/portrait/iphone4.png) no-repeat 0 0;
+    padding: 147px 0 0 1px;
+    .device-body {
+      width: 320px;
+      height: 460px;
+    }
+  }
+  &[data-device="iphone4-landscape"] {
+    padding: 57px 0 0;
+    width: 734px;
+    height: 396px;
+    background: url(../images/landscape/iphone4.png) no-repeat 0 0;
+    .device-body {
+      width: 480px;
+      height: 300px;
+    }
+  }
+  &[data-device="iphone5-portrait"] {
+    width: 396px;
+    height: 822px;
+    background: url(../images/portrait/iphone5.png) no-repeat 0 0;
+    padding: 147px 0 0 0;
+    .device-body {
+      width: 320px;
+      height: 548px;
+    }
+  }
+  &[data-device="iphone5-landscape"] {
+    padding: 58px 0 0;
+    width: 822px;
+    height: 396px;
+    background: url(../images/landscape/iphone5.png) no-repeat 0 0;
+    .device-body {
+      width: 568px;
+      height: 300px;
+    }
+  }
+  &[data-device="nexus4-portrait"] {
+    width: 434px;
+    height: 849px;
+    background: url(../images/portrait/nexus4.png) no-repeat 0 0;
+    padding: 107px 0 0;
+    .device-body {
+      width: 366px;
+      height: 604px;
+    }
+  }
+  &[data-device="nexus4-landscape"] {
+    padding: 34px 0 0;
+    width: 849px;
+    height: 434px;
+    background: url(../images/landscape/nexus4.png) no-repeat 0 0;
+    .device-body {
+      width: 604px;
+      height: 366px;
+      position: relative;
+      right: 15px;
+    }
+  }
+  &[data-device="ipad3-portrait"] {
+    width: 970px;
+    height: 1260px;
+
+    background: url(../images/portrait/ipad3.png) no-repeat 0 0;
+    padding: 137px 0 0;
+    .device-body {
+      width: 768px;
+      height: 1004px;
+    }
+  }
+  &[data-device="ipad3-landscape"] {
+    padding: 118px 0 0;
+    width: 1260px;
+    height: 970px;
+    background: url(../images/landscape/ipad3.png) no-repeat 0 0;
+    .device-body {
+      width: 1024px;
+      height: 748px;
+    }
+  }
+  &[data-device="nexus7-portrait"] {
+    width: 970px;
+    height: 1260px;
+    background: url(../images/portrait/nexus7.png) no-repeat center center;
+    padding: 134px 0 0;
+    background-size: contain;
+    .device-body {
+      width: 608px;
+      height: 972px;
+    }
+  }
+  &[data-device="nexus7-landscape"] {
+    width: 1260px;
+    height: 970px;
+    background: url(../images/landscape/nexus7.png) no-repeat center center;
+    background-size: contain;
+    padding: 176px 0 0;
+    .device-body {
+      width: 972px;
+      height: 608px;
+    }
+  }
+}

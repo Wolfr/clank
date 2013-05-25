@@ -6,16 +6,11 @@
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/test.css"/>
+    <link rel="stylesheet" href="css/application.css"/>
 </head>
-<body>
+<body ng-controller="DeviceCtrl">
 
-
-<div ng-controller="DeviceCtrl">
-
-  <h1>Device selector</h1>
-
-  <div class="controls">
+  <div class="controls top">
     <div>
       <label for="deviceChoice">Device</label>
       <select ng-model="deviceChoice" id="deviceChoice" ng-options="p for p in devices"></select>
@@ -29,20 +24,17 @@
       <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
     </div>
   </div>
-
-  <div ng-show="deviceOrientation">
-      <div ng-show="deviceChoice">
-
-          <!-- Display selected device here -->
-          <img style="-webkit-transform: scale({{deviceSize}});" ng-show="deviceChoice" src="images/{{ deviceOrientation | lowercase }}/{{ deviceChoice | removewhitespace | lowercase }}.png">
-
-          <!-- Display label here -->
-          <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>
-
+  
+  <div class="frame">
+    <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}});" data-device="{{ deviceChoice | lowercase | removewhitespace }}-{{ deviceOrientation | lowercase }}">
+      <div class="device-body">
       </div>
+    </div>
   </div>
 
-</div>
+  <div class="controls bottom">
+    <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>
+  </div>
 
 </body>
 </html>

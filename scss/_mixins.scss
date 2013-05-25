@@ -1,0 +1,210 @@
+@mixin unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin background-alt {
+  background: darken($background-color, 10%);
+  border-bottom: darken($background-color, 20%);
+  @if $gradient {
+    @include gradient-vertical($background-color, darken($background-color, 10%));
+  }
+}
+
+@mixin background-alt-inverse {
+  background: lighten($background-color-inverse, 10%);
+  border-bottom: lighten($background-color-inverse, 20%);
+  @if $gradient {
+    @include gradient-vertical($background-color-inverse, lighten($background-color-inverse, 10%));
+  }
+}
+
+@mixin text-shadow-white {
+  @if $text-shadows {
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  }
+}
+
+@mixin text-shadow-black {
+  @if $text-shadows {
+    text-shadow: 0 1px rgba(0,0,0,0.33);
+  }
+}
+
+@mixin gradient-vertical($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+
+@mixin button-skin {
+  & > span {
+    @include border-radius($default-border-radius);
+    @if $accent-color-light {
+      color: darken($text-color, 5%);
+    } @else {
+      color: lighten($text-color-inverse, 20%);
+    }
+    @if $gradient {
+      @include gradient-vertical(darken($accent-color,2%), darken($accent-color,5%));
+    } @else {
+      background: darken($accent-color, 10%);
+    }
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(saturate(lighten($accent-color, 25%), 10%), darken($accent-color, 0%));
+      } @else {
+        background: darken($accent-color, 5%);
+      }
+    }
+  }
+  &:hover > span,
+  &:active > span,
+  &:focus > span,
+  &.active > span {
+    @if $gradient {
+      @include gradient-vertical(darken($accent-color,7%), darken($accent-color, 13%));
+    } @else {
+      background: darken($accent-color, 20%);
+    }
+    @include box-shadow(none);
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
+        @if $shadows {
+          @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
+        }
+      } @else {
+        background: darken($accent-color, 10%);
+      }
+    }
+  }
+}
+
+@mixin button-skin-primary {
+  & > span {
+    @include border-radius($default-border-radius);
+    color: lighten($text-color-inverse, 20%);
+    @if $gradient {
+      @include gradient-vertical(darken($accent-color-primary,7%), darken($accent-color-primary, 24%));
+    } @else {
+      background: darken($accent-color-primary, 10%);
+    }
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
+      } @else {
+        background: $accent-color-primary;
+      }
+    }
+  }
+}
+
+@mixin button-skin-subtle {
+  & > span {
+    @include text-shadow-white;
+    color: #333;
+    .iconfont {
+      @include opacity(0.5);
+      text-shadow: none;
+    }
+    @if $gradient {
+      @include gradient-vertical(darken($background-color,7%), darken($background-color, 15%));
+    } @else {
+      background: darken($background-color, 20%);
+    }
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(lighten($background-color, 7%), darken($background-color, 5%));
+      } @else {
+        background: darken($background-color, 10%);
+      }
+    }
+  }
+  &:hover > span,
+  &:active > span,
+  &:focus > span,
+  &.active > span {
+    @if $gradient {
+      @include gradient-vertical(darken($background-color,17%), darken($background-color, 25%));
+    } @else {
+      background: darken($background-color, 20%);
+    }
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(lighten($background-color, 17%), lighten($background-color, 15%));
+      } @else {
+        background: lighten($background-color,20%);
+      }
+    }
+  }
+}
+
+@mixin table-cell-skin {
+  background: lighten($background-color, 10%);
+  // @include border-radius($default-border-radius/2);
+  @if $shadows {
+    @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
+  }
+  @if $color-inverse {
+    .color-inverse & {
+      background: lighten($background-color-inverse, 10%);
+      color: #FFF;
+      @if $shadows {
+        @include box-shadow(0 2px 0 rgba(255,255,255,.2), inset 0 1px 0 rgba(255,255,255,.1));
+      }
+    }
+  }
+}
+
+@mixin table-cell-skin-accent {
+  background: $accent-color;
+  @if $shadows {
+    @include box-shadow(0 2px 0 darken($accent-color, 10%), inset 0 1px 0 rgba(0,0,0,.1));
+  }
+}
+
+@mixin table-cell-skin-accent-secondary {
+  background: $accent-color-primary;
+  @if $shadows {
+    @include box-shadow(0 2px 0 darken($accent-color-primary, 10%), inset 0 1px 0 rgba(0,0,0,.1));
+  }
+}
+
+// Webkit-style focus
+// ------------------
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+}
+
+/*
+  Alternate clearfix that does not rely on overflow: hidden;
+*/
+
+@mixin micro-clearfix {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}

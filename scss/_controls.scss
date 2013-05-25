@@ -1,0 +1,48 @@
+.controls {
+  z-index: 2;
+  line-height: 44px;
+  height: 44px;
+  label {
+    line-height: 44px;
+  }
+  select {
+    margin-top: 12px;
+  }
+  background: #FFF;
+  background: rgba(255,255,255,0.9);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  
+  &.top {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    top: 0;
+  }
+  &.bottom {
+    border-top: 1px solid rgba(0,0,0,0.15);
+    bottom: 0;
+    p {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  /* flexbox setup */
+  display: flex;
+  flex-direction: row;
+}
+
+.controls.top > div {
+  flex: auto;
+  justify-content: center;
+  line-height: 24px;
+  display: flex;
+}
+
+.controls label {
+  margin-right: 3px;
+  &:after {
+    content: ":";
+  }
+}
