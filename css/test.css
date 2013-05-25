@@ -5,7 +5,7 @@ body {
     font-size: 13px;
 }
 
-.holder {
+.controls {
   margin: 0 auto;
   width: 50%;
   /* flexbox setup */
@@ -13,12 +13,18 @@ body {
   flex-direction: row;
 }
 
-.holder > div {
+.controls > div {
   flex: auto;
   justify-content: center;
+  line-height: 24px;
+  
+  display: flex;
 }
 
-.holder p {
-  padding: 2px 0;
-  margin: 0;
+.controls > label {
+  margin-right: 2px;
+}
+
+.controls label:after {
+  content: ":";
 }

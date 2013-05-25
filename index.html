@@ -13,26 +13,19 @@
 
 <div ng-controller="DeviceCtrl">
 
-  <div class="holder">
+  <div class="controls">
     <div>
-      <p>Select a device:</p>
-      <p>
-          <select ng-model="deviceChoice" ng-options="p for p in devices"></select>
-      </p>
+      <label for="deviceChoice">Device</label>
+      <select ng-model="deviceChoice" id="deviceChoice" ng-options="p for p in devices"></select>
     </div>
     <div>
-      <p>Select orientation:</p>
-      <p>
-          <select ng-model="deviceOrientation" ng-options="p for p in deviceOrientations"></select>
-      </p>
+      <label for="deviceOrientation">Orientation</label>
+      <select ng-model="deviceOrientation" ng-options="p for p in deviceOrientations"></select>
     </div>
     <div>
-      <p>Select size:</p>
-      <p>
-        <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
-      </p>
+      <label for="deviceSize">Size</label>
+      <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
     </div>
-
   </div>
 
   <div ng-show="deviceOrientation">
