@@ -1,9 +1,10 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
-    <script type="text/javascript" src="components/angular/angular.js"></script>
-    <script type="text/javascript" src="js/controllers.js"></script>
-    <script type="text/javascript" src="js/filters.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/prefix-free/prefixfree.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
     <link rel="stylesheet" href="css/test.css"/>
 </head>
 <body>
@@ -12,27 +13,39 @@
 
 <div ng-controller="DeviceCtrl">
 
-    <p>Select a device:</p>
-    <p>
-        <select ng-model="deviceChoice" ng-options="p for p in devices"></select>
-    </p>
-
-    <p>Select orientation:</p>
-    <p>
-        <select ng-model="deviceOrientation" ng-options="p for p in deviceOrientations"></select>
-    </p>
-
-    <div ng-show="deviceOrientation">
-        <div ng-show="deviceChoice">
-
-            <!-- Display selected device here -->
-            <img ng-show="deviceChoice" src="images/{{ deviceOrientation | lowercase }}/{{ deviceChoice | removewhitespace | lowercase }}.png">
-
-            <!-- Display label here -->
-            <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>
-        
-        </div>
+  <div class="holder">
+    <div>
+      <p>Select a device:</p>
+      <p>
+          <select ng-model="deviceChoice" ng-options="p for p in devices"></select>
+      </p>
     </div>
+    <div>
+      <p>Select orientation:</p>
+      <p>
+          <select ng-model="deviceOrientation" ng-options="p for p in deviceOrientations"></select>
+      </p>
+    </div>
+    <div>
+      <p>Select size:</p>
+      <p>
+        <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
+      </p>
+    </div>
+
+  </div>
+
+  <div ng-show="deviceOrientation">
+      <div ng-show="deviceChoice">
+
+          <!-- Display selected device here -->
+          <img style="-webkit-transform: scale({{deviceSize}});" ng-show="deviceChoice" src="images/{{ deviceOrientation | lowercase }}/{{ deviceChoice | removewhitespace | lowercase }}.png">
+
+          <!-- Display label here -->
+          <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>
+
+      </div>
+  </div>
 
 </div>
 

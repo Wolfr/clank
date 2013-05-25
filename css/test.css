@@ -5,3 +5,20 @@ body {
     font-size: 13px;
 }
 
+.holder {
+  margin: 0 auto;
+  width: 50%;
+  /* flexbox setup */
+  display: flex;
+  flex-direction: row;
+}
+
+.holder > div {
+  flex: auto;
+  justify-content: center;
+}
+
+.holder p {
+  padding: 2px 0;
+  margin: 0;
+}

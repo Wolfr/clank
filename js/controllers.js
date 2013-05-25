@@ -21,4 +21,7 @@ function DeviceCtrl($scope) {
 
     $scope.deviceOrientation = $scope.deviceOrientations[0]; // vertical
 
+    // Size default
+    $scope.deviceSize = 1;
+
 }
