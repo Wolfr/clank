@@ -4,20 +4,20 @@ function DeviceCtrl($scope) {
 
     // Devices
     $scope.devices = [
-      'iPhone 4',
-      'iPhone 5',
-      'Nexus 4',
-      'Nexus 7',
-      'iPad 3'
-      
-      // ['iPhone 4', 'iOS'],
-      // ['iPhone 5', 'iOS'],
-      // ['Nexus 4', 'Android'],
-      // ['Nexus 7', 'Android'],
-      // ['iPad 3', 'iOS']
+      { name: 'iPhone 4', os: 'iOS'},
+      { name: 'iPhone 5', os: 'iOS'},
+      { name: 'Nexus 4', os: 'Android'},
+      { name: 'Nexus 7', os: 'Android'},
+      { name: 'iPad 3', os: 'iOS'}
     ];
 
     $scope.deviceChoice = $scope.devices[0]; // Set default
+
+    
+    $scope.getOS = function() {
+      console.log($scope.deviceChoice.os);
+      return $scope.deviceChoice.os;
+     }
 
     // Orientations
 

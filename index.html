@@ -13,7 +13,7 @@
   <div class="controls top">
     <div>
       <label for="deviceChoice">Device</label>
-      <select ng-model="deviceChoice" id="deviceChoice" ng-options="p for p in devices"></select>
+      <select ng-model="deviceChoice" id="deviceChoice" ng-options="p.name for p in devices"></select>
     </div>
     <div>
       <label for="deviceOrientation">Orientation</label>
@@ -26,11 +26,10 @@
   </div>
   
   <div class="frame">
-    <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}});" data-device="{{ deviceChoice | lowercase | removewhitespace }}-{{ deviceOrientation | lowercase }}">
+    <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}});" data-device="{{ deviceChoice.name | lowercase | removewhitespace }}-{{ deviceOrientation | lowercase }}">
       <div class="device-body">
 
-        
-        <div class="ios-status" ng-show="os">
+        <div class="ios-status" ng-show="deviceChoice.os == 'iOS'">
           <span>
             <span class="carrier">Carrier</span>
             <span>Wifi</span>
@@ -42,7 +41,7 @@
           </span>
         </div>
 
-        <div class="android-status" ng-show="os">
+        <div class="android-status" ng-show="deviceChoice.os == 'Android'">
           <span>
             <span>X</span>
             <span>X</span>
@@ -54,13 +53,21 @@
             <span>20:49</span>
           </span>
         </div>
+        
+        <div class="android-software-buttons" ng-show="deviceChoice.os == 'Android'">
+          <span>
+            <span>Back</span>
+            <span>Home</span>
+            <span>Apps</span>
+          </span>
+        </div>
 
       </div>
     </div>
   </div>
 
   <div class="controls bottom">
-    <p><span ng-show="deviceChoice">{{ deviceChoice }} - {{ deviceOrientation }}</span></p>
+    <p><span ng-show="deviceChoice">{{ deviceChoice.name }} - {{ deviceOrientation }}</span></p>
   </div>
 
 </body>

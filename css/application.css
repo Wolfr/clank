@@ -48,7 +48,7 @@ input, select, textarea, option {
 .frame {
   height: 100%;
   width: 100%;
-  /* Flexbox hawtness */
+  /* Center with flexbox */
   display: box;
   display: flexbox;
   box-align: center;
@@ -57,12 +57,12 @@ input, select, textarea, option {
   flex-pack: center;
 }
 
-/* line 35, ../scss/_device_wraps.scss */
+/* line 33, ../scss/_device_wraps.scss */
 .phone-wrap {
   position: relative;
 }
 
-/* line 39, ../scss/_device_wraps.scss */
+/* line 37, ../scss/_device_wraps.scss */
 .phone-wrap {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -71,105 +71,105 @@ input, select, textarea, option {
   overflow-y: hidden;
   position: relative;
 }
-/* line 44, ../scss/_device_wraps.scss */
+/* line 42, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-portrait"] {
   width: 396px;
   height: 734px;
   background: url(../images/portrait/iphone4.png) no-repeat 0 0;
   padding: 127px 0 0 2px;
 }
-/* line 49, ../scss/_device_wraps.scss */
+/* line 47, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-portrait"] .device-body {
   width: 320px;
   height: 480px;
 }
-/* line 54, ../scss/_device_wraps.scss */
+/* line 52, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-landscape"] {
-  padding: 57px 0 0;
+  padding: 37px 0 0;
   width: 734px;
   height: 396px;
   background: url(../images/landscape/iphone4.png) no-repeat 0 0;
 }
-/* line 59, ../scss/_device_wraps.scss */
+/* line 57, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-landscape"] .device-body {
   width: 480px;
   height: 300px;
 }
-/* line 64, ../scss/_device_wraps.scss */
+/* line 62, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-portrait"] {
   width: 396px;
   height: 822px;
   background: url(../images/portrait/iphone5.png) no-repeat 0 0;
-  padding: 147px 0 0 0;
+  padding: 127px 0 0 0;
 }
-/* line 69, ../scss/_device_wraps.scss */
+/* line 67, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-portrait"] .device-body {
   width: 320px;
   height: 548px;
 }
-/* line 74, ../scss/_device_wraps.scss */
+/* line 72, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-landscape"] {
-  padding: 58px 0 0;
+  padding: 38px 0 0;
   width: 822px;
   height: 396px;
   background: url(../images/landscape/iphone5.png) no-repeat 0 0;
 }
-/* line 79, ../scss/_device_wraps.scss */
+/* line 77, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-landscape"] .device-body {
   width: 568px;
   height: 300px;
 }
-/* line 84, ../scss/_device_wraps.scss */
+/* line 82, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-portrait"] {
   width: 434px;
   height: 849px;
   background: url(../images/portrait/nexus4.png) no-repeat 0 0;
   padding: 107px 0 0;
 }
-/* line 89, ../scss/_device_wraps.scss */
+/* line 87, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-portrait"] .device-body {
   width: 366px;
-  height: 604px;
+  height: 650px;
 }
-/* line 94, ../scss/_device_wraps.scss */
+/* line 92, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] {
-  padding: 34px 0 0;
+  padding: 34px 0 0 42px;
   width: 849px;
   height: 434px;
   background: url(../images/landscape/nexus4.png) no-repeat 0 0;
 }
-/* line 99, ../scss/_device_wraps.scss */
+/* line 97, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] .device-body {
-  width: 604px;
+  width: 650px;
   height: 366px;
   position: relative;
   right: 15px;
 }
-/* line 106, ../scss/_device_wraps.scss */
+/* line 104, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] {
   width: 970px;
   height: 1260px;
   background: url(../images/portrait/ipad3.png) no-repeat 0 0;
-  padding: 137px 0 0;
+  padding: 97px 0 0;
 }
-/* line 112, ../scss/_device_wraps.scss */
+/* line 110, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] .device-body {
   width: 768px;
   height: 1004px;
 }
-/* line 117, ../scss/_device_wraps.scss */
+/* line 115, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-landscape"] {
-  padding: 118px 0 0;
+  padding: 98px 0 0;
   width: 1260px;
   height: 970px;
   background: url(../images/landscape/ipad3.png) no-repeat 0 0;
 }
-/* line 122, ../scss/_device_wraps.scss */
+/* line 120, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-landscape"] .device-body {
   width: 1024px;
   height: 748px;
 }
-/* line 127, ../scss/_device_wraps.scss */
+/* line 125, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] {
   width: 970px;
   height: 1260px;
@@ -177,12 +177,12 @@ input, select, textarea, option {
   padding: 134px 0 0;
   background-size: contain;
 }
-/* line 133, ../scss/_device_wraps.scss */
+/* line 131, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] .device-body {
   width: 608px;
   height: 972px;
 }
-/* line 138, ../scss/_device_wraps.scss */
+/* line 136, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] {
   width: 1260px;
   height: 970px;
@@ -190,7 +190,7 @@ input, select, textarea, option {
   background-size: contain;
   padding: 176px 0 0;
 }
-/* line 144, ../scss/_device_wraps.scss */
+/* line 142, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] .device-body {
   width: 972px;
   height: 608px;
@@ -296,4 +296,26 @@ input, select, textarea, option {
   color: #FFF;
   height: 24px;
   line-height: 24px;
+}
+
+/* line 49, ../scss/_os_chrome.scss */
+.android-software-buttons {
+  background: #000;
+  color: #FFF;
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 53, ../scss/_os_chrome.scss */
+[data-device$=landscape] .android-software-buttons {
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+}
+/* line 59, ../scss/_os_chrome.scss */
+[data-device$=portrait] .android-software-buttons {
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

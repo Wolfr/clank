@@ -42,3 +42,25 @@
   height: 24px;
   line-height: 24px;
 }
+
+
+
+  
+.android-software-buttons {
+  background: #000;
+  color: #FFF;
+  position: absolute;
+  [data-device$=landscape] & {
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+  }
+  [data-device$=portrait] & {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  height: 40px;
+  line-height: 40px;
+}

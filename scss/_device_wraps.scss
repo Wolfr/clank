@@ -24,11 +24,10 @@
   height: 100%;
   width: 100%;
   
-  /* Flexbox hawtness */
+  /* Center with flexbox */
   display: box; display: flexbox;
   box-align: center; flex-align: center;
   box-pack: center; flex-pack: center;
-
 }
 
 .phone-wrap {
@@ -51,7 +50,7 @@
     }
   }
   &[data-device="iphone4-landscape"] {
-    padding: 57px 0 0;
+    padding: 37px 0 0;
     width: 734px;
     height: 396px;
     background: url(../images/landscape/iphone4.png) no-repeat 0 0;
@@ -64,14 +63,14 @@
     width: 396px;
     height: 822px;
     background: url(../images/portrait/iphone5.png) no-repeat 0 0;
-    padding: 147px 0 0 0;
+    padding: 127px 0 0 0;
     .device-body {
       width: 320px;
       height: 548px;
     }
   }
   &[data-device="iphone5-landscape"] {
-    padding: 58px 0 0;
+    padding: 38px 0 0;
     width: 822px;
     height: 396px;
     background: url(../images/landscape/iphone5.png) no-repeat 0 0;
@@ -87,16 +86,16 @@
     padding: 107px 0 0;
     .device-body {
       width: 366px;
-      height: 604px;
+      height: 650px;
     }
   }
   &[data-device="nexus4-landscape"] {
-    padding: 34px 0 0;
+    padding: 34px 0 0 42px;
     width: 849px;
     height: 434px;
     background: url(../images/landscape/nexus4.png) no-repeat 0 0;
     .device-body {
-      width: 604px;
+      width: 650px;
       height: 366px;
       position: relative;
       right: 15px;
@@ -107,14 +106,14 @@
     height: 1260px;
 
     background: url(../images/portrait/ipad3.png) no-repeat 0 0;
-    padding: 137px 0 0;
+    padding: 97px 0 0;
     .device-body {
       width: 768px;
       height: 1004px;
     }
   }
   &[data-device="ipad3-landscape"] {
-    padding: 118px 0 0;
+    padding: 98px 0 0;
     width: 1260px;
     height: 970px;
     background: url(../images/landscape/ipad3.png) no-repeat 0 0;
