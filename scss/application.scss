@@ -1,6 +1,8 @@
-@import "compass/css3";
+@import "compass";
+
 @import "base";
 @import "mixins";
 @import "device_wraps";
 @import "controls";
 @import "os_chrome";
+@import "components/headers-footers";

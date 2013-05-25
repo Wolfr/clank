@@ -1,3 +1,38 @@
+$ios-bar-size: 44px;
+$android-bar-size: 44px;
+
+
+// Default style variables
+
+$gradient: true !default;
+$shadows: true !default;
+$button-borders: true !default;
+$text-shadows: true !default;
+$btn-link: true !default; // show some buttons as links by omitting their backgrounds and shadows
+
+$color-inverse: false !default;
+$subtle: true !default; // enable subtle buttons
+$subtle-headers: false !default; // enable subtle headers
+
+$default-border-radius: 4px !default;
+
+$accent-color: #155663 !default; // accent color is supposed to be something like purple, red, blue
+
+$accent-color-primary: adjust-saturation(adjust-lightness($accent-color, 30%), 30%) !default; // move up the color chart
+
+$accent-color-light: false !default;
+
+$header-font-size: 20px !default;
+
+$text-color: #333 !default;
+$text-color-inverse: #DDD !default;
+$headings-color: darken($text-color, 20%) !default;
+
+$background-color: #E6E6E6 !default;
+
+$background-color-inverse: darken($accent-color, 10%);
+// $background-color-inverse: adjust-lightness(invert($background-color), 5%) !default;
+
 @mixin unstyled {
   margin: 0;
   padding: 0;
@@ -208,3 +243,4 @@
     clear:both;
   }
 }
+

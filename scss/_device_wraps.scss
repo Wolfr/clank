@@ -1,14 +1,10 @@
 // Device wraps
 
 .phone-wrap {
-  &[data-device="iphone4"] .device-body,
-  &[data-device="iphone5"] .device-body,
-  &[data-device="iphone4-landscape"] .device-body,
-  &[data-device="iphone5-landscape"] .device-body {
+  &[data-os="ios"] .device-body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
-  &[data-device="nexus4"] .device-body,
-  &[data-device="nexus4-landscape"] .device-body {
+  &[data-os="android"] .device-body {
     font-family: 'Roboto', 'Droid Sans', sans-serif;
   }
 }
@@ -18,6 +14,7 @@
   position: relative;
   // background: red;
   overflow: scroll;
+  -webkit-font-smoothing: antialiased;
 }
 
 .frame {
@@ -56,7 +53,7 @@
     background: url(../images/landscape/iphone4.png) no-repeat 0 0;
     .device-body {
       width: 480px;
-      height: 300px;
+      height: 320px;
     }
   }
   &[data-device="iphone5-portrait"] {
@@ -66,7 +63,7 @@
     padding: 127px 0 0 0;
     .device-body {
       width: 320px;
-      height: 548px;
+      height: 568px;
     }
   }
   &[data-device="iphone5-landscape"] {
@@ -76,7 +73,7 @@
     background: url(../images/landscape/iphone5.png) no-repeat 0 0;
     .device-body {
       width: 568px;
-      height: 300px;
+      height: 320px;
     }
   }
   &[data-device="nexus4-portrait"] {
@@ -90,7 +87,7 @@
     }
   }
   &[data-device="nexus4-landscape"] {
-    padding: 34px 0 0 42px;
+    padding: 34px 40px 0 0;
     width: 849px;
     height: 434px;
     background: url(../images/landscape/nexus4.png) no-repeat 0 0;
@@ -106,20 +103,20 @@
     height: 1260px;
 
     background: url(../images/portrait/ipad3.png) no-repeat 0 0;
-    padding: 97px 0 0;
+    padding: 119px 0 0;
     .device-body {
       width: 768px;
-      height: 1004px;
+      height: 1024px;
     }
   }
   &[data-device="ipad3-landscape"] {
-    padding: 98px 0 0;
+    padding: 101px 0 0;
     width: 1260px;
     height: 970px;
     background: url(../images/landscape/ipad3.png) no-repeat 0 0;
     .device-body {
       width: 1024px;
-      height: 748px;
+      height: 768px;
     }
   }
   &[data-device="nexus7-portrait"] {

@@ -28,23 +28,24 @@ input, select, textarea, option {
 /*
   Alternate clearfix that does not rely on overflow: hidden;
 */
-/* line 7, ../scss/_device_wraps.scss */
-.phone-wrap[data-device="iphone4"] .device-body, .phone-wrap[data-device="iphone5"] .device-body, .phone-wrap[data-device="iphone4-landscape"] .device-body, .phone-wrap[data-device="iphone5-landscape"] .device-body {
+/* line 4, ../scss/_device_wraps.scss */
+.phone-wrap[data-os="ios"] .device-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-/* line 11, ../scss/_device_wraps.scss */
-.phone-wrap[data-device="nexus4"] .device-body, .phone-wrap[data-device="nexus4-landscape"] .device-body {
+/* line 7, ../scss/_device_wraps.scss */
+.phone-wrap[data-os="android"] .device-body {
   font-family: 'Roboto', 'Droid Sans', sans-serif;
 }
 
-/* line 16, ../scss/_device_wraps.scss */
+/* line 12, ../scss/_device_wraps.scss */
 .device-body {
   margin: 0 auto;
   position: relative;
   overflow: scroll;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 23, ../scss/_device_wraps.scss */
+/* line 20, ../scss/_device_wraps.scss */
 .frame {
   height: 100%;
   width: 100%;
@@ -57,12 +58,12 @@ input, select, textarea, option {
   flex-pack: center;
 }
 
-/* line 33, ../scss/_device_wraps.scss */
+/* line 30, ../scss/_device_wraps.scss */
 .phone-wrap {
   position: relative;
 }
 
-/* line 37, ../scss/_device_wraps.scss */
+/* line 34, ../scss/_device_wraps.scss */
 .phone-wrap {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -71,105 +72,105 @@ input, select, textarea, option {
   overflow-y: hidden;
   position: relative;
 }
-/* line 42, ../scss/_device_wraps.scss */
+/* line 39, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-portrait"] {
   width: 396px;
   height: 734px;
   background: url(../images/portrait/iphone4.png) no-repeat 0 0;
   padding: 127px 0 0 2px;
 }
-/* line 47, ../scss/_device_wraps.scss */
+/* line 44, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-portrait"] .device-body {
   width: 320px;
   height: 480px;
 }
-/* line 52, ../scss/_device_wraps.scss */
+/* line 49, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-landscape"] {
   padding: 37px 0 0;
   width: 734px;
   height: 396px;
   background: url(../images/landscape/iphone4.png) no-repeat 0 0;
 }
-/* line 57, ../scss/_device_wraps.scss */
+/* line 54, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone4-landscape"] .device-body {
   width: 480px;
-  height: 300px;
+  height: 320px;
 }
-/* line 62, ../scss/_device_wraps.scss */
+/* line 59, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-portrait"] {
   width: 396px;
   height: 822px;
   background: url(../images/portrait/iphone5.png) no-repeat 0 0;
   padding: 127px 0 0 0;
 }
-/* line 67, ../scss/_device_wraps.scss */
+/* line 64, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-portrait"] .device-body {
   width: 320px;
-  height: 548px;
+  height: 568px;
 }
-/* line 72, ../scss/_device_wraps.scss */
+/* line 69, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-landscape"] {
   padding: 38px 0 0;
   width: 822px;
   height: 396px;
   background: url(../images/landscape/iphone5.png) no-repeat 0 0;
 }
-/* line 77, ../scss/_device_wraps.scss */
+/* line 74, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="iphone5-landscape"] .device-body {
   width: 568px;
-  height: 300px;
+  height: 320px;
 }
-/* line 82, ../scss/_device_wraps.scss */
+/* line 79, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-portrait"] {
   width: 434px;
   height: 849px;
   background: url(../images/portrait/nexus4.png) no-repeat 0 0;
   padding: 107px 0 0;
 }
-/* line 87, ../scss/_device_wraps.scss */
+/* line 84, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-portrait"] .device-body {
   width: 366px;
   height: 650px;
 }
-/* line 92, ../scss/_device_wraps.scss */
+/* line 89, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] {
-  padding: 34px 0 0 42px;
+  padding: 34px 40px 0 0;
   width: 849px;
   height: 434px;
   background: url(../images/landscape/nexus4.png) no-repeat 0 0;
 }
-/* line 97, ../scss/_device_wraps.scss */
+/* line 94, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] .device-body {
   width: 650px;
   height: 366px;
   position: relative;
   right: 15px;
 }
-/* line 104, ../scss/_device_wraps.scss */
+/* line 101, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] {
   width: 970px;
   height: 1260px;
   background: url(../images/portrait/ipad3.png) no-repeat 0 0;
-  padding: 97px 0 0;
+  padding: 119px 0 0;
 }
-/* line 110, ../scss/_device_wraps.scss */
+/* line 107, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] .device-body {
   width: 768px;
-  height: 1004px;
+  height: 1024px;
 }
-/* line 115, ../scss/_device_wraps.scss */
+/* line 112, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-landscape"] {
-  padding: 98px 0 0;
+  padding: 101px 0 0;
   width: 1260px;
   height: 970px;
   background: url(../images/landscape/ipad3.png) no-repeat 0 0;
 }
-/* line 120, ../scss/_device_wraps.scss */
+/* line 117, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-landscape"] .device-body {
   width: 1024px;
-  height: 748px;
+  height: 768px;
 }
-/* line 125, ../scss/_device_wraps.scss */
+/* line 122, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] {
   width: 970px;
   height: 1260px;
@@ -177,12 +178,12 @@ input, select, textarea, option {
   padding: 134px 0 0;
   background-size: contain;
 }
-/* line 131, ../scss/_device_wraps.scss */
+/* line 128, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] .device-body {
   width: 608px;
   height: 972px;
 }
-/* line 136, ../scss/_device_wraps.scss */
+/* line 133, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] {
   width: 1260px;
   height: 970px;
@@ -190,7 +191,7 @@ input, select, textarea, option {
   background-size: contain;
   padding: 176px 0 0;
 }
-/* line 142, ../scss/_device_wraps.scss */
+/* line 139, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] .device-body {
   width: 972px;
   height: 608px;
@@ -318,4 +319,134 @@ input, select, textarea, option {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+/* line 6, ../scss/components/_headers-footers.scss */
+.bar-title > div,
+.bar > div {
+  *zoom: 1;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.bar-title > div:after,
+.bar > div:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 10, ../scss/components/_headers-footers.scss */
+[data-os="ios"] .bar-title > div, [data-os="ios"]
+.bar > div {
+  min-height: 44px;
+  height: 44px;
+}
+/* line 14, ../scss/components/_headers-footers.scss */
+[data-os="android"] .bar-title > div, [data-os="android"]
+.bar > div {
+  min-height: 44px;
+  height: 44px;
+}
+
+/* line 22, ../scss/components/_headers-footers.scss */
+.bar-footer {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+/* line 27, ../scss/components/_headers-footers.scss */
+.bar-footer > div {
+  min-height: 44px;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* line 38, ../scss/components/_headers-footers.scss */
+.bar-title .title {
+  text-align: center;
+  max-width: 240px;
+  max-width: 180px;
+  margin: 0 auto;
+  -webkit-hyphens: auto;
+}
+/* line 40, ../scss/components/_headers-footers.scss */
+[data-os="ios"] .bar-title .title {
+  line-height: 44px;
+}
+/* line 43, ../scss/components/_headers-footers.scss */
+[data-os="android"] .bar-title .title {
+  line-height: 44px;
+}
+/* line 50, ../scss/components/_headers-footers.scss */
+.bar-title .title.stretch-full {
+  max-width: none;
+}
+
+/* line 60, ../scss/components/_headers-footers.scss */
+.bar-title > div,
+.bar-footer > div,
+.bar > div {
+  position: relative;
+  background: #155663;
+  background-color: #1a6c7c;
+  background-image: -moz-linear-gradient(top, #1e7b8d, #155663);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1e7b8d), to(#155663));
+  background-image: -webkit-linear-gradient(top, #1e7b8d, #155663);
+  background-image: -o-linear-gradient(top, #1e7b8d, #155663);
+  background-image: linear-gradient(to bottom, #1e7b8d, #155663);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1E7B8D', endColorstr='#FF155663', GradientType=0);
+}
+/* line 63, ../scss/components/_headers-footers.scss */
+.bar-title > div > p,
+.bar-footer > div > p,
+.bar > div > p {
+  line-height: 44px;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+}
+/* line 73, ../scss/components/_headers-footers.scss */
+.bar-title > div > p.align-left,
+.bar-footer > div > p.align-left,
+.bar > div > p.align-left {
+  margin-left: 7px;
+}
+/* line 78, ../scss/components/_headers-footers.scss */
+.bar-title > div .title,
+.bar-footer > div .title,
+.bar > div .title {
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+}
+/* line 102, ../scss/components/_headers-footers.scss */
+.bar-title > div:before,
+.bar-footer > div:before,
+.bar > div:before {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  background: #1e7b8d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 112, ../scss/components/_headers-footers.scss */
+.bar-title > div:after,
+.bar-footer > div:after,
+.bar > div:after {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

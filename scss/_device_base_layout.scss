@@ -2,13 +2,9 @@
   @include box-sizing(border-box);
 }
 
-html, body, .frame {
-  height: 100%;
-}
-
-.device-body > .bar-title,
-.device-body > .content,
-.device-body > .bar-footer {
+.device-body > div > .bar-title,
+.device-body > div > .content,
+.device-body > div > .bar-footer {
   margin: 0 auto;
 }
 
@@ -25,7 +21,7 @@ html, body, .frame {
   word-wrap: break-word;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-  & > article.content {
+  & > div >  article.content {
     height: 100%;
     @include calc(height, "100% - 44px");
     &.has-footer {
