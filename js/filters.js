@@ -10,6 +10,6 @@ angular.module('filters', []).
     filter('removewhitespace', function () {
         return function(text) {
 
-            return String(text).replace(/ /g,"")
+            return String(text).replace(/\s/g, "");
         };
     });
