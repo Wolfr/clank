@@ -11,8 +11,15 @@ function DeviceCtrl($scope) {
       { name: 'iPad 3', os: 'iOS'}
     ];
 
-    $scope.deviceChoice = $scope.devices[0]; // Set default
-
+    if ($cookieStore.get('savedDevice')) {
+      angular.forEach($scope.devices, function (device) {
+        if (device.name == $cookieStore.get('savedDevice')) {
+          $scope.deviceChoice = device;
+        }
+      });
+    } else {
+      $scope.deviceChoice = $scope.devices[0]; // Set default
+    }
     
     $scope.getOS = function() {
       console.log($scope.deviceChoice.os);
