@@ -10,9 +10,9 @@
   ],
   "file_name": "android",
   "glyphs": [
-    "android-battery-colored",
-    "android-battery",
-    "android-network",
-    "android-wifi"
+    "battery-colored",
+    "battery",
+    "network",
+    "wifi"
   ]
 }

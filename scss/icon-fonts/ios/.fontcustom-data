@@ -1,0 +1,18 @@
+{
+  "fonts": [
+    "ios.ttf",
+    "ios.woff",
+    "ios.eot",
+    "ios.svg"
+  ],
+  "templates": [
+    "_fontcustom.scss"
+  ],
+  "file_name": "ios",
+  "glyphs": [
+    "battery-colored",
+    "battery",
+    "network",
+    "wifi"
+  ]
+}
