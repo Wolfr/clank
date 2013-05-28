@@ -26,16 +26,16 @@ function DeviceCtrl($scope, $cookieStore) {
       console.log('Our cookie now reads ' +  $cookieStore.get('savedDevice'));
     }
 
-    // @otod This code is exactly like save device but breaks?
+    // @todo This code is exactly like save device but breaks?
 
-    // $scope.saveDeviceOrientation = function() {
-    //   console.log($scope.deviceOrientations.name);
-    // 
-    //   console.log('We changed the orientation');
-    //   $cookieStore.put('savedOrientation', $scope.deviceOrientations.name);
-    //   console.log('Our cookie now reads ' +  $cookieStore.get('savedOrientation'));
-    //   
-    // }
+    $scope.saveDeviceOrientation = function() {
+      console.log($scope.deviceOrientations.name);
+    
+      console.log('We changed the orientation');
+      $cookieStore.put('savedOrientation', $scope.deviceOrientations.name);
+      console.log('Our cookie now reads ' +  $cookieStore.get('savedOrientation'));
+      
+    }
 
     // If a cookie with saved device data exists apply it
     if ($cookieStore.get('savedDevice')) {
