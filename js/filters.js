@@ -1,12 +1,9 @@
-// add the filter to your application module
-angular.module('myApp', ['filters']);
-
 /**
  * Remove whitespace filter
  * @Param text
  * @return string
  */
-angular.module('filters', []).
+angular.module('myApp').
     filter('removewhitespace', function () {
         return function(text) {
 

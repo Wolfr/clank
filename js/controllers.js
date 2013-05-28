@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp',['ngCookies']);
 
-function DeviceCtrl($scope) {
+function DeviceCtrl($scope, $cookieStore) {
 
     // Devices
     $scope.devices = [
