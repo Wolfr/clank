@@ -1,0 +1,1 @@
+fontcustom compile ./svg_source/ios -t scss -o ../scss/custom -n ios -h false -p --font-face-path="../scss/custom/"  --css-prefix=icon-ios-
