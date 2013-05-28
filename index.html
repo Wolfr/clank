@@ -19,7 +19,7 @@
     </div>
     <div>
       <label for="deviceOrientation">Orientation</label>
-      <select ng-model="deviceOrientation" ng-options="p for p in deviceOrientations"></select>
+      <select ng-model="deviceOrientation" ng-options="p.name for p in deviceOrientations"></select>
     </div>
     <div>
       <label for="deviceSize">Size</label>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="frame">
-    <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}}); -moz-transform: scale({{deviceSize}});" data-os="{{ deviceChoice.os | lowercase | removewhitespace }}" data-device="{{ deviceChoice.name | lowercase | removewhitespace }}-{{ deviceOrientation | lowercase }}">
+    <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}}); -moz-transform: scale({{deviceSize}});" data-os="{{ deviceChoice.os | lowercase | removewhitespace }}" data-device="{{ deviceChoice.name | lowercase | removewhitespace }}-{{ deviceOrientation.name | lowercase }}">
       <div class="device-body">
 
         <div class="ios-status" ng-show="deviceChoice.os == 'iOS'">
@@ -99,7 +99,7 @@
   </div>
 
   <div class="controls bottom">
-    <p><span ng-show="deviceChoice">{{ deviceChoice.name }} - {{ deviceOrientation }}</span></p>
+    <p><span ng-show="deviceChoice">{{ deviceChoice.name }} - {{ deviceOrientation.name }}</span></p>
   </div>
 
 </body>
