@@ -13,10 +13,10 @@
   font-style: normal;
 }
 
-.icon-ios-battery-colored:before,
+.icon-ios-alarm:before,
 .icon-ios-battery:before,
-.icon-ios-network:before,
-.icon-ios-wifi:before {
+.icon-ios-locate:before,
+.icon-ios-lock:before {
   font-family: "ios";
   font-style: normal;
   font-weight: normal;
@@ -28,7 +28,7 @@
   text-decoration: inherit;
 }
 
-.icon-ios-battery-colored:before { content: "\f100"; }
+.icon-ios-alarm:before { content: "\f100"; }
 .icon-ios-battery:before { content: "\f101"; }
-.icon-ios-network:before { content: "\f102"; }
-.icon-ios-wifi:before { content: "\f103"; }
+.icon-ios-locate:before { content: "\f102"; }
+.icon-ios-lock:before { content: "\f103"; }

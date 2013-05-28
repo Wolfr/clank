@@ -10,9 +10,9 @@
   ],
   "file_name": "ios",
   "glyphs": [
-    "battery-colored",
+    "alarm",
     "battery",
-    "network",
-    "wifi"
+    "locate",
+    "lock"
   ]
 }

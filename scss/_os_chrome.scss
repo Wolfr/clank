@@ -1,3 +1,7 @@
+/**
+  Shared
+**/
+
 .ios-status,
 .android-status {
   // Style
@@ -6,8 +10,8 @@
   text-align: center;
   line-height: 20px;
 
-  width: 98%;
-  padding: 0 1%;
+  padding: 0 4px;
+  @include calc("width", "100% - 8px");
 
   // Layout 
   display: flex;
@@ -28,11 +32,69 @@
   
 }
 
+/**
+  iOS only
+**/
+
 .ios-status {
   font-weight: 700;
   font-family: Helvetica;
   height: 20px;
+  
+  .clock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
 }
+
+// Reception (iOS)
+
+.signals {
+  font-size: 0;
+  margin-right: 3px;
+  span {
+    width: 3px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 1px;
+    position: relative;
+    bottom: 10px;
+    background: #FFF;
+  }
+  .signal1 {
+    height: 4px;
+  }
+  .signal2 {
+    height: 5px;
+  }  
+  .signal3 {
+    height: 6.5px;
+  }
+  .signal4 {
+    height: 8px;
+  }
+  .signal5 {
+    height: 10px;
+  }
+}
+
+// Batter icon ios
+
+.icon-ios-battery {
+  font-size: 22px;
+  line-height: 0;
+  position: relative;
+  top: -1px;
+  margin-left: 4px;
+  float: right;
+}
+
+
+/**
+  Android only
+**/
 
 .android-status {
   font-family: Roboto;
@@ -42,9 +104,6 @@
   height: 24px;
   line-height: 24px;
 }
-
-
-
   
 .android-software-buttons {
   background: #000;

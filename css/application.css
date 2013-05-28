@@ -144,7 +144,7 @@ input, select, textarea, option {
   width: 650px;
   height: 366px;
   position: relative;
-  right: 15px;
+  right: -27px;
 }
 /* line 101, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] {
@@ -254,43 +254,108 @@ input, select, textarea, option {
   content: ":";
 }
 
-/* line 2, ../scss/_os_chrome.scss */
+/**
+  Shared
+**/
+/* line 6, ../scss/_os_chrome.scss */
 .ios-status,
 .android-status {
   background: #000;
   color: #FFF;
   text-align: center;
   line-height: 20px;
-  width: 98%;
-  padding: 0 1%;
+  padding: 0 4px;
+  width: -moz-calc(100% - 8px);
+  width: -o-calc(100% - 8px);
+  width: -webkit-calc(100% - 8px);
+  width: calc(100% - 8px);
   display: flex;
   flex-direction: row;
 }
-/* line 16, ../scss/_os_chrome.scss */
+/* line 20, ../scss/_os_chrome.scss */
 .ios-status > span,
 .android-status > span {
   flex: auto;
   justify-content: space-around;
 }
-/* line 21, ../scss/_os_chrome.scss */
+/* line 25, ../scss/_os_chrome.scss */
 .ios-status span:first-child,
 .android-status span:first-child {
   text-align: left;
 }
-/* line 25, ../scss/_os_chrome.scss */
+/* line 29, ../scss/_os_chrome.scss */
 .ios-status span:last-child,
 .android-status span:last-child {
   text-align: right;
 }
 
-/* line 31, ../scss/_os_chrome.scss */
+/**
+  iOS only
+**/
+/* line 39, ../scss/_os_chrome.scss */
 .ios-status {
   font-weight: 700;
   font-family: Helvetica;
   height: 20px;
 }
+/* line 44, ../scss/_os_chrome.scss */
+.ios-status .clock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
 
-/* line 37, ../scss/_os_chrome.scss */
+/* line 54, ../scss/_os_chrome.scss */
+.signals {
+  font-size: 0;
+  margin-right: 3px;
+}
+/* line 57, ../scss/_os_chrome.scss */
+.signals span {
+  width: 3px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 1px;
+  position: relative;
+  bottom: 10px;
+  background: #FFF;
+}
+/* line 66, ../scss/_os_chrome.scss */
+.signals .signal1 {
+  height: 4px;
+}
+/* line 69, ../scss/_os_chrome.scss */
+.signals .signal2 {
+  height: 5px;
+}
+/* line 72, ../scss/_os_chrome.scss */
+.signals .signal3 {
+  height: 6.5px;
+}
+/* line 75, ../scss/_os_chrome.scss */
+.signals .signal4 {
+  height: 8px;
+}
+/* line 78, ../scss/_os_chrome.scss */
+.signals .signal5 {
+  height: 10px;
+}
+
+/* line 85, ../scss/_os_chrome.scss */
+.icon-ios-battery {
+  font-size: 22px;
+  line-height: 0;
+  position: relative;
+  top: -1px;
+  margin-left: 4px;
+  float: right;
+}
+
+/**
+  Android only
+**/
+/* line 99, ../scss/_os_chrome.scss */
 .android-status {
   font-family: Roboto;
   background: #000;
@@ -299,7 +364,7 @@ input, select, textarea, option {
   line-height: 24px;
 }
 
-/* line 49, ../scss/_os_chrome.scss */
+/* line 108, ../scss/_os_chrome.scss */
 .android-software-buttons {
   background: #000;
   color: #FFF;
@@ -307,14 +372,14 @@ input, select, textarea, option {
   height: 40px;
   line-height: 40px;
 }
-/* line 53, ../scss/_os_chrome.scss */
+/* line 112, ../scss/_os_chrome.scss */
 [data-device$=landscape] .android-software-buttons {
   top: 0;
   right: 0;
   width: 40px;
   height: 100%;
 }
-/* line 59, ../scss/_os_chrome.scss */
+/* line 118, ../scss/_os_chrome.scss */
 [data-device$=portrait] .android-software-buttons {
   bottom: 0;
   left: 0;
@@ -463,10 +528,10 @@ input, select, textarea, option {
 }
 
 /* line 19, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-battery-colored:before,
+.icon-ios-alarm:before,
 .icon-ios-battery:before,
-.icon-ios-network:before,
-.icon-ios-wifi:before {
+.icon-ios-locate:before,
+.icon-ios-lock:before {
   font-family: "ios";
   font-style: normal;
   font-weight: normal;
@@ -479,7 +544,7 @@ input, select, textarea, option {
 }
 
 /* line 31, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-battery-colored:before {
+.icon-ios-alarm:before {
   content: "\f100";
 }
 
@@ -489,12 +554,12 @@ input, select, textarea, option {
 }
 
 /* line 33, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-network:before {
+.icon-ios-locate:before {
   content: "\f102";
 }
 
 /* line 34, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-wifi:before {
+.icon-ios-lock:before {
   content: "\f103";
 }
 
