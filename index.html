@@ -15,11 +15,11 @@
   <div class="controls top">
     <div>
       <label for="deviceChoice">Device</label>
-      <select ng-model="deviceChoice" id="deviceChoice" ng-options="p.name for p in devices"></select>
+      <select ng-model="deviceChoice" id="deviceChoice" ng-options="p.name for p in devices" ng-change="saveDeviceChoice()"></select>
     </div>
     <div>
       <label for="deviceOrientation">Orientation</label>
-      <select ng-model="deviceOrientation" ng-options="p.name for p in deviceOrientations"></select>
+      <select ng-model="deviceOrientation" ng-options="p.name for p in deviceOrientations" ng-change="saveDeviceOrientation()"></select>
     </div>
     <div>
       <label for="deviceSize">Size</label>

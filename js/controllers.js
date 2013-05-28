@@ -18,10 +18,25 @@ function DeviceCtrl($scope, $cookieStore) {
     ];
     
     // When you set a device, also set a cookie
-    // Temporarily hardcode this
-    $cookieStore.put('savedDevice', 'Nexus 4');
-    $cookieStore.put('savedOrientation', 'Landscape');
-    
+    $scope.saveDeviceChoice = function() {
+      console.log($scope.deviceChoice.name);
+      
+      console.log('We changed the device');
+      $cookieStore.put('savedDevice', $scope.deviceChoice.name);
+      console.log('Our cookie now reads ' +  $cookieStore.get('savedDevice'));
+    }
+
+    // @otod This code is exactly like save device but breaks?
+
+    // $scope.saveDeviceOrientation = function() {
+    //   console.log($scope.deviceOrientations.name);
+    // 
+    //   console.log('We changed the orientation');
+    //   $cookieStore.put('savedOrientation', $scope.deviceOrientations.name);
+    //   console.log('Our cookie now reads ' +  $cookieStore.get('savedOrientation'));
+    //   
+    // }
+
     // If a cookie with saved device data exists apply it
     if ($cookieStore.get('savedDevice')) {
       angular.forEach($scope.devices, function (device) {
@@ -37,8 +52,6 @@ function DeviceCtrl($scope, $cookieStore) {
     // If a cookie with saved orientation data exists apply it
     if ($cookieStore.get('savedOrientation')) {
       angular.forEach($scope.deviceOrientations, function (deviceOrientation) {
-
-        console.log('hi');
         if (deviceOrientation.name == $cookieStore.get('savedOrientation')) {
           $scope.deviceOrientation = deviceOrientation;
         }
@@ -47,11 +60,6 @@ function DeviceCtrl($scope, $cookieStore) {
       // Apply orientation default
       $scope.deviceOrientation = $scope.deviceOrientations[0];
     }
-    
-    $scope.getOS = function() {
-      console.log($scope.deviceChoice.os);
-      return $scope.deviceChoice.os;
-     }
 
     // Size default
     $scope.deviceSize = 1;
