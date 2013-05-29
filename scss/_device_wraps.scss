@@ -84,6 +84,10 @@
     .device-body {
       width: 366px;
       height: 650px;
+      .page {
+        position: relative;
+        height: 586px;
+      }
     }
   }
   &[data-device="nexus4-landscape"] {
@@ -91,6 +95,14 @@
     width: 849px;
     height: 434px;
     background: url(../images/landscape/nexus4.png) no-repeat 0 0;
+    .android-status {
+      width: 602px;
+    }
+    .page {
+      width: 610px;
+      position: relative;
+      height: 342px;
+    }
     .device-body {
       width: 650px;
       height: 366px;

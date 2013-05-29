@@ -132,45 +132,60 @@ input, select, textarea, option {
   width: 366px;
   height: 650px;
 }
-/* line 89, ../scss/_device_wraps.scss */
+/* line 87, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-portrait"] .device-body .page {
+  position: relative;
+  height: 586px;
+}
+/* line 93, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] {
   padding: 34px 40px 0 0;
   width: 849px;
   height: 434px;
   background: url(../images/landscape/nexus4.png) no-repeat 0 0;
 }
-/* line 94, ../scss/_device_wraps.scss */
+/* line 98, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-landscape"] .android-status {
+  width: 602px;
+}
+/* line 101, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus4-landscape"] .page {
+  width: 610px;
+  position: relative;
+  height: 342px;
+}
+/* line 106, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] .device-body {
   width: 650px;
   height: 366px;
   position: relative;
   right: -27px;
 }
-/* line 101, ../scss/_device_wraps.scss */
+/* line 113, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] {
   width: 970px;
   height: 1260px;
   background: url(../images/portrait/ipad3.png) no-repeat 0 0;
   padding: 119px 0 0;
 }
-/* line 107, ../scss/_device_wraps.scss */
+/* line 119, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] .device-body {
   width: 768px;
   height: 1024px;
 }
-/* line 112, ../scss/_device_wraps.scss */
+/* line 124, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-landscape"] {
   padding: 101px 0 0;
   width: 1260px;
   height: 970px;
   background: url(../images/landscape/ipad3.png) no-repeat 0 0;
 }
-/* line 117, ../scss/_device_wraps.scss */
+/* line 129, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-landscape"] .device-body {
   width: 1024px;
   height: 768px;
 }
-/* line 122, ../scss/_device_wraps.scss */
+/* line 134, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] {
   width: 970px;
   height: 1260px;
@@ -178,12 +193,12 @@ input, select, textarea, option {
   padding: 134px 0 0;
   background-size: contain;
 }
-/* line 128, ../scss/_device_wraps.scss */
+/* line 140, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] .device-body {
   width: 608px;
   height: 972px;
 }
-/* line 133, ../scss/_device_wraps.scss */
+/* line 145, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] {
   width: 1260px;
   height: 970px;
@@ -191,7 +206,7 @@ input, select, textarea, option {
   background-size: contain;
   padding: 176px 0 0;
 }
-/* line 139, ../scss/_device_wraps.scss */
+/* line 151, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] .device-body {
   width: 972px;
   height: 608px;
