@@ -1,0 +1,33 @@
+
+// Button positioning
+.bar-title,
+.bar-footer,
+.bar {
+  // If no aligment is specified align left
+  .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  // if there is a button right after .title it should probably be right aligned
+  .title + .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+  }
+  .btn.align-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 232px; // 320 - 44 - 44
+  }
+  .align-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+  }
+}

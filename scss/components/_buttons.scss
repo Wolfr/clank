@@ -1,0 +1,166 @@
+.btn {
+  display: block;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  var { // use to help with text offset
+    font-style: normal;
+  }
+  & > span,
+  & > span > span {
+    display: block;
+    @include micro-clearfix;
+  }
+  .label {
+    @include inline-block;
+    margin: 0 3px;
+  }
+  @if $text-shadows {
+    @include text-shadow-black;
+    @if $accent-color-light {
+      @include text-shadow-white;
+    }
+  }
+  .iconfont {
+    font-size: 18px;
+    line-height: 30px; // please never exceed 30
+    @include inline-block;
+    margin: 0 3px;
+
+    span.hidden {
+      display: none;
+    }
+  }
+  .iconfont + .label {
+    margin-left: 0;
+  }
+  .content & .iconfont {
+    position: absolute;
+    left: 17px;
+    top: 3px;
+  }
+  & > span {
+    font-weight: 700;
+    min-width: 54px;
+    text-align: center;
+    font-size: 13px;
+    & > span {
+      padding: 0 5px;
+    }
+    // Fake gradient border
+    @if $button-borders {
+      padding: 1px;
+      & > span {
+        line-height: 30px;
+      }
+    } @else {
+      padding: 0;
+      & > span {
+        line-height: 34px;
+      }
+    }
+  }
+  
+  // Bar buttons
+  .bar-title &,
+  .bar-footer &,
+  .bar & {
+    padding: 0 7px;
+    & > span {
+      margin: 5px 0;
+      font-size: 13px;
+    }
+  }
+  // Content buttons
+  .content .controls & > span {
+    margin: 5px 10px; // 10px for sides
+    font-size: 15px; // content buttons should have larger font sizes
+    // Fake gradient border
+    @if $button-borders {
+      & > span {
+        line-height: 36px;
+      }
+    } @else {
+      & > span {
+        line-height: 40px;
+      }
+    }
+  }
+  // Less min width for icon only type buttons
+  &.btn-icon > span {
+    min-width: 34px; // +10 = 44
+  }
+  &.btn-icon-only {
+    width: 44px;
+    & > span {
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+  // Border radius logic
+  & > span {
+    // Skin
+    @include border-radius($default-border-radius);
+    & > span {
+      @include border-radius($default-border-radius);
+    }
+  }
+  @if $shadows {
+    // Shadow logic
+    & > span {
+      // Skin
+      @include box-shadow(0 1px 0 rgba(0,0,0,.2));
+      & > span {
+        @include box-shadow(inset 0 1px 0 rgba(255,255,255,.05));
+      }
+    }
+  }
+
+  // Bg color/gradient logic
+  // This logic works on mid colors like red, purple, green
+  @include button-skin;
+
+  // Secondary buttons based off of secondary accent color
+  &.btn-primary {
+    @include button-skin-primary;
+  }
+  // Primary buttons in headers primary border color to blend in better
+  header &.btn-primary > span {
+
+    @if $gradient {
+      @include gradient-vertical($accent-color, darken($accent-color, 5%));
+    } @else {
+      background: darken($accent-color, 10%);
+    }
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
+      } @else {
+        background: darken($accent-color-primary, 10%);
+      }
+    }
+  }
+  header &.btn-primary:hover > span,
+  header &.btn-primary:active > span,
+  header &.btn-primary:focus > span,
+  header &.btn-primary.active > span {
+    @if $gradient {
+      @include gradient-vertical(darken($accent-color,7%), darken($accent-color, 13%));
+    } @else {
+      background: darken($accent-color, 20%);
+    }
+    @include box-shadow(none);
+    & > span {
+      @if $gradient {
+        @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
+        @if $shadows {
+          @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
+        }
+      } @else {
+        background: darken($accent-color, 10%);
+      }
+    }
+  }
+}
