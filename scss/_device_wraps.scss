@@ -100,8 +100,8 @@
     }
     .page {
       width: 610px;
-      position: relative;
       height: 342px;
+      position: relative;
     }
     .device-body {
       width: 650px;
@@ -115,7 +115,7 @@
     height: 1260px;
 
     background: url(../images/portrait/ipad3.png) no-repeat 0 0;
-    padding: 119px 0 0;
+    padding: 118px 0 0;
     .device-body {
       width: 768px;
       height: 1024px;
@@ -138,8 +138,11 @@
     padding: 134px 0 0;
     background-size: contain;
     .device-body {
-      width: 608px;
-      height: 972px;
+      width: 610px;
+      height: 977px;
+      .page {
+        height: 913px;
+      }
     }
   }
   &[data-device="nexus7-landscape"] {
@@ -149,8 +152,15 @@
     background-size: contain;
     padding: 176px 0 0;
     .device-body {
-      width: 972px;
-      height: 608px;
+      width: 977px;
+      height: 614px;
+      position: relative;
+      right: 6px;
+      .page {
+        position: relative;
+        height: 589px;
+        width: 937px;
+      }
     }
   }
 }

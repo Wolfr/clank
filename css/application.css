@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-/* line 23, ../scss/_base.scss */
+/* line 22, ../scss/_base.scss */
 input, select, textarea, option {
   font-family: "Roboto", Arial;
 }
@@ -156,8 +156,8 @@ input, select, textarea, option {
 /* line 101, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] .page {
   width: 610px;
-  position: relative;
   height: 342px;
+  position: relative;
 }
 /* line 106, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus4-landscape"] .device-body {
@@ -171,7 +171,7 @@ input, select, textarea, option {
   width: 970px;
   height: 1260px;
   background: url(../images/portrait/ipad3.png) no-repeat 0 0;
-  padding: 119px 0 0;
+  padding: 118px 0 0;
 }
 /* line 119, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="ipad3-portrait"] .device-body {
@@ -200,10 +200,14 @@ input, select, textarea, option {
 }
 /* line 140, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-portrait"] .device-body {
-  width: 608px;
-  height: 972px;
+  width: 610px;
+  height: 977px;
 }
-/* line 145, ../scss/_device_wraps.scss */
+/* line 143, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus7-portrait"] .device-body .page {
+  height: 913px;
+}
+/* line 148, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] {
   width: 1260px;
   height: 970px;
@@ -211,10 +215,18 @@ input, select, textarea, option {
   background-size: contain;
   padding: 176px 0 0;
 }
-/* line 151, ../scss/_device_wraps.scss */
+/* line 154, ../scss/_device_wraps.scss */
 .phone-wrap[data-device="nexus7-landscape"] .device-body {
-  width: 972px;
-  height: 608px;
+  width: 977px;
+  height: 614px;
+  position: relative;
+  right: 6px;
+}
+/* line 159, ../scss/_device_wraps.scss */
+.phone-wrap[data-device="nexus7-landscape"] .device-body .page {
+  position: relative;
+  height: 589px;
+  width: 937px;
 }
 
 /* line 1, ../scss/_controls.scss */
