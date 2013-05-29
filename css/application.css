@@ -829,8 +829,11 @@ header .btn.btn-primary:hover > span > span, header .btn.btn-primary:active > sp
 }
 /* line 13, ../scss/components/_button-positioning.scss */
 .bar-title .title + .btn,
+.bar-title .btn:last-child,
 .bar-footer .title + .btn,
-.bar .title + .btn {
+.bar-footer .btn:last-child,
+.bar .title + .btn,
+.bar .btn:last-child {
   position: absolute;
   top: 0;
   right: 0;
@@ -949,4 +952,13 @@ header .btn.btn-primary:hover > span > span, header .btn.btn-primary:active > sp
 /* line 34, ../scss/icon-fonts/android/_fontcustom.scss */
 .icon-android-wifi:before {
   content: "\f103";
+}
+
+/* line 16, ../scss/application.scss */
+.article {
+  background: #FFF;
+  text-align: left;
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 15px;
 }

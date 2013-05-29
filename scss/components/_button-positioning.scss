@@ -9,8 +9,8 @@
     top: 0;
     left: 0;
   }
-  // if there is a button right after .title it should probably be right aligned
-  .title + .btn {
+  .title + .btn, // if there is a button right after .title it should probably be right aligned
+  .btn:last-child { // if there is a button the last child it should probably be right aligned
     position: absolute;
     top: 0;
     right: 0;
