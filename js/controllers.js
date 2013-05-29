@@ -29,10 +29,10 @@ function DeviceCtrl($scope, $cookieStore) {
     // @todo This code is exactly like save device but breaks?
 
     $scope.saveDeviceOrientation = function() {
-      console.log($scope.deviceOrientations.name);
+      console.log($scope.deviceOrientation.name);
     
       console.log('We changed the orientation');
-      $cookieStore.put('savedOrientation', $scope.deviceOrientations.name);
+      $cookieStore.put('savedOrientation', $scope.deviceOrientation.name);
       console.log('Our cookie now reads ' +  $cookieStore.get('savedOrientation'));
       
     }
