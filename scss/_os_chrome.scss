@@ -11,8 +11,6 @@
   line-height: 20px;
 
   padding: 0 4px;
-  @include calc("width", "100% - 8px");
-
   // Layout 
   display: flex;
   flex-direction: row;

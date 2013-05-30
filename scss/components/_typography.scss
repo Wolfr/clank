@@ -1,0 +1,10 @@
+.cl-article--inner {
+
+  p {
+    margin: 0 10px;
+    line-height: 1.33;
+    color: #333;
+    @include text-shadow-white;
+  }
+
+}

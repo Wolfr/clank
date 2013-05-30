@@ -297,25 +297,21 @@ input, select, textarea, option {
   text-align: center;
   line-height: 20px;
   padding: 0 4px;
-  width: -moz-calc(100% - 8px);
-  width: -o-calc(100% - 8px);
-  width: -webkit-calc(100% - 8px);
-  width: calc(100% - 8px);
   display: flex;
   flex-direction: row;
 }
-/* line 20, ../scss/_os_chrome.scss */
+/* line 18, ../scss/_os_chrome.scss */
 .ios-status > span,
 .android-status > span {
   flex: auto;
   justify-content: space-around;
 }
-/* line 25, ../scss/_os_chrome.scss */
+/* line 23, ../scss/_os_chrome.scss */
 .ios-status span:first-child,
 .android-status span:first-child {
   text-align: left;
 }
-/* line 29, ../scss/_os_chrome.scss */
+/* line 27, ../scss/_os_chrome.scss */
 .ios-status span:last-child,
 .android-status span:last-child {
   text-align: right;
@@ -324,13 +320,13 @@ input, select, textarea, option {
 /**
   iOS only
 **/
-/* line 39, ../scss/_os_chrome.scss */
+/* line 37, ../scss/_os_chrome.scss */
 .ios-status {
   font-weight: 700;
   font-family: Helvetica;
   height: 20px;
 }
-/* line 44, ../scss/_os_chrome.scss */
+/* line 42, ../scss/_os_chrome.scss */
 .ios-status .clock {
   position: absolute;
   top: 0;
@@ -338,12 +334,12 @@ input, select, textarea, option {
   left: 0;
 }
 
-/* line 54, ../scss/_os_chrome.scss */
+/* line 52, ../scss/_os_chrome.scss */
 .signals {
   font-size: 0;
   margin-right: 3px;
 }
-/* line 57, ../scss/_os_chrome.scss */
+/* line 55, ../scss/_os_chrome.scss */
 .signals span {
   width: 3px;
   display: inline-block;
@@ -353,28 +349,28 @@ input, select, textarea, option {
   bottom: 10px;
   background: #FFF;
 }
-/* line 66, ../scss/_os_chrome.scss */
+/* line 64, ../scss/_os_chrome.scss */
 .signals .signal1 {
   height: 4px;
 }
-/* line 69, ../scss/_os_chrome.scss */
+/* line 67, ../scss/_os_chrome.scss */
 .signals .signal2 {
   height: 5px;
 }
-/* line 72, ../scss/_os_chrome.scss */
+/* line 70, ../scss/_os_chrome.scss */
 .signals .signal3 {
   height: 6.5px;
 }
-/* line 75, ../scss/_os_chrome.scss */
+/* line 73, ../scss/_os_chrome.scss */
 .signals .signal4 {
   height: 8px;
 }
-/* line 78, ../scss/_os_chrome.scss */
+/* line 76, ../scss/_os_chrome.scss */
 .signals .signal5 {
   height: 10px;
 }
 
-/* line 85, ../scss/_os_chrome.scss */
+/* line 83, ../scss/_os_chrome.scss */
 .icon-ios-battery {
   font-size: 22px;
   line-height: 0;
@@ -387,7 +383,7 @@ input, select, textarea, option {
 /**
   Android only
 **/
-/* line 99, ../scss/_os_chrome.scss */
+/* line 97, ../scss/_os_chrome.scss */
 .android-status {
   font-family: Roboto;
   background: #000;
@@ -396,7 +392,7 @@ input, select, textarea, option {
   line-height: 24px;
 }
 
-/* line 108, ../scss/_os_chrome.scss */
+/* line 106, ../scss/_os_chrome.scss */
 .android-software-buttons {
   background: #000;
   color: #FFF;
@@ -404,18 +400,76 @@ input, select, textarea, option {
   height: 40px;
   line-height: 40px;
 }
-/* line 112, ../scss/_os_chrome.scss */
+/* line 110, ../scss/_os_chrome.scss */
 [data-device$=landscape] .android-software-buttons {
   top: 0;
   right: 0;
   width: 40px;
   height: 100%;
 }
-/* line 118, ../scss/_os_chrome.scss */
+/* line 116, ../scss/_os_chrome.scss */
 [data-device$=portrait] .android-software-buttons {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+/* line 1, ../scss/_device_base_layout.scss */
+.device-body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../scss/_device_base_layout.scss */
+.device-body > div > .bar-title,
+.device-body > div > .content,
+.device-body > div > .bar-footer {
+  margin: 0 auto;
+}
+
+/* line 11, ../scss/_device_base_layout.scss */
+.device-body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 25, ../scss/_device_base_layout.scss */
+.device-body > div > article.content {
+  height: 100%;
+  height: -moz-calc(100% - 44px);
+  height: -o-calc(100% - 44px);
+  height: -webkit-calc(100% - 44px);
+  height: calc(100% - 44px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+/* line 28, ../scss/_device_base_layout.scss */
+.device-body > div > article.content.has-footer {
+  height: -moz-calc(100% - 88px);
+  height: -o-calc(100% - 88px);
+  height: -webkit-calc(100% - 88px);
+  height: calc(100% - 88px);
+}
+/* line 35, ../scss/_device_base_layout.scss */
+.device-body > div > article.content .content-inner {
+  padding: 10px;
+}
+/* line 38, ../scss/_device_base_layout.scss */
+.device-body > div > article.content .full-height {
+  height: 100%;
 }
 
 /* line 4, ../scss/components/_headers-footers.scss */
@@ -564,12 +618,12 @@ input, select, textarea, option {
 .btn > span, .btn > span > span {
   display: block;
 }
-/* line 238, ../scss/_mixins.scss */
+/* line 243, ../scss/_mixins.scss */
 .btn > span:before, .btn > span:after, .btn > span > span:before, .btn > span > span:after {
   content: "";
   display: table;
 }
-/* line 242, ../scss/_mixins.scss */
+/* line 247, ../scss/_mixins.scss */
 .btn > span:after, .btn > span > span:after {
   clear: both;
 }
@@ -819,6 +873,14 @@ header .btn.btn-primary:hover > span > span, header .btn.btn-primary:active > sp
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
+/* line 3, ../scss/components/_typography.scss */
+.cl-article--inner p {
+  margin: 0 10px;
+  line-height: 1.33;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
 /* line 7, ../scss/components/_button-positioning.scss */
 .bar-title .btn,
 .bar-footer .btn,
@@ -858,6 +920,489 @@ header .btn.btn-primary:hover > span > span, header .btn.btn-primary:active > sp
   top: 0;
   right: 0;
   left: auto;
+}
+
+/* line 1, ../scss/components/_table-view.scss */
+.table-view-title {
+  padding: 0;
+  margin: 10px 10px 0 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #3E3E3E;
+}
+/* line 7, ../scss/components/_table-view.scss */
+.table-view-title + .table-view {
+  padding-top: 5px;
+}
+/* line 10, ../scss/components/_table-view.scss */
+.table-view-title + .input-group {
+  padding-top: 5px;
+}
+
+/* line 15, ../scss/components/_table-view.scss */
+.table-view {
+  *zoom: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 10px 0;
+  width: 100%;
+}
+/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.table-view:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 20, ../scss/components/_table-view.scss */
+.table-view .table-view--cell {
+  font-size: 16px;
+  min-height: 44px;
+  margin: 0 10px;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 26, ../scss/components/_table-view.scss */
+.table-view .table-view--cell p {
+  padding: 0;
+}
+/* line 29, ../scss/components/_table-view.scss */
+.table-view .table-view--cell a {
+  font-weight: 700;
+  color: #000;
+}
+/* line 34, ../scss/components/_table-view.scss */
+.table-view .table-view--cell-expanded {
+  margin: 0 10px;
+}
+/* line 36, ../scss/components/_table-view.scss */
+.table-view .table-view--cell-expanded .content {
+  background: white;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 186, ../scss/_mixins.scss */
+.table-view .table-view--cell-expanded .content:first-child {
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 189, ../scss/_mixins.scss */
+.table-view .table-view--cell-expanded .content:last-child {
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 38, ../scss/components/_table-view.scss */
+.table-view .table-view--cell-expanded .content .icon-arrow-right {
+  color: #FFF;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+}
+/* line 42, ../scss/components/_table-view.scss */
+.table-view .table-view--cell-expanded .content .main {
+  position: relative;
+}
+/* line 45, ../scss/components/_table-view.scss */
+.table-view .table-view--cell-expanded .content .sub {
+  padding: 10px;
+  font-size: 12px;
+}
+/* line 48, ../scss/components/_table-view.scss */
+.table-view .table-view--cell-expanded .content .sub p {
+  padding: 0;
+}
+/* line 55, ../scss/components/_table-view.scss */
+.table-view > div[class=table-view--cell] {
+  *zoom: 1;
+  background: white;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.table-view > div[class=table-view--cell]:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 186, ../scss/_mixins.scss */
+.table-view > div[class=table-view--cell]:first-child {
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 189, ../scss/_mixins.scss */
+.table-view > div[class=table-view--cell]:last-child {
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 58, ../scss/components/_table-view.scss */
+.table-view > div[class=table-view--cell] > a {
+  display: block;
+  padding: 10px;
+  min-height: 44px;
+}
+/* line 63, ../scss/components/_table-view.scss */
+.table-view > div[class=table-view--cell] > label {
+  display: block;
+  padding: 10px;
+}
+/* line 69, ../scss/components/_table-view.scss */
+.table-view > div[class=table-view--cell]:hover, .table-view > div[class=table-view--cell]:active, .table-view > div[class=table-view--cell]:focus {
+  background: #0188f4;
+  background-color: #0174ee;
+  background-image: -moz-linear-gradient(top, #0188f4, #0158e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0188f4), to(#0158e6));
+  background-image: -webkit-linear-gradient(top, #0188f4, #0158e6);
+  background-image: -o-linear-gradient(top, #0188f4, #0158e6);
+  background-image: linear-gradient(to bottom, #0188f4, #0158e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
+  color: #FFF;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+}
+/* line 74, ../scss/components/_table-view.scss */
+.table-view > div[class=table-view--cell]:hover h3, .table-view > div[class=table-view--cell]:hover a, .table-view > div[class=table-view--cell]:hover .icon-arrow-right, .table-view > div[class=table-view--cell]:hover .disclosure-help, .table-view > div[class=table-view--cell]:active h3, .table-view > div[class=table-view--cell]:active a, .table-view > div[class=table-view--cell]:active .icon-arrow-right, .table-view > div[class=table-view--cell]:active .disclosure-help, .table-view > div[class=table-view--cell]:focus h3, .table-view > div[class=table-view--cell]:focus a, .table-view > div[class=table-view--cell]:focus .icon-arrow-right, .table-view > div[class=table-view--cell]:focus .disclosure-help {
+  color: #FFF;
+}
+/* line 79, ../scss/components/_table-view.scss */
+.table-view .title, .table-view h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+/* line 85, ../scss/components/_table-view.scss */
+.table-view .disclosure-help {
+  font-weight: 400;
+  position: absolute;
+  top: 35%;
+  right: 30px;
+  color: #AAA;
+}
+/* line 92, ../scss/components/_table-view.scss */
+.table-view .icon-arrow-right {
+  font-size: 19px;
+  position: absolute;
+  top: 26%;
+  right: 10px;
+  font-weight: 700;
+  color: #AAA;
+}
+/* line 100, ../scss/components/_table-view.scss */
+.table-view .meta {
+  font-weight: 400;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66);
+  opacity: 0.66;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+/* line 108, ../scss/components/_table-view.scss */
+.table-view .split {
+  margin: 0 10px;
+  *zoom: 1;
+}
+/* line 112, ../scss/components/_table-view.scss */
+.table-view .split:first-child .table-cell:first-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+}
+/* line 116, ../scss/components/_table-view.scss */
+.table-view .split:first-child .table-cell:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 122, ../scss/components/_table-view.scss */
+.table-view .split:last-child .table-cell:first-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+}
+/* line 126, ../scss/components/_table-view.scss */
+.table-view .split:last-child .table-cell:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 132, ../scss/components/_table-view.scss */
+.table-view .split:only-child .table-cell:first-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+}
+/* line 136, ../scss/components/_table-view.scss */
+.table-view .split:only-child .table-cell:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.table-view .split:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 143, ../scss/components/_table-view.scss */
+.table-view .split .table-cell {
+  padding: 10px;
+  width: 50%;
+  margin: 0;
+  background: white;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 186, ../scss/_mixins.scss */
+.table-view .split .table-cell:first-child {
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 189, ../scss/_mixins.scss */
+.table-view .split .table-cell:last-child {
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 148, ../scss/components/_table-view.scss */
+.table-view .split .table-cell:first-child {
+  width: -moz-calc(50% - 1px);
+  width: -o-calc(50% - 1px);
+  width: -webkit-calc(50% - 1px);
+  width: calc(50% - 1px);
+  float: left;
+}
+/* line 152, ../scss/components/_table-view.scss */
+.table-view .split .table-cell:last-child {
+  width: -moz-calc(50%);
+  width: -o-calc(50%);
+  width: -webkit-calc(50%);
+  width: calc(50%);
+  float: right;
+}
+/* line 158, ../scss/components/_table-view.scss */
+.table-view .split .table-cell:hover, .table-view .split .table-cell:active, .table-view .split .table-cell:focus {
+  background: #0188f4;
+  background-color: #0174ee;
+  background-image: -moz-linear-gradient(top, #0188f4, #0158e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0188f4), to(#0158e6));
+  background-image: -webkit-linear-gradient(top, #0188f4, #0158e6);
+  background-image: -o-linear-gradient(top, #0188f4, #0158e6);
+  background-image: linear-gradient(to bottom, #0188f4, #0158e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
+  color: #FFF;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+}
+/* line 163, ../scss/components/_table-view.scss */
+.table-view .split .table-cell:hover h3, .table-view .split .table-cell:hover a, .table-view .split .table-cell:hover .icon-arrow-right, .table-view .split .table-cell:hover .disclosure-help, .table-view .split .table-cell:active h3, .table-view .split .table-cell:active a, .table-view .split .table-cell:active .icon-arrow-right, .table-view .split .table-cell:active .disclosure-help, .table-view .split .table-cell:focus h3, .table-view .split .table-cell:focus a, .table-view .split .table-cell:focus .icon-arrow-right, .table-view .split .table-cell:focus .disclosure-help {
+  color: #FFF;
+}
+/* line 170, ../scss/components/_table-view.scss */
+.table-view .split.split-2-3 .table-cell:first-child {
+  width: -moz-calc(40% - 1px);
+  width: -o-calc(40% - 1px);
+  width: -webkit-calc(40% - 1px);
+  width: calc(40% - 1px);
+  float: left;
+}
+/* line 174, ../scss/components/_table-view.scss */
+.table-view .split.split-2-3 .table-cell:last-child {
+  width: -moz-calc(60% - 1px);
+  width: -o-calc(60% - 1px);
+  width: -webkit-calc(60% - 1px);
+  width: calc(60% - 1px);
+  float: right;
+}
+/* line 182, ../scss/components/_table-view.scss */
+.table-view .split.split-3-7 .table-cell:first-child {
+  width: -moz-calc(30% - 1px);
+  width: -o-calc(30% - 1px);
+  width: -webkit-calc(30% - 1px);
+  width: calc(30% - 1px);
+  float: left;
+}
+/* line 186, ../scss/components/_table-view.scss */
+.table-view .split.split-3-7 .table-cell:last-child {
+  width: -moz-calc(70%);
+  width: -o-calc(70%);
+  width: -webkit-calc(70%);
+  width: calc(70%);
+  float: right;
+}
+/* line 194, ../scss/components/_table-view.scss */
+.table-view .split.split-1-3 .table-cell:first-child {
+  width: -moz-calc(25% - 1px);
+  width: -o-calc(25% - 1px);
+  width: -webkit-calc(25% - 1px);
+  width: calc(25% - 1px);
+  float: left;
+}
+/* line 198, ../scss/components/_table-view.scss */
+.table-view .split.split-1-3 .table-cell:last-child {
+  width: -moz-calc(75%);
+  width: -o-calc(75%);
+  width: -webkit-calc(75%);
+  width: calc(75%);
+  float: right;
+}
+/* line 208, ../scss/components/_table-view.scss */
+.table-view.extended .icon-arrow-right {
+  right: 10px;
+}
+/* line 211, ../scss/components/_table-view.scss */
+.table-view.extended a {
+  display: block;
+}
+/* line 214, ../scss/components/_table-view.scss */
+.table-view.extended .table-cell {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  margin: 0 0 1px;
+  margin: 0;
+}
+/* line 216, ../scss/components/_table-view.scss */
+.table-view.extended .table-cell .table-cell {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 227, ../scss/components/_table-view.scss */
+.table-view .view-all {
+  *zoom: 1;
+  background: white;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #d5d5d5;
+  background-image: -moz-linear-gradient(top, #dadada, #cecece);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dadada), to(#cecece));
+  background-image: -webkit-linear-gradient(top, #dadada, #cecece);
+  background-image: -o-linear-gradient(top, #dadada, #cecece);
+  background-image: linear-gradient(to bottom, #dadada, #cecece);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFDADADA', endColorstr='#FFCECECE', GradientType=0);
+  text-transform: uppercase;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.table-view .view-all:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 186, ../scss/_mixins.scss */
+.table-view .view-all:first-child {
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 189, ../scss/_mixins.scss */
+.table-view .view-all:last-child {
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 235, ../scss/components/_table-view.scss */
+.table-view .view-all > a {
+  display: block;
+  padding: 10px;
+}
+/* line 239, ../scss/components/_table-view.scss */
+.table-view .view-all > label {
+  display: block;
+  padding: 10px;
+}
+
+/* line 1, ../scss/components/_help-txt.scss */
+.help-text {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center;
+  max-width: 95%;
+  font-size: 13px;
+  margin: 0 auto;
+  padding: 0 0 12px;
+}
+/* line 8, ../scss/components/_help-txt.scss */
+.help-text a {
+  color: #666;
+  text-decoration: underline;
+}
+/* line 11, ../scss/components/_help-txt.scss */
+.help-text a:hover {
+  color: #333;
 }
 
 /* 
@@ -952,13 +1497,4 @@ header .btn.btn-primary:hover > span > span, header .btn.btn-primary:active > sp
 /* line 34, ../scss/icon-fonts/android/_fontcustom.scss */
 .icon-android-wifi:before {
   content: "\f103";
-}
-
-/* line 17, ../scss/application.scss */
-.article {
-  background: #FFF;
-  text-align: left;
-  padding: 10px;
-  line-height: 1.5;
-  font-size: 15px;
 }

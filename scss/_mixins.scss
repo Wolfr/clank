@@ -183,7 +183,12 @@ $background-color-inverse: darken($accent-color, 10%);
 
 @mixin table-cell-skin {
   background: lighten($background-color, 10%);
-  // @include border-radius($default-border-radius/2);
+  &:first-child {
+    @include border-top-radius($default-border-radius/2);
+  }
+  &:last-child {
+    @include border-bottom-radius($default-border-radius/2);
+  }
   @if $shadows {
     @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
   }

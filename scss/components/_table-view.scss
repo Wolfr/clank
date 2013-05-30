@@ -1,0 +1,246 @@
+.table-view-title {
+  padding: 0;
+  margin: 10px 10px 0 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #3E3E3E;
+  & + .table-view {
+    padding-top: 5px;
+  }
+  & + .input-group {
+    padding-top: 5px;
+  }
+}
+
+.table-view {
+  @include pie-clearfix;
+  @include unstyled;
+  padding: 10px 0;
+  width: 100%;
+  .table-view--cell {
+    font-size: 16px;
+    min-height: 44px;
+    margin: 0 10px;
+    position: relative;
+    vertical-align: middle;
+    p {
+      padding: 0;
+    }
+    a {
+      font-weight: 700;
+      color: #000;
+    }
+  }
+  .table-view--cell-expanded {
+    margin: 0 10px;
+    .content {
+      @include table-cell-skin;
+      .icon-arrow-right {
+        color: #FFF;
+        @include text-shadow-black;
+      }
+      .main {
+        position: relative;
+      }
+      .sub {
+        padding: 10px;
+        font-size: 12px;
+        p {
+          padding: 0;
+        }
+      }
+    }
+  }
+  // Only have 1 class
+  & > div[class=table-view--cell] {
+    @include pie-clearfix;
+    @include table-cell-skin;
+    & > a {
+      display: block;
+      padding: 10px;
+      min-height: 44px;
+    }
+    & > label {
+      display: block;
+      padding: 10px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: #0188f4;
+      @include gradient-vertical(#0188f4, #0158e6);
+      color: #FFF;
+      @include text-shadow-black;
+      h3, a, .icon-arrow-right, .disclosure-help {
+        color: #FFF;
+      }
+    }
+  }
+  .title, h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  .disclosure-help {
+    font-weight: 400;
+    position: absolute;
+    top: 35%;
+    right: 30px;
+    color: #AAA;
+  }
+  .icon-arrow-right {
+    font-size: 19px;
+    position: absolute;
+    top: 26%;
+    right: 10px;
+    font-weight: 700;
+    color: #AAA;
+  }
+  .meta {
+    font-weight: 400;
+    @include opacity(0.66);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  // Cells that split in multiple cells
+  .split {
+    // Rounded corners on split cells
+    // @todo rewrite this, a bit bloated
+    &:first-child {
+      .table-cell:first-child {
+        @include border-radius(0);
+        @include border-top-left-radius($default-border-radius/2);
+      }
+      .table-cell:last-child {
+        @include border-radius(0);
+        @include border-top-right-radius($default-border-radius/2);
+      }
+    }
+    &:last-child {
+      .table-cell:first-child {
+        @include border-radius(0);
+        @include border-bottom-left-radius($default-border-radius/2);
+      }
+      .table-cell:last-child {
+        @include border-radius(0);
+        @include border-bottom-right-radius($default-border-radius/2);
+      }
+    }
+    &:only-child {
+      .table-cell:first-child {
+        @include border-radius(0);
+        @include border-left-radius($default-border-radius/2);
+      }
+      .table-cell:last-child {
+        @include border-radius(0);
+        @include border-right-radius($default-border-radius/2);
+      }
+    }
+    margin: 0 10px;
+    @include pie-clearfix;
+    .table-cell {
+      padding: 10px;
+      width: 50%;
+      margin: 0;
+      @include table-cell-skin;
+      &:first-child {
+        @include calc(width, "50% - 1px");
+        float: left;
+      }
+      &:last-child {
+        @include calc(width, "50%");
+        float: right;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background: #0188f4;
+        @include gradient-vertical(#0188f4, #0158e6);
+        color: #FFF;
+        @include text-shadow-black;
+        h3, a, .icon-arrow-right, .disclosure-help{
+          color: #FFF;
+        }
+      }
+    }
+    &.split-2-3 {
+      .table-cell {
+        &:first-child {
+          @include calc(width, "40% - 1px");
+          float: left;
+        }
+        &:last-child {
+          @include calc(width, "60% - 1px");
+          float: right;
+        }
+      }
+    }
+    &.split-3-7 {
+      .table-cell {
+        &:first-child {
+          @include calc(width, "30% - 1px");
+          float: left;
+        }
+        &:last-child {
+          @include calc(width, "70%");
+          float: right;
+        }
+      }
+    }
+    &.split-1-3 {
+      .table-cell {
+        &:first-child {
+          @include calc(width, "25% - 1px");
+          float: left;
+        }
+        &:last-child {
+          @include calc(width, "75%");
+          float: right;
+        }
+      }
+    }
+  }
+
+  // Cells that extend to the window/screen edges
+  &.extended {
+    .icon-arrow-right {
+      right: 10px;
+    }
+    a {
+      display: block;
+    }
+    .table-cell {
+      @include border-radius(0);
+      .table-cell {
+        @include border-radius(0);
+      }
+      margin: 0 0 1px;
+      @if $shadows {
+        margin: 0;
+      }
+    }
+  }
+
+  // Control to view all items
+  .view-all {
+    @include pie-clearfix;
+    @include table-cell-skin;
+
+    @include gradient-vertical(#DADADA,#CECECE);
+    text-transform: uppercase;
+    font-size: 12px;
+    @include text-shadow-white;
+    & > a {
+      display: block;
+      padding: 10px;
+    }
+    & > label {
+      display: block;
+      padding: 10px;
+    }
+    text-align: center;
+
+  }
+}

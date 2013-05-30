@@ -6,18 +6,14 @@
 @import "controls";
 @import "os_chrome";
 
+@import "device_base_layout";
+
 @import "components/headers-footers";
 @import "components/buttons";
+@import "components/typography";
 @import "components/button-positioning";
+@import "components/table-view";
+@import "components/help-txt";
 
 @import "icon-fonts/ios/fontcustom";
 @import "icon-fonts/android/fontcustom";
-
-// Temporary
-.article {
-  background: #FFF;
-  text-align: left;
-  padding: 10px;
-  line-height: 1.5;
-  font-size: 15px;
-}
