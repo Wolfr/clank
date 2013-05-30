@@ -1,10 +1,36 @@
-.cl-article--inner {
+.cl-article__inner {
 
   p {
-    margin: 0 10px;
+    &.intro {
+      font-size: 16px;
+      background: $accent-color;
+      color: #FFF;
+      text-shadow: none;
+      padding: 10px;
+      margin: 0 0 10px;
+    }
+    margin: 10px; // make use of collapsing margins
     line-height: 1.33;
     color: #333;
     @include text-shadow-white;
+    & + p {
+      margin-top: 0;
+    }
+  }
+  
+  h4 {
+    @extend p;
+  }
+  
+  pre {
+    padding: 10px;
+    font-size: 11px;
+    background: #EEE;
+  }
+  
+  a {
+    color: $accent-color;
+    border-bottom: 1px solid lighten($accent-color, 60%);
   }
 
 }

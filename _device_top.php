@@ -1,15 +1,3 @@
-<!doctype html>
-<html ng-app="myApp">
-<head>
-    <script src="components/angular/angular.js"></script>
-    <script src="components/angular-cookies/angular-cookies.min.js"></script>
-    
-    <script src="components/prefix-free/prefixfree.min.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/filters.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/application.css">
-</head>
 <body ng-controller="DeviceCtrl">
 
   <div class="controls top">
@@ -77,46 +65,3 @@
           </span>
         </div>
 
-
-        <div class="page page-detail">
-          <div class="bar-title">
-            <div>
-              <a href="#" class="btn"><span><span>My button</span></span></a>
-              <div class="title">Page title</div>
-              <a href="#" class="btn"><span><span>Another</span></span></a>
-            </div>
-          </div>
-          <div class="content cl-article">
-            <div class="cl-article--inner">
-              <div class="table-view">
-                <div class="table-view--cell">
-                  <a href="#">Apple</a>
-                </div>
-                <div class="table-view--cell">
-                  <a href="#">Orange</a>
-                </div>
-                <div class="table-view--cell">
-                  <a href="#">Banana</a>
-                </div>
-              </div>
-              <p>Phasellus convallis dapibus ultricies. Donec leo nunc, porta a vestibulum quis, commodo non mi. Donec vel eros neque, vitae ultricies elit.</p>
-            </div>
-          </div>
-          <!-- <div class="bar-footer">
-            <div>
-              <a href="#" class="btn"><span><span>My button</span></span></a>
-              <a href="#" class="btn"><span><span>Another</span></span></a>
-            </div>
-          </div> -->
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="controls bottom">
-    <p><span ng-show="deviceChoice">{{ deviceChoice.name }} - {{ deviceOrientation.name }}</span></p>
-  </div>
-
-</body>
-</html>

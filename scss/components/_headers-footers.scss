@@ -1,35 +1,27 @@
 // Layout
 .bar-title,
 .bar {
-  & > div {
-    @include pie-clearfix;
-    overflow: hidden;
-    width: 100%;
-    [data-os="ios"] & {
-      min-height: $ios-bar-size;
-      height: $ios-bar-size;
-    }
-    [data-os="android"] & {
-      min-height: $android-bar-size;
-      height: $android-bar-size;
-    }
-    position: relative;
+  @include pie-clearfix;
+  overflow: hidden;
+  width: 100%;
+  [data-os="ios"] & {
+    min-height: $ios-bar-size;
+    height: $ios-bar-size;
   }
+  [data-os="android"] & {
+    min-height: $android-bar-size;
+    height: $android-bar-size;
+  }
+  position: relative;
 }
 
 .bar-footer {
-  bottom: 0;
   position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  & > div {
-    min-height: 44px;
-    height: 44px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
+  min-height: 44px;
+  height: 44px;
 }
 
 .bar-title {
@@ -41,23 +33,16 @@
     [data-os="android"] & {
       line-height: $android-bar-size;
     }
-    max-width: 240px; // detail
-    max-width: 180px; // list
     margin: 0 auto;
     -webkit-hyphens: auto;
-    &.stretch-full {
-      max-width: none;
-    }
   }
 }
 
 /// Skin
 
-.bar-title > div,
-.bar-footer > div,
-.bar > div  {
-  position: relative;
-  
+.bar-title,
+.bar-footer,
+.bar {
   & > p {
     line-height: 44px;
     color: lighten($text-color-inverse, 20%);

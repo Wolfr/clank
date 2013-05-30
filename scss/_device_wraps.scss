@@ -12,9 +12,44 @@
 .device-body {
   margin: 0 auto;
   position: relative;
-  // background: red;
   overflow: scroll;
   -webkit-font-smoothing: antialiased;
+}
+
+.device-body * {
+  @include box-sizing(border-box);
+}
+
+.device-body {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  & > div > article.content {
+    height: 100%;
+    @include calc(height, "100% - 44px");
+    &.has-footer {
+      @include calc(height, "100% - 88px");
+    }
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    .content-inner {
+      padding: 10px;
+    }
+    .full-height {
+      height: 100%;
+    }
+  }
+  & > .bar-title,
+  & > .content,
+  & > .bar-footer {
+    margin: 0 auto;
+  }
 }
 
 .frame {

@@ -17,3 +17,24 @@
 
 @import "icon-fonts/ios/fontcustom";
 @import "icon-fonts/android/fontcustom";
+
+// Page level
+
+.page {
+  font-size: 14px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.page {
+  height: 100%;
+  .content {
+    background: #FFF;
+  }
+}
+
+.page-welcome {
+  .content {
+    background: #EEE;
+  }
+}

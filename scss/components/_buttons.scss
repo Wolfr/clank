@@ -3,9 +3,6 @@
   font-weight: 700;
   cursor: pointer;
   position: relative;
-  var { // use to help with text offset
-    font-style: normal;
-  }
   & > span,
   & > span > span {
     display: block;
