@@ -1,7 +1,7 @@
 <?php require_once('_head.php') ?>
 <?php require_once('_device_top.php') ?>
 
-<div class="cl-page cl-page-welcome">
+<div class="cl-page">
   <div class="cl-bar-title">
     <a href="index.php" class="cl-btn"><span><span>Back</span></span></a>
     <div class="cl-title">Component naming</div>

@@ -919,24 +919,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   left: auto;
 }
 
-/* line 1, ../scss/components/_table-view.scss */
-.cl-table-view-title {
-  padding: 0;
-  margin: 10px 10px 0 20px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #3E3E3E;
-}
-/* line 7, ../scss/components/_table-view.scss */
-.cl-table-view-title + .cl-table-view, .cl-table-view-title + .cl-table-view__extended {
-  padding-top: 5px;
-}
-/* line 10, ../scss/components/_table-view.scss */
-.cl-table-view-title + .input-group {
-  padding-top: 5px;
-}
-
-/* line 15, ../scss/components/_table-view.scss */
+/* line 3, ../scss/components/_table-view.scss */
 .cl-table-view, .cl-table-view__extended {
   *zoom: 1;
   margin: 0;
@@ -952,69 +935,48 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   clear: both;
 }
 
-/* line 22, ../scss/components/_table-view.scss */
-.cl-table-view__cell {
+/* line 12, ../scss/components/_table-view.scss */
+.cl-table-view-title, .cl-table-view-title-extended {
+  padding: 0;
+  margin: 10px 10px 0 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #3E3E3E;
+}
+/* line 18, ../scss/components/_table-view.scss */
+.cl-table-view-title + .cl-table-view, .cl-table-view-title-extended + .cl-table-view, .cl-table-view-title + .cl-table-view__extended, .cl-table-view-title-extended + .cl-table-view__extended {
+  padding-top: 5px;
+}
+/* line 21, ../scss/components/_table-view.scss */
+.cl-table-view-title + .input-group, .cl-table-view-title-extended + .input-group {
+  padding-top: 5px;
+}
+
+/* line 26, ../scss/components/_table-view.scss */
+.cl-table-view-title-extended {
+  margin-left: 10px;
+}
+
+/* line 34, ../scss/components/_table-view.scss */
+.cl-table-view__cell, .cl-table-view__cell-single {
   font-size: 16px;
   min-height: 44px;
   margin: 0 10px;
   position: relative;
   vertical-align: middle;
 }
-/* line 28, ../scss/components/_table-view.scss */
-.cl-table-view__cell p, .cl-table-view__cell .cl-article h4, .cl-article .cl-table-view__cell h4 {
+/* line 40, ../scss/components/_table-view.scss */
+.cl-table-view__cell p, .cl-table-view__cell-single p, .cl-table-view__cell .cl-article h4, .cl-article .cl-table-view__cell h4, .cl-table-view__cell-single .cl-article h4, .cl-article .cl-table-view__cell-single h4 {
   padding: 0;
 }
-/* line 31, ../scss/components/_table-view.scss */
-.cl-table-view__cell a {
+/* line 43, ../scss/components/_table-view.scss */
+.cl-table-view__cell a, .cl-table-view__cell-single a {
   font-weight: 700;
   color: #000;
 }
-
-/* line 37, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] {
-  *zoom: 1;
-  background: white;
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-div[class=cl-table-view__cell]:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 185, ../scss/_mixins.scss */
-div[class=cl-table-view__cell]:first-child {
-  -moz-border-radius-topleft: 2.5px;
-  -webkit-border-top-left-radius: 2.5px;
-  border-top-left-radius: 2.5px;
-  -moz-border-radius-topright: 2.5px;
-  -webkit-border-top-right-radius: 2.5px;
-  border-top-right-radius: 2.5px;
-}
-/* line 188, ../scss/_mixins.scss */
-div[class=cl-table-view__cell]:last-child {
-  -moz-border-radius-bottomleft: 2.5px;
-  -webkit-border-bottom-left-radius: 2.5px;
-  border-bottom-left-radius: 2.5px;
-  -moz-border-radius-bottomright: 2.5px;
-  -webkit-border-bottom-right-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
-}
-/* line 40, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] > a {
-  display: block;
-  padding: 10px;
-  min-height: 44px;
-}
-/* line 45, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] > label {
-  display: block;
-  padding: 10px;
-}
-/* line 51, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell]:hover, div[class=cl-table-view__cell]:active, div[class=cl-table-view__cell]:focus {
+/* line 48, ../scss/components/_table-view.scss */
+.cl-table-view__cell a:hover, .cl-table-view__cell-single a:hover, .cl-table-view__cell a:active, .cl-table-view__cell-single a:active, .cl-table-view__cell a:focus, .cl-table-view__cell-single a:focus {
+  color: #FFF;
   background: #0188f4;
   background-color: #0174ee;
   background-image: -moz-linear-gradient(top, #0188f4, #0158e6);
@@ -1024,39 +986,72 @@ div[class=cl-table-view__cell]:hover, div[class=cl-table-view__cell]:active, div
   background-image: linear-gradient(to bottom, #0188f4, #0158e6);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
-  color: #FFF;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 56, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell]:hover h3, div[class=cl-table-view__cell]:hover a, div[class=cl-table-view__cell]:hover .icon-arrow-right, div[class=cl-table-view__cell]:hover .disclosure-help, div[class=cl-table-view__cell]:active h3, div[class=cl-table-view__cell]:active a, div[class=cl-table-view__cell]:active .icon-arrow-right, div[class=cl-table-view__cell]:active .disclosure-help, div[class=cl-table-view__cell]:focus h3, div[class=cl-table-view__cell]:focus a, div[class=cl-table-view__cell]:focus .icon-arrow-right, div[class=cl-table-view__cell]:focus .disclosure-help {
-  color: #FFF;
+
+/* line 57, ../scss/components/_table-view.scss */
+.cl-table-view__cell-single {
+  *zoom: 1;
+  background: white;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 60, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] .title, div[class=cl-table-view__cell] h3 {
+/* line 38, ../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.cl-table-view__cell-single:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 185, ../scss/_mixins.scss */
+.cl-table-view__cell-single:first-child {
+  -moz-border-radius-topleft: 2.5px;
+  -webkit-border-top-left-radius: 2.5px;
+  border-top-left-radius: 2.5px;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 188, ../scss/_mixins.scss */
+.cl-table-view__cell-single:last-child {
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 62, ../scss/components/_table-view.scss */
+.cl-table-view__cell-single > a {
+  display: block;
+  padding: 10px;
+  min-height: 44px;
+}
+/* line 67, ../scss/components/_table-view.scss */
+.cl-table-view__cell-single > label {
+  display: block;
+  padding: 10px;
+}
+
+/* line 74, ../scss/components/_table-view.scss */
+.cl-table-view .label, .cl-table-view__extended .label {
   font-size: 16px;
   font-weight: 700;
   margin: 0;
   padding: 0;
 }
-/* line 66, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] .disclosure-help {
+
+/* line 81, ../scss/components/_table-view.scss */
+.cl-table-view .disclosure-help, .cl-table-view__extended .disclosure-help {
   font-weight: 400;
   position: absolute;
   top: 35%;
   right: 30px;
   color: #AAA;
 }
-/* line 73, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] .icon-arrow-right {
-  font-size: 19px;
-  position: absolute;
-  top: 26%;
-  right: 10px;
-  font-weight: 700;
-  color: #AAA;
-}
-/* line 81, ../scss/components/_table-view.scss */
-div[class=cl-table-view__cell] .meta {
+
+/* line 89, ../scss/components/_table-view.scss */
+.cl-table-view .meta, .cl-table-view__extended .meta {
   font-weight: 400;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66);
   opacity: 0.66;
@@ -1065,7 +1060,17 @@ div[class=cl-table-view__cell] .meta {
   padding: 0;
 }
 
-/* line 90, ../scss/components/_table-view.scss */
+/* line 97, ../scss/components/_table-view.scss */
+.cl-table-view .icon-ios-arrow-right, .cl-table-view__extended .icon-ios-arrow-right {
+  font-size: 19px;
+  position: absolute;
+  top: 26%;
+  right: 10px;
+  font-weight: 700;
+  color: #AAA;
+}
+
+/* line 106, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell {
   margin: 0 10px;
   *zoom: 1;
@@ -1076,8 +1081,8 @@ div[class=cl-table-view__cell] .meta {
   display: table;
   clear: both;
 }
-/* line 97, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell:first-child .cl-table-view__cell:first-child {
+/* line 113, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell:first-child .cl-table-view__cell:first-child, .cl-table-view--split-cell:first-child .cl-table-view__cell-single:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1086,42 +1091,42 @@ div[class=cl-table-view__cell] .meta {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
   border-top-left-radius: 2.5px;
-}
-/* line 101, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell:first-child .cl-table-view__cell:last-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -moz-border-radius-topright: 2.5px;
-  -webkit-border-top-right-radius: 2.5px;
-  border-top-right-radius: 2.5px;
-}
-/* line 107, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell:last-child .cl-table-view__cell:first-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -moz-border-radius-bottomleft: 2.5px;
-  -webkit-border-bottom-left-radius: 2.5px;
-  border-bottom-left-radius: 2.5px;
-}
-/* line 111, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell:last-child .cl-table-view__cell:last-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -moz-border-radius-bottomright: 2.5px;
-  -webkit-border-bottom-right-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
 }
 /* line 117, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell:only-child .cl-table-view__cell:first-child {
+.cl-table-view--split-cell:first-child .cl-table-view__cell:last-child, .cl-table-view--split-cell:first-child .cl-table-view__cell-single:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-topright: 2.5px;
+  -webkit-border-top-right-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+/* line 123, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell:last-child .cl-table-view__cell:first-child, .cl-table-view--split-cell:last-child .cl-table-view__cell-single:first-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-bottomleft: 2.5px;
+  -webkit-border-bottom-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+}
+/* line 127, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell:last-child .cl-table-view__cell:last-child, .cl-table-view--split-cell:last-child .cl-table-view__cell-single:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-bottomright: 2.5px;
+  -webkit-border-bottom-right-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+}
+/* line 133, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell:only-child .cl-table-view__cell:first-child, .cl-table-view--split-cell:only-child .cl-table-view__cell-single:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1134,8 +1139,8 @@ div[class=cl-table-view__cell] .meta {
   -webkit-border-bottom-left-radius: 2.5px;
   border-bottom-left-radius: 2.5px;
 }
-/* line 121, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell:only-child .cl-table-view__cell:last-child {
+/* line 137, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell:only-child .cl-table-view__cell:last-child, .cl-table-view--split-cell:only-child .cl-table-view__cell-single:last-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1148,8 +1153,8 @@ div[class=cl-table-view__cell] .meta {
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 126, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell .cl-table-view__cell {
+/* line 142, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell .cl-table-view__cell, .cl-table-view--split-cell .cl-table-view__cell-single {
   padding: 10px;
   width: 50%;
   margin: 0;
@@ -1159,7 +1164,7 @@ div[class=cl-table-view__cell] .meta {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 /* line 185, ../scss/_mixins.scss */
-.cl-table-view--split-cell .cl-table-view__cell:first-child {
+.cl-table-view--split-cell .cl-table-view__cell:first-child, .cl-table-view--split-cell .cl-table-view__cell-single:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
   border-top-left-radius: 2.5px;
@@ -1168,7 +1173,7 @@ div[class=cl-table-view__cell] .meta {
   border-top-right-radius: 2.5px;
 }
 /* line 188, ../scss/_mixins.scss */
-.cl-table-view--split-cell .cl-table-view__cell:last-child {
+.cl-table-view--split-cell .cl-table-view__cell:last-child, .cl-table-view--split-cell .cl-table-view__cell-single:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
   border-bottom-left-radius: 2.5px;
@@ -1176,24 +1181,24 @@ div[class=cl-table-view__cell] .meta {
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 131, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell .cl-table-view__cell:first-child {
+/* line 147, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell .cl-table-view__cell:first-child, .cl-table-view--split-cell .cl-table-view__cell-single:first-child {
   width: -moz-calc(50% - 1px);
   width: -o-calc(50% - 1px);
   width: -webkit-calc(50% - 1px);
   width: calc(50% - 1px);
   float: left;
 }
-/* line 135, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell .cl-table-view__cell:last-child {
+/* line 151, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell .cl-table-view__cell:last-child, .cl-table-view--split-cell .cl-table-view__cell-single:last-child {
   width: -moz-calc(50%);
   width: -o-calc(50%);
   width: -webkit-calc(50%);
   width: calc(50%);
   float: right;
 }
-/* line 141, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell .cl-table-view__cell:hover, .cl-table-view--split-cell .cl-table-view__cell:active, .cl-table-view--split-cell .cl-table-view__cell:focus {
+/* line 157, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell .cl-table-view__cell:hover, .cl-table-view--split-cell .cl-table-view__cell-single:hover, .cl-table-view--split-cell .cl-table-view__cell:active, .cl-table-view--split-cell .cl-table-view__cell-single:active, .cl-table-view--split-cell .cl-table-view__cell:focus, .cl-table-view--split-cell .cl-table-view__cell-single:focus {
   background: #0188f4;
   background-color: #0174ee;
   background-image: -moz-linear-gradient(top, #0188f4, #0158e6);
@@ -1206,52 +1211,52 @@ div[class=cl-table-view__cell] .meta {
   color: #FFF;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 146, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell .cl-table-view__cell:hover h3, .cl-table-view--split-cell .cl-table-view__cell:hover a, .cl-table-view--split-cell .cl-table-view__cell:hover .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:hover .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell:active h3, .cl-table-view--split-cell .cl-table-view__cell:active a, .cl-table-view--split-cell .cl-table-view__cell:active .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:active .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell:focus h3, .cl-table-view--split-cell .cl-table-view__cell:focus a, .cl-table-view--split-cell .cl-table-view__cell:focus .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:focus .disclosure-help {
+/* line 162, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell .cl-table-view__cell:hover h3, .cl-table-view--split-cell .cl-table-view__cell-single:hover h3, .cl-table-view--split-cell .cl-table-view__cell:hover a, .cl-table-view--split-cell .cl-table-view__cell-single:hover a, .cl-table-view--split-cell .cl-table-view__cell:hover .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell-single:hover .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:hover .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell-single:hover .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell:active h3, .cl-table-view--split-cell .cl-table-view__cell-single:active h3, .cl-table-view--split-cell .cl-table-view__cell:active a, .cl-table-view--split-cell .cl-table-view__cell-single:active a, .cl-table-view--split-cell .cl-table-view__cell:active .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell-single:active .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:active .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell-single:active .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell:focus h3, .cl-table-view--split-cell .cl-table-view__cell-single:focus h3, .cl-table-view--split-cell .cl-table-view__cell:focus a, .cl-table-view--split-cell .cl-table-view__cell-single:focus a, .cl-table-view--split-cell .cl-table-view__cell:focus .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell-single:focus .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:focus .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell-single:focus .disclosure-help {
   color: #FFF;
 }
-/* line 153, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell.split-2-3 .cl-table-view__cell:first-child {
+/* line 169, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell.split-2-3 .cl-table-view__cell:first-child, .cl-table-view--split-cell.split-2-3 .cl-table-view__cell-single:first-child {
   width: -moz-calc(40% - 1px);
   width: -o-calc(40% - 1px);
   width: -webkit-calc(40% - 1px);
   width: calc(40% - 1px);
   float: left;
 }
-/* line 157, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell.split-2-3 .cl-table-view__cell:last-child {
+/* line 173, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell.split-2-3 .cl-table-view__cell:last-child, .cl-table-view--split-cell.split-2-3 .cl-table-view__cell-single:last-child {
   width: -moz-calc(60% - 1px);
   width: -o-calc(60% - 1px);
   width: -webkit-calc(60% - 1px);
   width: calc(60% - 1px);
   float: right;
 }
-/* line 165, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell.split-3-7 .cl-table-view__cell:first-child {
+/* line 181, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell.split-3-7 .cl-table-view__cell:first-child, .cl-table-view--split-cell.split-3-7 .cl-table-view__cell-single:first-child {
   width: -moz-calc(30% - 1px);
   width: -o-calc(30% - 1px);
   width: -webkit-calc(30% - 1px);
   width: calc(30% - 1px);
   float: left;
 }
-/* line 169, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell.split-3-7 .cl-table-view__cell:last-child {
+/* line 185, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell.split-3-7 .cl-table-view__cell:last-child, .cl-table-view--split-cell.split-3-7 .cl-table-view__cell-single:last-child {
   width: -moz-calc(70%);
   width: -o-calc(70%);
   width: -webkit-calc(70%);
   width: calc(70%);
   float: right;
 }
-/* line 177, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell.split-1-3 .cl-table-view__cell:first-child {
+/* line 193, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell.split-1-3 .cl-table-view__cell:first-child, .cl-table-view--split-cell.split-1-3 .cl-table-view__cell-single:first-child {
   width: -moz-calc(25% - 1px);
   width: -o-calc(25% - 1px);
   width: -webkit-calc(25% - 1px);
   width: calc(25% - 1px);
   float: left;
 }
-/* line 181, ../scss/components/_table-view.scss */
-.cl-table-view--split-cell.split-1-3 .cl-table-view__cell:last-child {
+/* line 197, ../scss/components/_table-view.scss */
+.cl-table-view--split-cell.split-1-3 .cl-table-view__cell:last-child, .cl-table-view--split-cell.split-1-3 .cl-table-view__cell-single:last-child {
   width: -moz-calc(75%);
   width: -o-calc(75%);
   width: -webkit-calc(75%);
@@ -1259,7 +1264,7 @@ div[class=cl-table-view__cell] .meta {
   float: right;
 }
 
-/* line 190, ../scss/components/_table-view.scss */
+/* line 206, ../scss/components/_table-view.scss */
 .view-all {
   *zoom: 1;
   background: white;
@@ -1303,27 +1308,27 @@ div[class=cl-table-view__cell] .meta {
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 198, ../scss/components/_table-view.scss */
+/* line 214, ../scss/components/_table-view.scss */
 .view-all > a {
   display: block;
   padding: 10px;
 }
-/* line 202, ../scss/components/_table-view.scss */
+/* line 218, ../scss/components/_table-view.scss */
 .view-all > label {
   display: block;
   padding: 10px;
 }
 
-/* line 212, ../scss/components/_table-view.scss */
+/* line 228, ../scss/components/_table-view.scss */
 .cl-table-view__extended .icon-arrow-right {
   right: 10px;
 }
-/* line 215, ../scss/components/_table-view.scss */
+/* line 231, ../scss/components/_table-view.scss */
 .cl-table-view__extended a {
   display: block;
 }
-/* line 218, ../scss/components/_table-view.scss */
-.cl-table-view__extended .cl-table-view__cell {
+/* line 234, ../scss/components/_table-view.scss */
+.cl-table-view__extended .cl-table-view__cell, .cl-table-view__extended .cl-table-view__cell-single {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1332,8 +1337,8 @@ div[class=cl-table-view__cell] .meta {
   margin: 0 0 1px;
   margin: 0;
 }
-/* line 220, ../scss/components/_table-view.scss */
-.cl-table-view__extended .cl-table-view__cell .cl-table-view__cell {
+/* line 236, ../scss/components/_table-view.scss */
+.cl-table-view__extended .cl-table-view__cell .cl-table-view__cell, .cl-table-view__extended .cl-table-view__cell-single .cl-table-view__cell, .cl-table-view__extended .cl-table-view__cell .cl-table-view__cell-single, .cl-table-view__extended .cl-table-view__cell-single .cl-table-view__cell-single {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1371,11 +1376,13 @@ div[class=cl-table-view__cell] .meta {
   font-style: normal;
 }
 
-/* line 19, ../scss/icon-fonts/ios/_fontcustom.scss */
+/* line 21, ../scss/icon-fonts/ios/_fontcustom.scss */
 .icon-ios-alarm:before,
+.icon-ios-arrow-right:before,
 .icon-ios-battery:before,
 .icon-ios-locate:before,
-.icon-ios-lock:before {
+.icon-ios-lock:before,
+.icon-ios-square:before {
   font-family: "ios";
   font-style: normal;
   font-weight: normal;
@@ -1387,24 +1394,34 @@ div[class=cl-table-view__cell] .meta {
   text-decoration: inherit;
 }
 
-/* line 31, ../scss/icon-fonts/ios/_fontcustom.scss */
+/* line 33, ../scss/icon-fonts/ios/_fontcustom.scss */
 .icon-ios-alarm:before {
   content: "\f100";
 }
 
-/* line 32, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-battery:before {
+/* line 34, ../scss/icon-fonts/ios/_fontcustom.scss */
+.icon-ios-arrow-right:before {
   content: "\f101";
 }
 
-/* line 33, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-locate:before {
+/* line 35, ../scss/icon-fonts/ios/_fontcustom.scss */
+.icon-ios-battery:before {
   content: "\f102";
 }
 
-/* line 34, ../scss/icon-fonts/ios/_fontcustom.scss */
-.icon-ios-lock:before {
+/* line 36, ../scss/icon-fonts/ios/_fontcustom.scss */
+.icon-ios-locate:before {
   content: "\f103";
+}
+
+/* line 37, ../scss/icon-fonts/ios/_fontcustom.scss */
+.icon-ios-lock:before {
+  content: "\f104";
+}
+
+/* line 38, ../scss/icon-fonts/ios/_fontcustom.scss */
+.icon-ios-square:before {
+  content: "\f105";
 }
 
 /* 
@@ -1454,19 +1471,67 @@ div[class=cl-table-view__cell] .meta {
   content: "\f103";
 }
 
-/* line 22, ../scss/application.scss */
+/* 
+ * Font Custom: bare CSS
+ */
+@font-face {
+  font-family: "my-app-ios";
+  src: url("../scss/icon-fonts/my-app-ios/my-app-ios.eot");
+  src: url("../scss/icon-fonts/my-app-ios/my-app-ios.eot?#iefix") format("embedded-opentype"), url("../scss/icon-fonts/my-app-ios/my-app-ios.woff") format("woff"), url("../scss/icon-fonts/my-app-ios/my-app-ios.ttf") format("truetype"), url("../scss/icon-fonts/my-app-ios/my-app-ios.svg#my-app-ios") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 19, ../scss/icon-fonts/my_app_ios/_fontcustom.scss */
+.icon-my-app-ios-arrow-down:before,
+.icon-my-app-ios-arrow-left:before,
+.icon-my-app-ios-arrow-right:before,
+.icon-my-app-ios-arrow-up:before {
+  font-family: "my-app-ios";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* line 31, ../scss/icon-fonts/my_app_ios/_fontcustom.scss */
+.icon-my-app-ios-arrow-down:before {
+  content: "\f100";
+}
+
+/* line 32, ../scss/icon-fonts/my_app_ios/_fontcustom.scss */
+.icon-my-app-ios-arrow-left:before {
+  content: "\f101";
+}
+
+/* line 33, ../scss/icon-fonts/my_app_ios/_fontcustom.scss */
+.icon-my-app-ios-arrow-right:before {
+  content: "\f102";
+}
+
+/* line 34, ../scss/icon-fonts/my_app_ios/_fontcustom.scss */
+.icon-my-app-ios-arrow-up:before {
+  content: "\f103";
+}
+
+/* line 26, ../scss/application.scss */
 .cl-page {
   font-size: 14px;
   text-align: left;
   word-wrap: break-word;
   height: 100%;
 }
-/* line 27, ../scss/application.scss */
+/* line 31, ../scss/application.scss */
 .cl-page .cl-content {
   background: #FFF;
 }
 
-/* line 33, ../scss/application.scss */
-.cl-page-welcome .cl-content {
+/* line 38, ../scss/application.scss */
+.cl-page-welcome .cl-content,
+.cl-page-table-view .cl-content {
   background: #EEE;
 }

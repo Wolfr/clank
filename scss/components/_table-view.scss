@@ -1,3 +1,14 @@
+// Base for table view
+
+.cl-table-view {
+  @include pie-clearfix;
+  @include unstyled;
+  padding: 10px 0;
+  width: 100%;
+}
+
+// Table view titles
+
 .cl-table-view-title {
   padding: 0;
   margin: 10px 10px 0 20px;
@@ -12,12 +23,13 @@
   }
 }
 
-.cl-table-view {
-  @include pie-clearfix;
-  @include unstyled;
-  padding: 10px 0;
-  width: 100%;
+.cl-table-view-title-extended {
+  @extend .cl-table-view-title;
+  margin-left: 10px;
 }
+
+// Table view cell
+
 
 .cl-table-view__cell {
   font-size: 16px;
@@ -31,10 +43,20 @@
   a {
     font-weight: 700;
     color: #000;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #FFF;
+      background: #0188f4;
+      @include gradient-vertical(#0188f4, #0158e6);
+      @include text-shadow-black;
+    }
   }
 }
 
-div[class=cl-table-view__cell] {
+.cl-table-view__cell-single {
+  @extend .cl-table-view__cell;
+
   @include pie-clearfix;
   @include table-cell-skin;
   & > a {
@@ -46,45 +68,39 @@ div[class=cl-table-view__cell] {
     display: block;
     padding: 10px;
   }
-  &:hover,
-  &:active,
-  &:focus {
-    background: #0188f4;
-    @include gradient-vertical(#0188f4, #0158e6);
-    color: #FFF;
-    @include text-shadow-black;
-    h3, a, .icon-arrow-right, .disclosure-help {
-      color: #FFF;
-    }
-  }
-  .title, h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-  }
-  .disclosure-help {
-    font-weight: 400;
-    position: absolute;
-    top: 35%;
-    right: 30px;
-    color: #AAA;
-  }
-  .icon-arrow-right {
-    font-size: 19px;
-    position: absolute;
-    top: 26%;
-    right: 10px;
-    font-weight: 700;
-    color: #AAA;
-  }
-  .meta {
-    font-weight: 400;
-    @include opacity(0.66);
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-  }
+}
+
+
+.cl-table-view .label {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.cl-table-view .disclosure-help {
+  font-weight: 400;
+  position: absolute;
+  top: 35%;
+  right: 30px;
+  color: #AAA;
+}
+
+.cl-table-view .meta {
+  font-weight: 400;
+  @include opacity(0.66);
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+  
+.cl-table-view .icon-ios-arrow-right {
+  font-size: 19px;
+  position: absolute;
+  top: 26%;
+  right: 10px;
+  font-weight: 700;
+  color: #AAA;
 }
 
 .cl-table-view--split-cell {

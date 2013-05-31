@@ -14,8 +14,12 @@
 @import "components/table-view";
 @import "components/help-txt";
 
+// System icons
 @import "icon-fonts/ios/fontcustom";
 @import "icon-fonts/android/fontcustom";
+
+// App specific icons
+@import "icon-fonts/my_app_ios/fontcustom";
 
 // Page level
 
@@ -29,7 +33,8 @@
   }
 }
 
-.cl-page-welcome {
+.cl-page-welcome,
+.cl-page-table-view {
   .cl-content {
     background: #EEE;
   }

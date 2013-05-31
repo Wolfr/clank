@@ -11,6 +11,8 @@
   <div class="cl-content">
     <p class="cl-article-intro">Why you should use Clank for your HTML/CSS prototypes.</p>
     <div class="cl-article">
+      <h4>Actually looks like a native app</h4>
+      <p>We strive to actually look like a native app (as far as web tech allows us to go) instead of pseudo implementations.</p>
       <h4>Component based: pick and choose</h4>
       <p>Clank is a collection of HTML/CSS components. For example, a button is a component. It has it's own SCSS file: <code>components/_button.scss</a></code>.</p>
       <p>Every component stands on its own and can't influence other components. Clank has <a href="component_naming.php">strong rules</a> on component naming to avoid any style clashes.</p>

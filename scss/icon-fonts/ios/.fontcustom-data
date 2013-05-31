@@ -11,8 +11,10 @@
   "file_name": "ios",
   "glyphs": [
     "alarm",
+    "arrow-right",
     "battery",
     "locate",
-    "lock"
+    "lock",
+    "square"
   ]
 }

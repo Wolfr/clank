@@ -1,0 +1,18 @@
+{
+  "fonts": [
+    "my-app-ios.ttf",
+    "my-app-ios.woff",
+    "my-app-ios.eot",
+    "my-app-ios.svg"
+  ],
+  "templates": [
+    "_fontcustom.scss"
+  ],
+  "file_name": "my-app-ios",
+  "glyphs": [
+    "arrow-down",
+    "arrow-left",
+    "arrow-right",
+    "arrow-up"
+  ]
+}

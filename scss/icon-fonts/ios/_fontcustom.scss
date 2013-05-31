@@ -14,9 +14,11 @@
 }
 
 .icon-ios-alarm:before,
+.icon-ios-arrow-right:before,
 .icon-ios-battery:before,
 .icon-ios-locate:before,
-.icon-ios-lock:before {
+.icon-ios-lock:before,
+.icon-ios-square:before {
   font-family: "ios";
   font-style: normal;
   font-weight: normal;
@@ -29,6 +31,8 @@
 }
 
 .icon-ios-alarm:before { content: "\f100"; }
-.icon-ios-battery:before { content: "\f101"; }
-.icon-ios-locate:before { content: "\f102"; }
-.icon-ios-lock:before { content: "\f103"; }
+.icon-ios-arrow-right:before { content: "\f101"; }
+.icon-ios-battery:before { content: "\f102"; }
+.icon-ios-locate:before { content: "\f103"; }
+.icon-ios-lock:before { content: "\f104"; }
+.icon-ios-square:before { content: "\f105"; }
