@@ -1,13 +1,13 @@
 <?php require_once('_head.php') ?>
 <?php require_once('_device_top.php') ?>
 
-<div class="page">
-  <div class="bar-title">
-      <a href="index.php" class="btn"><span><span>Back</span></span></a>
-      <div class="title">Table view</div>
+<div class="cl-page">
+  <div class="cl-bar-title">
+      <a href="index.php" class="cl-btn"><span><span>Back</span></span></a>
+      <div class="cl-title">Table view</div>
   </div>
-  <div class="content cl-article">
-    <div class="cl-article__inner">
+  <div class="cl-content">
+    <div class="cl-article">
       <p>Regular table view</p>
     </div>
     <div class="cl-table-view">
@@ -18,7 +18,7 @@
         <a href="#">Item 2</a>
       </div>
     </div>
-    <div class="cl-article__inner">
+    <!-- <div class="cl-article">
       <p>Regular table view with disclosure arrows</p>
     </div>
     <div class="cl-table-view">
@@ -30,8 +30,8 @@
         <a href="#">Item 2</a>
         <i class="icon icon-arrow-right"></i>
       </div>
-    </div>
-    <div class="cl-article__inner">
+    </div> -->
+    <div class="cl-article">
       <p>Extended table view</p>
     </div>
     <div class="cl-table-view__extended">

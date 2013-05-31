@@ -6,10 +6,9 @@
 @import "controls";
 @import "os_chrome";
 
-@import "device_base_layout";
-
 @import "components/headers-footers";
 @import "components/buttons";
+@import "components/code-example";
 @import "components/typography";
 @import "components/button-positioning";
 @import "components/table-view";
@@ -20,21 +19,18 @@
 
 // Page level
 
-.page {
+.cl-page {
   font-size: 14px;
   text-align: left;
   word-wrap: break-word;
-}
-
-.page {
   height: 100%;
-  .content {
+  .cl-content {
     background: #FFF;
   }
 }
 
-.page-welcome {
-  .content {
+.cl-page-welcome {
+  .cl-content {
     background: #EEE;
   }
 }

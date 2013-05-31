@@ -1,22 +1,22 @@
 
 // Button positioning
-.bar-title,
-.bar-footer,
-.bar {
+.cl-bar-title,
+.cl-bar-footer,
+.cl-bar {
   // If no aligment is specified align left
-  .btn {
+  .cl-btn {
     position: absolute;
     top: 0;
     left: 0;
   }
-  .title + .btn, // if there is a button right after .title it should probably be right aligned
-  .btn:last-child { // if there is a button the last child it should probably be right aligned
+  .cl-title + .btn, // if there is a button right after .title it should probably be right aligned
+  .cl-btn:last-child { // if there is a button the last child it should probably be right aligned
     position: absolute;
     top: 0;
     right: 0;
     left: auto;
   }
-  .btn.align-center {
+  .cl-btn.align-center {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@
     margin: 0 auto;
     max-width: 232px; // 320 - 44 - 44
   }
-  .align-right {
+  cl-.align-right {
     position: absolute;
     top: 0;
     right: 0;

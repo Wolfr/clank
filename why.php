@@ -1,16 +1,16 @@
 <?php require_once('_head.php') ?>
 <?php require_once('_device_top.php') ?>
 
-<div class="page page-detail">
-  <div class="bar-title">
+<div class="cl-page cl-page-detail">
+  <div class="cl-bar-title">
     <div>
-      <a href="index.php" class="btn"><span><span>Back</span></span></a>
-      <div class="title">Why Clank?</div>
+      <a href="index.php" class="cl-btn"><span><span>Back</span></span></a>
+      <div class="cl-title">Why Clank?</div>
     </div>
   </div>
-  <div class="content cl-article">
-    <div class="cl-article__inner">
-      <p class="intro">Why you should use Clank for your HTML/CSS prototypes.</p>
+  <div class="cl-content">
+    <p class="cl-article-intro">Why you should use Clank for your HTML/CSS prototypes.</p>
+    <div class="cl-article">
       <h4>Component based: pick and choose</h4>
       <p>Clank is a collection of HTML/CSS components. For example, a button is a component. It has it's own SCSS file: <code>components/_button.scss</a></code>.</p>
       <p>Every component stands on its own and can't influence other components. Clank has <a href="component_naming.php">strong rules</a> on component naming to avoid any style clashes.</p>

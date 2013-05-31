@@ -1,12 +1,12 @@
 <?php require_once('_head.php') ?>
 <?php require_once('_device_top.php') ?>
 
-<div class="page page-welcome">
-  <div class="bar-title">
-    <div class="title">Welcome to Clank</div>
+<div class="cl-page cl-page-welcome">
+  <div class="cl-bar-title">
+    <div class="cl-title">Welcome to Clank</div>
   </div>
-  <div class="content cl-article">
-    <div class="cl-article__inner">
+  <div class="cl-content">
+    <div class="cl-article">
       <p>You are looking at Clank, an open source prototyping framework for mobile apps</p>
       <p>Think of it as Twitter Bootstrap but for prototyping native apps.</p>
     </div>
@@ -28,7 +28,7 @@
         <a href="table-view.php">Table view</a>
       </div>
     </div>
-    <h3 class="cl-table-view-title">Customizing</h3>
+    <h3 class="cl-table-view-title">Creating your own</h3>
     <div class="cl-table-view">
       <div class="cl-table-view__cell">
         <a href="component_naming.php">Component naming conventions</a>

@@ -1,9 +1,13 @@
 /**
+  OS Chrome
+**/
+
+/**
   Shared
 **/
 
-.ios-status,
-.android-status {
+.cl-ios-status,
+.cl-android-status {
   // Style
   background: #000;
   color: #FFF;
@@ -34,7 +38,7 @@
   iOS only
 **/
 
-.ios-status {
+.cl-ios-status {
   font-weight: 700;
   font-family: Helvetica;
   height: 20px;
@@ -49,7 +53,7 @@
 
 // Reception (iOS)
 
-.signals {
+.cl-ios-status .signals {
   font-size: 0;
   margin-right: 3px;
   span {
@@ -78,7 +82,7 @@
   }
 }
 
-// Batter icon ios
+// Battery icon ios
 
 .icon-ios-battery {
   font-size: 22px;
@@ -94,16 +98,15 @@
   Android only
 **/
 
-.android-status {
+.cl-android-status {
   font-family: Roboto;
-  
   background: #000;
   color: #FFF;
   height: 24px;
   line-height: 24px;
 }
   
-.android-software-buttons {
+.cl-android-software-buttons {
   background: #000;
   color: #FFF;
   position: absolute;

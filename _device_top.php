@@ -1,6 +1,6 @@
 <body ng-controller="DeviceCtrl">
 
-  <div class="controls top">
+  <div class="cl-docs-controls cl-docs-controls--top">
     <div>
       <label for="deviceChoice">Device</label>
       <select ng-model="deviceChoice" id="deviceChoice" ng-options="p.name for p in devices" ng-change="saveDeviceChoice()"></select>
@@ -15,11 +15,11 @@
     </div>
   </div>
 
-  <div class="frame">
-    <div class="phone-wrap" style="-webkit-transform: scale({{deviceSize}}); -moz-transform: scale({{deviceSize}});" data-os="{{ deviceChoice.os | lowercase | removewhitespace }}" data-device="{{ deviceChoice.name | lowercase | removewhitespace }}-{{ deviceOrientation.name | lowercase }}">
-      <div class="device-body">
+  <div class="cl-device-frame">
+    <div class="cl-phone-wrap" style="-webkit-transform: scale({{deviceSize}}); -moz-transform: scale({{deviceSize}});" data-os="{{ deviceChoice.os | lowercase | removewhitespace }}" data-device="{{ deviceChoice.name | lowercase | removewhitespace }}-{{ deviceOrientation.name | lowercase }}">
+      <div class="cl-device-body">
 
-        <div class="ios-status" ng-show="deviceChoice.os == 'iOS'">
+        <div class="cl-ios-status" ng-show="deviceChoice.os == 'iOS'">
           <span>
             <span class="signals">
               <span class="signal1"></span>
@@ -42,7 +42,7 @@
         </div>
 
 
-        <div class="android-status" ng-show="deviceChoice.os == 'Android'">
+        <div class="cl-android-status" ng-show="deviceChoice.os == 'Android'">
           <!-- <span>
             <span>Notification</span>
             <span>Notification</span>
@@ -57,7 +57,7 @@
           </span>
         </div>
         
-        <div class="android-software-buttons" ng-show="deviceChoice.os == 'Android'">
+        <div class="cl-android-software-buttons" ng-show="deviceChoice.os == 'Android'">
           <span>
             <span>Back</span>
             <span>Home</span>

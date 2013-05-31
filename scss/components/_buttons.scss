@@ -1,4 +1,4 @@
-.btn {
+.cl-btn {
   display: block;
   font-weight: 700;
   cursor: pointer;
@@ -31,7 +31,7 @@
   .iconfont + .label {
     margin-left: 0;
   }
-  .content & .iconfont {
+  .cl-content & .iconfont {
     position: absolute;
     left: 17px;
     top: 3px;
@@ -59,9 +59,9 @@
   }
   
   // Bar buttons
-  .bar-title &,
-  .bar-footer &,
-  .bar & {
+  .cl-bar-title &,
+  .cl-bar-footer &,
+  .cl-bar & {
     padding: 0 7px;
     & > span {
       margin: 5px 0;
@@ -69,7 +69,7 @@
     }
   }
   // Content buttons
-  .content .controls & > span {
+  .cl-content .controls & > span {
     margin: 5px 10px; // 10px for sides
     font-size: 15px; // content buttons should have larger font sizes
     // Fake gradient border
@@ -95,7 +95,7 @@
   }
 }
 
-.btn {
+.cl-btn {
   // Border radius logic
   & > span {
     // Skin
