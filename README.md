@@ -22,7 +22,7 @@ How to use
 
 Run "bower install" to start. This will install the necessary components to run the app.
 
-Run the files on a local webserver so cookies work. Cookies are used to save your viewing preferences.
+Run the files on a local PHP webserver so cookies and PHP includes work. Cookies are used to save your viewing preferences. PHP includes are used only as a temporary measure. We will move to [Jekyll](https://github.com/mojombo/jekyll) for docs generation soon.
 
 Compatibility
 -------------
