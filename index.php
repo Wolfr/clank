@@ -13,28 +13,40 @@
     <h3 class="cl-table-view-title">About Clank</h3>
     <div class="cl-table-view">
       <div class="cl-table-view__cell-single">
-        <a href="why.php">Why Clank?</a>
+        <a href="why.php">
+          <span class="label">Why Clank?</span>
+        </a>
       </div>
     </div>
     <h3 class="cl-table-view-title">Components</h3>
     <div class="cl-table-view">
       <div class="cl-table-view__cell-single">
-        <a href="headers_footers.php">Headers and footers</a>
+        <a href="headers_footers.php">
+          <span class="label">Why Clank?</span>
+        </a>
       </div>
       <div class="cl-table-view__cell-single">
-        <a href="buttons.php">Buttons</a>
+        <a href="buttons.php">
+          <span class="label">Buttons</span>
+        </a>
       </div>
       <div class="cl-table-view__cell-single">
-        <a href="table-view.php">Table view</a>
+        <a href="table-view.php">
+          <span class="label">Table view</span>
+        </a>
       </div>
     </div>
     <h3 class="cl-table-view-title">Creating your own</h3>
     <div class="cl-table-view">
       <div class="cl-table-view__cell-single">
-        <a href="component_naming.php">Component naming conventions</a>
+        <a href="component_naming.php">
+          <span class="label">Component naming conventions</span>
+        </a>
       </div>
       <div class="cl-table-view__cell-single">
-        <a href="generators.php">Generators</a>
+        <a href="generators.php">
+          <span class="label">Generators</span>
+        </a>
       </div>
     </div>
   </div>

@@ -69,10 +69,10 @@ input, select, textarea, option {
 /* line 33, ../scss/_device_wraps.scss */
 .cl-content {
   height: 100%;
-  height: -moz-calc(100% - 44px);
-  height: -o-calc(100% - 44px);
-  height: -webkit-calc(100% - 44px);
-  height: calc(100% - 44px);
+  height: -moz-calc(100% - 64px);
+  height: -o-calc(100% - 64px);
+  height: -webkit-calc(100% - 64px);
+  height: calc(100% - 64px);
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -1036,12 +1036,13 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
 /* line 74, ../scss/components/_table-view.scss */
 .cl-table-view .label, .cl-table-view__extended .label {
   font-size: 16px;
+  line-height: 24px;
   font-weight: 700;
   margin: 0;
   padding: 0;
 }
 
-/* line 81, ../scss/components/_table-view.scss */
+/* line 82, ../scss/components/_table-view.scss */
 .cl-table-view .disclosure-help, .cl-table-view__extended .disclosure-help {
   font-weight: 400;
   position: absolute;
@@ -1050,7 +1051,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   color: #AAA;
 }
 
-/* line 89, ../scss/components/_table-view.scss */
+/* line 90, ../scss/components/_table-view.scss */
 .cl-table-view .meta, .cl-table-view__extended .meta {
   font-weight: 400;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66);
@@ -1060,7 +1061,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   padding: 0;
 }
 
-/* line 97, ../scss/components/_table-view.scss */
+/* line 98, ../scss/components/_table-view.scss */
 .cl-table-view .icon-ios-arrow-right, .cl-table-view__extended .icon-ios-arrow-right {
   font-size: 19px;
   position: absolute;
@@ -1070,7 +1071,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   color: #AAA;
 }
 
-/* line 106, ../scss/components/_table-view.scss */
+/* line 107, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell {
   margin: 0 10px;
   *zoom: 1;
@@ -1081,7 +1082,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   display: table;
   clear: both;
 }
-/* line 113, ../scss/components/_table-view.scss */
+/* line 114, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell:first-child .cl-table-view__cell:first-child, .cl-table-view--split-cell:first-child .cl-table-view__cell-single:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1092,7 +1093,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-top-left-radius: 2.5px;
   border-top-left-radius: 2.5px;
 }
-/* line 117, ../scss/components/_table-view.scss */
+/* line 118, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell:first-child .cl-table-view__cell:last-child, .cl-table-view--split-cell:first-child .cl-table-view__cell-single:last-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1103,7 +1104,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 123, ../scss/components/_table-view.scss */
+/* line 124, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell:last-child .cl-table-view__cell:first-child, .cl-table-view--split-cell:last-child .cl-table-view__cell-single:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1114,7 +1115,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-bottom-left-radius: 2.5px;
   border-bottom-left-radius: 2.5px;
 }
-/* line 127, ../scss/components/_table-view.scss */
+/* line 128, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell:last-child .cl-table-view__cell:last-child, .cl-table-view--split-cell:last-child .cl-table-view__cell-single:last-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1125,7 +1126,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 133, ../scss/components/_table-view.scss */
+/* line 134, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell:only-child .cl-table-view__cell:first-child, .cl-table-view--split-cell:only-child .cl-table-view__cell-single:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1139,7 +1140,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-bottom-left-radius: 2.5px;
   border-bottom-left-radius: 2.5px;
 }
-/* line 137, ../scss/components/_table-view.scss */
+/* line 138, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell:only-child .cl-table-view__cell:last-child, .cl-table-view--split-cell:only-child .cl-table-view__cell-single:last-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1153,7 +1154,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 142, ../scss/components/_table-view.scss */
+/* line 143, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell .cl-table-view__cell, .cl-table-view--split-cell .cl-table-view__cell-single {
   padding: 10px;
   width: 50%;
@@ -1181,7 +1182,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 147, ../scss/components/_table-view.scss */
+/* line 148, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell .cl-table-view__cell:first-child, .cl-table-view--split-cell .cl-table-view__cell-single:first-child {
   width: -moz-calc(50% - 1px);
   width: -o-calc(50% - 1px);
@@ -1189,7 +1190,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(50% - 1px);
   float: left;
 }
-/* line 151, ../scss/components/_table-view.scss */
+/* line 152, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell .cl-table-view__cell:last-child, .cl-table-view--split-cell .cl-table-view__cell-single:last-child {
   width: -moz-calc(50%);
   width: -o-calc(50%);
@@ -1197,7 +1198,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(50%);
   float: right;
 }
-/* line 157, ../scss/components/_table-view.scss */
+/* line 158, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell .cl-table-view__cell:hover, .cl-table-view--split-cell .cl-table-view__cell-single:hover, .cl-table-view--split-cell .cl-table-view__cell:active, .cl-table-view--split-cell .cl-table-view__cell-single:active, .cl-table-view--split-cell .cl-table-view__cell:focus, .cl-table-view--split-cell .cl-table-view__cell-single:focus {
   background: #0188f4;
   background-color: #0174ee;
@@ -1211,11 +1212,11 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   color: #FFF;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 162, ../scss/components/_table-view.scss */
+/* line 163, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell .cl-table-view__cell:hover h3, .cl-table-view--split-cell .cl-table-view__cell-single:hover h3, .cl-table-view--split-cell .cl-table-view__cell:hover a, .cl-table-view--split-cell .cl-table-view__cell-single:hover a, .cl-table-view--split-cell .cl-table-view__cell:hover .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell-single:hover .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:hover .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell-single:hover .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell:active h3, .cl-table-view--split-cell .cl-table-view__cell-single:active h3, .cl-table-view--split-cell .cl-table-view__cell:active a, .cl-table-view--split-cell .cl-table-view__cell-single:active a, .cl-table-view--split-cell .cl-table-view__cell:active .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell-single:active .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:active .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell-single:active .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell:focus h3, .cl-table-view--split-cell .cl-table-view__cell-single:focus h3, .cl-table-view--split-cell .cl-table-view__cell:focus a, .cl-table-view--split-cell .cl-table-view__cell-single:focus a, .cl-table-view--split-cell .cl-table-view__cell:focus .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell-single:focus .icon-arrow-right, .cl-table-view--split-cell .cl-table-view__cell:focus .disclosure-help, .cl-table-view--split-cell .cl-table-view__cell-single:focus .disclosure-help {
   color: #FFF;
 }
-/* line 169, ../scss/components/_table-view.scss */
+/* line 170, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell.split-2-3 .cl-table-view__cell:first-child, .cl-table-view--split-cell.split-2-3 .cl-table-view__cell-single:first-child {
   width: -moz-calc(40% - 1px);
   width: -o-calc(40% - 1px);
@@ -1223,7 +1224,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(40% - 1px);
   float: left;
 }
-/* line 173, ../scss/components/_table-view.scss */
+/* line 174, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell.split-2-3 .cl-table-view__cell:last-child, .cl-table-view--split-cell.split-2-3 .cl-table-view__cell-single:last-child {
   width: -moz-calc(60% - 1px);
   width: -o-calc(60% - 1px);
@@ -1231,7 +1232,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(60% - 1px);
   float: right;
 }
-/* line 181, ../scss/components/_table-view.scss */
+/* line 182, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell.split-3-7 .cl-table-view__cell:first-child, .cl-table-view--split-cell.split-3-7 .cl-table-view__cell-single:first-child {
   width: -moz-calc(30% - 1px);
   width: -o-calc(30% - 1px);
@@ -1239,7 +1240,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(30% - 1px);
   float: left;
 }
-/* line 185, ../scss/components/_table-view.scss */
+/* line 186, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell.split-3-7 .cl-table-view__cell:last-child, .cl-table-view--split-cell.split-3-7 .cl-table-view__cell-single:last-child {
   width: -moz-calc(70%);
   width: -o-calc(70%);
@@ -1247,7 +1248,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(70%);
   float: right;
 }
-/* line 193, ../scss/components/_table-view.scss */
+/* line 194, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell.split-1-3 .cl-table-view__cell:first-child, .cl-table-view--split-cell.split-1-3 .cl-table-view__cell-single:first-child {
   width: -moz-calc(25% - 1px);
   width: -o-calc(25% - 1px);
@@ -1255,7 +1256,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   width: calc(25% - 1px);
   float: left;
 }
-/* line 197, ../scss/components/_table-view.scss */
+/* line 198, ../scss/components/_table-view.scss */
 .cl-table-view--split-cell.split-1-3 .cl-table-view__cell:last-child, .cl-table-view--split-cell.split-1-3 .cl-table-view__cell-single:last-child {
   width: -moz-calc(75%);
   width: -o-calc(75%);
@@ -1264,7 +1265,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   float: right;
 }
 
-/* line 206, ../scss/components/_table-view.scss */
+/* line 207, ../scss/components/_table-view.scss */
 .view-all {
   *zoom: 1;
   background: white;
@@ -1308,26 +1309,26 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 214, ../scss/components/_table-view.scss */
+/* line 215, ../scss/components/_table-view.scss */
 .view-all > a {
   display: block;
   padding: 10px;
 }
-/* line 218, ../scss/components/_table-view.scss */
+/* line 219, ../scss/components/_table-view.scss */
 .view-all > label {
   display: block;
   padding: 10px;
 }
 
-/* line 228, ../scss/components/_table-view.scss */
+/* line 229, ../scss/components/_table-view.scss */
 .cl-table-view__extended .icon-arrow-right {
   right: 10px;
 }
-/* line 231, ../scss/components/_table-view.scss */
+/* line 232, ../scss/components/_table-view.scss */
 .cl-table-view__extended a {
   display: block;
 }
-/* line 234, ../scss/components/_table-view.scss */
+/* line 235, ../scss/components/_table-view.scss */
 .cl-table-view__extended .cl-table-view__cell, .cl-table-view__extended .cl-table-view__cell-single {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1337,7 +1338,7 @@ header .cl-btn.btn-primary:hover > span > span, header .cl-btn.btn-primary:activ
   margin: 0 0 1px;
   margin: 0;
 }
-/* line 236, ../scss/components/_table-view.scss */
+/* line 237, ../scss/components/_table-view.scss */
 .cl-table-view__extended .cl-table-view__cell .cl-table-view__cell, .cl-table-view__extended .cl-table-view__cell-single .cl-table-view__cell, .cl-table-view__extended .cl-table-view__cell .cl-table-view__cell-single, .cl-table-view__extended .cl-table-view__cell-single .cl-table-view__cell-single {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

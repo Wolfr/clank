@@ -11,7 +11,8 @@
   <div class="cl-content cl-article">
     <div class="cl-article__inner">
       <h4>What is a generator?</h4>
-      <p>A generator is simply a bash script that generates code for you.</p>
+      <p>A generator is simply a bash script that generates code for you. This makes it easy to, for example, add new screens or components to your project.</p>
+      <p><em>Note that generators are a work in progress and they do not exist yet</em>.</p>
       <h4>Available generators</h4>
       <ul>
         <li>

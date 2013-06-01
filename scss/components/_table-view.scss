@@ -73,6 +73,7 @@
 
 .cl-table-view .label {
   font-size: 16px;
+  line-height: 24px; // based on iOS @todo refactor android
   font-weight: 700;
   margin: 0;
   padding: 0;
