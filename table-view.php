@@ -3,8 +3,8 @@
 
 <div class="cl-page cl-page-table-view">
   <div class="cl-bar-title">
-      <a href="index.php" class="cl-btn"><span><span>Back</span></span></a>
-      <div class="cl-title">Table view</div>
+      <a href="index.php" class="cl-btn">Back</a>
+      <h1 class="cl-title">Table view</h1>
   </div>
   <div class="cl-content">
     <h3 class="cl-table-title">Regular table view</h3>

@@ -3,91 +3,34 @@
   font-weight: 700;
   cursor: pointer;
   position: relative;
-  & > span,
-  & > span > span {
-    display: block;
-    @include micro-clearfix;
-  }
-  .label {
-    @include inline-block;
-    margin: 0 3px;
-  }
+
   @if $text-shadows {
     @include text-shadow-black;
     @if $accent-color-light {
       @include text-shadow-white;
     }
   }
-  .iconfont {
-    font-size: 18px;
-    line-height: 30px; // please never exceed 30
-    @include inline-block;
-    margin: 0 3px;
 
-    span.hidden {
-      display: none;
-    }
-  }
-  .iconfont + .label {
-    margin-left: 0;
-  }
-  .cl-content & .iconfont {
-    position: absolute;
-    left: 17px;
-    top: 3px;
-  }
-  & > span {
-    font-weight: 700;
-    min-width: 54px;
-    text-align: center;
-    font-size: 13px;
-    & > span {
-      padding: 0 5px;
-    }
-    // Fake gradient border
-    @if $button-borders {
-      padding: 1px;
-      & > span {
-        line-height: 30px;
-      }
-    } @else {
-      padding: 0;
-      & > span {
-        line-height: 34px;
-      }
-    }
-  }
+  font-weight: 700;
+  min-width: 54px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 32px;
   
   // Bar buttons
   .cl-bar-title &,
   .cl-bar-footer &,
   .cl-bar & {
     padding: 0 7px;
-    & > span {
-      margin: 5px 0;
-      font-size: 13px;
-    }
+    margin: 5px;
+    font-size: 13px;
   }
-  // Content buttons
-  .cl-content .controls & > span {
-    margin: 5px 10px; // 10px for sides
-    font-size: 15px; // content buttons should have larger font sizes
-    // Fake gradient border
-    @if $button-borders {
-      & > span {
-        line-height: 36px;
-      }
-    } @else {
-      & > span {
-        line-height: 40px;
-      }
-    }
-  }
+
   // Less min width for icon only type buttons
-  &.btn-icon > span {
+  &.cl-btn-icon {
     min-width: 34px; // +10 = 44
   }
-  &.btn-icon-only {
+  &.cl-btn-icon-only {
     width: 44px;
     & > span {
       text-align: center;
@@ -96,25 +39,6 @@
 }
 
 .cl-btn {
-  // Border radius logic
-  & > span {
-    // Skin
-    @include border-radius($default-border-radius);
-    & > span {
-      @include border-radius($default-border-radius);
-    }
-  }
-  @if $shadows {
-    // Shadow logic
-    & > span {
-      // Skin
-      @include box-shadow(0 1px 0 rgba(0,0,0,.2));
-      & > span {
-        @include box-shadow(inset 0 1px 0 rgba(255,255,255,.05));
-      }
-    }
-  }
-
   // Bg color/gradient logic
   // This logic works on mid colors like red, purple, green
   @include button-skin;
@@ -127,39 +51,34 @@
 }
 
 // Primary buttons in headers primary border color to blend in better
-.cl-btn-primary > span {
-
+.cl-btn-primary {
+//  @if $gradient {
+//    @include gradient-vertical($accent-color, darken($accent-color, 5%));
+//  } @else {
+//    background: darken($accent-color, 10%);
+//  }
   @if $gradient {
-    @include gradient-vertical($accent-color, darken($accent-color, 5%));
+    @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
   } @else {
-    background: darken($accent-color, 10%);
-  }
-  & > span {
-    @if $gradient {
-      @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
-    } @else {
-      background: darken($accent-color-primary, 10%);
-    }
+    background: darken($accent-color-primary, 10%);
   }
 }
-.cl-btn-primary:hover > span,
-.cl-btn-primary:active > span,
-.cl-btn-primary:focus > span,
-.cl-btn-primary.active > span {
-  @if $gradient {
-    @include gradient-vertical(darken($accent-color,7%), darken($accent-color, 13%));
-  } @else {
-    background: darken($accent-color, 20%);
-  }
+.cl-btn-primary:hover,
+.cl-btn-primary:active,
+.cl-btn-primary:focus,
+.cl-btn-primary.active {
+//  @if $gradient {
+//    @include gradient-vertical(darken($accent-color,7%), darken($accent-color, 13%));
+//  } @else {
+//    background: darken($accent-color, 20%);
+//  }
   @include box-shadow(none);
-  & > span {
-    @if $gradient {
-      @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
-      @if $shadows {
-        @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
-      }
-    } @else {
-      background: darken($accent-color, 10%);
+  @if $gradient {
+    @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
+    @if $shadows {
+      @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
     }
+  } @else {
+    background: darken($accent-color, 10%);
   }
 }

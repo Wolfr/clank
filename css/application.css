@@ -523,22 +523,23 @@ input, select, textarea, option {
 /* line 63, ../scss/components/_headers-footers.scss */
 .cl-title {
   font-size: 20px;
+  margin: 0;
   font-weight: 700;
   white-space: nowrap;
   text-align: center;
   color: white;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 68, ../scss/components/_headers-footers.scss */
+/* line 69, ../scss/components/_headers-footers.scss */
 [data-os="ios"] .cl-title {
   line-height: 44px;
 }
-/* line 71, ../scss/components/_headers-footers.scss */
+/* line 72, ../scss/components/_headers-footers.scss */
 [data-os="android"] .cl-title {
   line-height: 50px;
 }
 
-/* line 89, ../scss/components/_headers-footers.scss */
+/* line 90, ../scss/components/_headers-footers.scss */
 .cl-bar-title,
 .cl-bar-footer,
 .cl-bar {
@@ -552,7 +553,7 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1E7B8D', endColorstr='#FF155663', GradientType=0);
 }
-/* line 100, ../scss/components/_headers-footers.scss */
+/* line 101, ../scss/components/_headers-footers.scss */
 .cl-bar-title:before,
 .cl-bar-footer:before,
 .cl-bar:before {
@@ -564,7 +565,7 @@ input, select, textarea, option {
   top: 0;
   left: 0;
 }
-/* line 110, ../scss/components/_headers-footers.scss */
+/* line 111, ../scss/components/_headers-footers.scss */
 .cl-bar-title:after,
 .cl-bar-footer:after,
 .cl-bar:after {
@@ -584,150 +585,42 @@ input, select, textarea, option {
   cursor: pointer;
   position: relative;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
-}
-/* line 7, ../scss/components/_buttons.scss */
-.cl-btn > span, .cl-btn > span > span {
-  display: block;
-}
-/* line 252, ../scss/_mixins.scss */
-.cl-btn > span:before, .cl-btn > span:after, .cl-btn > span > span:before, .cl-btn > span > span:after {
-  content: "";
-  display: table;
-}
-/* line 256, ../scss/_mixins.scss */
-.cl-btn > span:after, .cl-btn > span > span:after {
-  clear: both;
-}
-/* line 11, ../scss/components/_buttons.scss */
-.cl-btn .label {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin: 0 3px;
-}
-/* line 21, ../scss/components/_buttons.scss */
-.cl-btn .iconfont {
-  font-size: 18px;
-  line-height: 30px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin: 0 3px;
-}
-/* line 27, ../scss/components/_buttons.scss */
-.cl-btn .iconfont span.hidden {
-  display: none;
-}
-/* line 31, ../scss/components/_buttons.scss */
-.cl-btn .iconfont + .label {
-  margin-left: 0;
-}
-/* line 34, ../scss/components/_buttons.scss */
-.cl-content .cl-btn .iconfont {
-  position: absolute;
-  left: 17px;
-  top: 3px;
-}
-/* line 39, ../scss/components/_buttons.scss */
-.cl-btn > span {
   font-weight: 700;
   min-width: 54px;
   text-align: center;
   font-size: 13px;
-  padding: 1px;
+  line-height: 32px;
 }
-/* line 44, ../scss/components/_buttons.scss */
-.cl-btn > span > span {
-  padding: 0 5px;
-}
-/* line 50, ../scss/components/_buttons.scss */
-.cl-btn > span > span {
-  line-height: 30px;
-}
-/* line 64, ../scss/components/_buttons.scss */
+/* line 23, ../scss/components/_buttons.scss */
 .cl-bar-title .cl-btn, .cl-bar-footer .cl-btn, .cl-bar .cl-btn {
   padding: 0 7px;
-}
-/* line 66, ../scss/components/_buttons.scss */
-.cl-bar-title .cl-btn > span, .cl-bar-footer .cl-btn > span, .cl-bar .cl-btn > span {
-  margin: 5px 0;
+  margin: 5px;
   font-size: 13px;
 }
-/* line 72, ../scss/components/_buttons.scss */
-.cl-content .controls .cl-btn > span {
-  margin: 5px 10px;
-  font-size: 15px;
-}
-/* line 77, ../scss/components/_buttons.scss */
-.cl-content .controls .cl-btn > span > span {
-  line-height: 36px;
-}
-/* line 87, ../scss/components/_buttons.scss */
-.cl-btn.btn-icon > span {
+/* line 30, ../scss/components/_buttons.scss */
+.cl-btn.cl-btn-icon {
   min-width: 34px;
 }
-/* line 90, ../scss/components/_buttons.scss */
-.cl-btn.btn-icon-only {
+/* line 33, ../scss/components/_buttons.scss */
+.cl-btn.cl-btn-icon-only {
   width: 44px;
 }
-/* line 92, ../scss/components/_buttons.scss */
-.cl-btn.btn-icon-only > span {
+/* line 35, ../scss/components/_buttons.scss */
+.cl-btn.cl-btn-icon-only > span {
   text-align: center;
 }
 
-/* line 100, ../scss/components/_buttons.scss */
-.cl-btn > span {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-}
-/* line 103, ../scss/components/_buttons.scss */
-.cl-btn > span > span {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-}
-/* line 109, ../scss/components/_buttons.scss */
-.cl-btn > span {
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-/* line 112, ../scss/components/_buttons.scss */
-.cl-btn > span > span {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-/* line 81, ../scss/_mixins.scss */
-.cl-btn > span {
+/* line 41, ../scss/components/_buttons.scss */
+.cl-btn {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
   color: white;
-  background-color: #124a55;
-  background-image: -moz-linear-gradient(top, #134f5b, #11444e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#134f5b), to(#11444e));
-  background-image: -webkit-linear-gradient(top, #134f5b, #11444e);
-  background-image: -o-linear-gradient(top, #134f5b, #11444e);
-  background-image: linear-gradient(to bottom, #134f5b, #11444e);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF134F5B', endColorstr='#FF11444E', GradientType=0);
-}
-/* line 93, ../scss/_mixins.scss */
-.cl-btn > span > span {
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   background-color: #1b92a9;
   background-image: -moz-linear-gradient(top, #1fbad9, #155663);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1fbad9), to(#155663));
@@ -737,22 +630,11 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1FBAD9', endColorstr='#FF155663', GradientType=0);
 }
-/* line 104, ../scss/_mixins.scss */
-.cl-btn:hover > span, .cl-btn:active > span, .cl-btn:focus > span, .cl-btn.active > span {
-  background-color: #0c333b;
-  background-image: -moz-linear-gradient(top, #0f3c46, #09262c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0f3c46), to(#09262c));
-  background-image: -webkit-linear-gradient(top, #0f3c46, #09262c);
-  background-image: -o-linear-gradient(top, #0f3c46, #09262c);
-  background-image: linear-gradient(to bottom, #0f3c46, #09262c);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0F3C46', endColorstr='#FF09262C', GradientType=0);
+/* line 105, ../scss/_mixins.scss */
+.cl-btn:hover, .cl-btn:active, .cl-btn:focus, .cl-btn.active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-/* line 111, ../scss/_mixins.scss */
-.cl-btn:hover > span > span, .cl-btn:active > span > span, .cl-btn:focus > span > span, .cl-btn.active > span > span {
   background-color: #114650;
   background-image: -moz-linear-gradient(top, #134f5b, #0e3941);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#134f5b), to(#0e3941));
@@ -766,7 +648,7 @@ input, select, textarea, option {
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 125, ../scss/_mixins.scss */
+/* line 124, ../scss/_mixins.scss */
 .cl-btn-primary > span {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -783,7 +665,7 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF06C2E7', endColorstr='#FF047B93', GradientType=0);
 }
-/* line 133, ../scss/_mixins.scss */
+/* line 132, ../scss/_mixins.scss */
 .cl-btn-primary > span > span {
   background-color: #16bfe2;
   background-image: -moz-linear-gradient(top, #22d5f9, #05a0c0);
@@ -795,19 +677,8 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF22D5F9', endColorstr='#FF05A0C0', GradientType=0);
 }
 
-/* line 130, ../scss/components/_buttons.scss */
-.cl-btn-primary > span {
-  background-color: #134e5a;
-  background-image: -moz-linear-gradient(top, #155663, #11444e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#155663), to(#11444e));
-  background-image: -webkit-linear-gradient(top, #155663, #11444e);
-  background-image: -o-linear-gradient(top, #155663, #11444e);
-  background-image: linear-gradient(to bottom, #155663, #11444e);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF155663', endColorstr='#FF11444E', GradientType=0);
-}
-/* line 137, ../scss/components/_buttons.scss */
-.cl-btn-primary > span > span {
+/* line 54, ../scss/components/_buttons.scss */
+.cl-btn-primary {
   background-color: #16bfe2;
   background-image: -moz-linear-gradient(top, #22d5f9, #05a0c0);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#22d5f9), to(#05a0c0));
@@ -818,28 +689,14 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF22D5F9', endColorstr='#FF05A0C0', GradientType=0);
 }
 
-/* line 148, ../scss/components/_buttons.scss */
-.cl-btn-primary:hover > span,
-.cl-btn-primary:active > span,
-.cl-btn-primary:focus > span,
-.cl-btn-primary.active > span {
-  background-color: #0c333b;
-  background-image: -moz-linear-gradient(top, #0f3c46, #09262c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0f3c46), to(#09262c));
-  background-image: -webkit-linear-gradient(top, #0f3c46, #09262c);
-  background-image: -o-linear-gradient(top, #0f3c46, #09262c);
-  background-image: linear-gradient(to bottom, #0f3c46, #09262c);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0F3C46', endColorstr='#FF09262C', GradientType=0);
+/* line 69, ../scss/components/_buttons.scss */
+.cl-btn-primary:hover,
+.cl-btn-primary:active,
+.cl-btn-primary:focus,
+.cl-btn-primary.active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-/* line 155, ../scss/components/_buttons.scss */
-.cl-btn-primary:hover > span > span,
-.cl-btn-primary:active > span > span,
-.cl-btn-primary:focus > span > span,
-.cl-btn-primary.active > span > span {
   background-color: #114650;
   background-image: -moz-linear-gradient(top, #134f5b, #0e3941);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#134f5b), to(#0e3941));
@@ -985,7 +842,7 @@ input, select, textarea, option {
   -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 185, ../scss/_mixins.scss */
+/* line 184, ../scss/_mixins.scss */
 .cl-table-cell:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -994,7 +851,7 @@ input, select, textarea, option {
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 188, ../scss/_mixins.scss */
+/* line 187, ../scss/_mixins.scss */
 .cl-table-cell:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
@@ -1017,7 +874,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 207, ../scss/_mixins.scss */
+/* line 206, ../scss/_mixins.scss */
 .cl-table-cell:hover a, .cl-table-cell:active a, .cl-table-cell:focus a {
   color: #FFF;
 }
@@ -1252,7 +1109,7 @@ input, select, textarea, option {
   display: table;
   clear: both;
 }
-/* line 185, ../scss/_mixins.scss */
+/* line 184, ../scss/_mixins.scss */
 .view-all:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -1261,7 +1118,7 @@ input, select, textarea, option {
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 188, ../scss/_mixins.scss */
+/* line 187, ../scss/_mixins.scss */
 .view-all:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;

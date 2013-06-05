@@ -3,8 +3,8 @@
 
 <div class="cl-page">
   <div class="cl-bar-title">
-    <a href="index.php" class="cl-btn"><span><span>Back</span></span></a>
-    <div class="cl-title">Component naming</div>
+    <a href="index.php" class="cl-btn">Back</a>
+    <h1 class="cl-title">Component naming</h1>
   </div>
   <div class="cl-content">
     <div class="cl-article">

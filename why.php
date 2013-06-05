@@ -3,10 +3,8 @@
 
 <div class="cl-page cl-page-detail">
   <div class="cl-bar-title">
-    <div>
-      <a href="index.php" class="cl-btn"><span><span>Back</span></span></a>
-      <div class="cl-title">Why Clank?</div>
-    </div>
+    <a href="index.php" class="cl-btn">Back</a>
+    <h1 class="cl-title">Why Clank?</h1>
   </div>
   <div class="cl-content">
     <p class="cl-article-intro">Why you should use Clank for your HTML/CSS prototypes.</p>

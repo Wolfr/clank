@@ -21,7 +21,7 @@
     <div class="cl-table">
       <div class="cl-table-cell">
         <a href="headers_footers.php">
-          <span class="label">Why Clank?</span>
+          <span class="label">Headers &amp; footers?</span>
         </a>
       </div>
       <div class="cl-table-cell">

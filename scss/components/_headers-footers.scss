@@ -58,10 +58,11 @@
 }
 
 
-/// Title, sample markup: <h2 class="cl-title"></h2>
+/// Title, sample markup: <h1 class="cl-title"></h1>
 
 .cl-title {
   font-size: $header-font-size;
+  margin: 0;
   font-weight: 700;
   white-space: nowrap;
   text-align: center;
