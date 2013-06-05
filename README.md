@@ -1,6 +1,10 @@
 Clank
 =====
 
+[View the demo](http://getclank.com/demo/)
+
+---
+
 [Ratchet](https://github.com/maker/ratchet), meet Clank.
 
 Clank is an open source HTML/CSS prototyping framework for mobile apps.
