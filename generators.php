@@ -5,7 +5,7 @@
   <div class="cl-bar-title">
     <div>
       <a href="index.php" class="cl-btn">Back</a>
-      <div class="cl-title">Generators</div>
+      <h1 class="cl-title">Generators</h1>
     </div>
   </div>
   <div class="cl-content cl-article">

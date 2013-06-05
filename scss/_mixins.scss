@@ -17,7 +17,7 @@ $default-border-radius: 4px !default;
 
 $accent-color: #155663 !default; // accent color is supposed to be something like purple, red, blue
 
-$accent-color-primary: adjust-saturation(adjust-lightness($accent-color, 30%), 30%) !default; // move up the color chart
+$accent-color-primary: adjust-saturation(adjust-lightness($accent-color, 20%), 20%) !default; // move up the color chart
 
 $accent-color-light: false !default;
 
@@ -84,16 +84,9 @@ $background-color-inverse: darken($accent-color, 10%);
   } @else {
     color: lighten($text-color-inverse, 20%);
   }
-//  @if $gradient {
-//    @include gradient-vertical(darken($accent-color,2%), darken($accent-color,5%));
-//  } @else {
-//    background: darken($accent-color, 10%);
-//  }
-
   @if $shadows {
     @include box-shadow(0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.05));
   }
-  
   @if $gradient {
     @include gradient-vertical(saturate(lighten($accent-color, 25%), 10%), darken($accent-color, 0%));
   } @else {
@@ -103,11 +96,6 @@ $background-color-inverse: darken($accent-color, 10%);
   &:active,
   &:focus,
   &.active {
-//    @if $gradient {
-//      @include gradient-vertical(darken($accent-color,7%), darken($accent-color, 13%));
-//    } @else {
-//      background: darken($accent-color, 20%);
-//    }
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
@@ -121,20 +109,25 @@ $background-color-inverse: darken($accent-color, 10%);
 }
 
 @mixin button-skin-primary {
-  & > span {
-    @include border-radius($default-border-radius);
-    color: lighten($text-color-inverse, 20%);
+  @include border-radius($default-border-radius);
+  color: lighten($text-color-inverse, 20%);
+  @if $gradient {
+    @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
+  } @else {
+    background: $accent-color-primary;
+  }
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    @include box-shadow(none);
     @if $gradient {
-      @include gradient-vertical(darken($accent-color-primary,7%), darken($accent-color-primary, 24%));
-    } @else {
-      background: darken($accent-color-primary, 10%);
-    }
-    & > span {
-      @if $gradient {
-        @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
-      } @else {
-        background: $accent-color-primary;
+      @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
+      @if $shadows {
+        @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
       }
+    } @else {
+      background: darken($accent-color, 10%);
     }
   }
 }

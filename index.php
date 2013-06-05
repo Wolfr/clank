@@ -3,7 +3,7 @@
 
 <div class="cl-page cl-page-welcome">
   <div class="cl-bar-title">
-    <div class="cl-title">Welcome to Clank</div>
+    <h1 class="cl-title">Welcome to Clank</h1>
   </div>
   <div class="cl-content">
     <div class="cl-article">
