@@ -24,10 +24,11 @@
 // Page level
 
 .cl-page {
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   word-wrap: break-word;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
   .cl-content {
     background: #FFF;
   }

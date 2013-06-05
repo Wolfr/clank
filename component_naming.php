@@ -13,13 +13,13 @@
     <pre class="cl-code-example"><code>.cl-accordion</code></pre>
     <div class="cl-article">
       <p>This is verbose but the only way to not clash with other libraries until Web Components are commonplace.</p>
-      <p>A child element dependent on the component should be added with a double hyphen:</p>
+      <p>A child element dependent on the component should be added with a hyphen:</p>
     </div>
-    <pre class="cl-code-example"><code>.cl-accordion__item</code></pre>
+    <pre class="cl-code-example"><code>.cl-accordion-item</code></pre>
     <div class="cl-article">
       <p>State should be added with a double underscore:</p>
     </div>
-    <pre class="cl-code-example"><code>.cl-accordion__item--disabled</code></pre>
+    <pre class="cl-code-example"><code>.cl-accordion-item__disabled</code></pre>
     <div class="cl-article">
       <p>This prevents nesting in SCSS.</p>
       <p>This naming technique has been coined <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a>.</p>

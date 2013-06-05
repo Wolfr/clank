@@ -1,21 +1,25 @@
 // Base for table view
 
-.cl-table-view {
+.cl-table {
   @include pie-clearfix;
   @include unstyled;
   padding: 10px 0;
-  width: 100%;
+  width: 90%;
+  @include calc("width", "100% - 20px");
+  & + .cl-table {
+    padding-top: 0;
+  }
 }
 
 // Table view titles
 
-.cl-table-view-title {
+.cl-table-title {
   padding: 0;
   margin: 10px 10px 0 20px;
   font-size: 11px;
   text-transform: uppercase;
   color: #3E3E3E;
-  & + .cl-table-view {
+  & + .cl-table {
     padding-top: 5px;
   }
   & + .input-group {
@@ -23,187 +27,184 @@
   }
 }
 
-.cl-table-view-title-extended {
-  @extend .cl-table-view-title;
+.cl-table-title-extended {
+  @extend .cl-table-title;
   margin-left: 10px;
 }
 
+
 // Table view cell
-
-
-.cl-table-view__cell {
-  font-size: 16px;
+.cl-table-cell {
+  font-size: 14px;
   min-height: 44px;
-  margin: 0 10px;
   position: relative;
-  vertical-align: middle;
-  p {
-    padding: 0;
-  }
-  a {
-    font-weight: 700;
-    color: #000;
-    &:hover,
-    &:active,
-    &:focus {
-      color: #FFF;
-      background: #0188f4;
-      @include gradient-vertical(#0188f4, #0158e6);
-      @include text-shadow-black;
-    }
-  }
-}
-
-.cl-table-view__cell-single {
-  @extend .cl-table-view__cell;
-
-  @include pie-clearfix;
+  width: 100%;
   @include table-cell-skin;
-  & > a {
-    display: block;
-    padding: 10px;
-    min-height: 44px;
-  }
-  & > label {
-    display: block;
-    padding: 10px;
+  &:hover,
+  &:active,
+  &:focus {
+    @include table-cell-skin-hover;
   }
 }
 
-
-.cl-table-view .label {
-  font-size: 16px;
-  line-height: 24px; // based on iOS @todo refactor android
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-}
-
-.cl-table-view .disclosure-help {
-  font-weight: 400;
-  position: absolute;
-  top: 35%;
-  right: 30px;
-  color: #AAA;
-}
-
-.cl-table-view .meta {
-  font-weight: 400;
-  @include opacity(0.66);
-  font-size: 12px;
-  margin: 0;
-  padding: 0;
-}
-  
-.cl-table-view .icon-ios-arrow-right {
-  font-size: 19px;
-  position: absolute;
-  top: 26%;
-  right: 10px;
-  font-weight: 700;
-  color: #AAA;
-}
-
-.cl-table-view--split-cell {
+.cl-table > .cl-table-cell {
   margin: 0 10px;
-  @include pie-clearfix;
-  
-  // Rounded corners on split cells
-  // @todo rewrite this, a bit bloated
   &:first-child {
-    .cl-table-view__cell:first-child {
-      @include border-radius(0);
-      @include border-top-left-radius($default-border-radius/2);
-    }
-    .cl-table-view__cell:last-child {
-      @include border-radius(0);
-      @include border-top-right-radius($default-border-radius/2);
-    }
+    @include border-top-radius($default-border-radius/2);
   }
   &:last-child {
-    .cl-table-view__cell:first-child {
-      @include border-radius(0);
-      @include border-bottom-left-radius($default-border-radius/2);
-    }
-    .cl-table-view__cell:last-child {
-      @include border-radius(0);
-      @include border-bottom-right-radius($default-border-radius/2);
-    }
+    @include border-bottom-radius($default-border-radius/2);
   }
-  &:only-child {
-    .cl-table-view__cell:first-child {
-      @include border-radius(0);
-      @include border-left-radius($default-border-radius/2);
-    }
-    .cl-table-view__cell:last-child {
-      @include border-radius(0);
-      @include border-right-radius($default-border-radius/2);
-    }
-  }
-  .cl-table-view__cell {
-    padding: 10px;
-    width: 50%;
-    margin: 0;
-    @include table-cell-skin;
+}
+
+.cl-table-row {
+  margin: 0 10px;
+  @include pie-clearfix;
+
+  // Flex for eq heights
+  display: -webkit-flex;
+  -webkit-align-items: stretch;
+
+  & > .cl-table-cell {
+    @include pie-clearfix;
     &:first-child {
-      @include calc(width, "50% - 1px");
       float: left;
     }
     &:last-child {
-      @include calc(width, "50%");
       float: right;
     }
-    &:hover,
-    &:active,
-    &:focus {
-      background: #0188f4;
-      @include gradient-vertical(#0188f4, #0158e6);
-      color: #FFF;
-      @include text-shadow-black;
-      h3, a, .icon-arrow-right, .disclosure-help{
-        color: #FFF;
-      }
+  }
+}
+
+.cl-table-row {
+  .cl-table-cell {
+    &:first-child {
+      @include calc(width, "50% - 1px");
+    }
+    &:last-child {
+      @include calc(width, "50%");
     }
   }
   &.split-2-3 {
-    .cl-table-view__cell {
+    .cl-table-cell {
       &:first-child {
         @include calc(width, "40% - 1px");
-        float: left;
       }
       &:last-child {
         @include calc(width, "60% - 1px");
-        float: right;
       }
     }
   }
   &.split-3-7 {
-    .cl-table-view__cell {
+    .cl-table-cell {
       &:first-child {
         @include calc(width, "30% - 1px");
-        float: left;
       }
       &:last-child {
         @include calc(width, "70%");
-        float: right;
       }
     }
   }
   &.split-1-3 {
-    .cl-table-view__cell {
+    .cl-table-cell {
       &:first-child {
         @include calc(width, "25% - 1px");
-        float: left;
       }
       &:last-child {
         @include calc(width, "75%");
-        float: right;
       }
     }
   }
 }
 
+// Different components of a cell
+
+.cl-table-cell {
+
+  a {
+    display: block;
+    padding: 10px;
+    min-height: 44px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  & > p {
+    display: block;
+    padding: 10px;
+    margin: 0;
+  }
+
+  // The main title
+  .label {
+    font-size: 16px;
+    line-height: 24px; // based on iOS @todo refactor android
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Secondary help
+  .disclosure-help {
+    font-weight: 400;
+    position: absolute;
+    top: 35%;
+    right: 30px;
+    color: #AAA;
+  }
+  
+  // Smaller meta info
+  .meta {
+    font-weight: 400;
+    @include opacity(0.66);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Disclosure arrow
+  .icon-arrow-right {
+    font-size: 19px;
+    position: absolute;
+    top: 26%;
+    right: 10px;
+    font-weight: 700;
+    color: #AAA;
+  }
+
+}
+
+.cl-table {
+  .cl-table-row:first-child {
+    .cl-table-cell:first-child {
+      @include border-top-left-radius($default-border-radius/2);
+    }
+    .cl-table-cell:last-child {
+      @include border-top-right-radius($default-border-radius/2);
+    }
+  }
+  .cl-table-row:only-child {
+    .cl-table-cell:first-child {
+      @include border-left-radius($default-border-radius/2);
+    }
+    .cl-table-cell:last-child {
+      @include border-right-radius($default-border-radius/2);
+    }
+  }
+  .cl-table-row:last-child {
+    .cl-table-cell:first-child {
+      @include border-bottom-left-radius($default-border-radius/2);
+    }
+    .cl-table-cell:last-child {
+      @include border-bottom-right-radius($default-border-radius/2);
+    }
+  }
+
+}
+
 // Control to view all items
+// @todo scope this
+
 .view-all {
   @include pie-clearfix;
   @include table-cell-skin;
@@ -224,17 +225,18 @@
 }
 
 // Cells that extend to the window/screen edges
-.cl-table-view__extended {
-  @extend .cl-table-view;
+
+.cl-table__extended {
+  @extend .cl-table;
   .icon-arrow-right {
     right: 10px;
   }
   a {
     display: block;
   }
-  .cl-table-view__cell {
+  .cl-table-cell {
     @include border-radius(0);
-    .cl-table-view__cell {
+    .cl-table-cell {
       @include border-radius(0);
     }
     margin: 0 0 1px;
