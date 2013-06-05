@@ -1,4 +1,4 @@
-<body ng-controller="DeviceCtrl">
+<body ng-controller="DeviceCtrl" onload="load()">
 
   <div class="cl-docs-controls cl-docs-controls--top">
     <div>
