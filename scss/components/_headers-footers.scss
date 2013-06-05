@@ -40,10 +40,17 @@
 }
 
 
-// Bar text, sample markup: <p class="bar-text"></p>
+// Text in a bar
+// sample markup: <p class="cl-bar-text">My text</p>
 
 .cl-bar-text {
+  margin: 0;
+  padding: 0;
   line-height: 44px;
+  .cl-bar &,
+  .cl-bar-title & {
+    margin: 0 10px;
+  }
   color: lighten($text-color-inverse, 20%);
   @if $text-shadows {
     @include text-shadow-black;

@@ -48,6 +48,19 @@
         </a>
       </div>
     </div>
+    <h3 class="cl-table-title">Tests</h3>
+    <div class="cl-table">
+      <div class="cl-table-cell">
+        <a href="loading.php">
+          <span class="label">#cl-loading</span>
+        </a>
+      </div>
+      <div class="cl-table-cell">
+        <a href="cl-bar-text.php">
+          <span class="label">.cl-bar-text</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 

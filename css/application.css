@@ -515,18 +515,24 @@ input, select, textarea, option {
   line-height: 50px;
 }
 
-/* line 45, ../scss/components/_headers-footers.scss */
+/* line 46, ../scss/components/_headers-footers.scss */
 .cl-bar-text {
+  margin: 0;
+  padding: 0;
   line-height: 44px;
   color: white;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 55, ../scss/components/_headers-footers.scss */
+/* line 51, ../scss/components/_headers-footers.scss */
+.cl-bar .cl-bar-text, .cl-bar-title .cl-bar-text {
+  margin: 0 10px;
+}
+/* line 62, ../scss/components/_headers-footers.scss */
 .cl-bar-text.align-left {
   margin-left: 7px;
 }
 
-/* line 63, ../scss/components/_headers-footers.scss */
+/* line 70, ../scss/components/_headers-footers.scss */
 .cl-title {
   font-size: 20px;
   margin: 0;
@@ -536,16 +542,16 @@ input, select, textarea, option {
   color: white;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 69, ../scss/components/_headers-footers.scss */
+/* line 76, ../scss/components/_headers-footers.scss */
 [data-os="ios"] .cl-title {
   line-height: 44px;
 }
-/* line 72, ../scss/components/_headers-footers.scss */
+/* line 79, ../scss/components/_headers-footers.scss */
 [data-os="android"] .cl-title {
   line-height: 50px;
 }
 
-/* line 90, ../scss/components/_headers-footers.scss */
+/* line 97, ../scss/components/_headers-footers.scss */
 .cl-bar-title,
 .cl-bar-footer,
 .cl-bar {
@@ -559,7 +565,7 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1E7B8D', endColorstr='#FF155663', GradientType=0);
 }
-/* line 101, ../scss/components/_headers-footers.scss */
+/* line 108, ../scss/components/_headers-footers.scss */
 .cl-bar-title:before,
 .cl-bar-footer:before,
 .cl-bar:before {
@@ -571,7 +577,7 @@ input, select, textarea, option {
   top: 0;
   left: 0;
 }
-/* line 111, ../scss/components/_headers-footers.scss */
+/* line 118, ../scss/components/_headers-footers.scss */
 .cl-bar-title:after,
 .cl-bar-footer:after,
 .cl-bar:after {
