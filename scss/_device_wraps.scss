@@ -32,7 +32,7 @@
 
 .cl-content {
   height: 100%;
-  @include calc(height, "100% - 64px");
+  @include calc(height, "100% - 44px");
   &.has-footer {
     @include calc(height, "100% - 88px");
   }

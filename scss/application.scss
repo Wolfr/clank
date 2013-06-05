@@ -28,8 +28,11 @@
   text-align: left;
   word-wrap: break-word;
   height: 100%;
+  @include calc("height","100% - 20px"); // minus status bar height
+
   -webkit-font-smoothing: antialiased;
   .cl-content {
+
     background: #FFF;
   }
 }

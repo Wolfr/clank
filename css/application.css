@@ -69,10 +69,10 @@ input, select, textarea, option {
 /* line 33, ../scss/_device_wraps.scss */
 .cl-content {
   height: 100%;
-  height: -moz-calc(100% - 64px);
-  height: -o-calc(100% - 64px);
-  height: -webkit-calc(100% - 64px);
-  height: calc(100% - 64px);
+  height: -moz-calc(100% - 44px);
+  height: -o-calc(100% - 44px);
+  height: -webkit-calc(100% - 44px);
+  height: calc(100% - 44px);
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -272,8 +272,14 @@ input, select, textarea, option {
   z-index: 2;
   line-height: 44px;
   height: 44px;
-  background: #FFF;
-  background: rgba(255, 255, 255, 0.9);
+  background-color: #cad2d7;
+  background-image: -moz-linear-gradient(top, #d1d6da, #c1ccd3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1d6da), to(#c1ccd3));
+  background-image: -webkit-linear-gradient(top, #d1d6da, #c1ccd3);
+  background-image: -o-linear-gradient(top, #d1d6da, #c1ccd3);
+  background-image: linear-gradient(to bottom, #d1d6da, #c1ccd3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD1D6DA', endColorstr='#FFC1CCD3', GradientType=0);
   position: fixed;
   left: 0;
   width: 100%;
@@ -289,7 +295,7 @@ input, select, textarea, option {
 .cl-docs-controls select {
   margin-top: 12px;
 }
-/* line 24, ../scss/_controls.scss */
+/* line 23, ../scss/_controls.scss */
 .cl-docs-controls > div {
   flex: auto;
   justify-content: center;
@@ -297,27 +303,27 @@ input, select, textarea, option {
   display: flex;
 }
 
-/* line 35, ../scss/_controls.scss */
+/* line 34, ../scss/_controls.scss */
 .cl-docs-controls--top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   top: 0;
 }
 
-/* line 40, ../scss/_controls.scss */
+/* line 39, ../scss/_controls.scss */
 .cl-docs-controls--top label {
   margin-right: 3px;
 }
-/* line 42, ../scss/_controls.scss */
+/* line 41, ../scss/_controls.scss */
 .cl-docs-controls--top label:after {
   content: ":";
 }
 
-/* line 48, ../scss/_controls.scss */
+/* line 47, ../scss/_controls.scss */
 .cl-docs-controls--bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   bottom: 0;
 }
-/* line 51, ../scss/_controls.scss */
+/* line 50, ../scss/_controls.scss */
 .cl-docs-controls--bottom p, .cl-docs-controls--bottom .cl-article h4, .cl-article .cl-docs-controls--bottom h4 {
   padding: 0;
   margin: 0;
@@ -1423,14 +1429,18 @@ input, select, textarea, option {
   text-align: left;
   word-wrap: break-word;
   height: 100%;
+  height: -moz-calc(100% - 20px);
+  height: -o-calc(100% - 20px);
+  height: -webkit-calc(100% - 20px);
+  height: calc(100% - 20px);
   -webkit-font-smoothing: antialiased;
 }
-/* line 32, ../scss/application.scss */
+/* line 34, ../scss/application.scss */
 .cl-page .cl-content {
   background: #FFF;
 }
 
-/* line 39, ../scss/application.scss */
+/* line 42, ../scss/application.scss */
 .cl-page-welcome .cl-content,
 .cl-page-table-view .cl-content {
   background: #EEE;

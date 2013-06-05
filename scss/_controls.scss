@@ -12,8 +12,7 @@
   select {
     margin-top: 12px;
   }
-  background: #FFF;
-  background: rgba(255,255,255,0.9);
+  @include gradient-vertical(#d1d6da, #c1ccd3);
   position: fixed;
   left: 0;
   width: 100%;
