@@ -1,0 +1,1 @@
+fontcustom compile ./svg_source/my_app_android -t scss -o ../scss/icon-fonts/my_app_android/ -n my-app-android -h false -p --font-face-path="../scss/icon-fonts/my-app-android"  --css-prefix=icon-my-app-android-

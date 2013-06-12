@@ -1,0 +1,37 @@
+/*
+  Main grid using Susy
+*/
+
+// Susy
+$total-columns  : 6;
+$column-width   : 140px;
+$gutter-width   : 20px;
+
+$grid-padding   : 20px;
+
+$container-style: magic;
+
+// Container
+
+#header > .inner-content,
+#content > .inner-content,
+#footer > .inner-content {
+  // page acts as a container for our grid.
+  @include container;
+}
+
+// header and footer are full-width by default.
+#header, #footer { clear: both; }
+
+.has-sidebar {
+
+  // nav spans 3 columns of total 12.
+  #nav {
+    @include span-columns(3,12);
+  }
+
+  #content {
+    @include span-columns(9 omega,12);
+  }
+
+}

@@ -1,0 +1,38 @@
+/* 
+ * Font Custom: bare CSS
+ */
+
+@font-face {
+  font-family: "ios";
+  src: url("../scss/clank/icon-fonts/ios/ios.eot");
+  src: url("../scss/clank/icon-fonts/ios/ios.eot?#iefix") format("embedded-opentype"),
+       url("../scss/clank/icon-fonts/ios/ios.woff") format("woff"),
+       url("../scss/clank/icon-fonts/ios/ios.ttf") format("truetype"),
+       url("../scss/clank/icon-fonts/ios/ios.svg#ios") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-ios-alarm:before,
+.icon-ios-arrow-right:before,
+.icon-ios-battery:before,
+.icon-ios-locate:before,
+.icon-ios-lock:before,
+.icon-ios-square:before {
+  font-family: "ios";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.icon-ios-alarm:before { content: "\f100"; }
+.icon-ios-arrow-right:before { content: "\f101"; }
+.icon-ios-battery:before { content: "\f102"; }
+.icon-ios-locate:before { content: "\f103"; }
+.icon-ios-lock:before { content: "\f104"; }
+.icon-ios-square:before { content: "\f105"; }

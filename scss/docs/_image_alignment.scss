@@ -1,0 +1,43 @@
+
+/*
+  Image alignment
+*/
+
+// Wordpress
+
+a[rel="attachment"] {
+  border: none;
+}
+
+.aligncenter {
+  margin: 0 auto;
+  display: block;
+}
+
+.wp-caption {
+  text-align: right;
+  a {
+    border: none;
+  } 
+  .wp-caption-text {
+    color: #999;
+    font-size: 13px;
+  }
+}
+
+img.alignright,
+div.alignright {
+  float: right;
+  padding: 0 0 12px 12px;
+}
+
+img.alignleft,
+div.alignleft {
+  float: left;
+  padding: 0 12px 12px 0;
+}
+
+img.aligncenter {
+  margin: 0 auto 12px;
+  clear: both;
+}
