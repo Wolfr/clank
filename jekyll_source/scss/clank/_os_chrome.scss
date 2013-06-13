@@ -18,6 +18,11 @@
   // Layout 
   display: flex;
   flex-direction: row;
+  
+  // Flex for eq heights
+  /* Compass version */
+  // @include display-box;
+  // @include box-orient(horizontal);
 
   & > span {
     flex: auto;

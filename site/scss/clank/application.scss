@@ -14,12 +14,10 @@
 @import "components/table-view";
 @import "components/help-txt";
 
-// System icons
-// @import "icon-fonts/ios/fontcustom";
-// @import "icon-fonts/android/fontcustom";
 
-// App specific icons
-// @import "icon-fonts/my_app_ios/fontcustom";
+@import "icon-fonts/ios"; // System icons ios
+@import "icon-fonts/android"; // System Android
+@import "icon-fonts/my_app"; // App specific icons ios
 
 // Page level
 

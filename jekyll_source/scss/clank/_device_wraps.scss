@@ -53,6 +53,11 @@
   display: box; display: flexbox;
   box-align: center; flex-align: center;
   box-pack: center; flex-pack: center;
+  
+  /* Compass version */
+  @include display-box;
+  @include box-align(center);
+  @include box-pack(center);
 }
 
 .cl-phone-wrap {
