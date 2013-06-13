@@ -615,7 +615,6 @@ input, select, textarea, option {
   cursor: pointer;
   position: relative;
   z-index: 1;
-  color: #FFF;
   font-weight: 700;
   min-width: 54px;
   text-align: center;
@@ -660,26 +659,26 @@ input, select, textarea, option {
   -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
-/* line 30, ../../scss/clank/components/_buttons.scss */
+/* line 29, ../../scss/clank/components/_buttons.scss */
 .cl-bar-title .cl-btn, .cl-bar-footer .cl-btn, .cl-bar .cl-btn {
   padding: 0 7px;
   margin: 5px;
   font-size: 13px;
 }
-/* line 36, ../../scss/clank/components/_buttons.scss */
+/* line 35, ../../scss/clank/components/_buttons.scss */
 .cl-content > .cl-btn {
   margin: 0 10px;
 }
-/* line 41, ../../scss/clank/components/_buttons.scss */
+/* line 40, ../../scss/clank/components/_buttons.scss */
 .cl-btn.cl-btn-icon {
   min-width: 34px;
 }
-/* line 44, ../../scss/clank/components/_buttons.scss */
+/* line 43, ../../scss/clank/components/_buttons.scss */
 .cl-btn.cl-btn-icon-only {
   width: 44px;
 }
 
-/* line 54, ../../scss/clank/components/_buttons.scss */
+/* line 53, ../../scss/clank/components/_buttons.scss */
 .cl-btn:before,
 .cl-btn:after {
   position: absolute;
@@ -691,7 +690,7 @@ input, select, textarea, option {
   white-space: nowrap;
 }
 
-/* line 64, ../../scss/clank/components/_buttons.scss */
+/* line 63, ../../scss/clank/components/_buttons.scss */
 .cl-btn:after {
   top: -1px;
   left: -1px;
@@ -707,7 +706,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF175D6B', endColorstr='#FF11444E', GradientType=0);
 }
 
-/* line 79, ../../scss/clank/components/_buttons.scss */
+/* line 78, ../../scss/clank/components/_buttons.scss */
 .cl-btn:hover:after {
   background-color: #0c333b;
   background-image: -moz-linear-gradient(top, #0f3c46, #09262c);
@@ -719,7 +718,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0F3C46', endColorstr='#FF09262C', GradientType=0);
 }
 
-/* line 87, ../../scss/clank/components/_buttons.scss */
+/* line 86, ../../scss/clank/components/_buttons.scss */
 .cl-btn:before {
   top: 0;
   left: 0;
@@ -735,7 +734,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1FBAD9', endColorstr='#FF155663', GradientType=0);
 }
 
-/* line 101, ../../scss/clank/components/_buttons.scss */
+/* line 100, ../../scss/clank/components/_buttons.scss */
 .cl-btn:hover:before {
   background-color: #114650;
   background-image: -moz-linear-gradient(top, #134f5b, #0e3941);
@@ -750,7 +749,7 @@ input, select, textarea, option {
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 115, ../../scss/clank/components/_buttons.scss */
+/* line 114, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -785,7 +784,7 @@ input, select, textarea, option {
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 125, ../../scss/clank/components/_buttons.scss */
+/* line 124, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary:after {
   background-color: #14535f;
   background-image: -moz-linear-gradient(top, #175d6b, #11444e);
@@ -797,7 +796,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF175D6B', endColorstr='#FF11444E', GradientType=0);
 }
 
-/* line 136, ../../scss/clank/components/_buttons.scss */
+/* line 135, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary:before {
   background-color: #42cde8;
   background-image: -moz-linear-gradient(top, #63e2fb, #11aecd);
@@ -809,7 +808,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF63E2FB', endColorstr='#FF11AECD', GradientType=0);
 }
 
-/* line 146, ../../scss/clank/components/_buttons.scss */
+/* line 145, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary:hover:before {
   background-color: #0f9cb8;
   background-image: -moz-linear-gradient(top, #10a6c4, #0e8ea8);
