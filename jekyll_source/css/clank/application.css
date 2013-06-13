@@ -261,8 +261,13 @@ input, select, textarea, option {
 /* line 5, ../../scss/clank/_controls.scss */
 .cl-docs-controls {
   z-index: 2;
-  line-height: 44px;
-  height: 44px;
+  position: absolute;
+  left: 0;
+}
+
+/* line 14, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top,
+.cl-docs-controls--bottom {
   background-color: #cad2d7;
   background-image: -moz-linear-gradient(top, #d1d6da, #c1ccd3);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1d6da), to(#c1ccd3));
@@ -271,55 +276,82 @@ input, select, textarea, option {
   background-image: linear-gradient(to bottom, #d1d6da, #c1ccd3);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD1D6DA', endColorstr='#FFC1CCD3', GradientType=0);
-  position: absolute;
-  left: 0;
   width: 100%;
+  line-height: 44px;
+  height: 44px;
   /* flexbox setup */
   display: flex;
   flex-direction: row;
 }
-/* line 9, ../../scss/clank/_controls.scss */
-.cl-docs-controls label {
+/* line 21, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top label,
+.cl-docs-controls--bottom label {
   line-height: 44px;
 }
-/* line 12, ../../scss/clank/_controls.scss */
-.cl-docs-controls select {
+/* line 24, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top select,
+.cl-docs-controls--bottom select {
   margin-top: 12px;
 }
-/* line 23, ../../scss/clank/_controls.scss */
-.cl-docs-controls > div {
+/* line 31, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top > div,
+.cl-docs-controls--bottom > div {
   flex: auto;
   justify-content: center;
   line-height: 24px;
   display: flex;
 }
 
-/* line 34, ../../scss/clank/_controls.scss */
+/* line 41, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   top: 0;
 }
 
-/* line 39, ../../scss/clank/_controls.scss */
+/* line 46, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top label {
   margin-right: 3px;
 }
-/* line 41, ../../scss/clank/_controls.scss */
+/* line 48, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top label:after {
   content: ":";
 }
 
-/* line 47, ../../scss/clank/_controls.scss */
+/* line 54, ../../scss/clank/_controls.scss */
 .cl-docs-controls--bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   bottom: 0;
 }
-/* line 50, ../../scss/clank/_controls.scss */
+/* line 57, ../../scss/clank/_controls.scss */
 .cl-docs-controls--bottom p, .cl-docs-controls--bottom .cl-article h4, .cl-article .cl-docs-controls--bottom h4 {
   padding: 0;
   margin: 0;
   text-align: center;
   width: 100%;
+}
+
+/* line 67, ../../scss/clank/_controls.scss */
+.cl-docs-controls--left {
+  background: #FFF;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  width: 120px;
+  left: 0;
+  top: 46px;
+  height: 100%;
+  height: -moz-calc(100% - 90px);
+  height: -o-calc(100% - 90px);
+  height: -webkit-calc(100% - 90px);
+  height: calc(100% - 90px);
+}
+/* line 75, ../../scss/clank/_controls.scss */
+.cl-docs-controls--left a {
+  display: block;
+  border: none;
+  padding: 4px;
+}
+/* line 79, ../../scss/clank/_controls.scss */
+.cl-docs-controls--left a:hover {
+  background: #EEE;
 }
 
 /**

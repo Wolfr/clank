@@ -4,6 +4,18 @@
 
 .cl-docs-controls {
   z-index: 2;
+  position: absolute;
+  left: 0;
+}
+
+// Top AND bottom
+
+.cl-docs-controls--top,
+.cl-docs-controls--bottom {
+  
+  @include gradient-vertical(#d1d6da, #c1ccd3);
+  
+  width: 100%;
   line-height: 44px;
   height: 44px;
   label {
@@ -12,11 +24,7 @@
   select {
     margin-top: 12px;
   }
-  @include gradient-vertical(#d1d6da, #c1ccd3);
-  position: absolute;
-  left: 0;
-  width: 100%;
-
+  
   /* flexbox setup */
   display: flex;
   flex-direction: row;
@@ -26,7 +34,6 @@
    line-height: 24px;
    display: flex;
  }
- 
 }
 
 // Top
@@ -54,4 +61,23 @@
     width: 100%;
   }
 
+}
+
+// Left
+.cl-docs-controls--left {
+  background: #FFF;
+  border-right: 1px solid rgba(0,0,0,0.15);
+  width: 120px;
+  left: 0;
+  top: 46px;
+  height: 100%;
+  @include calc("height", "100% - 90px");
+  a {
+    display: block;
+    border: none;
+    padding: 4px;
+    &:hover {
+      background: #EEE;
+    }
+  }
 }
