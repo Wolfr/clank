@@ -3,12 +3,12 @@
 @import "susy";
 
 // Regular imports
-@import "vars-n-mixins";
-@import "normalize";
-@import "grid";
-@import "image_alignment";
-@import "bootstrap-nav-tabs-stacked";
-@import "pygments";
+@import "docs/vars-n-mixins";
+@import "docs/normalize";
+@import "docs/grid";
+@import "docs/image_alignment";
+@import "docs/bootstrap-nav-tabs-stacked";
+@import "docs/pygments";
 
 body {
   font-family: Arial;

@@ -1,0 +1,41 @@
+@import "compass";
+
+@import "clank/base";
+@import "clank/mixins";
+@import "clank/device_wraps";
+@import "clank/controls";
+@import "clank/os_chrome";
+
+@import "clank/components/headers-footers";
+@import "clank/components/buttons";
+@import "clank/components/code-example";
+@import "clank/components/typography";
+@import "clank/components/button-positioning";
+@import "clank/components/table-view";
+@import "clank/components/help-txt";
+
+@import "clank/icon-fonts/ios"; // System icons ios
+@import "clank/icon-fonts/android"; // System Android
+@import "clank/icon-fonts/my_app"; // App specific icons ios
+
+// Page level
+
+.cl-page {
+  text-align: left;
+  font-size: 13px;
+  word-wrap: break-word;
+  height: 100%;
+  @include calc("height","100% - 20px"); // minus status bar height
+
+  -webkit-font-smoothing: antialiased;
+  .cl-content {
+    background: #FFF;
+  }
+}
+
+.cl-page-welcome,
+.cl-page-table-view {
+  .cl-content {
+    background: #EEE;
+  }
+}
