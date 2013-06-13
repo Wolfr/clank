@@ -1,0 +1,31 @@
+.cl-article {
+
+  p {
+    margin: 10px; // make use of collapsing margins
+    line-height: 1.33;
+    color: #333;
+    @include text-shadow-white;
+    & + p {
+      margin-top: 0;
+    }
+  }
+  
+  h4 {
+    @extend p;
+  }
+  
+  a {
+    color: $accent-color;
+    border-bottom: 1px solid lighten($accent-color, 60%);
+  }
+
+}
+
+.cl-article-intro {
+  font-size: 16px;
+  background: $accent-color;
+  color: #FFF;
+  text-shadow: none;
+  padding: 10px;
+  margin: 0 0 10px;
+}
