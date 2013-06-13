@@ -78,19 +78,22 @@ $background-color-inverse: darken($accent-color, 10%);
 }
 
 @mixin button-skin {
-  @include border-radius($default-border-radius);
-  @if $accent-color-light {
-    color: darken($text-color, 5%);
-  } @else {
-    color: lighten($text-color-inverse, 20%);
-  }
-  @if $shadows {
-    @include box-shadow(0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.05));
-  }
-  @if $gradient {
-    @include gradient-vertical(saturate(lighten($accent-color, 25%), 10%), darken($accent-color, 0%));
-  } @else {
-    background: darken($accent-color, 5%);
+  &:link,
+  &:visited {
+    @include border-radius($default-border-radius);
+    @if $accent-color-light {
+      color: darken($text-color, 5%);
+    } @else {
+      color: lighten($text-color-inverse, 20%);
+    }
+    @if $shadows {
+      @include box-shadow(0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.05));
+    }
+    @if $gradient {
+      @include gradient-vertical(saturate(lighten($accent-color, 25%), 10%), darken($accent-color, 0%));
+    } @else {
+      background: darken($accent-color, 5%);
+    }
   }
   &:hover,
   &:active,

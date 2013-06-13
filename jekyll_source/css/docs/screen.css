@@ -1511,16 +1511,16 @@ h1, h2 {
 }
 
 /* line 71, ../../scss/docs/screen.scss */
-h4 {
-  color: #000;
-}
-
-/* line 75, ../../scss/docs/screen.scss */
 h3 {
   color: #333;
   font-weight: 400;
   font-size: 18px;
   margin: 12px 0;
+}
+
+/* line 78, ../../scss/docs/screen.scss */
+h4 {
+  color: #000;
 }
 
 /* line 82, ../../scss/docs/screen.scss */

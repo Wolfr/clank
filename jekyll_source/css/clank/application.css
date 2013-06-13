@@ -610,6 +610,21 @@ input, select, textarea, option {
 
 /* line 2, ../../scss/clank/components/_buttons.scss */
 .cl-btn {
+  display: block;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: #FFF;
+  font-weight: 700;
+  min-width: 54px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 32px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+}
+/* line 82, ../../scss/clank/_mixins.scss */
+.cl-btn:link, .cl-btn:visited {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -627,19 +642,8 @@ input, select, textarea, option {
   background-image: linear-gradient(to bottom, #1fbad9, #155663);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1FBAD9', endColorstr='#FF155663', GradientType=0);
-  display: block;
-  font-weight: 700;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  font-weight: 700;
-  min-width: 54px;
-  text-align: center;
-  font-size: 13px;
-  line-height: 32px;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 98, ../../scss/clank/_mixins.scss */
+/* line 101, ../../scss/clank/_mixins.scss */
 .cl-btn:hover, .cl-btn:active, .cl-btn:focus, .cl-btn.active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -656,26 +660,26 @@ input, select, textarea, option {
   -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
-/* line 29, ../../scss/clank/components/_buttons.scss */
+/* line 30, ../../scss/clank/components/_buttons.scss */
 .cl-bar-title .cl-btn, .cl-bar-footer .cl-btn, .cl-bar .cl-btn {
   padding: 0 7px;
   margin: 5px;
   font-size: 13px;
 }
-/* line 35, ../../scss/clank/components/_buttons.scss */
+/* line 36, ../../scss/clank/components/_buttons.scss */
 .cl-content > .cl-btn {
   margin: 0 10px;
 }
-/* line 40, ../../scss/clank/components/_buttons.scss */
+/* line 41, ../../scss/clank/components/_buttons.scss */
 .cl-btn.cl-btn-icon {
   min-width: 34px;
 }
-/* line 43, ../../scss/clank/components/_buttons.scss */
+/* line 44, ../../scss/clank/components/_buttons.scss */
 .cl-btn.cl-btn-icon-only {
   width: 44px;
 }
 
-/* line 53, ../../scss/clank/components/_buttons.scss */
+/* line 54, ../../scss/clank/components/_buttons.scss */
 .cl-btn:before,
 .cl-btn:after {
   position: absolute;
@@ -687,7 +691,7 @@ input, select, textarea, option {
   white-space: nowrap;
 }
 
-/* line 63, ../../scss/clank/components/_buttons.scss */
+/* line 64, ../../scss/clank/components/_buttons.scss */
 .cl-btn:after {
   top: -1px;
   left: -1px;
@@ -703,7 +707,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF175D6B', endColorstr='#FF11444E', GradientType=0);
 }
 
-/* line 78, ../../scss/clank/components/_buttons.scss */
+/* line 79, ../../scss/clank/components/_buttons.scss */
 .cl-btn:hover:after {
   background-color: #0c333b;
   background-image: -moz-linear-gradient(top, #0f3c46, #09262c);
@@ -715,7 +719,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0F3C46', endColorstr='#FF09262C', GradientType=0);
 }
 
-/* line 86, ../../scss/clank/components/_buttons.scss */
+/* line 87, ../../scss/clank/components/_buttons.scss */
 .cl-btn:before {
   top: 0;
   left: 0;
@@ -731,7 +735,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1FBAD9', endColorstr='#FF155663', GradientType=0);
 }
 
-/* line 100, ../../scss/clank/components/_buttons.scss */
+/* line 101, ../../scss/clank/components/_buttons.scss */
 .cl-btn:hover:before {
   background-color: #114650;
   background-image: -moz-linear-gradient(top, #134f5b, #0e3941);
@@ -746,7 +750,7 @@ input, select, textarea, option {
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 114, ../../scss/clank/components/_buttons.scss */
+/* line 115, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -763,7 +767,7 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF11B6D7', endColorstr='#FF0B7287', GradientType=0);
 }
-/* line 122, ../../scss/clank/_mixins.scss */
+/* line 125, ../../scss/clank/_mixins.scss */
 .cl-btn-primary:hover, .cl-btn-primary:active, .cl-btn-primary:focus, .cl-btn-primary.active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -781,7 +785,7 @@ input, select, textarea, option {
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 124, ../../scss/clank/components/_buttons.scss */
+/* line 125, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary:after {
   background-color: #14535f;
   background-image: -moz-linear-gradient(top, #175d6b, #11444e);
@@ -793,7 +797,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF175D6B', endColorstr='#FF11444E', GradientType=0);
 }
 
-/* line 135, ../../scss/clank/components/_buttons.scss */
+/* line 136, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary:before {
   background-color: #42cde8;
   background-image: -moz-linear-gradient(top, #63e2fb, #11aecd);
@@ -805,7 +809,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF63E2FB', endColorstr='#FF11AECD', GradientType=0);
 }
 
-/* line 145, ../../scss/clank/components/_buttons.scss */
+/* line 146, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary:hover:before {
   background-color: #0f9cb8;
   background-image: -moz-linear-gradient(top, #10a6c4, #0e8ea8);
@@ -952,7 +956,7 @@ input, select, textarea, option {
   -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 177, ../../scss/clank/_mixins.scss */
+/* line 180, ../../scss/clank/_mixins.scss */
 .cl-table-cell:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -961,7 +965,7 @@ input, select, textarea, option {
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 180, ../../scss/clank/_mixins.scss */
+/* line 183, ../../scss/clank/_mixins.scss */
 .cl-table-cell:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
@@ -984,7 +988,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 199, ../../scss/clank/_mixins.scss */
+/* line 202, ../../scss/clank/_mixins.scss */
 .cl-table-cell:hover a, .cl-table-cell:active a, .cl-table-cell:focus a {
   color: #FFF;
 }
@@ -1108,14 +1112,15 @@ input, select, textarea, option {
   min-height: 44px;
   font-weight: 700;
   color: #000;
+  border: none;
 }
-/* line 132, ../../scss/clank/components/_table-view.scss */
+/* line 133, ../../scss/clank/components/_table-view.scss */
 .cl-table-cell > p, .cl-article .cl-table-cell > h4 {
   display: block;
   padding: 10px;
   margin: 0;
 }
-/* line 139, ../../scss/clank/components/_table-view.scss */
+/* line 140, ../../scss/clank/components/_table-view.scss */
 .cl-table-cell .label {
   font-size: 16px;
   line-height: 24px;
@@ -1123,7 +1128,7 @@ input, select, textarea, option {
   margin: 0;
   padding: 0;
 }
-/* line 148, ../../scss/clank/components/_table-view.scss */
+/* line 149, ../../scss/clank/components/_table-view.scss */
 .cl-table-cell .disclosure-help {
   font-weight: 400;
   position: absolute;
@@ -1131,7 +1136,7 @@ input, select, textarea, option {
   right: 30px;
   color: #AAA;
 }
-/* line 157, ../../scss/clank/components/_table-view.scss */
+/* line 158, ../../scss/clank/components/_table-view.scss */
 .cl-table-cell .meta {
   font-weight: 400;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66);
@@ -1140,7 +1145,7 @@ input, select, textarea, option {
   margin: 0;
   padding: 0;
 }
-/* line 166, ../../scss/clank/components/_table-view.scss */
+/* line 167, ../../scss/clank/components/_table-view.scss */
 .cl-table-cell .icon-arrow-right {
   font-size: 19px;
   position: absolute;
@@ -1150,19 +1155,19 @@ input, select, textarea, option {
   color: #AAA;
 }
 
-/* line 179, ../../scss/clank/components/_table-view.scss */
+/* line 180, ../../scss/clank/components/_table-view.scss */
 .cl-table .cl-table-row:first-child .cl-table-cell:first-child, .cl-table__extended .cl-table-row:first-child .cl-table-cell:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
   border-top-left-radius: 2.5px;
 }
-/* line 182, ../../scss/clank/components/_table-view.scss */
+/* line 183, ../../scss/clank/components/_table-view.scss */
 .cl-table .cl-table-row:first-child .cl-table-cell:last-child, .cl-table__extended .cl-table-row:first-child .cl-table-cell:last-child {
   -moz-border-radius-topright: 2.5px;
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 187, ../../scss/clank/components/_table-view.scss */
+/* line 188, ../../scss/clank/components/_table-view.scss */
 .cl-table .cl-table-row:only-child .cl-table-cell:first-child, .cl-table__extended .cl-table-row:only-child .cl-table-cell:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -1171,7 +1176,7 @@ input, select, textarea, option {
   -webkit-border-bottom-left-radius: 2.5px;
   border-bottom-left-radius: 2.5px;
 }
-/* line 190, ../../scss/clank/components/_table-view.scss */
+/* line 191, ../../scss/clank/components/_table-view.scss */
 .cl-table .cl-table-row:only-child .cl-table-cell:last-child, .cl-table__extended .cl-table-row:only-child .cl-table-cell:last-child {
   -moz-border-radius-topright: 2.5px;
   -webkit-border-top-right-radius: 2.5px;
@@ -1180,20 +1185,20 @@ input, select, textarea, option {
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 195, ../../scss/clank/components/_table-view.scss */
+/* line 196, ../../scss/clank/components/_table-view.scss */
 .cl-table .cl-table-row:last-child .cl-table-cell:first-child, .cl-table__extended .cl-table-row:last-child .cl-table-cell:first-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
   border-bottom-left-radius: 2.5px;
 }
-/* line 198, ../../scss/clank/components/_table-view.scss */
+/* line 199, ../../scss/clank/components/_table-view.scss */
 .cl-table .cl-table-row:last-child .cl-table-cell:last-child, .cl-table__extended .cl-table-row:last-child .cl-table-cell:last-child {
   -moz-border-radius-bottomright: 2.5px;
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
 
-/* line 208, ../../scss/clank/components/_table-view.scss */
+/* line 209, ../../scss/clank/components/_table-view.scss */
 .view-all {
   *zoom: 1;
   background: white;
@@ -1219,7 +1224,7 @@ input, select, textarea, option {
   display: table;
   clear: both;
 }
-/* line 177, ../../scss/clank/_mixins.scss */
+/* line 180, ../../scss/clank/_mixins.scss */
 .view-all:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -1228,7 +1233,7 @@ input, select, textarea, option {
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 180, ../../scss/clank/_mixins.scss */
+/* line 183, ../../scss/clank/_mixins.scss */
 .view-all:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
@@ -1237,26 +1242,26 @@ input, select, textarea, option {
   -webkit-border-bottom-right-radius: 2.5px;
   border-bottom-right-radius: 2.5px;
 }
-/* line 216, ../../scss/clank/components/_table-view.scss */
+/* line 217, ../../scss/clank/components/_table-view.scss */
 .view-all > a {
   display: block;
   padding: 10px;
 }
-/* line 220, ../../scss/clank/components/_table-view.scss */
+/* line 221, ../../scss/clank/components/_table-view.scss */
 .view-all > label {
   display: block;
   padding: 10px;
 }
 
-/* line 231, ../../scss/clank/components/_table-view.scss */
+/* line 232, ../../scss/clank/components/_table-view.scss */
 .cl-table__extended .icon-arrow-right {
   right: 10px;
 }
-/* line 234, ../../scss/clank/components/_table-view.scss */
+/* line 235, ../../scss/clank/components/_table-view.scss */
 .cl-table__extended a {
   display: block;
 }
-/* line 237, ../../scss/clank/components/_table-view.scss */
+/* line 238, ../../scss/clank/components/_table-view.scss */
 .cl-table__extended .cl-table-cell {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1266,7 +1271,7 @@ input, select, textarea, option {
   margin: 0 0 1px;
   margin: 0;
 }
-/* line 239, ../../scss/clank/components/_table-view.scss */
+/* line 240, ../../scss/clank/components/_table-view.scss */
 .cl-table__extended .cl-table-cell .cl-table-cell {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
