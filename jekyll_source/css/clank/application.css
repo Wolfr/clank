@@ -51,8 +51,8 @@ input, select, textarea, option {
   height: -o-calc(100% - 44px);
   height: -webkit-calc(100% - 44px);
   height: calc(100% - 44px);
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   position: relative;
 }
@@ -63,12 +63,18 @@ input, select, textarea, option {
   height: -webkit-calc(100% - 88px);
   height: calc(100% - 88px);
 }
-/* line 43, ../../scss/clank/_device_wraps.scss */
+/* line 41, ../../scss/clank/_device_wraps.scss */
+.cl-content .cl-content-inner {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 48, ../../scss/clank/_device_wraps.scss */
 .cl-content .full-height {
   height: 100%;
 }
 
-/* line 48, ../../scss/clank/_device_wraps.scss */
+/* line 53, ../../scss/clank/_device_wraps.scss */
 .cl-device-frame {
   height: 100%;
   width: 100%;
@@ -94,7 +100,7 @@ input, select, textarea, option {
   box-pack: center;
 }
 
-/* line 63, ../../scss/clank/_device_wraps.scss */
+/* line 68, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -103,120 +109,120 @@ input, select, textarea, option {
   overflow-y: hidden;
   position: relative;
 }
-/* line 68, ../../scss/clank/_device_wraps.scss */
+/* line 73, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone4-portrait"] {
   width: 396px;
   height: 734px;
   background: url(../../images/portrait/iphone4.png) no-repeat 0 0;
   padding: 127px 0 0 2px;
 }
-/* line 73, ../../scss/clank/_device_wraps.scss */
+/* line 78, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone4-portrait"] .cl-device-body {
   width: 320px;
   height: 480px;
 }
-/* line 78, ../../scss/clank/_device_wraps.scss */
+/* line 83, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone4-landscape"] {
   padding: 37px 0 0;
   width: 734px;
   height: 396px;
   background: url(../../images/landscape/iphone4.png) no-repeat 0 0;
 }
-/* line 83, ../../scss/clank/_device_wraps.scss */
+/* line 88, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone4-landscape"] .cl-device-body {
   width: 480px;
   height: 320px;
 }
-/* line 88, ../../scss/clank/_device_wraps.scss */
+/* line 93, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone5-portrait"] {
   width: 396px;
   height: 822px;
   background: url(../../images/portrait/iphone5.png) no-repeat 0 0;
   padding: 127px 0 0 0;
 }
-/* line 93, ../../scss/clank/_device_wraps.scss */
+/* line 98, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone5-portrait"] .cl-device-body {
   width: 320px;
   height: 568px;
 }
-/* line 98, ../../scss/clank/_device_wraps.scss */
+/* line 103, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone5-landscape"] {
   padding: 38px 0 0;
   width: 822px;
   height: 396px;
   background: url(../../images/landscape/iphone5.png) no-repeat 0 0;
 }
-/* line 103, ../../scss/clank/_device_wraps.scss */
+/* line 108, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="iphone5-landscape"] .cl-device-body {
   width: 568px;
   height: 320px;
 }
-/* line 108, ../../scss/clank/_device_wraps.scss */
+/* line 113, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-portrait"] {
   width: 434px;
   height: 849px;
   background: url(../../images/portrait/nexus4.png) no-repeat 0 0;
   padding: 107px 0 0;
 }
-/* line 113, ../../scss/clank/_device_wraps.scss */
+/* line 118, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-portrait"] .cl-device-body {
   width: 366px;
   height: 650px;
 }
-/* line 116, ../../scss/clank/_device_wraps.scss */
+/* line 121, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-portrait"] .cl-device-body .cl-page {
   position: relative;
   height: 586px;
 }
-/* line 122, ../../scss/clank/_device_wraps.scss */
+/* line 127, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-landscape"] {
   padding: 34px 40px 0 0;
   width: 849px;
   height: 434px;
   background: url(../../images/landscape/nexus4.png) no-repeat 0 0;
 }
-/* line 127, ../../scss/clank/_device_wraps.scss */
+/* line 132, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-landscape"] .cl-android-status {
   width: 602px;
 }
-/* line 130, ../../scss/clank/_device_wraps.scss */
+/* line 135, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-landscape"] .cl-page {
   width: 610px;
   height: 342px;
   position: relative;
 }
-/* line 135, ../../scss/clank/_device_wraps.scss */
+/* line 140, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus4-landscape"] .cl-device-body {
   width: 650px;
   height: 366px;
   position: relative;
   right: -27px;
 }
-/* line 142, ../../scss/clank/_device_wraps.scss */
+/* line 147, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="ipad3-portrait"] {
   width: 970px;
   height: 1260px;
   background: url(../../images/portrait/ipad3.png) no-repeat 0 0;
   padding: 118px 0 0;
 }
-/* line 148, ../../scss/clank/_device_wraps.scss */
+/* line 153, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="ipad3-portrait"] .cl-device-body {
   width: 768px;
   height: 1024px;
 }
-/* line 153, ../../scss/clank/_device_wraps.scss */
+/* line 158, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="ipad3-landscape"] {
   padding: 101px 0 0;
   width: 1260px;
   height: 970px;
   background: url(../../images/landscape/ipad3.png) no-repeat 0 0;
 }
-/* line 158, ../../scss/clank/_device_wraps.scss */
+/* line 163, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="ipad3-landscape"] .cl-device-body {
   width: 1024px;
   height: 768px;
 }
-/* line 163, ../../scss/clank/_device_wraps.scss */
+/* line 168, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus7-portrait"] {
   width: 970px;
   height: 1260px;
@@ -224,16 +230,16 @@ input, select, textarea, option {
   padding: 134px 0 0;
   background-size: contain;
 }
-/* line 169, ../../scss/clank/_device_wraps.scss */
+/* line 174, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus7-portrait"] .cl-device-body {
   width: 610px;
   height: 977px;
 }
-/* line 172, ../../scss/clank/_device_wraps.scss */
+/* line 177, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus7-portrait"] .cl-device-body .cl-page {
   height: 913px;
 }
-/* line 177, ../../scss/clank/_device_wraps.scss */
+/* line 182, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus7-landscape"] {
   width: 1260px;
   height: 970px;
@@ -241,14 +247,14 @@ input, select, textarea, option {
   background-size: contain;
   padding: 176px 0 0;
 }
-/* line 183, ../../scss/clank/_device_wraps.scss */
+/* line 188, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus7-landscape"] .cl-device-body {
   width: 977px;
   height: 614px;
   position: relative;
   right: 6px;
 }
-/* line 188, ../../scss/clank/_device_wraps.scss */
+/* line 193, ../../scss/clank/_device_wraps.scss */
 .cl-phone-wrap[data-device="nexus7-landscape"] .cl-device-body .cl-page {
   position: relative;
   height: 589px;
@@ -276,53 +282,60 @@ input, select, textarea, option {
   background-image: linear-gradient(to bottom, #d1d6da, #c1ccd3);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD1D6DA', endColorstr='#FFC1CCD3', GradientType=0);
+  *zoom: 1;
   width: 100%;
   line-height: 44px;
   height: 44px;
-  /* flexbox setup */
-  display: flex;
-  flex-direction: row;
+}
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.cl-docs-controls--top:after,
+.cl-docs-controls--bottom:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 /* line 21, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top label,
 .cl-docs-controls--bottom label {
   line-height: 44px;
 }
-/* line 24, ../../scss/clank/_controls.scss */
-.cl-docs-controls--top select,
-.cl-docs-controls--bottom select {
-  margin-top: 12px;
-}
-/* line 31, ../../scss/clank/_controls.scss */
-.cl-docs-controls--top > div,
-.cl-docs-controls--bottom > div {
-  flex: auto;
-  justify-content: center;
-  line-height: 24px;
-  display: flex;
-}
 
-/* line 41, ../../scss/clank/_controls.scss */
+/* line 29, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   top: 0;
 }
+/* line 33, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top > div {
+  width: 33%;
+  text-align: center;
+  float: left;
+}
+/* line 38, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top select {
+  margin-top: 12px;
+}
+/* line 41, ../../scss/clank/_controls.scss */
+.cl-docs-controls--top input[type="range"] {
+  position: relative;
+  top: 5px;
+}
 
-/* line 46, ../../scss/clank/_controls.scss */
+/* line 47, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top label {
   margin-right: 3px;
 }
-/* line 48, ../../scss/clank/_controls.scss */
+/* line 49, ../../scss/clank/_controls.scss */
 .cl-docs-controls--top label:after {
   content: ":";
 }
 
-/* line 54, ../../scss/clank/_controls.scss */
+/* line 55, ../../scss/clank/_controls.scss */
 .cl-docs-controls--bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   bottom: 0;
 }
-/* line 57, ../../scss/clank/_controls.scss */
+/* line 58, ../../scss/clank/_controls.scss */
 .cl-docs-controls--bottom p, .cl-docs-controls--bottom .cl-article h4, .cl-article .cl-docs-controls--bottom h4 {
   padding: 0;
   margin: 0;
@@ -330,7 +343,7 @@ input, select, textarea, option {
   width: 100%;
 }
 
-/* line 67, ../../scss/clank/_controls.scss */
+/* line 68, ../../scss/clank/_controls.scss */
 .cl-docs-controls--left {
   background: #FFF;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
@@ -343,17 +356,17 @@ input, select, textarea, option {
   height: -webkit-calc(100% - 90px);
   height: calc(100% - 90px);
 }
-/* line 75, ../../scss/clank/_controls.scss */
+/* line 76, ../../scss/clank/_controls.scss */
 .cl-docs-controls--left h4, .cl-docs-controls--left a {
   display: block;
   border: none;
   padding: 4px;
 }
-/* line 80, ../../scss/clank/_controls.scss */
+/* line 81, ../../scss/clank/_controls.scss */
 .cl-docs-controls--left h4 {
   margin: 0;
 }
-/* line 84, ../../scss/clank/_controls.scss */
+/* line 85, ../../scss/clank/_controls.scss */
 .cl-docs-controls--left a:hover {
   background: #EEE;
 }
@@ -367,42 +380,44 @@ input, select, textarea, option {
 /* line 10, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status,
 .cl-android-status {
+  overflow: hidden;
+  height: 20px;
   background: #000;
   color: #FFF;
   text-align: center;
   line-height: 20px;
+  max-height: 20px;
+  white-space: nowrap;
   padding: 0 4px;
-  display: flex;
-  flex-direction: row;
-  /* Compass version */
 }
-/* line 27, ../../scss/clank/_os_chrome.scss */
-.cl-ios-status > span,
-.cl-android-status > span {
-  flex: auto;
-  justify-content: space-around;
+/* line 26, ../../scss/clank/_os_chrome.scss */
+.cl-ios-status > span:first-child,
+.cl-android-status > span:first-child {
+  float: left;
+}
+/* line 30, ../../scss/clank/_os_chrome.scss */
+.cl-ios-status > span:last-child,
+.cl-android-status > span:last-child {
+  float: right;
 }
 /* line 32, ../../scss/clank/_os_chrome.scss */
-.cl-ios-status span:first-child,
-.cl-android-status span:first-child {
-  text-align: left;
-}
-/* line 36, ../../scss/clank/_os_chrome.scss */
-.cl-ios-status span:last-child,
-.cl-android-status span:last-child {
-  text-align: right;
+.cl-ios-status > span:last-child span,
+.cl-android-status > span:last-child span {
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /**
   iOS only
 **/
-/* line 46, ../../scss/clank/_os_chrome.scss */
+/* line 45, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status {
   font-weight: 700;
   font-family: Helvetica;
   height: 20px;
 }
-/* line 51, ../../scss/clank/_os_chrome.scss */
+/* line 50, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .clock {
   position: absolute;
   top: 0;
@@ -410,12 +425,12 @@ input, select, textarea, option {
   left: 0;
 }
 
-/* line 61, ../../scss/clank/_os_chrome.scss */
+/* line 60, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals {
   font-size: 0;
   margin-right: 3px;
 }
-/* line 64, ../../scss/clank/_os_chrome.scss */
+/* line 63, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals span {
   width: 3px;
   display: inline-block;
@@ -425,35 +440,36 @@ input, select, textarea, option {
   bottom: 10px;
   background: #FFF;
 }
-/* line 73, ../../scss/clank/_os_chrome.scss */
+/* line 72, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals .signal1 {
   height: 4px;
 }
-/* line 76, ../../scss/clank/_os_chrome.scss */
+/* line 75, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals .signal2 {
   height: 5px;
 }
-/* line 79, ../../scss/clank/_os_chrome.scss */
+/* line 78, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals .signal3 {
   height: 6.5px;
 }
-/* line 82, ../../scss/clank/_os_chrome.scss */
+/* line 81, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals .signal4 {
   height: 8px;
 }
-/* line 85, ../../scss/clank/_os_chrome.scss */
+/* line 84, ../../scss/clank/_os_chrome.scss */
 .cl-ios-status .signals .signal5 {
   height: 10px;
 }
 
-/* line 92, ../../scss/clank/_os_chrome.scss */
+/* line 91, ../../scss/clank/_os_chrome.scss */
 .icon-ios-battery {
-  font-size: 22px;
-  line-height: 0;
+  font-size: 20px;
+  line-height: 20px;
   position: relative;
   top: -1px;
+  height: 20px;
+  max-height: 20px;
   margin-left: 4px;
-  float: right;
 }
 
 /**

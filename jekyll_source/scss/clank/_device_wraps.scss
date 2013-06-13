@@ -36,8 +36,13 @@
   &.has-footer {
     @include calc(height, "100% - 88px");
   }
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
+  .cl-content-inner {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
   -webkit-overflow-scrolling: touch;
   position: relative;
   .full-height {

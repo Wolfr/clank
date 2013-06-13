@@ -14,26 +14,14 @@
 .cl-docs-controls--bottom {
   
   @include gradient-vertical(#d1d6da, #c1ccd3);
-  
+  @include pie-clearfix;
   width: 100%;
   line-height: 44px;
   height: 44px;
   label {
     line-height: 44px;
   }
-  select {
-    margin-top: 12px;
-  }
-  
-  /* flexbox setup */
-  display: flex;
-  flex-direction: row;
-  & > div {
-   flex: auto;
-   justify-content: center;
-   line-height: 24px;
-   display: flex;
- }
+
 }
 
 // Top
@@ -41,6 +29,19 @@
 .cl-docs-controls--top {
   border-bottom: 1px solid rgba(0,0,0,0.15);
   top: 0;
+  
+  & > div {
+    width: 33%;
+    text-align: center;
+    float: left;
+  }
+  select {
+    margin-top: 12px;
+  }
+  input[type="range"] {
+    position: relative;
+    top: 5px;
+  }
 }
 
 .cl-docs-controls--top label {

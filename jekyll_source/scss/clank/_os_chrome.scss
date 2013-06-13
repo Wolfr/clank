@@ -9,32 +9,31 @@
 .cl-ios-status,
 .cl-android-status {
   // Style
+  overflow: hidden;
+  height: 20px;
   background: #000;
   color: #FFF;
   text-align: center;
   line-height: 20px;
-
+  max-height: 20px;
+  white-space: nowrap;
   padding: 0 4px;
   // Layout 
-  display: flex;
-  flex-direction: row;
-  
-  // Flex for eq heights
-  /* Compass version */
-  // @include display-box;
-  // @include box-orient(horizontal);
 
   & > span {
-    flex: auto;
-    justify-content: space-around;
   }
 
-  span:first-child {
-    text-align: left;
+  & > span:first-child {
+    float: left;
   }
   
-  span:last-child {
-    text-align: right;
+  & > span:last-child {
+    float: right;
+    span {
+      line-height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
   
 }
@@ -90,12 +89,13 @@
 // Battery icon ios
 
 .icon-ios-battery {
-  font-size: 22px;
-  line-height: 0;
+  font-size: 20px;
+  line-height: 20px;
   position: relative;
   top: -1px;
+  height: 20px;
+  max-height: 20px;
   margin-left: 4px;
-  float: right;
 }
 
 
