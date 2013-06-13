@@ -1862,32 +1862,58 @@ pre {
   margin-top: 0;
 }
 
-/* line 280, ../scss/docs.scss */
-#blog-nav ul {
+/* line 61, ../scss/docs/_vars-n-mixins.scss */
+#blog-nav a:link, #blog-nav a:visited {
+  color: #7F7F7F;
+  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+}
+/* line 68, ../scss/docs/_vars-n-mixins.scss */
+#blog-nav a:hover, #blog-nav a:active, #blog-nav a:focus {
+  color: #000;
+  border-bottom: none;
+}
+/* line 283, ../scss/docs.scss */
+#blog-nav .bordered-list {
   margin: 0;
   padding: 0;
 }
-/* line 283, ../scss/docs.scss */
-#blog-nav ul li {
-  list-style: none;
+/* line 286, ../scss/docs.scss */
+#blog-nav .bordered-list span {
+  display: block;
 }
-/* line 287, ../scss/docs.scss */
+/* line 289, ../scss/docs.scss */
+#blog-nav .bordered-list li {
+  list-style: none;
+  padding: 0 0 4px;
+  margin: 0 0 4px;
+  border-bottom: 1px solid #DDD;
+}
+/* line 294, ../scss/docs.scss */
+#blog-nav .bordered-list li:last-child {
+  border: none;
+}
+/* line 297, ../scss/docs.scss */
+#blog-nav .bordered-list li a {
+  border: none;
+}
+/* line 302, ../scss/docs.scss */
 #blog-nav .date {
   color: #999;
   margin-right: 4px;
 }
 
-/* line 293, ../scss/docs.scss */
+/* line 308, ../scss/docs.scss */
 #blog article {
   margin: 0 0 24px;
   padding: 0 0 24px;
   border-bottom: 1px solid #DDD;
 }
-/* line 295, ../scss/docs.scss */
+/* line 310, ../scss/docs.scss */
 #blog article header p {
   color: #999;
 }
-/* line 299, ../scss/docs.scss */
+/* line 314, ../scss/docs.scss */
 #blog article h1 {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1897,28 +1923,28 @@ pre {
   margin: 0;
   text-transform: none;
 }
-/* line 302, ../scss/docs.scss */
+/* line 317, ../scss/docs.scss */
 #blog article h1 a {
   color: #164886;
   border: none;
 }
-/* line 305, ../scss/docs.scss */
+/* line 320, ../scss/docs.scss */
 #blog article h1 a:hover {
   color: #000;
 }
-/* line 313, ../scss/docs.scss */
+/* line 328, ../scss/docs.scss */
 #blog article:last-child {
   margin: 0;
   border: none;
   padding: 0;
 }
 
-/* line 322, ../scss/docs.scss */
+/* line 337, ../scss/docs.scss */
 body, html {
   height: 100%;
 }
 
-/* line 325, ../scss/docs.scss */
+/* line 340, ../scss/docs.scss */
 #demo-app {
   height: 600px;
   height: -moz-calc(100% - 59px);
@@ -1928,7 +1954,7 @@ body, html {
   position: relative;
 }
 
-/* line 331, ../scss/docs.scss */
+/* line 346, ../scss/docs.scss */
 #disqus_thread {
   max-width: 600px;
 }

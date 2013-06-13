@@ -277,11 +277,26 @@ pre {
 }
 
 #blog-nav {
-  ul {
+  a {
+    @include muted-links;
+  }
+  .bordered-list {
     margin: 0;
     padding: 0;
+    span {
+      display: block;
+    }
     li {
       list-style: none;
+      padding: 0 0 4px;
+      margin: 0 0 4px;
+      border-bottom: 1px solid #DDD;
+      &:last-child {
+        border: none;
+      }
+      a {
+        border: none;
+      } 
     }
   }
   .date {
