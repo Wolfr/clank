@@ -344,12 +344,16 @@ input, select, textarea, option {
   height: calc(100% - 90px);
 }
 /* line 75, ../../scss/clank/_controls.scss */
-.cl-docs-controls--left a {
+.cl-docs-controls--left h4, .cl-docs-controls--left a {
   display: block;
   border: none;
   padding: 4px;
 }
-/* line 79, ../../scss/clank/_controls.scss */
+/* line 80, ../../scss/clank/_controls.scss */
+.cl-docs-controls--left h4 {
+  margin: 0;
+}
+/* line 84, ../../scss/clank/_controls.scss */
 .cl-docs-controls--left a:hover {
   background: #EEE;
 }
@@ -610,6 +614,7 @@ input, select, textarea, option {
 
 /* line 2, ../../scss/clank/components/_buttons.scss */
 .cl-btn {
+  color: white;
   display: block;
   font-weight: 700;
   cursor: pointer;
@@ -622,7 +627,7 @@ input, select, textarea, option {
   line-height: 32px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 82, ../../scss/clank/_mixins.scss */
+/* line 87, ../../scss/clank/_mixins.scss */
 .cl-btn:link, .cl-btn:visited {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -642,8 +647,10 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1FBAD9', endColorstr='#FF155663', GradientType=0);
 }
-/* line 101, ../../scss/clank/_mixins.scss */
+/* line 106, ../../scss/clank/_mixins.scss */
 .cl-btn:hover, .cl-btn:active, .cl-btn:focus, .cl-btn.active {
+  color: white;
+  border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -751,6 +758,10 @@ input, select, textarea, option {
 
 /* line 114, ../../scss/clank/components/_buttons.scss */
 .cl-btn-primary {
+  color: white;
+}
+/* line 132, ../../scss/clank/_mixins.scss */
+.cl-btn-primary:link, .cl-btn-primary:visited {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -766,8 +777,10 @@ input, select, textarea, option {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF11B6D7', endColorstr='#FF0B7287', GradientType=0);
 }
-/* line 125, ../../scss/clank/_mixins.scss */
+/* line 144, ../../scss/clank/_mixins.scss */
 .cl-btn-primary:hover, .cl-btn-primary:active, .cl-btn-primary:focus, .cl-btn-primary.active {
+  color: white;
+  border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -926,9 +939,9 @@ input, select, textarea, option {
 .cl-table-title, .cl-table-title-extended {
   padding: 0;
   margin: 10px 10px 0 20px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #3E3E3E;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
 }
 /* line 22, ../../scss/clank/components/_table-view.scss */
 .cl-table-title + .cl-table, .cl-table-title-extended + .cl-table, .cl-table-title + .cl-table__extended, .cl-table-title-extended + .cl-table__extended {
@@ -955,7 +968,7 @@ input, select, textarea, option {
   -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-/* line 180, ../../scss/clank/_mixins.scss */
+/* line 205, ../../scss/clank/_mixins.scss */
 .cl-table-cell:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -964,7 +977,7 @@ input, select, textarea, option {
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 183, ../../scss/clank/_mixins.scss */
+/* line 208, ../../scss/clank/_mixins.scss */
 .cl-table-cell:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
@@ -987,7 +1000,7 @@ input, select, textarea, option {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-/* line 202, ../../scss/clank/_mixins.scss */
+/* line 227, ../../scss/clank/_mixins.scss */
 .cl-table-cell:hover a, .cl-table-cell:active a, .cl-table-cell:focus a {
   color: #FFF;
 }
@@ -1223,7 +1236,7 @@ input, select, textarea, option {
   display: table;
   clear: both;
 }
-/* line 180, ../../scss/clank/_mixins.scss */
+/* line 205, ../../scss/clank/_mixins.scss */
 .view-all:first-child {
   -moz-border-radius-topleft: 2.5px;
   -webkit-border-top-left-radius: 2.5px;
@@ -1232,7 +1245,7 @@ input, select, textarea, option {
   -webkit-border-top-right-radius: 2.5px;
   border-top-right-radius: 2.5px;
 }
-/* line 183, ../../scss/clank/_mixins.scss */
+/* line 208, ../../scss/clank/_mixins.scss */
 .view-all:last-child {
   -moz-border-radius-bottomleft: 2.5px;
   -webkit-border-bottom-left-radius: 2.5px;
@@ -1451,10 +1464,9 @@ input, select, textarea, option {
   content: "\f103";
 }
 
-/* line 24, ../../scss/clank/application.scss */
+/* line 23, ../../scss/clank/application.scss */
 .cl-page {
   text-align: left;
-  font-family: "Roboto", Arial;
   font-size: 13px;
   word-wrap: break-word;
   height: 100%;
@@ -1464,12 +1476,12 @@ input, select, textarea, option {
   height: calc(100% - 20px);
   -webkit-font-smoothing: antialiased;
 }
-/* line 33, ../../scss/clank/application.scss */
+/* line 31, ../../scss/clank/application.scss */
 .cl-page .cl-content {
   background: #FFF;
 }
 
-/* line 41, ../../scss/clank/application.scss */
+/* line 38, ../../scss/clank/application.scss */
 .cl-page-welcome .cl-content,
 .cl-page-table-view .cl-content {
   background: #EEE;

@@ -78,6 +78,11 @@ $background-color-inverse: darken($accent-color, 10%);
 }
 
 @mixin button-skin {
+  @if $accent-color-light {
+    color: darken($text-color, 5%);
+  } @else {
+    color: lighten($text-color-inverse, 20%);
+  }
   &:link,
   &:visited {
     @include border-radius($default-border-radius);
@@ -99,6 +104,12 @@ $background-color-inverse: darken($accent-color, 10%);
   &:active,
   &:focus,
   &.active {
+    @if $accent-color-light {
+      color: darken($text-color, 5%);
+    } @else {
+      color: lighten($text-color-inverse, 20%);
+    }
+    border: none;
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
@@ -112,17 +123,31 @@ $background-color-inverse: darken($accent-color, 10%);
 }
 
 @mixin button-skin-primary {
-  @include border-radius($default-border-radius);
-  color: lighten($text-color-inverse, 20%);
-  @if $gradient {
-    @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
+  @if $accent-color-light {
+    color: darken($text-color, 5%);
   } @else {
-    background: $accent-color-primary;
+    color: lighten($text-color-inverse, 20%);
+  }
+  &:link,
+  &:visited {
+    @include border-radius($default-border-radius);
+    color: lighten($text-color-inverse, 20%);
+    @if $gradient {
+      @include gradient-vertical(lighten($accent-color-primary, 2%), darken($accent-color-primary, 15%));
+    } @else {
+      background: $accent-color-primary;
+    }
   }
   &:hover,
   &:active,
   &:focus,
   &.active {
+    @if $accent-color-light {
+      color: darken($text-color, 5%);
+    } @else {
+      color: lighten($text-color-inverse, 20%);
+    }
+    border: none;
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));

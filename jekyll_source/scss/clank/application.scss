@@ -14,7 +14,6 @@
 @import "components/table-view";
 @import "components/help-txt";
 
-
 @import "icon-fonts/ios"; // System icons ios
 @import "icon-fonts/android"; // System Android
 @import "icon-fonts/my_app"; // App specific icons ios
@@ -23,7 +22,6 @@
 
 .cl-page {
   text-align: left;
-  font-family: "Roboto", Arial;
   font-size: 13px;
   word-wrap: break-word;
   height: 100%;
@@ -31,7 +29,6 @@
 
   -webkit-font-smoothing: antialiased;
   .cl-content {
-
     background: #FFF;
   }
 }

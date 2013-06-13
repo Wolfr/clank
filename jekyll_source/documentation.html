@@ -16,6 +16,9 @@
       <li><a href="#what-is">What is</a></li>
       <li><a href="#why">Why Clank?</a></li>
       <li><a href="#css-conventions">CSS conventions</a></li>
+      <li><a href="#component-headers-footers">Component: headers &amp; footers</a></li>
+      <li><a href="#generators">Generators</a></li>
+
     </ul>
       
   </div>
@@ -60,14 +63,50 @@
   
       <h3 id="css-conventions">CSS conventions</h3>
       <p>Every component should be prefixed with <code>cl-</code>:</p>
-      {% highlight scss %}.cl-accordion{% endhighlight %}
+      {% highlight scss %}.cl-accordion { }{% endhighlight %}
       <p>This is verbose but the only way to not clash with other libraries until Web Components are commonplace.</p>
       <p>A child element dependent on the component should be added with a hyphen:</p>
-      {% highlight scss %}.cl-accordion-item{% endhighlight %}
+      {% highlight scss %}.cl-accordion-item { }{% endhighlight %}
       <p>State should be added with a double underscore:</p>
-      {% highlight scss %}.cl-accordion-item__disabled{% endhighlight %}
+      {% highlight scss %}.cl-accordion-item__disabled { }{% endhighlight %}
       <p>This prevents too many nested selectors in SCSS.</p>
       <p>This naming technique has been coined <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a>.</p>
+      
+      <hr />
+      
+      <h3 id="component-headers-footers">Component: headers &amp; footers</h3>
+      
+      <p class="intro">This page is about the headers and footers component. Adding headers and footers is as simple as adding specific markup.</p>
+      <h4>Adding a title bar</h4>
+      <p>Add header markup as a direct descendant of a <code>.cl-page</code>:</p>
+      {% highlight html %}<div class="cl-bar-title"></div>{% endhighlight %}
+      <h4>Adding a footer</h4>
+      <p>Add a footer as a direct descendant of a  <code>.cl-page</code>:</p>
+      {% highlight html %}<div class="cl-bar-footer"></div>{% endhighlight %}
+      <h4>Adding another bar</h4>
+      <p>Add a bar as direct descendant of <code>.cl-content</code>:</p>
+      {% highlight html %}<div class="cl-bar"></div>{% endhighlight %}
+
+      <hr />
+      
+      <h3 id="generators">Generators</h3>
+
+      <p><em>Note that generators are a work in progress and they do not exist yet</em>.</p>
+      
+      <h4>What is a generator?</h4>
+      <p>A generator is simply a bash script that generates code for you. This makes it easy to, for example, add new screens or components to your project.</p>
+      <h4>Available generators</h4>
+      <ul>
+        <li>
+          <p><strong>generate-page.sh</strong></p>
+          <p>Creates a new page.</p>
+        </li>
+        <li>
+          <p><strong>generate-component.sh</strong></p>
+          <p>Creates a new component.</p>
+        </li>
+      </ul>
+
     </article>
   </div>
 

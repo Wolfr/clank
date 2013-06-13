@@ -72,10 +72,15 @@
   top: 46px;
   height: 100%;
   @include calc("height", "100% - 90px");
-  a {
+  h4, a {
     display: block;
     border: none;
     padding: 4px;
+  }
+  h4 {
+    margin: 0;
+  }
+  a {
     &:hover {
       background: #EEE;
     }
