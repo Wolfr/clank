@@ -1,5 +1,5 @@
-components
-!scss/components
+jekyll_source/components
+!jekyll_source/scss/components
 .idea
 _site
 site

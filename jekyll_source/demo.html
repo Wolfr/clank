@@ -19,6 +19,17 @@
       <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
     </div>
   </div>
+  
+  <div class="cl-docs-controls cl-docs-controls--left">
+    <ul>
+      <li><a href="#">Index</a></li>
+      <li><a href="#">Headers and footers</a></li>
+      <li><a href="#">Bar text</a></li>
+      <li><a href="#">Buttons</a></li>
+      <li><a href="#">Loading</a></li>
+      <li><a href="#">Table view</a></li>
+    </ul>
+  </div>
 
   <div class="cl-device-frame">
     <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]});" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
@@ -79,6 +90,7 @@
               <p>You are looking at Clank, an open source prototyping framework for mobile apps. Think of it as Twitter Bootstrap but for prototyping native apps.</p>
             </div>
             <h3 class="cl-table-title">Demos</h3>
+            
             <div class="cl-table">
               <div class="cl-table-cell">
                 <a href="demo.html">
