@@ -1,6 +1,3 @@
+site
 jekyll_source/components
 !jekyll_source/scss/components
-.idea
-_site
-site
-site/*
