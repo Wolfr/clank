@@ -3,3 +3,4 @@ jekyll_source/components
 .idea
 _site
 site
+site/*
