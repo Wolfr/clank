@@ -1,0 +1,53 @@
+---
+  layout: base
+  title: Blog
+---
+
+<div class="page-title-bar">
+  <div class="inner-content">
+    <h2>The Clank Blog</h2>
+  </div>
+</div>
+
+<div id="blog">
+  <div id="blog-content">
+    {% for post in site.posts %}
+    <article>
+      <header>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <p>Posted on {{ post.date | date: "%B %d, %Y" }} by Wolfr</p>
+      </header>
+      <div class="entry-content">
+        {{ post.content }}
+      </div>
+    </article>
+    {% endfor %}
+    
+    {% if paginator.page %}
+    <div id="paginator" class="content">
+      {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}/">Older entries</a>
+      {% endif %}
+      {% if paginator.previous_page %}
+      <a href="/page{{ paginator.previous_page }}/">Newer entries</a>
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </div>
+  <div id="blog-nav">
+    <h4>Welcome to the Clank blog</h4>
+    <p>Use this blog to stay up to date on Clank. <a href="https://twitter.com/getclank">Follow us on Twitter</a> to subscribe to updates.</p>
+
+    <h4>Post archive</h4>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+          <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>

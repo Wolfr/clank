@@ -1,0 +1,10 @@
+{
+  "name": "getclank.com",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "~1.0.7",
+    "angular-cookies": "~1.0.7",
+    "prefix-free": "latest",
+    "spin.js": "~1.3.0"
+  }
+}

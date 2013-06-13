@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Clank</title>
+ <link href="http://getclank.com/atom.xml" rel="self"/>
+ <link href="http://getclank.com/"/>
+ <updated>2013-06-13T15:09:32+02:00</updated>
+ <id>http://getclank.com/</id>
+ <author>
+   <name>Johan Ronsse</name>
+   <email>clank@wolfslittlestore.be</email>
+ </author>
+ 
+ <entry>
+   <title>CSS Gradient Strokes</title>
+   <link href="http://getclank.com/2013/06/05/css-gradient-strokes.html"/>
+   <updated>2013-06-05T11:00:00+02:00</updated>
+   <id>http://getclank.com/2013/06/05/css-gradient-strokes</id>
+   <content type="html">&lt;p&gt;If you look closely at iOS buttons, you’ll see that they actually have a gradient running in their strokes:&lt;/p&gt;&lt;p&gt;&lt;img src='http://getclank.files.wordpress.com/2013/06/grad-strokes.png?w=584' /&gt;&lt;/p&gt;&lt;p&gt;There is no CSS gradient stroke feature in CSS. Fortunately, we can fake it with pseudo elements.&lt;/p&gt;&lt;p&gt;In the first version of &lt;a href='https://github.com/Wolfr/clank'&gt;Clank&lt;/a&gt;, I had extra elements around my buttons to make it work properly:&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;  &lt;span class='nt'&gt;&amp;lt;a&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;btn&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&amp;lt;span&amp;gt;&amp;lt;span&amp;gt;&lt;/span&gt;Hello&lt;span class='nt'&gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is problematic for framework adoption since it’s another thing people will have to learn.&lt;/p&gt;&lt;p&gt;This pretty messy code since changed to:&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;  &lt;span class='nt'&gt;&amp;lt;a&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;cl-btn&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;Hello&lt;span class='nt'&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I did manage the gradient strokes by hooking them to the :before and :after elements. E.g. let’s say you have a button with a green to dark green gradient background:&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nc'&gt;.cl-btn&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+  &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;linear&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;gradient&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;to&lt;/span&gt; &lt;span class='k'&gt;bottom&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='nb'&gt;green&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;%,&lt;/span&gt; &lt;span class='nb'&gt;darkgreen&lt;/span&gt; &lt;span class='m'&gt;100&lt;/span&gt;&lt;span class='o'&gt;%&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt; &lt;span class='c'&gt;/* W3C */&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If we include two pseudo elements that contains 100% of the space of the original element, we can use these to fake our new background:&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nc'&gt;.cl-btn&lt;/span&gt;&lt;span class='nd'&gt;:before&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt;
+&lt;span class='nc'&gt;.cl-btn&lt;/span&gt;&lt;span class='nd'&gt;:after&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+  &lt;span class='k'&gt;position&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;absolute&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;content&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;100&lt;/span&gt;&lt;span class='o'&gt;%&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;height&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;100&lt;/span&gt;&lt;span class='o'&gt;%&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;min-width&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;100&lt;/span&gt;&lt;span class='o'&gt;%&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;white-space&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;nowrap&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By using a negative z-index we can order the :before and :after elements:&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nc'&gt;.cl-btn&lt;/span&gt;&lt;span class='nd'&gt;:after&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+  &lt;span class='k'&gt;top&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;-1px&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;left&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;-1px&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;padding&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;1px&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt; &lt;span class='c'&gt;/* This makes for 1px gradient border */&lt;/span&gt;
+  &lt;span class='k'&gt;z-index&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;-2&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+
+&lt;span class='nc'&gt;.cl-btn&lt;/span&gt;&lt;span class='nd'&gt;:before&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+  &lt;span class='k'&gt;top&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;left&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;padding&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+  &lt;span class='k'&gt;z-index&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;-1&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Because we used negative z-index, create a new stacking context on .cl-btn so the elements don’t go below the original “page”.&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nc'&gt;.cl-btn&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='o'&gt;//&lt;/span&gt; &lt;span class='n'&gt;Create&lt;/span&gt; &lt;span class='n'&gt;new&lt;/span&gt; &lt;span class='n'&gt;stacking&lt;/span&gt; &lt;span class='n'&gt;context&lt;/span&gt; &lt;span class='n'&gt;for&lt;/span&gt; &lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='n'&gt;before&lt;/span&gt; &lt;span class='n'&gt;and&lt;/span&gt; &lt;span class='o'&gt;:&lt;/span&gt;&lt;span class='n'&gt;after&lt;/span&gt;
+    &lt;span class='k'&gt;z-index&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;1&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now if we apply our backgrounds to the new pseudo elements, we have gradient borders without extra markup:&lt;/p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nc'&gt;.cl-btn&lt;/span&gt;&lt;span class='nd'&gt;:before&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;linear&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;gradient&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;to&lt;/span&gt; &lt;span class='k'&gt;bottom&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='nb'&gt;green&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;%,&lt;/span&gt; &lt;span class='nb'&gt;darkgreen&lt;/span&gt; &lt;span class='m'&gt;100&lt;/span&gt;&lt;span class='o'&gt;%&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt; &lt;span class='c'&gt;/* W3C */&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+
+&lt;span class='nc'&gt;.cl-btn&lt;/span&gt;&lt;span class='nd'&gt;:after&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='k'&gt;background&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;linear&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;gradient&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;to&lt;/span&gt; &lt;span class='k'&gt;bottom&lt;/span&gt;&lt;span class='o'&gt;,&lt;/span&gt; &lt;span class='nb'&gt;darkgreen&lt;/span&gt; &lt;span class='m'&gt;0&lt;/span&gt;&lt;span class='o'&gt;%,&lt;/span&gt; &lt;span class='n'&gt;reallydarkgreen&lt;/span&gt; &lt;span class='m'&gt;100&lt;/span&gt;&lt;span class='o'&gt;%&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt; &lt;span class='c'&gt;/* W3C */&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, the reality is a bit more complicated.&lt;/p&gt;&lt;p&gt;A simple implementation without z-indexing can be found &lt;a href='https://github.com/Wolfr/css-gradient-strokes'&gt;here&lt;/a&gt; (&lt;a href='http://www.wolfslittlestore.be/css-gradient-strokes/'&gt;demo&lt;/a&gt;).&lt;/p&gt;&lt;p&gt;If you’re feeling brave, poke around in the SCSS source for Clank &lt;a href='https://github.com/Wolfr/clank/blob/master/scss/components/_buttons.scss'&gt;here&lt;/a&gt;.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Intro video</title>
+   <link href="http://getclank.com/2013/06/05/intro-video.html"/>
+   <updated>2013-06-05T00:00:00+02:00</updated>
+   <id>http://getclank.com/2013/06/05/intro-video</id>
+   <content type="html">&lt;p&gt;It took a few takes to tell a coherent story… ah well. Done is better than perfect. This video attempts to provide an intro why Clank exists.&lt;/p&gt;&lt;iframe allowfullscreen='allowfullscreen=' frameborder='none' height='400' src='http://www.youtube.com/embed/8TVB9wQX818' width='600'&gt; &lt;/iframe&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Demo</title>
+   <link href="http://getclank.com/2013/06/05/demo.html"/>
+   <updated>2013-06-05T00:00:00+02:00</updated>
+   <id>http://getclank.com/2013/06/05/demo</id>
+   <content type="html">&lt;p&gt;The demo is available at &lt;a href=&quot;http://getclank.com/demo/&quot;&gt;getclank.com/demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Be sure to use Google Chrome to view it since otherwise it’s not pretty.&lt;/p&gt;
+&lt;p&gt;I’m using a lot of advanced CSS like &lt;a href=&quot;http://css-tricks.com/&quot;&gt;CSS calc&lt;/a&gt; and Flexbox. This is intended to be a prototyping framework so for me it’s OK to make it work in a single browser. Over time support will improve as browsers improve.&lt;/p&gt;
+&lt;p&gt;Browser vendors are always asking for demos on why they need to implement some features. Well, here’s your demo!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Clank - Beginnings</title>
+   <link href="http://getclank.com/2013/06/05/clank-beginnings.html"/>
+   <updated>2013-06-05T00:00:00+02:00</updated>
+   <id>http://getclank.com/2013/06/05/clank-beginnings</id>
+   <content type="html">&lt;p&gt;
+  &lt;img class='alignright' height='300' src='http://getclank.files.wordpress.com/2013/06/screen-shot-2013-06-05-at-19-51-38.png?w=179&amp;amp;h=300' width='179' /&gt;
+&lt;/p&gt;&lt;p&gt;This is the blog for the &lt;a href='https://github.com/Wolfr/clank'&gt;Clank&lt;/a&gt;&amp;nbsp;open source project.&lt;/p&gt;&lt;p&gt;You might be wondering: WTF is Clank?&amp;nbsp;Clank is an open source HTML/CSS framework for prototyping native apps. It’s a set of components that will help you communicate your design.&lt;/p&gt;&lt;p&gt;In theory you could use Clank to make a real app – but I wouldn’t recommend it. Browser support is minimal as Clank is used to convey the idea of an app to app developers.&lt;/p&gt;&lt;p&gt;I am looking for contributors to help with the actual website, documentation and testing the framework. Get in &lt;a href='http://wolfslittlestore.be/contact/'&gt;touch&lt;/a&gt;.&lt;/p&gt;</content>
+ </entry>
+ 
+</feed>
