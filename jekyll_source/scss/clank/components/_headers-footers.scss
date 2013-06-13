@@ -1,0 +1,132 @@
+// Bar layout
+
+.cl-bar-title,
+.cl-bar {
+  @include pie-clearfix;
+  overflow: hidden;
+  width: 100%;
+  // default
+  min-height: $ios-bar-size;
+  height: $ios-bar-size;
+  [data-os="android"] & {
+    min-height: $android-bar-size;
+    height: $android-bar-size;
+  }
+  position: relative;
+}
+
+.cl-bar-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 44px;
+  height: 44px;
+}
+
+.cl-bar-title {
+  .title {
+    text-align: center;
+    // default
+    line-height: $ios-bar-size;
+    [data-os="android"] & {
+      line-height: $android-bar-size;
+    }
+    margin: 0 auto;
+    -webkit-hyphens: auto;
+  }
+}
+
+
+// Text in a bar
+// sample markup: <p class="cl-bar-text">My text</p>
+
+.cl-bar-text {
+  margin: 0;
+  padding: 0;
+  // default
+  line-height: $ios-bar-size;
+  [data-os="android"] & {
+    line-height: $android-bar-size;
+  }
+  .cl-bar &,
+  .cl-bar-title & {
+    margin: 0 10px;
+  }
+  color: lighten($text-color-inverse, 20%);
+  @if $text-shadows {
+    @include text-shadow-black;
+  }
+  @if $accent-color-light {
+    color: darken($text-color, 10%);
+    @include text-shadow-white;
+  }
+  &.align-left {
+    margin-left: 7px;
+  }
+}
+
+
+/// Title, sample markup: <h1 class="cl-title"></h1>
+
+.cl-title {
+  font-size: $header-font-size;
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+  // default
+  line-height: $ios-bar-size;
+  [data-os="android"] & {
+    line-height: $android-bar-size;
+  }
+
+  color: lighten($text-color-inverse, 20%);
+  @if $text-shadows {
+    @include text-shadow-black;
+  }
+  @if $accent-color-light {
+    color: darken($text-color, 10%);
+    @include text-shadow-white;
+  }
+}
+
+// Bar backgrounds
+
+.cl-bar-title,
+.cl-bar-footer,
+.cl-bar {
+  // Backgrounds
+  background: $accent-color;
+  @if $gradient {
+    @include gradient-vertical(lighten($accent-color, 10%), $accent-color);
+  } @else {
+    background: $accent-color;
+  }
+  
+  // iOS styles insets highlight and bottom border on header
+  // The upper highlight
+  &:before {
+    content: " ";
+    height: 1px;
+    width: 100%;
+    background: lighten($accent-color, 10%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  // The darker bottom
+  &:after {
+    content: " ";
+    height: 1px;
+    width: 100%;
+    background: darken($accent-color, 35%);
+    @if $accent-color-light {
+      background: darken($accent-color, 15%);
+    }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+}
