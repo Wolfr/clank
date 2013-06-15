@@ -11,16 +11,22 @@
 
 <div id="docs">
   <div id="docs-nav">
-  
+    <h4>General</h4>
     <ul class="nav nav-tabs nav-stacked">
-      <li><a href="#what-is">What is</a></li>
+      <li><a href="#what-is">What is Clank?</a></li>
       <li><a href="#why">Why Clank?</a></li>
-      <li><a href="#support">Support</a></li>
-      <li><a href="#css-conventions">CSS conventions</a></li>
-      <li><a href="#component-headers-footers">Component: headers &amp; footers</a></li>
+      <li><a href="#skinning-mechanism">Skinning mechanism</a></li>
+      <li><a href="#support">Browser support</a></li>
+      <li><a href="#scss-conventions">(S)CSS conventions</a></li>
+      <li><a href="#component-includes">Component includes</a></li>
       <li><a href="#generators">Generators</a></li>
     </ul>
-      
+    <h4>Components</h4>
+    <ul class="nav nav-tabs nav-stacked">
+      <li><a href="#component-headers-footers">Headers &amp; footers</a></li>
+      <li><a href="#component-buttons">Buttons</a></li>
+      <li><a href="#component-table-views">Table views</a></li>
+    </ul>
   </div>
   
   <div id="content">
@@ -31,19 +37,30 @@
       <hr>
   
       <h3 id="why">Why Clank?</h3>
+
       <h4>Actually looks like a native app</h4>
       <p>We strive to actually look like a native app (as far as web tech allows us to go) instead of pseudo implementations.</p>
+
       <h4>Component based: pick and choose</h4>
       <p>Clank is a collection of HTML/CSS components. For example, a button is a component. It has it's own SCSS file: <code>components/_button.scss</a></code>.</p>
-      <p>Every component stands on its own and can't influence other components. Clank has <a href="component_naming.php">strong rules</a> on component naming to avoid any style clashes.</p>
+      <p>Every component stands on its own and can't influence other components. Clank has <a href="#scss-conventions">strong rules</a> on component naming to avoid any style clashes.</p>
       <p>A good component only defines layout and provide hooks for specific looks.</p>
-      <h4>Handling the look</h4>
-      <p>Clank uses variables in SCSS to provide an easy way to skin Clank-made applications to your needs. Changing the global color of headers, bars and buttons is as easy as changing one variable:</p>
+
+      <h4></h4>
+      <p>We strive to actually look like a native app (as far as web tech allows us to go) instead of pseudo implementations.</p>
+
+      <hr>
+
+      <h3 id="skinning-mechanism">Skinning-mechanism</h3>
+
+      <p>Clank uses variables in SCSS to provide an easy way to easily change the look of Clank-made applications.</p>
+      
+      <p>Changing the global color of headers, bars and buttons is as easy as changing one variable:</p>
   
       {% highlight scss %}  $accent-color: red{% endhighlight %}
 
       <h4>Variables for cross platform design</h4>
-      <p>On Android, it makes sense to go flat and follow the look provided by ICS. On iOS, there's more gradients, strokes and subtle and inset shadows. Clank acknowledges that you are building for multiple platforms. We see each part of the design as a variable that can be altered:</p>
+      <p>Every operating system has its own look and feel. Clank acknowledges that you are building apps for multiple platforms. We see each part of the design as a variable that can be altered:</p>
   
 {% highlight scss %}  $functional-shadows: true
   $decorational-shadows: false{% endhighlight %}
@@ -51,19 +68,29 @@
       <p>Sometimes in more detail:</p>
   
       {% highlight scss %}  $border-radius: 4px;{% endhighlight %}
+      
+      <p>This way, it's easy to generate an iOS or Android specific style sheet by switching out the variables. Or maybe you want to create a unified look that looks like your brand instead of chasing platform guidelines. It's all possible.</p>
   
-      <p>You also want to switch on a functional level i.e. you might want to swap out an iOS header for an Android action bar component. More on this in <a href="#">component includes</a>.</p>
+      <p>You also want to switch on a functional level i.e. you might want to swap out an iOS header for an Android action bar component. More on this in <a href="#component-includes">component includes</a>.</p>
+
       <h4>Philosophy</h4>
       <p>You should try to make your application using standard components. The standard components used in iOS and Android have a lot of work behind them. Face it, you don't have 2 weeks to perfect a <code>&lt;select&gt;</code>.</p>
 
       <hr>
   
-      <h3 id="support">Support</h3>
+      <h3 id="component-includes">Component includes</h3>
+
+      <p><em>Component includes is a planned feature where you can swap components in your prototypes depending on the operating system. E.g. for your Android application you might want to use Android style tabs, but the same functionality in the iOS version uses a segmented control.</em></p>
+
+      <hr>
+  
+      <h3 id="browser-support">Browser support</h3>
       <p>It's not advisable to use Clank for production work since it only supports new and modern browsers like <em>Google Chrome</em>. A lot of the techniques used in Clank depend on newer CSS properties such as Flexbox. For now, Clank is a prototyping tool and testbed for modern web technologies.</p>
 
       <hr />
   
-      <h3 id="css-conventions">CSS conventions</h3>
+      <h3 id="scss-conventions">(S)CSS conventions</h3>
+      <p>We use SCSS for all CSS because it provides us with a way to extend CSS with variables and mixins.</p>
       <p>Every component should be prefixed with <code>cl-</code>:</p>
       {% highlight scss %}.cl-accordion { }{% endhighlight %}
       <p>This is verbose but the only way to not clash with other libraries until Web Components are commonplace.</p>
@@ -73,21 +100,6 @@
       {% highlight scss %}.cl-accordion-item__disabled { }{% endhighlight %}
       <p>This prevents too many nested selectors in SCSS.</p>
       <p>This naming technique has been coined <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a>.</p>
-      
-      <hr />
-      
-      <h3 id="component-headers-footers">Component: headers &amp; footers</h3>
-      
-      <p class="intro">This page is about the headers and footers component. Adding headers and footers is as simple as adding specific markup.</p>
-      <h4>Adding a title bar</h4>
-      <p>Add header markup as a direct descendant of a <code>.cl-page</code>:</p>
-      {% highlight html %}<div class="cl-bar-title"></div>{% endhighlight %}
-      <h4>Adding a footer</h4>
-      <p>Add a footer as a direct descendant of a  <code>.cl-page</code>:</p>
-      {% highlight html %}<div class="cl-bar-footer"></div>{% endhighlight %}
-      <h4>Adding another bar</h4>
-      <p>Add a bar as direct descendant of <code>.cl-content</code>:</p>
-      {% highlight html %}<div class="cl-bar"></div>{% endhighlight %}
 
       <hr />
       
@@ -98,7 +110,7 @@
       <h4>What is a generator?</h4>
       <p>A generator is simply a bash script that generates code for you. This makes it easy to, for example, add new screens or components to your project.</p>
       <h4>Available generators</h4>
-      <ul>
+      <ul class="bordered-list">
         <li>
           <p><strong>generate-page.sh</strong></p>
           <p>Creates a new page.</p>
@@ -108,6 +120,50 @@
           <p>Creates a new component.</p>
         </li>
       </ul>
+      
+      <hr />
+      
+      <h3 id="component-headers-footers">Component: headers &amp; footers</h3>
+      
+      <!-- <p>Controlled by: _headers-footers.scss</p> -->
+
+      <p class="intro">Adding headers and footers is as simple as adding specific markup.</p>
+      <h4>Adding a title bar</h4>
+      <p>Add header markup as a direct descendant of a <code>.cl-page</code>:</p>
+      {% highlight html %}<div class="cl-bar-title"></div>{% endhighlight %}
+      <h4>Adding a footer</h4>
+      <p>Add a footer as a direct descendant of a  <code>.cl-page</code>:</p>
+      {% highlight html %}<div class="cl-bar-footer"></div>{% endhighlight %}
+      <h4>Adding another bar</h4>
+      <p>Add a bar as direct descendant of <code>.cl-content</code>:</p>
+      {% highlight html %}<div class="cl-bar"></div>{% endhighlight %}
+      
+      <hr />
+      
+      <h3 id="component-buttons">Component: buttons</h3>
+
+      <!-- <p>Controlled by: buttons.scss</p> -->
+      
+      <p class="intro">To add a button:</p>
+
+      {% highlight html %}<a href="#" class="cl-btn">Button text</a>{% endhighlight %}
+
+      <p>Button styles will adapt depending on their location e.g. a button in the content area (<code>.cl-content</code>) will stretch full width while a button in a header (<code>.cl-title</code>) will position itself as you would expect.</p>
+      
+      <h4>Controlling button alignment within <code>.bar</code> elements</h4>
+      
+      <!-- <p>Controlled by: button_positioning.scss</p> -->
+
+      <p>You can control button alignment in bars with <code>.align-right</code> and <code>.align-center</code> classes.</p>
+      
+      {% highlight html %}<a href="#" class="cl-btn align-right">Button text</a>{% endhighlight %}
+      {% highlight html %}<a href="#" class="cl-btn align-center">Button text</a>{% endhighlight %}
+
+      <hr />
+      
+      <h3 id="component-table-views">Component: table views</h3>
+      
+      <p><em>No documentation for table views yet.</em></p>
 
     </article>
   </div>

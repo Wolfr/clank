@@ -231,9 +231,14 @@ pre {
   @include container;
   #docs-nav {
     @include span-columns(1);
+    margin: 32px 0 0;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
     ul {
-      margin: 32px 0 0;
       padding: 0;
+      margin-top: 0;
     }
   }
   #content {
@@ -280,30 +285,32 @@ pre {
   a {
     @include muted-links;
   }
-  .bordered-list {
-    margin: 0;
-    padding: 0;
-    span {
-      display: block;
-    }
-    li {
-      list-style: none;
-      padding: 0 0 4px;
-      margin: 0 0 4px;
-      border-bottom: 1px solid #DDD;
-      &:last-child {
-        border: none;
-      }
-      a {
-        border: none;
-      } 
-    }
-  }
   .date {
     color: #999;
     margin-right: 4px;
   }
 }
+
+.bordered-list {
+  margin: 0;
+  padding: 0;
+  span {
+    display: block;
+  }
+  li {
+    list-style: none;
+    padding: 0 0 4px;
+    margin: 0 0 4px;
+    border-bottom: 1px solid #EEE;
+    &:last-child {
+      border: none;
+    }
+    a {
+      border: none;
+    } 
+  }
+}
+
 
 #blog article {
   header {
