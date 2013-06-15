@@ -15,10 +15,10 @@
     <ul class="nav nav-tabs nav-stacked">
       <li><a href="#what-is">What is</a></li>
       <li><a href="#why">Why Clank?</a></li>
+      <li><a href="#support">Support</a></li>
       <li><a href="#css-conventions">CSS conventions</a></li>
       <li><a href="#component-headers-footers">Component: headers &amp; footers</a></li>
       <li><a href="#generators">Generators</a></li>
-
     </ul>
       
   </div>
@@ -40,25 +40,27 @@
       <h4>Handling the look</h4>
       <p>Clank uses variables in SCSS to provide an easy way to skin Clank-made applications to your needs. Changing the global color of headers, bars and buttons is as easy as changing one variable:</p>
   
-      {% highlight scss %}
-      $accent-color: red{% endhighlight %}
+      {% highlight scss %}  $accent-color: red{% endhighlight %}
 
       <h4>Variables for cross platform design</h4>
       <p>On Android, it makes sense to go flat and follow the look provided by ICS. On iOS, there's more gradients, strokes and subtle and inset shadows. Clank acknowledges that you are building for multiple platforms. We see each part of the design as a variable that can be altered:</p>
   
-      {% highlight scss %}
-      $functional-shadows: true
-      $decorational-shadows: false{% endhighlight %}
+{% highlight scss %}  $functional-shadows: true
+  $decorational-shadows: false{% endhighlight %}
 
       <p>Sometimes in more detail:</p>
   
-      {% highlight scss %}
-      $border-radius: 4px;{% endhighlight %}
+      {% highlight scss %}  $border-radius: 4px;{% endhighlight %}
   
       <p>You also want to switch on a functional level i.e. you might want to swap out an iOS header for an Android action bar component. More on this in <a href="#">component includes</a>.</p>
       <h4>Philosophy</h4>
       <p>You should try to make your application using standard components. The standard components used in iOS and Android have a lot of work behind them. Face it, you don't have 2 weeks to perfect a <code>&lt;select&gt;</code>.</p>
+
+      <hr>
   
+      <h3 id="support">Support</h3>
+      <p>It's not advisable to use Clank for production work since it only supports new and modern browsers like <em>Google Chrome</em>. A lot of the techniques used in Clank depend on newer CSS properties such as Flexbox. For now, Clank is a prototyping tool and testbed for modern web technologies.</p>
+
       <hr />
   
       <h3 id="css-conventions">CSS conventions</h3>
