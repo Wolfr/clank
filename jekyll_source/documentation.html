@@ -23,12 +23,6 @@
         <li><a href="#component-includes">Component includes</a></li>
         <li><a href="#generators">Generators</a></li>
       </ul>
-      <h4>Components</h4>
-      <ul class="nav nav-tabs nav-stacked">
-        <li><a href="#component-headers-footers">Headers &amp; footers</a></li>
-        <li><a href="#component-buttons">Buttons</a></li>
-        <li><a href="#component-table-views">Table views</a></li>
-      </ul>
     </div>
   
     <div id="content">
@@ -59,17 +53,19 @@
       
         <p>Changing the global color of headers, bars and buttons is as easy as changing one variable:</p>
   
-        {% highlight scss %}  $accent-color: red{% endhighlight %}
+        {% highlight scss %}$accent-color: red{% endhighlight %}
 
         <h4>Variables for cross platform design</h4>
         <p>Every operating system has its own look and feel. Clank acknowledges that you are building apps for multiple platforms. We see each part of the design as a variable that can be altered:</p>
   
-  {% highlight scss %}  $functional-shadows: true
-    $decorational-shadows: false{% endhighlight %}
+{% highlight scss %}
+$functional-shadows: true
+$decorational-shadows: false
+{% endhighlight %}
 
         <p>Sometimes in more detail:</p>
   
-        {% highlight scss %}  $border-radius: 4px;{% endhighlight %}
+        {% highlight scss %}$border-radius: 4px;{% endhighlight %}
       
         <p>This way, it's easy to generate an iOS or Android specific style sheet by switching out the variables. Or maybe you want to create a unified look that looks like your brand instead of chasing platform guidelines. It's all possible.</p>
   
@@ -122,50 +118,6 @@
             <p>Creates a new component.</p>
           </li>
         </ul>
-      
-        <hr />
-      
-        <h3 id="component-headers-footers">Component: headers &amp; footers</h3>
-      
-        <!-- <p>Controlled by: _headers-footers.scss</p> -->
-
-        <p class="intro">Adding headers and footers is as simple as adding specific markup.</p>
-        <h4>Adding a title bar</h4>
-        <p>Add header markup as a direct descendant of a <code>.cl-page</code>:</p>
-        {% highlight html %}<div class="cl-bar-title"></div>{% endhighlight %}
-        <h4>Adding a footer</h4>
-        <p>Add a footer as a direct descendant of a  <code>.cl-page</code>:</p>
-        {% highlight html %}<div class="cl-bar-footer"></div>{% endhighlight %}
-        <h4>Adding another bar</h4>
-        <p>Add a bar as direct descendant of <code>.cl-content</code>:</p>
-        {% highlight html %}<div class="cl-bar"></div>{% endhighlight %}
-      
-        <hr />
-      
-        <h3 id="component-buttons">Component: buttons</h3>
-
-        <!-- <p>Controlled by: buttons.scss</p> -->
-      
-        <p class="intro">To add a button:</p>
-
-        {% highlight html %}<a href="#" class="cl-btn">Button text</a>{% endhighlight %}
-
-        <p>Button styles will adapt depending on their location e.g. a button in the content area (<code>.cl-content</code>) will stretch full width while a button in a header (<code>.cl-title</code>) will position itself as you would expect.</p>
-      
-        <h4>Controlling button alignment within <code>.bar</code> elements</h4>
-      
-        <!-- <p>Controlled by: button_positioning.scss</p> -->
-
-        <p>You can control button alignment in bars with <code>.align-right</code> and <code>.align-center</code> classes.</p>
-      
-        {% highlight html %}<a href="#" class="cl-btn align-right">Button text</a>{% endhighlight %}
-        {% highlight html %}<a href="#" class="cl-btn align-center">Button text</a>{% endhighlight %}
-
-        <hr />
-      
-        <h3 id="component-table-views">Component: table views</h3>
-      
-        <p><em>No documentation for table views yet.</em></p>
 
       </article>
     </div>

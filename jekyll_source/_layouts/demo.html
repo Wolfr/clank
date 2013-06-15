@@ -19,76 +19,97 @@
         <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
       </div>
     </div>
+    
+    <div class="content-wrapper {% if page.docs %} docs-visible{% endif %}">
   
-    <div class="cl-docs-controls cl-docs-controls--left">
-      <h4>Demos:</h4>
-      <a href="/demos/index.html">Index</a>
-      <a href="/demos/headers-footers.html">Headers and footers</a>
-      <a href="/demos/bar-text.html">Bar text</a>
-      <a href="/demos/buttons.html">Buttons</a>
-      <!-- <a href="/demos/loading.html">Loading</a> -->
-      <a href="/demos/table-view.html">Table view</a>
-    </div>
+      <div class="cl-demo-list">
+        <h4>Demos:</h4>
+        <a href="/demos/index.html">Index</a>
+        <a href="/demos/headers-footers.html">Headers and footers</a>
+        <a href="/demos/bar-text.html">Bar text</a>
+        <a href="/demos/buttons.html">Buttons</a>
+        <!-- <a href="/demos/loading.html">Loading</a> -->
+        <a href="/demos/table-view.html">Table view</a>
+      </div>
 
-    <div class="cl-device-frame">
-      <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]});" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
-        <div class="cl-device-body">
+      <!-- Show relevant docs -->
+      {% if page.docs %}
+      
+      <div class="cl-docs-content">
+        <div class="cl-docs">
+          
+          {% case page.docs %}
+            {% when 'table-view' %}
+              {% include docs/components/table-view.html %}
+            {% when 'buttons' %}
+              {% include docs/components/buttons.html %}
+            {% when 'headers-footers' %}
+            {% include docs/components/headers-footers.html %}
+            {% else %}
+              <p>No documentation for this page.</p>
+          {% endcase %}
 
-          <div class="cl-ios-status" ng-show="deviceChoice.os == 'iOS'">
-            <span>
-              <span class="signals">
-                <span class="signal1"></span>
-                <span class="signal2"></span>
-                <span class="signal3"></span>
-                <span class="signal4"></span>
-                <span class="signal5"></span>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="cl-device-frame">
+        <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]});" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
+          <div class="cl-device-body">
+
+            <div class="cl-ios-status" ng-show="deviceChoice.os == 'iOS'">
+              <span>
+                <span class="signals">
+                  <span class="signal1"></span>
+                  <span class="signal2"></span>
+                  <span class="signal3"></span>
+                  <span class="signal4"></span>
+                  <span class="signal5"></span>
+                </span>
+                <span class="carrier">Bell</span>
+                <!-- <span>Wifi</span> -->
               </span>
-              <span class="carrier">Bell</span>
-              <!-- <span>Wifi</span> -->
-            </span>
-            <span class="clock">20:49</span>
-            <span>
-              <span>3G</span>
-              <span class="icon-ios-alarm"></span>
-              <span class="icon-ios-locate"></span>
-              <span class="icon-ios-lock"></span>
-              <span class="icon-ios-battery"></span>
-            </span>
-          </div>
+              <span class="clock">20:49</span>
+              <span>
+                <span>3G</span>
+                <span class="icon-ios-alarm"></span>
+                <span class="icon-ios-locate"></span>
+                <span class="icon-ios-lock"></span>
+                <span class="icon-ios-battery"></span>
+              </span>
+            </div>
 
 
-          <div class="cl-android-status" ng-show="deviceChoice.os == 'Android'">
-            <!-- <span>
-              <span>Notification</span>
-              <span>Notification</span>
-              <span>Notification</span>
-            </span> -->
-            <span>
-              <!-- <span>Bluetooth</span> -->
-              <span class="icon-android-battery"></span>
-              <span class="icon-android-network"></span>
-              <span class="icon-android-wifi"></span>
-              <span>20:49</span>
-            </span>
-          </div>
+            <div class="cl-android-status" ng-show="deviceChoice.os == 'Android'">
+              <!-- <span>
+                <span>Notification</span>
+                <span>Notification</span>
+                <span>Notification</span>
+              </span> -->
+              <span>
+                <!-- <span>Bluetooth</span> -->
+                <span class="icon-android-battery"></span>
+                <span class="icon-android-network"></span>
+                <span class="icon-android-wifi"></span>
+                <span>20:49</span>
+              </span>
+            </div>
         
-          <!-- <div class="cl-android-software-buttons" ng-show="deviceChoice.os == 'Android'">
-            <span>
-              <span>Back</span>
-              <span>Home</span>
-              <span>Apps</span>
-            </span>
-          </div> -->
+            <!-- <div class="cl-android-software-buttons" ng-show="deviceChoice.os == 'Android'">
+              <span>
+                <span>Back</span>
+                <span>Home</span>
+                <span>Apps</span>
+              </span>
+            </div> -->
 
-          {{ content }}
+            {{ content }}
 
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="cl-docs-controls cl-docs-controls--bottom">
-      <p><span ng-show="deviceChoice">{[{ deviceChoice.name }]} - {[{ deviceOrientation.name }]}</span></p>
-    </div>
    </div>
 
   {% include ga.html %}

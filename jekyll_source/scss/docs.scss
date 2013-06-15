@@ -8,7 +8,7 @@
 @import "docs/grid";
 @import "docs/demo-controls";
 @import "docs/image_alignment";
-@import "docs/bootstrap-nav-tabs-stacked";
+@import "docs/docs-nav";
 @import "docs/pygments";
 
 // demo specific
@@ -18,22 +18,22 @@
 }
 
 #demo-app {
-  height: 600px;
   @include calc("height", "100% - 59px");
   position: relative;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .cl-docs {
 
-
   & {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-size: 13px;
     color: #666;
-    margin: 0;
-    padding: 0;
     line-height: 1.5;
-    margin: 0 auto;
   }
 
   // Utils
@@ -57,7 +57,8 @@
   // Typography
 
   .page-title-bar {
-    background: #F0F0F0;
+    @include gradient-vertical(#d1d6da, #c1ccd3);
+
     .inner-content {
       @include container;
       padding-top: 12px;
@@ -101,17 +102,20 @@
   }
 
   pre {
-    padding: 10px 4px;
+    padding: 10px;
+    margin: 0 0 1px;
     font-size: 12px;
     @include border-radius(4px);
-    background: #F0F0F0;
-    margin: 0;
+    background: #EDEFF1;
     line-height: 1.3;
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */ 
+    & + pre {
+      border-bottom-radius: 4px;
+    }
   }
 
   .help-text {
@@ -447,4 +451,140 @@
     padding: 40px;
   }
 
+}
+
+// Demo layout 
+
+#demo-app .content-wrapper {
+  @include clearfix;
+  height: 100%;
+  @include calc("height", "100% - 45px");
+}
+
+/****
+  Clank
+  Demo docs controls
+
+  The bars to control the Clank demo
+****/
+
+.cl-docs-controls {
+  font-size: 13px;
+}
+
+// Top AND bottom
+
+.cl-docs-controls--top {
+  
+  @include gradient-vertical(#d1d6da, #c1ccd3);
+  @include pie-clearfix;
+  width: 100%;
+  line-height: 44px;
+  height: 44px;
+  label {
+    line-height: 44px;
+  }
+
+}
+
+// Top
+
+.cl-docs-controls--top {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  top: 0;
+  
+  & > div {
+    width: 33%;
+    text-align: center;
+    float: left;
+  }
+  select {
+    margin-top: 12px;
+  }
+  input[type="range"] {
+    position: relative;
+    top: 5px;
+  }
+}
+
+.cl-docs-controls--top label {
+  margin-right: 3px;
+  &:after {
+    content: ":";
+  }
+}
+
+// No docs
+.cl-demo-list,
+.cl-device-frame,
+.cl-docs-content {
+  height: 100%;
+  float: left;
+}
+.cl-demo-list {
+  width: 10%;
+}
+.cl-device-frame {
+  width: 90%;
+}
+
+// Docs visible
+
+.docs-visible {
+  .cl-docs-content {
+    width: 30%;
+  }
+  .cl-device-frame {
+    width: 60%;
+  }
+}
+
+// Demo list
+
+.cl-demo-list {
+  font-size: 13px;
+  background: #FFF;
+  border-right: 1px solid rgba(0,0,0,0.15);
+  width: 120px;
+  height: 100%;
+  line-height: 1.33;
+  h4, a {
+    display: block;
+    border: none;
+    padding: 4px;
+  }
+  h4 {
+    margin: 0;
+  }
+  a {
+    &:hover {
+      background: #EEE;
+    }
+  }
+}
+
+// Docs content
+.cl-docs-content {
+  border-right: 1px solid rgba(0,0,0,0.15);
+  overflow: scroll;
+  .cl-docs {
+    padding: 20px;
+  }
+  font-size: 13px;
+  h3:first-child {
+    margin-top: 0;
+  }
+}
+
+.cl-device-frame {
+  
+  /* Center with flexbox */
+  display: box; display: flexbox;
+  box-align: center; flex-align: center;
+  box-pack: center; flex-pack: center;
+  
+  /* Compass version */
+  @include display-box;
+  @include box-align(center);
+  @include box-pack(center);
 }

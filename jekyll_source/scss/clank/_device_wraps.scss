@@ -50,21 +50,6 @@
   }
 }
 
-.cl-device-frame {
-  height: 100%;
-  width: 100%;
-  
-  /* Center with flexbox */
-  display: box; display: flexbox;
-  box-align: center; flex-align: center;
-  box-pack: center; flex-pack: center;
-  
-  /* Compass version */
-  @include display-box;
-  @include box-align(center);
-  @include box-pack(center);
-}
-
 .cl-phone-wrap {
   @include box-sizing(border-box);
   margin: 0 auto;
