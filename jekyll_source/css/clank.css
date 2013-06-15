@@ -261,116 +261,6 @@ input, select, textarea, option {
   width: 937px;
 }
 
-/*
-  Clank docs controls
-*/
-/* line 5, ../scss/clank/_controls.scss */
-.cl-docs-controls {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-}
-
-/* line 14, ../scss/clank/_controls.scss */
-.cl-docs-controls--top,
-.cl-docs-controls--bottom {
-  background-color: #cad2d7;
-  background-image: -moz-linear-gradient(top, #d1d6da, #c1ccd3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1d6da), to(#c1ccd3));
-  background-image: -webkit-linear-gradient(top, #d1d6da, #c1ccd3);
-  background-image: -o-linear-gradient(top, #d1d6da, #c1ccd3);
-  background-image: linear-gradient(to bottom, #d1d6da, #c1ccd3);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD1D6DA', endColorstr='#FFC1CCD3', GradientType=0);
-  *zoom: 1;
-  width: 100%;
-  line-height: 44px;
-  height: 44px;
-}
-/* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.cl-docs-controls--top:after,
-.cl-docs-controls--bottom:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 21, ../scss/clank/_controls.scss */
-.cl-docs-controls--top label,
-.cl-docs-controls--bottom label {
-  line-height: 44px;
-}
-
-/* line 29, ../scss/clank/_controls.scss */
-.cl-docs-controls--top {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  top: 0;
-}
-/* line 33, ../scss/clank/_controls.scss */
-.cl-docs-controls--top > div {
-  width: 33%;
-  text-align: center;
-  float: left;
-}
-/* line 38, ../scss/clank/_controls.scss */
-.cl-docs-controls--top select {
-  margin-top: 12px;
-}
-/* line 41, ../scss/clank/_controls.scss */
-.cl-docs-controls--top input[type="range"] {
-  position: relative;
-  top: 5px;
-}
-
-/* line 47, ../scss/clank/_controls.scss */
-.cl-docs-controls--top label {
-  margin-right: 3px;
-}
-/* line 49, ../scss/clank/_controls.scss */
-.cl-docs-controls--top label:after {
-  content: ":";
-}
-
-/* line 55, ../scss/clank/_controls.scss */
-.cl-docs-controls--bottom {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  bottom: 0;
-}
-/* line 58, ../scss/clank/_controls.scss */
-.cl-docs-controls--bottom p, .cl-docs-controls--bottom .cl-article h4, .cl-article .cl-docs-controls--bottom h4 {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-}
-
-/* line 68, ../scss/clank/_controls.scss */
-.cl-docs-controls--left {
-  background: #FFF;
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
-  width: 120px;
-  left: 0;
-  top: 46px;
-  height: 100%;
-  height: -moz-calc(100% - 90px);
-  height: -o-calc(100% - 90px);
-  height: -webkit-calc(100% - 90px);
-  height: calc(100% - 90px);
-}
-/* line 76, ../scss/clank/_controls.scss */
-.cl-docs-controls--left h4, .cl-docs-controls--left a {
-  display: block;
-  border: none;
-  padding: 4px;
-}
-/* line 81, ../scss/clank/_controls.scss */
-.cl-docs-controls--left h4 {
-  margin: 0;
-}
-/* line 85, ../scss/clank/_controls.scss */
-.cl-docs-controls--left a:hover {
-  background: #EEE;
-}
-
 /**
   OS Chrome
 **/
@@ -1484,7 +1374,7 @@ input, select, textarea, option {
   content: "\f103";
 }
 
-/* line 23, ../scss/clank.scss */
+/* line 22, ../scss/clank.scss */
 .cl-page {
   text-align: left;
   font-size: 13px;
@@ -1496,12 +1386,12 @@ input, select, textarea, option {
   height: calc(100% - 20px);
   -webkit-font-smoothing: antialiased;
 }
-/* line 31, ../scss/clank.scss */
+/* line 30, ../scss/clank.scss */
 .cl-page .cl-content {
   background: #FFF;
 }
 
-/* line 38, ../scss/clank.scss */
+/* line 37, ../scss/clank.scss */
 .cl-page-welcome .cl-content,
 .cl-page-table-view .cl-content {
   background: #EEE;

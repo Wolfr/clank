@@ -12,7 +12,7 @@ $grid-padding   : 20px;
 
 $container-style: fluid;
 
-#layout-demo #header > .inner-content {
+#layout-demo .cl-docs #header > .inner-content {
   max-width: none;
   @include container;
 }
@@ -22,9 +22,9 @@ $container-style: fluid;
 $container-style: magic;
 
 // Container
-#header > .inner-content,
-#content > .inner-content,
-#footer > .inner-content {
+.cl-docs #header > .inner-content,
+.cl-docs #content > .inner-content,
+.cl-docs #footer > .inner-content {
   // page acts as a container for our grid.
   @include container;
 }

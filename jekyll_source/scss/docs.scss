@@ -6,291 +6,271 @@
 @import "docs/vars-n-mixins";
 @import "docs/normalize";
 @import "docs/grid";
+@import "docs/demo-controls";
 @import "docs/image_alignment";
 @import "docs/bootstrap-nav-tabs-stacked";
 @import "docs/pygments";
 
-body {
-  font-family: Arial;
-  font-size: 13px;
-  color: #666;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  margin: 0 auto;
+// demo specific
+
+#layout-demo, html {
+  height: 100%;
 }
 
-// Utils
-
-.accessible-text {
-  position: absolute;
-  top: -9000px;
-  left: -9000px;
+#demo-app {
+  height: 600px;
+  @include calc("height", "100% - 59px");
+  position: relative;
 }
 
-.well {
-  margin: 0 0 12px;
-  padding: 10px;
-  border: 1px solid #DDD;
-  @include border-radius(4px);
-  *:last-child {
-    margin-bottom: 0;
+.cl-docs {
+
+
+  & {
+    font-family: Arial;
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    margin: 0 auto;
   }
-}
 
-// Typography
+  // Utils
 
-.page-title-bar {
-  background: #F0F0F0;
-  .inner-content {
-    @include container;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  .accessible-text {
+    position: absolute;
+    top: -9000px;
+    left: -9000px;
   }
-  h2 {
-    @include display-font;
-    text-transform: none;
-    font-size: 32px;
-  }
-}
 
-p, h4 {
-  margin: 6px 0;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px solid #CCC;
-  margin: 18px 0;
-}
-
-h1, h2 {
-  color: #000;
-  line-height: 1.1;
-}
-
-h3 {
-  color: #333;
-  font-weight: 400;
-  font-size: 18px;
-  margin: 12px 0;
-}
-
-h4 {
-  color: #000;
-}
-
-a {
-  @include default-links;
-}
-
-pre {
-  padding: 10px 4px;
-  font-size: 12px;
-  @include border-radius(4px);
-  background: #F0F0F0;
-  margin: 0;
-  line-height: 1.3;
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */ 
-}
-
-.help-text {
-  color: $mutedText;
-  font-size: 11px;
-}
-
-// main layout
-
-
-#header {
-  background: $headerBackground;
-  // Nice transitions
-  a {
-    transition-property: background;
-    transition-duration: 0.18s;
-  }
-  .github-link {
-    margin: 10px;
-    border: none;
-    color: #FFF;
-    padding: 10px 15px;
-    display: inline-block;
-    float: right;
-    background: lighten($headerBackground, 10%);
-    border-radius: 3px;
-    &:hover,
-    &:focus {
-      background: darken($headerBackground, 20%);
+  .well {
+    margin: 0 0 12px;
+    padding: 10px;
+    border: 1px solid #DDD;
+    @include border-radius(4px);
+    *:last-child {
+      margin-bottom: 0;
     }
-    @media all and(max-width: $breakMedium) {
-      // Hide longer copy on medium sized screens
-      span {
+  }
+
+  // Typography
+
+  .page-title-bar {
+    background: #F0F0F0;
+    .inner-content {
+      @include container;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    h2 {
+      @include display-font;
+      text-transform: none;
+      font-size: 32px;
+    }
+  }
+
+  p, h4 {
+    margin: 6px 0;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #CCC;
+    margin: 18px 0;
+  }
+
+  h1, h2 {
+    color: #000;
+    line-height: 1.1;
+  }
+
+  h3 {
+    color: #333;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 12px 0;
+  }
+
+  h4 {
+    color: #000;
+  }
+
+  a {
+    @include default-links;
+  }
+
+  pre {
+    padding: 10px 4px;
+    font-size: 12px;
+    @include border-radius(4px);
+    background: #F0F0F0;
+    margin: 0;
+    line-height: 1.3;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */ 
+  }
+
+  .help-text {
+    color: $mutedText;
+    font-size: 11px;
+  }
+
+  // main layout
+
+
+  #header {
+    background: $headerBackground;
+    // Nice transitions
+    a {
+      transition-property: background;
+      transition-duration: 0.18s;
+    }
+    .github-link {
+      margin: 10px;
+      border: none;
+      color: #FFF;
+      padding: 10px 15px;
+      display: inline-block;
+      float: right;
+      background: lighten($headerBackground, 10%);
+      border-radius: 3px;
+      &:hover,
+      &:focus {
+        background: darken($headerBackground, 20%);
+      }
+      @media all and(max-width: $breakMedium) {
+        // Hide longer copy on medium sized screens
+        span {
+          display: none;
+        }
+      }
+      @media all and(max-width: $breakSmallMedium) {
+        // Hide gh button altogether on small sized screens
         display: none;
       }
     }
-    @media all and(max-width: $breakSmallMedium) {
-      // Hide gh button altogether on small sized screens
-      display: none;
-    }
   }
-}
 
-// nav in header
-#nav {
-  padding: 10px 0;
-  float: left;
-  a {
-    color: #FFF;
-    padding: 10px;
-    display: inline-block;
-    &:link,
-    &:visited {
-      border: none;
-      border-right: 1px solid lighten($headerBackground, 10%);
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background: lighten($headerBackground, 10%);
+  // nav in header
+  #nav {
+    padding: 10px 0;
+    float: left;
+    a {
+      color: #FFF;
+      padding: 10px;
+      display: inline-block;
+      &:link,
+      &:visited {
+        border: none;
+        border-right: 1px solid lighten($headerBackground, 10%);
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background: lighten($headerBackground, 10%);
       
-    }
-    &:last-child {
-      border-right: none;
-    }
-  }
-}
-
-#banner {
-  margin: 0 0 20px;
-  background: #DADEE2;
-  padding: 20px;
-  .inner-content {
-    @include container;
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-  }
-  h1 {
-    @include display-font;
-    font-size: 122px;
-    line-height: 0.9;
-  }
-  p {
-    font-size: 21px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-    color: #999;
-    line-height: 1.33;
-    margin-left: 10px;
-  }
-  img {
-    margin-top: 20px;
-  }
-  .img-holder {
-    display: none;
-  }
-  @media all and (min-width: $breakLarge) {
-    height: 303px;
-    padding: 0;
-    .img-holder {
-      display: block;
-      @include prefix(1,8);
-      @include span-columns(3,8);
-      img {
-        max-width: 100%;
+      }
+      &:last-child {
+        border-right: none;
       }
     }
-    .copy {
-      margin-top: 70px;
+  }
+
+  #banner {
+    margin: 0 0 20px;
+    background: #DADEE2;
+    padding: 20px;
+    .inner-content {
+      @include container;
+      margin: 0 auto;
       position: relative;
-      left: 20px;
-      @include span-columns(3,8);
+      height: 100%;
+      overflow: hidden;
     }
-  }
-}
-
-#footer {
-  border-top: 1px solid #DDD;
-  margin: 0 auto;
-  padding: 20px;
-  color: $mutedText;
-  overflow: hidden;
-  a {
-    @include muted-links;
-  }
-  @media all and (min-width: $breakLarge) {
-    p:first-child {
-      float: left;
+    h1 {
+      @include display-font;
+      font-size: 122px;
+      line-height: 0.9;
     }
-    p:last-child {
-      float: right;
+    p {
+      font-size: 21px;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-weight: 300;
+      color: #999;
+      line-height: 1.33;
+      margin-left: 10px;
     }
-  }
-}
-
-// home specific
-
-#clank-summary {
-  margin: 0 0 20px;
-  overflow: hidden; // clearing
-  h3 {
-    margin: 12px 0 4px;
-  }
-  @media all and (min-width: 500px) {
-    .col {
-      @include span-columns(3);
+    img {
+      margin-top: 20px;
     }
-    .col:last-child {
-      @include omega;
+    .img-holder {
+      display: none;
     }
-  }
-}
-
-// docs specific
-
-#docs {
-  #docs-nav {
-    h4 {
-      margin-top: 0;
-      margin-bottom: 4px;
-    }
-    ul {
+    @media all and (min-width: $breakLarge) {
+      height: 303px;
       padding: 0;
-      margin-top: 0;
+      .img-holder {
+        display: block;
+        @include prefix(1,8);
+        @include span-columns(3,8);
+        img {
+          max-width: 100%;
+        }
+      }
+      .copy {
+        margin-top: 70px;
+        position: relative;
+        left: 20px;
+        @include span-columns(3,8);
+      }
     }
   }
-  #content {
-    article {
-      font-size: 14px;
-    }
-    h2 {
-      margin-top: 0;
-    }
-  }
-}
 
-@media all and (max-width: $breakMedium - 1) {
-  #docs-nav {
-    padding: 12px 20px 0;
+  #footer {
+    border-top: 1px solid #DDD;
+    margin: 0 auto;
+    padding: 20px;
+    color: $mutedText;
+    overflow: hidden;
+    a {
+      @include muted-links;
+    }
+    @media all and (min-width: $breakLarge) {
+      p:first-child {
+        float: left;
+      }
+      p:last-child {
+        float: right;
+      }
+    }
   }
-  #docs #content {
-    padding: 0 20px 12px 20px;
-  }
-}
 
-// Layout
-@media all and (min-width: $breakMedium) {
+  // home specific
+
+  #clank-summary {
+    margin: 0 0 20px;
+    overflow: hidden; // clearing
+    h3 {
+      margin: 12px 0 4px;
+    }
+    @media all and (min-width: 500px) {
+      .col {
+        @include span-columns(3);
+      }
+      .col:last-child {
+        @include omega;
+      }
+    }
+  }
+
+  // docs specific
 
   #docs {
-    @include container;
     #docs-nav {
-      @include span-columns(1);
-      margin: 32px 0 0;
       h4 {
         margin-top: 0;
         margin-bottom: 4px;
@@ -301,12 +281,8 @@ pre {
       }
     }
     #content {
-      @include span-columns(5);
-      @include omega;
       article {
-        max-width: 740px;
         font-size: 14px;
-        padding: 20px;
       }
       h2 {
         margin-top: 0;
@@ -314,131 +290,161 @@ pre {
     }
   }
 
-}
-
-// blog specific
-
-@media all and (max-width: $breakLarge - 1) {
-  #blog-nav {
-    padding: 12px 20px 0;
+  @media all and (max-width: $breakMedium - 1) {
+    #docs-nav {
+      padding: 12px 20px 0;
+    }
+    #docs #content {
+      padding: 0 20px 12px 20px;
+    }
   }
-  #blog-content {
-    padding: 20px;
-  }
-}
 
-@media all and (min-width: $breakLarge) {
-  #blog {
-    @include container;
-    padding: 20px 0 0;
+  // Layout
+  @media all and (min-width: $breakMedium) {
+
+    #docs {
+      @include container;
+      #docs-nav {
+        @include span-columns(1);
+        margin: 32px 0 0;
+        h4 {
+          margin-top: 0;
+          margin-bottom: 4px;
+        }
+        ul {
+          padding: 0;
+          margin-top: 0;
+        }
+      }
+      #content {
+        @include span-columns(5);
+        @include omega;
+        article {
+          max-width: 740px;
+          font-size: 14px;
+          padding: 20px;
+        }
+        h2 {
+          margin-top: 0;
+        }
+      }
+    }
+
+  }
+
+  // blog specific
+
+  @media all and (max-width: $breakLarge - 1) {
     #blog-nav {
-      @include span-columns(2);
-      @include omega;
+      padding: 12px 20px 0;
     }
     #blog-content {
-      @include span-columns(4);
-    }
-    #blog-single {
-      @include prefix(1);
-      @include span-columns(4);
-    }
-    article {
-      max-width: 600px;
+      padding: 20px;
     }
   }
-}
 
-#blog {
-  article {
-    font-size: 14px;
-    @include clearfix;
-  }
-  h2 {
-    margin-top: 0;
-  }
-}
-
-#blog-nav {
-  a {
-    @include muted-links;
-  }
-  .date {
-    color: #999;
-    margin-right: 4px;
-  }
-}
-
-.bordered-list {
-  margin: 0;
-  padding: 0;
-  span {
-    display: block;
-  }
-  li {
-    list-style: none;
-    padding: 0 0 4px;
-    margin: 0 0 4px;
-    border-bottom: 1px solid #EEE;
-    &:last-child {
-      border: none;
-    }
-    a {
-      border: none;
-    } 
-  }
-}
-
-
-#blog article {
-  header {
-    p {
-      color: #999;
-    }
-  }
-  h1 {
-    @include display-font;
-    text-transform: none;
-    a {
-      color: darken($link-color, 10%);
-      border: none;
-      &:hover {
-        color: #000;
+  @media all and (min-width: $breakLarge) {
+    #blog {
+      @include container;
+      padding: 20px 0 0;
+      #blog-nav {
+        @include span-columns(2);
+        @include omega;
+      }
+      #blog-content {
+        @include span-columns(4);
+      }
+      #blog-single {
+        @include prefix(1);
+        @include span-columns(4);
+      }
+      article {
+        max-width: 600px;
       }
     }
   }
-  margin: 0 0 24px;
-  padding: 0 0 24px;
-  border-bottom: 1px solid #DDD;
-  &:last-child {
-    margin: 0;
-    border: none;
-    padding: 0;
+
+  #blog {
+    article {
+      font-size: 14px;
+      @include clearfix;
+    }
+    h2 {
+      margin-top: 0;
+    }
   }
-}
 
-// blog comments
+  #blog-nav {
+    a {
+      @include muted-links;
+    }
+    .date {
+      color: #999;
+      margin-right: 4px;
+    }
+  }
+
+  .bordered-list {
+    margin: 0;
+    padding: 0;
+    span {
+      display: block;
+    }
+    li {
+      list-style: none;
+      padding: 0 0 4px;
+      margin: 0 0 4px;
+      border-bottom: 1px solid #EEE;
+      &:last-child {
+        border: none;
+      }
+      a {
+        border: none;
+      } 
+    }
+  }
 
 
-#disqus_thread {
-  max-width: 600px;
-}
+  #blog article {
+    header {
+      p {
+        color: #999;
+      }
+    }
+    h1 {
+      @include display-font;
+      text-transform: none;
+      a {
+        color: darken($link-color, 10%);
+        border: none;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    margin: 0 0 24px;
+    padding: 0 0 24px;
+    border-bottom: 1px solid #DDD;
+    &:last-child {
+      margin: 0;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  // blog comments
 
 
-// demo specific
+  #disqus_thread {
+    max-width: 600px;
+  }
 
-body, html {
-  height: 100%;
-}
-#demo-app {
-  height: 600px;
-  @include calc("height", "100% - 59px");
-  position: relative;
-}
+  // 404
 
-// 404
+  #error404 {
+    background: #EEE;
+    text-align: center;
+    padding: 40px;
+  }
 
-#error404 {
-  background: #EEE;
-  text-align: center;
-  padding: 40px;
 }

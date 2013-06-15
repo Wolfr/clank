@@ -570,7 +570,7 @@ table {
   Grid using Susy
 */
 /* line 15, ../scss/docs/_grid.scss */
-#layout-demo #header > .inner-content {
+#layout-demo .cl-docs #header > .inner-content {
   max-width: none;
   *zoom: 1;
   padding-left: 20px;
@@ -579,16 +579,16 @@ table {
   margin-right: auto;
 }
 /* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-#layout-demo #header > .inner-content:after {
+#layout-demo .cl-docs #header > .inner-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
 /* line 27, ../scss/docs/_grid.scss */
-#header > .inner-content,
-#content > .inner-content,
-#footer > .inner-content {
+.cl-docs #header > .inner-content,
+.cl-docs #content > .inner-content,
+.cl-docs #footer > .inner-content {
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
@@ -598,93 +598,198 @@ table {
   margin-right: auto;
 }
 /* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-#header > .inner-content:after,
-#content > .inner-content:after,
-#footer > .inner-content:after {
+.cl-docs #header > .inner-content:after,
+.cl-docs #content > .inner-content:after,
+.cl-docs #footer > .inner-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
 /*
-  Image alignment
+  Clank docs controls
 */
-/* line 8, ../scss/docs/_image_alignment.scss */
-a[rel="attachment"] {
-  border: none;
+/* line 5, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls {
+  font-size: 13px;
+  z-index: 2;
+  position: absolute;
+  left: 0;
 }
 
-/* line 12, ../scss/docs/_image_alignment.scss */
-.aligncenter {
+/* line 15, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top,
+.cl-docs-controls--bottom {
+  background-color: #cad2d7;
+  background-image: -moz-linear-gradient(top, #d1d6da, #c1ccd3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1d6da), to(#c1ccd3));
+  background-image: -webkit-linear-gradient(top, #d1d6da, #c1ccd3);
+  background-image: -o-linear-gradient(top, #d1d6da, #c1ccd3);
+  background-image: linear-gradient(to bottom, #d1d6da, #c1ccd3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD1D6DA', endColorstr='#FFC1CCD3', GradientType=0);
+  *zoom: 1;
+  width: 100%;
+  line-height: 44px;
+  height: 44px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.cl-docs-controls--top:after,
+.cl-docs-controls--bottom:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 22, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top label,
+.cl-docs-controls--bottom label {
+  line-height: 44px;
+}
+
+/* line 30, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  top: 0;
+}
+/* line 34, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top > div {
+  width: 33%;
+  text-align: center;
+  float: left;
+}
+/* line 39, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top select {
+  margin-top: 12px;
+}
+/* line 42, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top input[type="range"] {
+  position: relative;
+  top: 5px;
+}
+
+/* line 48, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top label {
+  margin-right: 3px;
+}
+/* line 50, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--top label:after {
+  content: ":";
+}
+
+/* line 56, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  bottom: 0;
+}
+/* line 59, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--bottom p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 69, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--left {
+  background: #FFF;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  width: 120px;
+  left: 0;
+  top: 46px;
+  height: 100%;
+  height: -moz-calc(100% - 90px);
+  height: -o-calc(100% - 90px);
+  height: -webkit-calc(100% - 90px);
+  height: calc(100% - 90px);
+}
+/* line 77, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--left h4, .cl-docs-controls--left a {
+  display: block;
+  border: none;
+  padding: 4px;
+}
+/* line 82, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--left h4 {
+  margin: 0;
+}
+/* line 86, ../scss/docs/_demo-controls.scss */
+.cl-docs-controls--left a:hover {
+  background: #EEE;
+}
+
+/*
+  Image alignment
+*/
+/* line 9, ../scss/docs/_image_alignment.scss */
+.cl-docs a[rel="attachment"] {
+  border: none;
+}
+/* line 13, ../scss/docs/_image_alignment.scss */
+.cl-docs .aligncenter {
   margin: 0 auto;
   display: block;
 }
-
-/* line 17, ../scss/docs/_image_alignment.scss */
-.wp-caption {
+/* line 18, ../scss/docs/_image_alignment.scss */
+.cl-docs .wp-caption {
   text-align: right;
 }
-/* line 19, ../scss/docs/_image_alignment.scss */
-.wp-caption a {
+/* line 20, ../scss/docs/_image_alignment.scss */
+.cl-docs .wp-caption a {
   border: none;
 }
-/* line 22, ../scss/docs/_image_alignment.scss */
-.wp-caption .wp-caption-text {
+/* line 23, ../scss/docs/_image_alignment.scss */
+.cl-docs .wp-caption .wp-caption-text {
   color: #999;
   font-size: 13px;
 }
-
-/* line 29, ../scss/docs/_image_alignment.scss */
-img.alignright,
-div.alignright {
+/* line 30, ../scss/docs/_image_alignment.scss */
+.cl-docs img.alignright,
+.cl-docs div.alignright {
   float: right;
   padding: 0 0 12px 12px;
 }
-
-/* line 35, ../scss/docs/_image_alignment.scss */
-img.alignleft,
-div.alignleft {
+/* line 36, ../scss/docs/_image_alignment.scss */
+.cl-docs img.alignleft,
+.cl-docs div.alignleft {
   float: left;
   padding: 0 12px 12px 0;
 }
-
-/* line 40, ../scss/docs/_image_alignment.scss */
-img.aligncenter {
+/* line 41, ../scss/docs/_image_alignment.scss */
+.cl-docs img.aligncenter {
   margin: 0 auto 12px;
   clear: both;
 }
 
 /* line 3, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav {
+.cl-docs {
+  /* move down carets for tabs */
+}
+/* line 4, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav {
   margin-left: 0;
   margin-bottom: 20px;
   list-style: none;
 }
-
-/* line 8, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > li > a {
+/* line 9, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > li > a {
   display: block;
 }
-
-/* line 12, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > li > a:hover,
-.nav > li > a:focus {
+/* line 13, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > li > a:hover,
+.cl-docs .nav > li > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
-
-/* line 16, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > li > a > img {
+/* line 17, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > li > a > img {
   max-width: none;
 }
-
-/* line 19, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > .pull-right {
+/* line 20, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > .pull-right {
   float: right;
 }
-
-/* line 22, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-header {
+/* line 23, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-header {
   display: block;
   padding: 3px 15px;
   font-size: 11px;
@@ -694,49 +799,42 @@ img.aligncenter {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
-
-/* line 32, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav li + .nav-header {
+/* line 33, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav li + .nav-header {
   margin-top: 9px;
 }
-
-/* line 35, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-list {
+/* line 36, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-list {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 0;
 }
-
-/* line 41, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-list > li > a,
-.nav-list .nav-header {
+/* line 42, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-list > li > a,
+.cl-docs .nav-list .nav-header {
   margin-left: -15px;
   margin-right: -15px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
-
-/* line 46, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-list > li > a {
+/* line 47, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-list > li > a {
   padding: 3px 15px;
 }
-
-/* line 51, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-list > .active > a,
-.nav-list > .active > a:hover,
-.nav-list > .active > a:focus {
+/* line 52, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-list > .active > a,
+.cl-docs .nav-list > .active > a:hover,
+.cl-docs .nav-list > .active > a:focus {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #0088cc;
 }
-
-/* line 57, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-list [class^="icon-"],
-.nav-list [class*=" icon-"] {
+/* line 58, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-list [class^="icon-"],
+.cl-docs .nav-list [class*=" icon-"] {
   margin-right: 2px;
 }
-
-/* line 60, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-list .divider {
+/* line 61, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-list .divider {
   *width: 100%;
   height: 1px;
   margin: 9px 1px;
@@ -745,56 +843,48 @@ img.aligncenter {
   background-color: #e5e5e5;
   border-bottom: 1px solid #ffffff;
 }
-
-/* line 70, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs,
-.nav-pills {
+/* line 71, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs,
+.cl-docs .nav-pills {
   *zoom: 1;
 }
-
-/* line 76, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs:before,
-.nav-pills:before,
-.nav-tabs:after,
-.nav-pills:after {
+/* line 77, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs:before,
+.cl-docs .nav-pills:before,
+.cl-docs .nav-tabs:after,
+.cl-docs .nav-pills:after {
   display: table;
   content: "";
   line-height: 0;
 }
-
-/* line 82, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs:after,
-.nav-pills:after {
+/* line 83, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs:after,
+.cl-docs .nav-pills:after {
   clear: both;
 }
-
-/* line 86, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs > li,
-.nav-pills > li {
+/* line 87, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs > li,
+.cl-docs .nav-pills > li {
   float: left;
 }
-
-/* line 90, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs > li > a,
-.nav-pills > li > a {
+/* line 91, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs > li > a,
+.cl-docs .nav-pills > li > a {
   padding-right: 12px;
   padding-left: 12px;
   margin-right: 2px;
   line-height: 14px;
 }
-
-/* line 96, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs {
+/* line 97, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
-
-/* line 99, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs > li {
+/* line 100, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs > li {
   margin-bottom: -1px;
 }
-
-/* line 102, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs > li > a {
+/* line 103, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: 20px;
@@ -803,26 +893,23 @@ img.aligncenter {
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-
-/* line 112, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs > li > a:hover,
-.nav-tabs > li > a:focus {
+/* line 113, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs > li > a:hover,
+.cl-docs .nav-tabs > li > a:focus {
   border-color: #eeeeee #eeeeee #dddddd;
 }
-
-/* line 117, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover,
-.nav-tabs > .active > a:focus {
+/* line 118, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs > .active > a,
+.cl-docs .nav-tabs > .active > a:hover,
+.cl-docs .nav-tabs > .active > a:focus {
   color: #555555;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
 }
-
-/* line 124, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-pills > li > a {
+/* line 125, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-pills > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 2px;
@@ -831,40 +918,34 @@ img.aligncenter {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 135, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,
-.nav-pills > .active > a:focus {
+/* line 136, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-pills > .active > a,
+.cl-docs .nav-pills > .active > a:hover,
+.cl-docs .nav-pills > .active > a:focus {
   color: #ffffff;
   background-color: #0088cc;
 }
-
-/* line 139, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-stacked > li {
+/* line 140, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-stacked > li {
   float: none;
 }
-
-/* line 142, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-stacked > li > a {
+/* line 143, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-stacked > li > a {
   margin-right: 0;
 }
-
-/* line 145, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs.nav-stacked {
+/* line 146, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs.nav-stacked {
   border-bottom: 0;
 }
-
-/* line 148, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs.nav-stacked > li > a {
+/* line 149, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs.nav-stacked > li > a {
   border: 1px solid #ddd;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-
-/* line 154, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs.nav-stacked > li:first-child > a {
+/* line 155, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs.nav-stacked > li:first-child > a {
   -webkit-border-top-right-radius: 4px;
   -moz-border-radius-topright: 4px;
   border-top-right-radius: 4px;
@@ -872,9 +953,8 @@ img.aligncenter {
   -moz-border-radius-topleft: 4px;
   border-top-left-radius: 4px;
 }
-
-/* line 162, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs.nav-stacked > li:last-child > a {
+/* line 163, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs.nav-stacked > li:last-child > a {
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-bottomright: 4px;
   border-bottom-right-radius: 4px;
@@ -882,575 +962,501 @@ img.aligncenter {
   -moz-border-radius-bottomleft: 4px;
   border-bottom-left-radius: 4px;
 }
-
-/* line 171, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs.nav-stacked > li > a:hover,
-.nav-tabs.nav-stacked > li > a:focus {
+/* line 172, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs.nav-stacked > li > a:hover,
+.cl-docs .nav-tabs.nav-stacked > li > a:focus {
   border-color: #ddd;
   z-index: 2;
 }
-
-/* line 175, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-pills.nav-stacked > li > a {
+/* line 176, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-pills.nav-stacked > li > a {
   margin-bottom: 3px;
 }
-
-/* line 178, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-pills.nav-stacked > li:last-child > a {
+/* line 179, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-pills.nav-stacked > li:last-child > a {
   margin-bottom: 1px;
 }
-
-/* line 181, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs .dropdown-menu {
+/* line 182, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs .dropdown-menu {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
 }
-
-/* line 186, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-pills .dropdown-menu {
+/* line 187, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-pills .dropdown-menu {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-
-/* line 191, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav .dropdown-toggle .caret {
+/* line 192, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav .dropdown-toggle .caret {
   border-top-color: #0088cc;
   border-bottom-color: #0088cc;
   margin-top: 6px;
 }
-
-/* line 197, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav .dropdown-toggle:hover .caret,
-.nav .dropdown-toggle:focus .caret {
+/* line 198, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav .dropdown-toggle:hover .caret,
+.cl-docs .nav .dropdown-toggle:focus .caret {
   border-top-color: #005580;
   border-bottom-color: #005580;
 }
-
-/* move down carets for tabs */
-/* line 202, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs .dropdown-toggle .caret {
+/* line 203, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs .dropdown-toggle .caret {
   margin-top: 8px;
 }
-
-/* line 205, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav .active .dropdown-toggle .caret {
+/* line 206, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav .active .dropdown-toggle .caret {
   border-top-color: #fff;
   border-bottom-color: #fff;
 }
-
-/* line 209, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs .active .dropdown-toggle .caret {
+/* line 210, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs .active .dropdown-toggle .caret {
   border-top-color: #555555;
   border-bottom-color: #555555;
 }
-
-/* line 214, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > .dropdown.active > a:hover,
-.nav > .dropdown.active > a:focus {
+/* line 215, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > .dropdown.active > a:hover,
+.cl-docs .nav > .dropdown.active > a:focus {
   cursor: pointer;
 }
-
-/* line 220, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav-tabs .open .dropdown-toggle,
-.nav-pills .open .dropdown-toggle,
-.nav > li.dropdown.open.active > a:hover,
-.nav > li.dropdown.open.active > a:focus {
+/* line 221, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav-tabs .open .dropdown-toggle,
+.cl-docs .nav-pills .open .dropdown-toggle,
+.cl-docs .nav > li.dropdown.open.active > a:hover,
+.cl-docs .nav > li.dropdown.open.active > a:focus {
   color: #ffffff;
   background-color: #999999;
   border-color: #999999;
 }
-
-/* line 228, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav li.dropdown.open .caret,
-.nav li.dropdown.open.active .caret,
-.nav li.dropdown.open a:hover .caret,
-.nav li.dropdown.open a:focus .caret {
+/* line 229, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav li.dropdown.open .caret,
+.cl-docs .nav li.dropdown.open.active .caret,
+.cl-docs .nav li.dropdown.open a:hover .caret,
+.cl-docs .nav li.dropdown.open a:focus .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
   opacity: 1;
   filter: alpha(opacity=100);
 }
-
-/* line 235, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tabs-stacked .open > a:hover,
-.tabs-stacked .open > a:focus {
+/* line 236, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tabs-stacked .open > a:hover,
+.cl-docs .tabs-stacked .open > a:focus {
   border-color: #999999;
 }
-
-/* line 238, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tabbable {
+/* line 239, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tabbable {
   *zoom: 1;
 }
-
-/* line 242, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tabbable:before,
-.tabbable:after {
+/* line 243, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tabbable:before,
+.cl-docs .tabbable:after {
   display: table;
   content: "";
   line-height: 0;
 }
-
-/* line 247, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tabbable:after {
+/* line 248, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tabbable:after {
   clear: both;
 }
-
-/* line 250, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tab-content {
+/* line 251, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tab-content {
   overflow: auto;
 }
-
-/* line 255, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tabs-below > .nav-tabs,
-.tabs-right > .nav-tabs,
-.tabs-left > .nav-tabs {
+/* line 256, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tabs-below > .nav-tabs,
+.cl-docs .tabs-right > .nav-tabs,
+.cl-docs .tabs-left > .nav-tabs {
   border-bottom: 0;
 }
-
-/* line 259, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
+/* line 260, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tab-content > .tab-pane,
+.cl-docs .pill-content > .pill-pane {
   display: none;
 }
-
-/* line 263, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.tab-content > .active,
-.pill-content > .active {
+/* line 264, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .tab-content > .active,
+.cl-docs .pill-content > .active {
   display: block;
 }
-
-/* line 266, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > .disabled > a {
+/* line 267, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > .disabled > a {
   color: #999999;
 }
-
-/* line 270, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
-.nav > .disabled > a:hover,
-.nav > .disabled > a:focus {
+/* line 271, ../scss/docs/_bootstrap-nav-tabs-stacked.scss */
+.cl-docs .nav > .disabled > a:hover,
+.cl-docs .nav > .disabled > a:focus {
   text-decoration: none;
   background-color: transparent;
   cursor: default;
 }
 
-/* line 2, ../scss/docs/_pygments.scss */
-.highlight {
+/* line 1, ../scss/docs/_pygments.scss */
+.cl-docs {
+  /* Comment */
+  /* Error */
+  /* Generic */
+  /* Keyword */
+  /* Literal */
+  /* Name */
+  /* Operator */
+  /* Other */
+  /* Punctuation */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Deleted */
+  /* Generic.Emph */
+  /* Generic.Error */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Output */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Generic.Traceback */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Date */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Other */
+  /* Name.Property */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */
+}
+/* line 3, ../scss/docs/_pygments.scss */
+.cl-docs .highlight {
   background-color: #ffffcc;
 }
-
-/* line 3, ../scss/docs/_pygments.scss */
-.highlight .c {
+/* line 4, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .c {
   color: #586e75;
 }
-
-/* Comment */
-/* line 4, ../scss/docs/_pygments.scss */
-.highlight .err {
-  color: #93a1a1;
-}
-
-/* Error */
 /* line 5, ../scss/docs/_pygments.scss */
-.highlight .g {
+.cl-docs .highlight .err {
   color: #93a1a1;
 }
-
-/* Generic */
 /* line 6, ../scss/docs/_pygments.scss */
-.highlight .k {
-  color: #859900;
+.cl-docs .highlight .g {
+  color: #93a1a1;
 }
-
-/* Keyword */
 /* line 7, ../scss/docs/_pygments.scss */
-.highlight .l {
-  color: #93a1a1;
-}
-
-/* Literal */
-/* line 8, ../scss/docs/_pygments.scss */
-.highlight .n {
-  color: #93a1a1;
-}
-
-/* Name */
-/* line 9, ../scss/docs/_pygments.scss */
-.highlight .o {
+.cl-docs .highlight .k {
   color: #859900;
 }
-
-/* Operator */
+/* line 8, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .l {
+  color: #93a1a1;
+}
+/* line 9, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .n {
+  color: #93a1a1;
+}
 /* line 10, ../scss/docs/_pygments.scss */
-.highlight .x {
+.cl-docs .highlight .o {
+  color: #859900;
+}
+/* line 11, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .x {
   color: #cb4b16;
 }
-
-/* Other */
-/* line 11, ../scss/docs/_pygments.scss */
-.highlight .p {
+/* line 12, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .p {
   color: #93a1a1;
 }
-
-/* Punctuation */
-/* line 12, ../scss/docs/_pygments.scss */
-.highlight .cm {
-  color: #586e75;
-}
-
-/* Comment.Multiline */
 /* line 13, ../scss/docs/_pygments.scss */
-.highlight .cp {
-  color: #859900;
-}
-
-/* Comment.Preproc */
-/* line 14, ../scss/docs/_pygments.scss */
-.highlight .c1 {
+.cl-docs .highlight .cm {
   color: #586e75;
 }
-
-/* Comment.Single */
-/* line 15, ../scss/docs/_pygments.scss */
-.highlight .cs {
+/* line 14, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .cp {
   color: #859900;
 }
-
-/* Comment.Special */
+/* line 15, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .c1 {
+  color: #586e75;
+}
 /* line 16, ../scss/docs/_pygments.scss */
-.highlight .gd {
+.cl-docs .highlight .cs {
+  color: #859900;
+}
+/* line 17, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gd {
   color: #2aa198;
 }
-
-/* Generic.Deleted */
-/* line 17, ../scss/docs/_pygments.scss */
-.highlight .ge {
+/* line 18, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .ge {
   color: #93A1A1;
   font-style: italic;
 }
-
-/* Generic.Emph */
-/* line 18, ../scss/docs/_pygments.scss */
-.highlight .gr {
+/* line 19, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gr {
   color: #dc322f;
 }
-
-/* Generic.Error */
-/* line 19, ../scss/docs/_pygments.scss */
-.highlight .gh {
+/* line 20, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gh {
   color: #cb4b16;
 }
-
-/* Generic.Heading */
-/* line 20, ../scss/docs/_pygments.scss */
-.highlight .gi {
+/* line 21, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gi {
   color: #859900;
 }
-
-/* Generic.Inserted */
-/* line 21, ../scss/docs/_pygments.scss */
-.highlight .go {
-  color: #93a1a1;
-}
-
-/* Generic.Output */
 /* line 22, ../scss/docs/_pygments.scss */
-.highlight .gp {
+.cl-docs .highlight .go {
   color: #93a1a1;
 }
-
-/* Generic.Prompt */
 /* line 23, ../scss/docs/_pygments.scss */
-.highlight .gs {
+.cl-docs .highlight .gp {
+  color: #93a1a1;
+}
+/* line 24, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gs {
   color: #93A1A1;
   font-weight: bold;
 }
-
-/* Generic.Strong */
-/* line 24, ../scss/docs/_pygments.scss */
-.highlight .gu {
+/* line 25, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gu {
   color: #cb4b16;
 }
-
-/* Generic.Subheading */
-/* line 25, ../scss/docs/_pygments.scss */
-.highlight .gt {
+/* line 26, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .gt {
   color: #93a1a1;
 }
-
-/* Generic.Traceback */
-/* line 26, ../scss/docs/_pygments.scss */
-.highlight .kc {
+/* line 27, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .kc {
   color: #cb4b16;
 }
-
-/* Keyword.Constant */
-/* line 27, ../scss/docs/_pygments.scss */
-.highlight .kd {
-  color: #268bd2;
-}
-
-/* Keyword.Declaration */
 /* line 28, ../scss/docs/_pygments.scss */
-.highlight .kn {
-  color: #859900;
-}
-
-/* Keyword.Namespace */
-/* line 29, ../scss/docs/_pygments.scss */
-.highlight .kp {
-  color: #859900;
-}
-
-/* Keyword.Pseudo */
-/* line 30, ../scss/docs/_pygments.scss */
-.highlight .kr {
+.cl-docs .highlight .kd {
   color: #268bd2;
 }
-
-/* Keyword.Reserved */
+/* line 29, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .kn {
+  color: #859900;
+}
+/* line 30, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .kp {
+  color: #859900;
+}
 /* line 31, ../scss/docs/_pygments.scss */
-.highlight .kt {
+.cl-docs .highlight .kr {
+  color: #268bd2;
+}
+/* line 32, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .kt {
   color: #dc322f;
 }
-
-/* Keyword.Type */
-/* line 32, ../scss/docs/_pygments.scss */
-.highlight .ld {
-  color: #93a1a1;
-}
-
-/* Literal.Date */
 /* line 33, ../scss/docs/_pygments.scss */
-.highlight .m {
-  color: #2aa198;
-}
-
-/* Literal.Number */
-/* line 34, ../scss/docs/_pygments.scss */
-.highlight .s {
-  color: #2aa198;
-}
-
-/* Literal.String */
-/* line 35, ../scss/docs/_pygments.scss */
-.highlight .na {
+.cl-docs .highlight .ld {
   color: #93a1a1;
 }
-
-/* Name.Attribute */
+/* line 34, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .m {
+  color: #2aa198;
+}
+/* line 35, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .s {
+  color: #2aa198;
+}
 /* line 36, ../scss/docs/_pygments.scss */
-.highlight .nb {
+.cl-docs .highlight .na {
+  color: #93a1a1;
+}
+/* line 37, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .nb {
   color: #b58900;
 }
-
-/* Name.Builtin */
-/* line 37, ../scss/docs/_pygments.scss */
-.highlight .nc {
-  color: #268bd2;
-}
-
-/* Name.Class */
 /* line 38, ../scss/docs/_pygments.scss */
-.highlight .no {
-  color: #cb4b16;
+.cl-docs .highlight .nc {
+  color: #268bd2;
 }
-
-/* Name.Constant */
 /* line 39, ../scss/docs/_pygments.scss */
-.highlight .nd {
-  color: #268bd2;
+.cl-docs .highlight .no {
+  color: #cb4b16;
 }
-
-/* Name.Decorator */
 /* line 40, ../scss/docs/_pygments.scss */
-.highlight .ni {
-  color: #cb4b16;
+.cl-docs .highlight .nd {
+  color: #268bd2;
 }
-
-/* Name.Entity */
 /* line 41, ../scss/docs/_pygments.scss */
-.highlight .ne {
+.cl-docs .highlight .ni {
   color: #cb4b16;
 }
-
-/* Name.Exception */
 /* line 42, ../scss/docs/_pygments.scss */
-.highlight .nf {
-  color: #268bd2;
+.cl-docs .highlight .ne {
+  color: #cb4b16;
 }
-
-/* Name.Function */
 /* line 43, ../scss/docs/_pygments.scss */
-.highlight .nl {
-  color: #93a1a1;
+.cl-docs .highlight .nf {
+  color: #268bd2;
 }
-
-/* Name.Label */
 /* line 44, ../scss/docs/_pygments.scss */
-.highlight .nn {
+.cl-docs .highlight .nl {
   color: #93a1a1;
 }
-
-/* Name.Namespace */
 /* line 45, ../scss/docs/_pygments.scss */
-.highlight .nx {
+.cl-docs .highlight .nn {
   color: #93a1a1;
 }
-
-/* Name.Other */
 /* line 46, ../scss/docs/_pygments.scss */
-.highlight .py {
+.cl-docs .highlight .nx {
   color: #93a1a1;
 }
-
-/* Name.Property */
 /* line 47, ../scss/docs/_pygments.scss */
-.highlight .nt {
-  color: #268bd2;
+.cl-docs .highlight .py {
+  color: #93a1a1;
 }
-
-/* Name.Tag */
 /* line 48, ../scss/docs/_pygments.scss */
-.highlight .nv {
+.cl-docs .highlight .nt {
   color: #268bd2;
 }
-
-/* Name.Variable */
 /* line 49, ../scss/docs/_pygments.scss */
-.highlight .ow {
+.cl-docs .highlight .nv {
+  color: #268bd2;
+}
+/* line 50, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .ow {
   color: #859900;
 }
-
-/* Operator.Word */
-/* line 50, ../scss/docs/_pygments.scss */
-.highlight .w {
+/* line 51, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .w {
   color: #93a1a1;
 }
-
-/* Text.Whitespace */
-/* line 51, ../scss/docs/_pygments.scss */
-.highlight .mf {
-  color: #2aa198;
-}
-
-/* Literal.Number.Float */
 /* line 52, ../scss/docs/_pygments.scss */
-.highlight .mh {
+.cl-docs .highlight .mf {
   color: #2aa198;
 }
-
-/* Literal.Number.Hex */
 /* line 53, ../scss/docs/_pygments.scss */
-.highlight .mi {
+.cl-docs .highlight .mh {
   color: #2aa198;
 }
-
-/* Literal.Number.Integer */
 /* line 54, ../scss/docs/_pygments.scss */
-.highlight .mo {
+.cl-docs .highlight .mi {
   color: #2aa198;
 }
-
-/* Literal.Number.Oct */
 /* line 55, ../scss/docs/_pygments.scss */
-.highlight .sb {
+.cl-docs .highlight .mo {
+  color: #2aa198;
+}
+/* line 56, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .sb {
   color: #586e75;
 }
-
-/* Literal.String.Backtick */
-/* line 56, ../scss/docs/_pygments.scss */
-.highlight .sc {
+/* line 57, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .sc {
   color: #2aa198;
 }
-
-/* Literal.String.Char */
-/* line 57, ../scss/docs/_pygments.scss */
-.highlight .sd {
+/* line 58, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .sd {
   color: #93a1a1;
 }
-
-/* Literal.String.Doc */
-/* line 58, ../scss/docs/_pygments.scss */
-.highlight .s2 {
+/* line 59, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .s2 {
   color: #2aa198;
 }
-
-/* Literal.String.Double */
-/* line 59, ../scss/docs/_pygments.scss */
-.highlight .se {
+/* line 60, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .se {
   color: #cb4b16;
 }
-
-/* Literal.String.Escape */
-/* line 60, ../scss/docs/_pygments.scss */
-.highlight .sh {
+/* line 61, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .sh {
   color: #93a1a1;
 }
-
-/* Literal.String.Heredoc */
-/* line 61, ../scss/docs/_pygments.scss */
-.highlight .si {
-  color: #2aa198;
-}
-
-/* Literal.String.Interpol */
 /* line 62, ../scss/docs/_pygments.scss */
-.highlight .sx {
+.cl-docs .highlight .si {
   color: #2aa198;
 }
-
-/* Literal.String.Other */
 /* line 63, ../scss/docs/_pygments.scss */
-.highlight .sr {
+.cl-docs .highlight .sx {
+  color: #2aa198;
+}
+/* line 64, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .sr {
   color: #dc322f;
 }
-
-/* Literal.String.Regex */
-/* line 64, ../scss/docs/_pygments.scss */
-.highlight .s1 {
-  color: #2aa198;
-}
-
-/* Literal.String.Single */
 /* line 65, ../scss/docs/_pygments.scss */
-.highlight .ss {
+.cl-docs .highlight .s1 {
   color: #2aa198;
 }
-
-/* Literal.String.Symbol */
 /* line 66, ../scss/docs/_pygments.scss */
-.highlight .bp {
-  color: #268bd2;
+.cl-docs .highlight .ss {
+  color: #2aa198;
 }
-
-/* Name.Builtin.Pseudo */
 /* line 67, ../scss/docs/_pygments.scss */
-.highlight .vc {
+.cl-docs .highlight .bp {
   color: #268bd2;
 }
-
-/* Name.Variable.Class */
 /* line 68, ../scss/docs/_pygments.scss */
-.highlight .vg {
+.cl-docs .highlight .vc {
   color: #268bd2;
 }
-
-/* Name.Variable.Global */
 /* line 69, ../scss/docs/_pygments.scss */
-.highlight .vi {
+.cl-docs .highlight .vg {
   color: #268bd2;
 }
-
-/* Name.Variable.Instance */
 /* line 70, ../scss/docs/_pygments.scss */
-.highlight .il {
+.cl-docs .highlight .vi {
+  color: #268bd2;
+}
+/* line 71, ../scss/docs/_pygments.scss */
+.cl-docs .highlight .il {
   color: #2aa198;
 }
 
-/* Literal.Number.Integer.Long */
-/* line 13, ../scss/docs.scss */
-body {
+/* line 16, ../scss/docs.scss */
+#layout-demo, html {
+  height: 100%;
+}
+
+/* line 20, ../scss/docs.scss */
+#demo-app {
+  height: 600px;
+  height: -moz-calc(100% - 59px);
+  height: -o-calc(100% - 59px);
+  height: -webkit-calc(100% - 59px);
+  height: calc(100% - 59px);
+  position: relative;
+}
+
+/* line 29, ../scss/docs.scss */
+.cl-docs {
   font-family: Arial;
   font-size: 13px;
   color: #666;
@@ -1459,16 +1465,14 @@ body {
   line-height: 1.5;
   margin: 0 auto;
 }
-
-/* line 25, ../scss/docs.scss */
-.accessible-text {
+/* line 41, ../scss/docs.scss */
+.cl-docs .accessible-text {
   position: absolute;
   top: -9000px;
   left: -9000px;
 }
-
-/* line 31, ../scss/docs.scss */
-.well {
+/* line 47, ../scss/docs.scss */
+.cl-docs .well {
   margin: 0 0 12px;
   padding: 10px;
   border: 1px solid #DDD;
@@ -1478,17 +1482,16 @@ body {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 36, ../scss/docs.scss */
-.well *:last-child {
+/* line 52, ../scss/docs.scss */
+.cl-docs .well *:last-child {
   margin-bottom: 0;
 }
-
-/* line 43, ../scss/docs.scss */
-.page-title-bar {
+/* line 59, ../scss/docs.scss */
+.cl-docs .page-title-bar {
   background: #F0F0F0;
 }
-/* line 45, ../scss/docs.scss */
-.page-title-bar .inner-content {
+/* line 61, ../scss/docs.scss */
+.cl-docs .page-title-bar .inner-content {
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
@@ -1500,13 +1503,13 @@ body {
   padding-bottom: 12px;
 }
 /* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.page-title-bar .inner-content:after {
+.cl-docs .page-title-bar .inner-content:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 50, ../scss/docs.scss */
-.page-title-bar h2 {
+/* line 66, ../scss/docs.scss */
+.cl-docs .page-title-bar h2 {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1516,71 +1519,64 @@ body {
   text-transform: none;
   font-size: 32px;
 }
-
-/* line 57, ../scss/docs.scss */
-p, h4 {
+/* line 73, ../scss/docs.scss */
+.cl-docs p, .cl-docs h4 {
   margin: 6px 0;
 }
-
-/* line 61, ../scss/docs.scss */
-hr {
+/* line 77, ../scss/docs.scss */
+.cl-docs hr {
   border: none;
   border-bottom: 1px solid #CCC;
   margin: 18px 0;
 }
-
-/* line 67, ../scss/docs.scss */
-h1, h2 {
+/* line 83, ../scss/docs.scss */
+.cl-docs h1, .cl-docs h2 {
   color: #000;
   line-height: 1.1;
 }
-
-/* line 72, ../scss/docs.scss */
-h3 {
+/* line 88, ../scss/docs.scss */
+.cl-docs h3 {
   color: #333;
   font-weight: 400;
   font-size: 18px;
   margin: 12px 0;
 }
-
-/* line 79, ../scss/docs.scss */
-h4 {
+/* line 95, ../scss/docs.scss */
+.cl-docs h4 {
   color: #000;
 }
-
-/* line 83, ../scss/docs.scss */
-a {
+/* line 99, ../scss/docs.scss */
+.cl-docs a {
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 10, ../scss/docs/_vars-n-mixins.scss */
-a {
+/* line 21, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs a {
   text-decoration: none;
 }
-/* line 13, ../scss/docs/_vars-n-mixins.scss */
-a:link {
+/* line 24, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs a:link {
   color: #1d60b2;
   border-bottom: 1px solid #bad9ff;
 }
-/* line 17, ../scss/docs/_vars-n-mixins.scss */
-a:visited {
+/* line 28, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs a:visited {
   color: #513c90;
   border-bottom: 1px dotted #8e75da;
 }
-/* line 23, ../scss/docs/_vars-n-mixins.scss */
-a:hover, a:active, a:focus {
+/* line 34, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs a:hover, .cl-docs a:active, .cl-docs a:focus {
   color: #1876e6;
   border-bottom: 1px solid #68adff;
 }
-/* line 26, ../scss/docs/_vars-n-mixins.scss */
-.content p a:hover, .content li a:hover, .content p a:active, .content li a:active, .content p a:focus, .content li a:focus {
+/* line 37, ../scss/docs/_vars-n-mixins.scss */
+.content p .cl-docs a:hover, .content li .cl-docs a:hover, .content p .cl-docs a:active, .content li .cl-docs a:active, .content p .cl-docs a:focus, .content li .cl-docs a:focus {
   background: #e7f2ff;
 }
-
-/* line 87, ../scss/docs.scss */
-pre {
+/* line 103, ../scss/docs.scss */
+.cl-docs pre {
   padding: 10px 4px;
   font-size: 12px;
   -webkit-border-radius: 4px;
@@ -1602,24 +1598,22 @@ pre {
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
 }
-
-/* line 101, ../scss/docs.scss */
-.help-text {
+/* line 117, ../scss/docs.scss */
+.cl-docs .help-text {
   color: #999999;
   font-size: 11px;
 }
-
-/* line 109, ../scss/docs.scss */
-#header {
+/* line 125, ../scss/docs.scss */
+.cl-docs #header {
   background: #35393e;
 }
-/* line 112, ../scss/docs.scss */
-#header a {
+/* line 128, ../scss/docs.scss */
+.cl-docs #header a {
   transition-property: background;
   transition-duration: 0.18s;
 }
-/* line 116, ../scss/docs.scss */
-#header .github-link {
+/* line 132, ../scss/docs.scss */
+.cl-docs #header .github-link {
   margin: 10px;
   border: none;
   color: #FFF;
@@ -1629,56 +1623,54 @@ pre {
   background: #4d5259;
   border-radius: 3px;
 }
-/* line 126, ../scss/docs.scss */
-#header .github-link:hover, #header .github-link:focus {
+/* line 142, ../scss/docs.scss */
+.cl-docs #header .github-link:hover, .cl-docs #header .github-link:focus {
   background: #060607;
 }
 @media all and (max-width: 768px) {
-  /* line 131, ../scss/docs.scss */
-  #header .github-link span {
+  /* line 147, ../scss/docs.scss */
+  .cl-docs #header .github-link span {
     display: none;
   }
 }
 @media all and (max-width: 480px) {
-  /* line 116, ../scss/docs.scss */
-  #header .github-link {
+  /* line 132, ../scss/docs.scss */
+  .cl-docs #header .github-link {
     display: none;
   }
 }
-
-/* line 143, ../scss/docs.scss */
-#nav {
+/* line 159, ../scss/docs.scss */
+.cl-docs #nav {
   padding: 10px 0;
   float: left;
 }
-/* line 146, ../scss/docs.scss */
-#nav a {
+/* line 162, ../scss/docs.scss */
+.cl-docs #nav a {
   color: #FFF;
   padding: 10px;
   display: inline-block;
 }
-/* line 151, ../scss/docs.scss */
-#nav a:link, #nav a:visited {
+/* line 167, ../scss/docs.scss */
+.cl-docs #nav a:link, .cl-docs #nav a:visited {
   border: none;
   border-right: 1px solid #4d5259;
 }
-/* line 157, ../scss/docs.scss */
-#nav a:hover, #nav a:active, #nav a:focus {
+/* line 173, ../scss/docs.scss */
+.cl-docs #nav a:hover, .cl-docs #nav a:active, .cl-docs #nav a:focus {
   background: #4d5259;
 }
-/* line 161, ../scss/docs.scss */
-#nav a:last-child {
+/* line 177, ../scss/docs.scss */
+.cl-docs #nav a:last-child {
   border-right: none;
 }
-
-/* line 167, ../scss/docs.scss */
-#banner {
+/* line 183, ../scss/docs.scss */
+.cl-docs #banner {
   margin: 0 0 20px;
   background: #DADEE2;
   padding: 20px;
 }
-/* line 171, ../scss/docs.scss */
-#banner .inner-content {
+/* line 187, ../scss/docs.scss */
+.cl-docs #banner .inner-content {
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
@@ -1692,13 +1684,13 @@ pre {
   overflow: hidden;
 }
 /* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-#banner .inner-content:after {
+.cl-docs #banner .inner-content:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 178, ../scss/docs.scss */
-#banner h1 {
+/* line 194, ../scss/docs.scss */
+.cl-docs #banner h1 {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1708,8 +1700,8 @@ pre {
   font-size: 122px;
   line-height: 0.9;
 }
-/* line 183, ../scss/docs.scss */
-#banner p {
+/* line 199, ../scss/docs.scss */
+.cl-docs #banner p {
   font-size: 21px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -1717,22 +1709,22 @@ pre {
   line-height: 1.33;
   margin-left: 10px;
 }
-/* line 191, ../scss/docs.scss */
-#banner img {
+/* line 207, ../scss/docs.scss */
+.cl-docs #banner img {
   margin-top: 20px;
 }
-/* line 194, ../scss/docs.scss */
-#banner .img-holder {
+/* line 210, ../scss/docs.scss */
+.cl-docs #banner .img-holder {
   display: none;
 }
 @media all and (min-width: 960px) {
-  /* line 167, ../scss/docs.scss */
-  #banner {
+  /* line 183, ../scss/docs.scss */
+  .cl-docs #banner {
     height: 303px;
     padding: 0;
   }
-  /* line 200, ../scss/docs.scss */
-  #banner .img-holder {
+  /* line 216, ../scss/docs.scss */
+  .cl-docs #banner .img-holder {
     display: block;
     padding-left: 12.69841%;
     width: 36.50794%;
@@ -1740,12 +1732,12 @@ pre {
     margin-right: 1.5873%;
     display: inline;
   }
-  /* line 204, ../scss/docs.scss */
-  #banner .img-holder img {
+  /* line 220, ../scss/docs.scss */
+  .cl-docs #banner .img-holder img {
     max-width: 100%;
   }
-  /* line 208, ../scss/docs.scss */
-  #banner .copy {
+  /* line 224, ../scss/docs.scss */
+  .cl-docs #banner .copy {
     margin-top: 70px;
     position: relative;
     left: 20px;
@@ -1755,96 +1747,91 @@ pre {
     display: inline;
   }
 }
-
-/* line 217, ../scss/docs.scss */
-#footer {
+/* line 233, ../scss/docs.scss */
+.cl-docs #footer {
   border-top: 1px solid #DDD;
   margin: 0 auto;
   padding: 20px;
   color: #999999;
   overflow: hidden;
 }
-/* line 63, ../scss/docs/_vars-n-mixins.scss */
-#footer a:link, #footer a:visited {
+/* line 74, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs #footer a:link, .cl-docs #footer a:visited {
   color: #7F7F7F;
   border-bottom: 1px solid #CCC;
   border-bottom: 1px solid rgba(0, 0, 0, 0.33);
 }
-/* line 70, ../scss/docs/_vars-n-mixins.scss */
-#footer a:hover, #footer a:active, #footer a:focus {
+/* line 81, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs #footer a:hover, .cl-docs #footer a:active, .cl-docs #footer a:focus {
   color: #000;
   border-bottom: none;
 }
 @media all and (min-width: 960px) {
-  /* line 227, ../scss/docs.scss */
-  #footer p:first-child {
+  /* line 243, ../scss/docs.scss */
+  .cl-docs #footer p:first-child {
     float: left;
   }
-  /* line 230, ../scss/docs.scss */
-  #footer p:last-child {
+  /* line 246, ../scss/docs.scss */
+  .cl-docs #footer p:last-child {
     float: right;
   }
 }
-
-/* line 238, ../scss/docs.scss */
-#clank-summary {
+/* line 254, ../scss/docs.scss */
+.cl-docs #clank-summary {
   margin: 0 0 20px;
   overflow: hidden;
 }
-/* line 241, ../scss/docs.scss */
-#clank-summary h3 {
+/* line 257, ../scss/docs.scss */
+.cl-docs #clank-summary h3 {
   margin: 12px 0 4px;
 }
 @media all and (min-width: 500px) {
-  /* line 245, ../scss/docs.scss */
-  #clank-summary .col {
+  /* line 261, ../scss/docs.scss */
+  .cl-docs #clank-summary .col {
     width: 48.93617%;
     float: left;
     margin-right: 2.12766%;
     display: inline;
   }
-  /* line 248, ../scss/docs.scss */
-  #clank-summary .col:last-child {
+  /* line 264, ../scss/docs.scss */
+  .cl-docs #clank-summary .col:last-child {
     float: right;
     margin-right: 0;
     *margin-left: -20px;
     display: inline;
   }
 }
-
-/* line 258, ../scss/docs.scss */
-#docs #docs-nav h4 {
+/* line 274, ../scss/docs.scss */
+.cl-docs #docs #docs-nav h4 {
   margin-top: 0;
   margin-bottom: 4px;
 }
-/* line 262, ../scss/docs.scss */
-#docs #docs-nav ul {
+/* line 278, ../scss/docs.scss */
+.cl-docs #docs #docs-nav ul {
   padding: 0;
   margin-top: 0;
 }
-/* line 268, ../scss/docs.scss */
-#docs #content article {
+/* line 284, ../scss/docs.scss */
+.cl-docs #docs #content article {
   font-size: 14px;
 }
-/* line 271, ../scss/docs.scss */
-#docs #content h2 {
+/* line 287, ../scss/docs.scss */
+.cl-docs #docs #content h2 {
   margin-top: 0;
 }
-
 @media all and (max-width: 767px) {
-  /* line 278, ../scss/docs.scss */
-  #docs-nav {
+  /* line 294, ../scss/docs.scss */
+  .cl-docs #docs-nav {
     padding: 12px 20px 0;
   }
-
-  /* line 281, ../scss/docs.scss */
-  #docs #content {
+  /* line 297, ../scss/docs.scss */
+  .cl-docs #docs #content {
     padding: 0 20px 12px 20px;
   }
 }
 @media all and (min-width: 768px) {
-  /* line 289, ../scss/docs.scss */
-  #docs {
+  /* line 305, ../scss/docs.scss */
+  .cl-docs #docs {
     *zoom: 1;
     max-width: 940px;
     _width: 940px;
@@ -1854,31 +1841,31 @@ pre {
     margin-right: auto;
   }
   /* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #docs:after {
+  .cl-docs #docs:after {
     content: "";
     display: table;
     clear: both;
   }
-  /* line 291, ../scss/docs.scss */
-  #docs #docs-nav {
+  /* line 307, ../scss/docs.scss */
+  .cl-docs #docs #docs-nav {
     width: 14.89362%;
     float: left;
     margin-right: 2.12766%;
     display: inline;
     margin: 32px 0 0;
   }
-  /* line 294, ../scss/docs.scss */
-  #docs #docs-nav h4 {
+  /* line 310, ../scss/docs.scss */
+  .cl-docs #docs #docs-nav h4 {
     margin-top: 0;
     margin-bottom: 4px;
   }
-  /* line 298, ../scss/docs.scss */
-  #docs #docs-nav ul {
+  /* line 314, ../scss/docs.scss */
+  .cl-docs #docs #docs-nav ul {
     padding: 0;
     margin-top: 0;
   }
-  /* line 303, ../scss/docs.scss */
-  #docs #content {
+  /* line 319, ../scss/docs.scss */
+  .cl-docs #docs #content {
     width: 82.97872%;
     float: left;
     margin-right: 2.12766%;
@@ -1888,31 +1875,30 @@ pre {
     *margin-left: -20px;
     display: inline;
   }
-  /* line 306, ../scss/docs.scss */
-  #docs #content article {
+  /* line 322, ../scss/docs.scss */
+  .cl-docs #docs #content article {
     max-width: 740px;
     font-size: 14px;
     padding: 20px;
   }
-  /* line 311, ../scss/docs.scss */
-  #docs #content h2 {
+  /* line 327, ../scss/docs.scss */
+  .cl-docs #docs #content h2 {
     margin-top: 0;
   }
 }
 @media all and (max-width: 959px) {
-  /* line 322, ../scss/docs.scss */
-  #blog-nav {
+  /* line 338, ../scss/docs.scss */
+  .cl-docs #blog-nav {
     padding: 12px 20px 0;
   }
-
-  /* line 325, ../scss/docs.scss */
-  #blog-content {
+  /* line 341, ../scss/docs.scss */
+  .cl-docs #blog-content {
     padding: 20px;
   }
 }
 @media all and (min-width: 960px) {
-  /* line 331, ../scss/docs.scss */
-  #blog {
+  /* line 347, ../scss/docs.scss */
+  .cl-docs #blog {
     *zoom: 1;
     max-width: 940px;
     _width: 940px;
@@ -1923,13 +1909,13 @@ pre {
     padding: 20px 0 0;
   }
   /* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #blog:after {
+  .cl-docs #blog:after {
     content: "";
     display: table;
     clear: both;
   }
-  /* line 334, ../scss/docs.scss */
-  #blog #blog-nav {
+  /* line 350, ../scss/docs.scss */
+  .cl-docs #blog #blog-nav {
     width: 31.91489%;
     float: left;
     margin-right: 2.12766%;
@@ -1939,91 +1925,88 @@ pre {
     *margin-left: -20px;
     display: inline;
   }
-  /* line 338, ../scss/docs.scss */
-  #blog #blog-content {
+  /* line 354, ../scss/docs.scss */
+  .cl-docs #blog #blog-content {
     width: 65.95745%;
     float: left;
     margin-right: 2.12766%;
     display: inline;
   }
-  /* line 341, ../scss/docs.scss */
-  #blog #blog-single {
+  /* line 357, ../scss/docs.scss */
+  .cl-docs #blog #blog-single {
     padding-left: 17.02128%;
     width: 65.95745%;
     float: left;
     margin-right: 2.12766%;
     display: inline;
   }
-  /* line 345, ../scss/docs.scss */
-  #blog article {
+  /* line 361, ../scss/docs.scss */
+  .cl-docs #blog article {
     max-width: 600px;
   }
 }
-/* line 352, ../scss/docs.scss */
-#blog article {
+/* line 368, ../scss/docs.scss */
+.cl-docs #blog article {
   font-size: 14px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 356, ../scss/docs.scss */
-#blog h2 {
+/* line 372, ../scss/docs.scss */
+.cl-docs #blog h2 {
   margin-top: 0;
 }
-
-/* line 63, ../scss/docs/_vars-n-mixins.scss */
-#blog-nav a:link, #blog-nav a:visited {
+/* line 74, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs #blog-nav a:link, .cl-docs #blog-nav a:visited {
   color: #7F7F7F;
   border-bottom: 1px solid #CCC;
   border-bottom: 1px solid rgba(0, 0, 0, 0.33);
 }
-/* line 70, ../scss/docs/_vars-n-mixins.scss */
-#blog-nav a:hover, #blog-nav a:active, #blog-nav a:focus {
+/* line 81, ../scss/docs/_vars-n-mixins.scss */
+.cl-docs #blog-nav a:hover, .cl-docs #blog-nav a:active, .cl-docs #blog-nav a:focus {
   color: #000;
   border-bottom: none;
 }
-/* line 365, ../scss/docs.scss */
-#blog-nav .date {
+/* line 381, ../scss/docs.scss */
+.cl-docs #blog-nav .date {
   color: #999;
   margin-right: 4px;
 }
-
-/* line 371, ../scss/docs.scss */
-.bordered-list {
+/* line 387, ../scss/docs.scss */
+.cl-docs .bordered-list {
   margin: 0;
   padding: 0;
 }
-/* line 374, ../scss/docs.scss */
-.bordered-list span {
+/* line 390, ../scss/docs.scss */
+.cl-docs .bordered-list span {
   display: block;
 }
-/* line 377, ../scss/docs.scss */
-.bordered-list li {
+/* line 393, ../scss/docs.scss */
+.cl-docs .bordered-list li {
   list-style: none;
   padding: 0 0 4px;
   margin: 0 0 4px;
   border-bottom: 1px solid #EEE;
 }
-/* line 382, ../scss/docs.scss */
-.bordered-list li:last-child {
+/* line 398, ../scss/docs.scss */
+.cl-docs .bordered-list li:last-child {
   border: none;
 }
-/* line 385, ../scss/docs.scss */
-.bordered-list li a {
+/* line 401, ../scss/docs.scss */
+.cl-docs .bordered-list li a {
   border: none;
 }
-
-/* line 392, ../scss/docs.scss */
-#blog article {
+/* line 408, ../scss/docs.scss */
+.cl-docs #blog article {
   margin: 0 0 24px;
   padding: 0 0 24px;
   border-bottom: 1px solid #DDD;
 }
-/* line 394, ../scss/docs.scss */
-#blog article header p {
+/* line 410, ../scss/docs.scss */
+.cl-docs #blog article header p {
   color: #999;
 }
-/* line 398, ../scss/docs.scss */
-#blog article h1 {
+/* line 414, ../scss/docs.scss */
+.cl-docs #blog article h1 {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -2032,44 +2015,27 @@ pre {
   margin: 0;
   text-transform: none;
 }
-/* line 401, ../scss/docs.scss */
-#blog article h1 a {
+/* line 417, ../scss/docs.scss */
+.cl-docs #blog article h1 a {
   color: #164886;
   border: none;
 }
-/* line 404, ../scss/docs.scss */
-#blog article h1 a:hover {
+/* line 420, ../scss/docs.scss */
+.cl-docs #blog article h1 a:hover {
   color: #000;
 }
-/* line 412, ../scss/docs.scss */
-#blog article:last-child {
+/* line 428, ../scss/docs.scss */
+.cl-docs #blog article:last-child {
   margin: 0;
   border: none;
   padding: 0;
 }
-
-/* line 422, ../scss/docs.scss */
-#disqus_thread {
+/* line 438, ../scss/docs.scss */
+.cl-docs #disqus_thread {
   max-width: 600px;
 }
-
-/* line 429, ../scss/docs.scss */
-body, html {
-  height: 100%;
-}
-
-/* line 432, ../scss/docs.scss */
-#demo-app {
-  height: 600px;
-  height: -moz-calc(100% - 59px);
-  height: -o-calc(100% - 59px);
-  height: -webkit-calc(100% - 59px);
-  height: calc(100% - 59px);
-  position: relative;
-}
-
-/* line 440, ../scss/docs.scss */
-#error404 {
+/* line 444, ../scss/docs.scss */
+.cl-docs #error404 {
   background: #EEE;
   text-align: center;
   padding: 40px;
