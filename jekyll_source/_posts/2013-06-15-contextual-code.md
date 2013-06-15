@@ -6,6 +6,6 @@
 
 The new layout for the docs allows you to see the component code in context with what it looks like:
 
-<p><img src="../images/blog/contextual-code.png" alt="Contextual code"></p>
+<p><img src="/images/blog/contextual-code.png" alt="Contextual code"></p>
 
 Go <a href="/demos">check it out</a>!
