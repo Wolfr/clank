@@ -8,15 +8,16 @@ $column-width   : 140px;
 $gutter-width   : 20px;
 $grid-padding   : 20px;
 
-// For a container with completely new settings
-// simply override the initial variables:
+// Fluid pages
+
 $container-style: fluid;
 
-// Only in this context I want to go liquid
 #layout-demo #header > .inner-content {
   max-width: none;
   @include container;
 }
+
+// Pages with max widths
 
 $container-style: magic;
 

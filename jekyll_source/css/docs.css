@@ -569,7 +569,7 @@ table {
 /*
   Grid using Susy
 */
-/* line 16, ../scss/docs/_grid.scss */
+/* line 15, ../scss/docs/_grid.scss */
 #layout-demo #header > .inner-content {
   max-width: none;
   *zoom: 1;
@@ -585,7 +585,7 @@ table {
   clear: both;
 }
 
-/* line 26, ../scss/docs/_grid.scss */
+/* line 27, ../scss/docs/_grid.scss */
 #header > .inner-content,
 #content > .inner-content,
 #footer > .inner-content {
