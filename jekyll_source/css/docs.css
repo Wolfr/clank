@@ -567,9 +567,9 @@ table {
 }
 
 /*
-  Main grid using Susy
+  Grid using Susy
 */
-/* line 18, ../scss/docs/_grid.scss */
+/* line 15, ../scss/docs/_grid.scss */
 #header > .inner-content,
 #content > .inner-content,
 #footer > .inner-content {
@@ -588,27 +588,6 @@ table {
   content: "";
   display: table;
   clear: both;
-}
-
-/* line 24, ../scss/docs/_grid.scss */
-#header, #footer {
-  clear: both;
-}
-
-/* line 29, ../scss/docs/_grid.scss */
-.has-sidebar #nav {
-  width: 24.21053%;
-  float: left;
-  margin-right: 1.05263%;
-  display: inline;
-}
-/* line 33, ../scss/docs/_grid.scss */
-.has-sidebar #content {
-  width: 74.73684%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20px;
-  display: inline;
 }
 
 /*
@@ -1039,389 +1018,418 @@ img.aligncenter {
   cursor: default;
 }
 
-/* line 1, ../scss/docs/_pygments.scss */
-.hll {
+/* line 2, ../scss/docs/_pygments.scss */
+.highlight {
   background-color: #ffffcc;
 }
 
-/* line 2, ../scss/docs/_pygments.scss */
-.c {
-  color: #408080;
-  font-style: italic;
+/* line 3, ../scss/docs/_pygments.scss */
+.highlight .c {
+  color: #586e75;
 }
 
 /* Comment */
-/* line 3, ../scss/docs/_pygments.scss */
-.err {
-  border: 1px solid red;
+/* line 4, ../scss/docs/_pygments.scss */
+.highlight .err {
+  color: #93a1a1;
 }
 
 /* Error */
-/* line 4, ../scss/docs/_pygments.scss */
-.k {
-  color: #008000;
-  font-weight: bold;
+/* line 5, ../scss/docs/_pygments.scss */
+.highlight .g {
+  color: #93a1a1;
+}
+
+/* Generic */
+/* line 6, ../scss/docs/_pygments.scss */
+.highlight .k {
+  color: #859900;
 }
 
 /* Keyword */
-/* line 5, ../scss/docs/_pygments.scss */
-.o {
-  color: #666666;
+/* line 7, ../scss/docs/_pygments.scss */
+.highlight .l {
+  color: #93a1a1;
+}
+
+/* Literal */
+/* line 8, ../scss/docs/_pygments.scss */
+.highlight .n {
+  color: #93a1a1;
+}
+
+/* Name */
+/* line 9, ../scss/docs/_pygments.scss */
+.highlight .o {
+  color: #859900;
 }
 
 /* Operator */
-/* line 6, ../scss/docs/_pygments.scss */
-.cm {
-  color: #408080;
-  font-style: italic;
+/* line 10, ../scss/docs/_pygments.scss */
+.highlight .x {
+  color: #cb4b16;
+}
+
+/* Other */
+/* line 11, ../scss/docs/_pygments.scss */
+.highlight .p {
+  color: #93a1a1;
+}
+
+/* Punctuation */
+/* line 12, ../scss/docs/_pygments.scss */
+.highlight .cm {
+  color: #586e75;
 }
 
 /* Comment.Multiline */
-/* line 7, ../scss/docs/_pygments.scss */
-.cp {
-  color: #bc7a00;
+/* line 13, ../scss/docs/_pygments.scss */
+.highlight .cp {
+  color: #859900;
 }
 
 /* Comment.Preproc */
-/* line 8, ../scss/docs/_pygments.scss */
-.c1 {
-  color: #408080;
-  font-style: italic;
+/* line 14, ../scss/docs/_pygments.scss */
+.highlight .c1 {
+  color: #586e75;
 }
 
 /* Comment.Single */
-/* line 9, ../scss/docs/_pygments.scss */
-.cs {
-  color: #408080;
-  font-style: italic;
+/* line 15, ../scss/docs/_pygments.scss */
+.highlight .cs {
+  color: #859900;
 }
 
 /* Comment.Special */
-/* line 10, ../scss/docs/_pygments.scss */
-.gd {
-  color: #a00000;
+/* line 16, ../scss/docs/_pygments.scss */
+.highlight .gd {
+  color: #2aa198;
 }
 
 /* Generic.Deleted */
-/* line 11, ../scss/docs/_pygments.scss */
-.ge {
+/* line 17, ../scss/docs/_pygments.scss */
+.highlight .ge {
+  color: #93A1A1;
   font-style: italic;
 }
 
 /* Generic.Emph */
-/* line 12, ../scss/docs/_pygments.scss */
-.gr {
-  color: red;
+/* line 18, ../scss/docs/_pygments.scss */
+.highlight .gr {
+  color: #dc322f;
 }
 
 /* Generic.Error */
-/* line 13, ../scss/docs/_pygments.scss */
-.gh {
-  color: #000080;
-  font-weight: bold;
+/* line 19, ../scss/docs/_pygments.scss */
+.highlight .gh {
+  color: #cb4b16;
 }
 
 /* Generic.Heading */
-/* line 14, ../scss/docs/_pygments.scss */
-.gi {
-  color: #00a000;
+/* line 20, ../scss/docs/_pygments.scss */
+.highlight .gi {
+  color: #859900;
 }
 
 /* Generic.Inserted */
-/* line 15, ../scss/docs/_pygments.scss */
-.go {
-  color: #888888;
+/* line 21, ../scss/docs/_pygments.scss */
+.highlight .go {
+  color: #93a1a1;
 }
 
 /* Generic.Output */
-/* line 16, ../scss/docs/_pygments.scss */
-.gp {
-  color: #000080;
-  font-weight: bold;
+/* line 22, ../scss/docs/_pygments.scss */
+.highlight .gp {
+  color: #93a1a1;
 }
 
 /* Generic.Prompt */
-/* line 17, ../scss/docs/_pygments.scss */
-.gs {
+/* line 23, ../scss/docs/_pygments.scss */
+.highlight .gs {
+  color: #93A1A1;
   font-weight: bold;
 }
 
 /* Generic.Strong */
-/* line 18, ../scss/docs/_pygments.scss */
-.gu {
-  color: #800080;
-  font-weight: bold;
+/* line 24, ../scss/docs/_pygments.scss */
+.highlight .gu {
+  color: #cb4b16;
 }
 
 /* Generic.Subheading */
-/* line 19, ../scss/docs/_pygments.scss */
-.gt {
-  color: #0044dd;
+/* line 25, ../scss/docs/_pygments.scss */
+.highlight .gt {
+  color: #93a1a1;
 }
 
 /* Generic.Traceback */
-/* line 20, ../scss/docs/_pygments.scss */
-.kc {
-  color: #008000;
-  font-weight: bold;
+/* line 26, ../scss/docs/_pygments.scss */
+.highlight .kc {
+  color: #cb4b16;
 }
 
 /* Keyword.Constant */
-/* line 21, ../scss/docs/_pygments.scss */
-.kd {
-  color: #008000;
-  font-weight: bold;
+/* line 27, ../scss/docs/_pygments.scss */
+.highlight .kd {
+  color: #268bd2;
 }
 
 /* Keyword.Declaration */
-/* line 22, ../scss/docs/_pygments.scss */
-.kn {
-  color: #008000;
-  font-weight: bold;
+/* line 28, ../scss/docs/_pygments.scss */
+.highlight .kn {
+  color: #859900;
 }
 
 /* Keyword.Namespace */
-/* line 23, ../scss/docs/_pygments.scss */
-.kp {
-  color: green;
+/* line 29, ../scss/docs/_pygments.scss */
+.highlight .kp {
+  color: #859900;
 }
 
 /* Keyword.Pseudo */
-/* line 24, ../scss/docs/_pygments.scss */
-.kr {
-  color: #008000;
-  font-weight: bold;
+/* line 30, ../scss/docs/_pygments.scss */
+.highlight .kr {
+  color: #268bd2;
 }
 
 /* Keyword.Reserved */
-/* line 25, ../scss/docs/_pygments.scss */
-.kt {
-  color: #b00040;
+/* line 31, ../scss/docs/_pygments.scss */
+.highlight .kt {
+  color: #dc322f;
 }
 
 /* Keyword.Type */
-/* line 26, ../scss/docs/_pygments.scss */
-.m {
-  color: #666666;
+/* line 32, ../scss/docs/_pygments.scss */
+.highlight .ld {
+  color: #93a1a1;
+}
+
+/* Literal.Date */
+/* line 33, ../scss/docs/_pygments.scss */
+.highlight .m {
+  color: #2aa198;
 }
 
 /* Literal.Number */
-/* line 27, ../scss/docs/_pygments.scss */
-.s {
-  color: #ba2121;
+/* line 34, ../scss/docs/_pygments.scss */
+.highlight .s {
+  color: #2aa198;
 }
 
 /* Literal.String */
-/* line 28, ../scss/docs/_pygments.scss */
-.na {
-  color: #7d9029;
+/* line 35, ../scss/docs/_pygments.scss */
+.highlight .na {
+  color: #93a1a1;
 }
 
 /* Name.Attribute */
-/* line 29, ../scss/docs/_pygments.scss */
-.nb {
-  color: green;
+/* line 36, ../scss/docs/_pygments.scss */
+.highlight .nb {
+  color: #b58900;
 }
 
 /* Name.Builtin */
-/* line 30, ../scss/docs/_pygments.scss */
-.nc {
-  color: #0000FF;
-  font-weight: bold;
+/* line 37, ../scss/docs/_pygments.scss */
+.highlight .nc {
+  color: #268bd2;
 }
 
 /* Name.Class */
-/* line 31, ../scss/docs/_pygments.scss */
-.no {
-  color: #880000;
+/* line 38, ../scss/docs/_pygments.scss */
+.highlight .no {
+  color: #cb4b16;
 }
 
 /* Name.Constant */
-/* line 32, ../scss/docs/_pygments.scss */
-.nd {
-  color: #aa22ff;
+/* line 39, ../scss/docs/_pygments.scss */
+.highlight .nd {
+  color: #268bd2;
 }
 
 /* Name.Decorator */
-/* line 33, ../scss/docs/_pygments.scss */
-.ni {
-  color: #999999;
-  font-weight: bold;
+/* line 40, ../scss/docs/_pygments.scss */
+.highlight .ni {
+  color: #cb4b16;
 }
 
 /* Name.Entity */
-/* line 34, ../scss/docs/_pygments.scss */
-.ne {
-  color: #D2413A;
-  font-weight: bold;
+/* line 41, ../scss/docs/_pygments.scss */
+.highlight .ne {
+  color: #cb4b16;
 }
 
 /* Name.Exception */
-/* line 35, ../scss/docs/_pygments.scss */
-.nf {
-  color: blue;
+/* line 42, ../scss/docs/_pygments.scss */
+.highlight .nf {
+  color: #268bd2;
 }
 
 /* Name.Function */
-/* line 36, ../scss/docs/_pygments.scss */
-.nl {
-  color: #a0a000;
+/* line 43, ../scss/docs/_pygments.scss */
+.highlight .nl {
+  color: #93a1a1;
 }
 
 /* Name.Label */
-/* line 37, ../scss/docs/_pygments.scss */
-.nn {
-  color: #0000FF;
-  font-weight: bold;
+/* line 44, ../scss/docs/_pygments.scss */
+.highlight .nn {
+  color: #93a1a1;
 }
 
 /* Name.Namespace */
-/* line 38, ../scss/docs/_pygments.scss */
-.nt {
-  color: #008000;
-  font-weight: bold;
+/* line 45, ../scss/docs/_pygments.scss */
+.highlight .nx {
+  color: #93a1a1;
+}
+
+/* Name.Other */
+/* line 46, ../scss/docs/_pygments.scss */
+.highlight .py {
+  color: #93a1a1;
+}
+
+/* Name.Property */
+/* line 47, ../scss/docs/_pygments.scss */
+.highlight .nt {
+  color: #268bd2;
 }
 
 /* Name.Tag */
-/* line 39, ../scss/docs/_pygments.scss */
-.nv {
-  color: #19177c;
+/* line 48, ../scss/docs/_pygments.scss */
+.highlight .nv {
+  color: #268bd2;
 }
 
 /* Name.Variable */
-/* line 40, ../scss/docs/_pygments.scss */
-.ow {
-  color: #AA22FF;
-  font-weight: bold;
+/* line 49, ../scss/docs/_pygments.scss */
+.highlight .ow {
+  color: #859900;
 }
 
 /* Operator.Word */
-/* line 41, ../scss/docs/_pygments.scss */
-.w {
-  color: #bbbbbb;
+/* line 50, ../scss/docs/_pygments.scss */
+.highlight .w {
+  color: #93a1a1;
 }
 
 /* Text.Whitespace */
-/* line 42, ../scss/docs/_pygments.scss */
-.mf {
-  color: #666666;
+/* line 51, ../scss/docs/_pygments.scss */
+.highlight .mf {
+  color: #2aa198;
 }
 
 /* Literal.Number.Float */
-/* line 43, ../scss/docs/_pygments.scss */
-.mh {
-  color: #666666;
+/* line 52, ../scss/docs/_pygments.scss */
+.highlight .mh {
+  color: #2aa198;
 }
 
 /* Literal.Number.Hex */
-/* line 44, ../scss/docs/_pygments.scss */
-.mi {
-  color: #666666;
+/* line 53, ../scss/docs/_pygments.scss */
+.highlight .mi {
+  color: #2aa198;
 }
 
 /* Literal.Number.Integer */
-/* line 45, ../scss/docs/_pygments.scss */
-.mo {
-  color: #666666;
+/* line 54, ../scss/docs/_pygments.scss */
+.highlight .mo {
+  color: #2aa198;
 }
 
 /* Literal.Number.Oct */
-/* line 46, ../scss/docs/_pygments.scss */
-.sb {
-  color: #ba2121;
+/* line 55, ../scss/docs/_pygments.scss */
+.highlight .sb {
+  color: #586e75;
 }
 
 /* Literal.String.Backtick */
-/* line 47, ../scss/docs/_pygments.scss */
-.sc {
-  color: #ba2121;
+/* line 56, ../scss/docs/_pygments.scss */
+.highlight .sc {
+  color: #2aa198;
 }
 
 /* Literal.String.Char */
-/* line 48, ../scss/docs/_pygments.scss */
-.sd {
-  color: #BA2121;
-  font-style: italic;
+/* line 57, ../scss/docs/_pygments.scss */
+.highlight .sd {
+  color: #93a1a1;
 }
 
 /* Literal.String.Doc */
-/* line 49, ../scss/docs/_pygments.scss */
-.s2 {
-  color: #ba2121;
+/* line 58, ../scss/docs/_pygments.scss */
+.highlight .s2 {
+  color: #2aa198;
 }
 
 /* Literal.String.Double */
-/* line 50, ../scss/docs/_pygments.scss */
-.se {
-  color: #BB6622;
-  font-weight: bold;
+/* line 59, ../scss/docs/_pygments.scss */
+.highlight .se {
+  color: #cb4b16;
 }
 
 /* Literal.String.Escape */
-/* line 51, ../scss/docs/_pygments.scss */
-.sh {
-  color: #ba2121;
+/* line 60, ../scss/docs/_pygments.scss */
+.highlight .sh {
+  color: #93a1a1;
 }
 
 /* Literal.String.Heredoc */
-/* line 52, ../scss/docs/_pygments.scss */
-.si {
-  color: #BB6688;
-  font-weight: bold;
+/* line 61, ../scss/docs/_pygments.scss */
+.highlight .si {
+  color: #2aa198;
 }
 
 /* Literal.String.Interpol */
-/* line 53, ../scss/docs/_pygments.scss */
-.sx {
-  color: green;
+/* line 62, ../scss/docs/_pygments.scss */
+.highlight .sx {
+  color: #2aa198;
 }
 
 /* Literal.String.Other */
-/* line 54, ../scss/docs/_pygments.scss */
-.sr {
-  color: #bb6688;
+/* line 63, ../scss/docs/_pygments.scss */
+.highlight .sr {
+  color: #dc322f;
 }
 
 /* Literal.String.Regex */
-/* line 55, ../scss/docs/_pygments.scss */
-.s1 {
-  color: #ba2121;
+/* line 64, ../scss/docs/_pygments.scss */
+.highlight .s1 {
+  color: #2aa198;
 }
 
 /* Literal.String.Single */
-/* line 56, ../scss/docs/_pygments.scss */
-.ss {
-  color: #19177c;
+/* line 65, ../scss/docs/_pygments.scss */
+.highlight .ss {
+  color: #2aa198;
 }
 
 /* Literal.String.Symbol */
-/* line 57, ../scss/docs/_pygments.scss */
-.bp {
-  color: green;
+/* line 66, ../scss/docs/_pygments.scss */
+.highlight .bp {
+  color: #268bd2;
 }
 
 /* Name.Builtin.Pseudo */
-/* line 58, ../scss/docs/_pygments.scss */
-.vc {
-  color: #19177c;
+/* line 67, ../scss/docs/_pygments.scss */
+.highlight .vc {
+  color: #268bd2;
 }
 
 /* Name.Variable.Class */
-/* line 59, ../scss/docs/_pygments.scss */
-.vg {
-  color: #19177c;
+/* line 68, ../scss/docs/_pygments.scss */
+.highlight .vg {
+  color: #268bd2;
 }
 
 /* Name.Variable.Global */
-/* line 60, ../scss/docs/_pygments.scss */
-.vi {
-  color: #19177c;
+/* line 69, ../scss/docs/_pygments.scss */
+.highlight .vi {
+  color: #268bd2;
 }
 
 /* Name.Variable.Instance */
-/* line 61, ../scss/docs/_pygments.scss */
-.il {
-  color: #666666;
+/* line 70, ../scss/docs/_pygments.scss */
+.highlight .il {
+  color: #2aa198;
 }
 
 /* Literal.Number.Integer.Long */

@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} - Clank</title>
-  <script src="/components/angular/angular.js"></script>
-  <script src="/components/angular-cookies/angular-cookies.min.js"></script>
+  {% if page.layout == "demo" %}
+    <script src="/components/angular/angular.min.js"></script>
+    <script src="/components/angular-cookies/angular-cookies.min.js"></script>
+  {% endif %}
 
   <script src="/components/prefix-free/prefixfree.min.js"></script>
   
