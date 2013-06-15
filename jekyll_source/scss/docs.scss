@@ -44,7 +44,8 @@ body {
   background: #F0F0F0;
   .inner-content {
     @include container;
-    padding: 12px 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   h2 {
     @include display-font;
@@ -107,14 +108,34 @@ pre {
 
 #header {
   background: $headerBackground;
+  // Nice transitions
+  a {
+    transition-property: background;
+    transition-duration: 0.18s;
+  }
   .github-link {
     margin: 10px;
     border: none;
     color: #FFF;
-    padding: 10px;
+    padding: 10px 15px;
     display: inline-block;
     float: right;
     background: lighten($headerBackground, 10%);
+    border-radius: 3px;
+    &:hover,
+    &:focus {
+      background: darken($headerBackground, 20%);
+    }
+    @media all and(max-width: $breakMedium) {
+      // Hide longer copy on medium sized screens
+      span {
+        display: none;
+      }
+    }
+    @media all and(max-width: $breakSmallMedium) {
+      // Hide gh button altogether on small sized screens
+      display: none;
+    }
   }
 }
 
@@ -135,6 +156,10 @@ pre {
     &:active,
     &:focus {
       background: lighten($headerBackground, 10%);
+      
+    }
+    &:last-child {
+      border-right: none;
     }
   }
 }
@@ -229,10 +254,7 @@ pre {
 // docs specific
 
 #docs {
-  @include container;
   #docs-nav {
-    @include span-columns(1);
-    margin: 32px 0 0;
     h4 {
       margin-top: 0;
       margin-bottom: 4px;
@@ -243,12 +265,8 @@ pre {
     }
   }
   #content {
-    @include span-columns(5);
-    @include omega;
     article {
-      max-width: 740px;
       font-size: 14px;
-      padding: 20px;
     }
     h2 {
       margin-top: 0;
@@ -256,26 +274,84 @@ pre {
   }
 }
 
+@media all and (max-width: $breakMedium - 1) {
+  #docs-nav {
+    padding: 12px 20px 0;
+  }
+  #docs #content {
+    padding: 0 20px 12px 20px;
+  }
+}
+
+// Layout
+@media all and (min-width: $breakMedium) {
+
+  #docs {
+    @include container;
+    #docs-nav {
+      @include span-columns(1);
+      margin: 32px 0 0;
+      h4 {
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+      ul {
+        padding: 0;
+        margin-top: 0;
+      }
+    }
+    #content {
+      @include span-columns(5);
+      @include omega;
+      article {
+        max-width: 740px;
+        font-size: 14px;
+        padding: 20px;
+      }
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+
+}
 
 // blog specific
 
-#blog {
-  @include container;
-  padding: 20px 0 0;
+@media all and (max-width: $breakLarge - 1) {
   #blog-nav {
-    @include span-columns(2);
-    @include omega;
+    padding: 12px 20px 0;
   }
   #blog-content {
-    @include span-columns(4);
+    padding: 20px;
   }
-  #blog-single {
-    @include prefix(1);
-    @include span-columns(4);
+}
+
+@media all and (min-width: $breakLarge) {
+  #blog {
+    @include container;
+    padding: 20px 0 0;
+    #blog-nav {
+      @include span-columns(2);
+      @include omega;
+    }
+    #blog-content {
+      @include span-columns(4);
+    }
+    #blog-single {
+      @include prefix(1);
+      @include span-columns(4);
+    }
+    article {
+      max-width: 600px;
+    }
   }
+}
+
+#blog {
   article {
-    max-width: 600px;
     font-size: 14px;
+    @include clearfix;
   }
   h2 {
     margin-top: 0;

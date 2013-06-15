@@ -1,6 +1,8 @@
 $headerBackground: #35393e;
 $mutedText: #999;
-$breakLarge: 1000px;
+$breakLarge: 960px;
+$breakMedium: 768px;
+$breakSmallMedium: 480px;
 $link-color: #1d60b2;
 
 @mixin default-links {
