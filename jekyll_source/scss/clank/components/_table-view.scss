@@ -164,7 +164,7 @@
   }
   
   // Disclosure arrow
-  .icon-arrow-right {
+  .icon-ios-arrow-right {
     font-size: 19px;
     position: absolute;
     top: 26%;
@@ -229,6 +229,8 @@
 
 .cl-table__extended {
   @extend .cl-table;
+  // overwrite extended .cl-table
+  width: 100%;
   .icon-arrow-right {
     right: 10px;
   }

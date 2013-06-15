@@ -1174,7 +1174,7 @@ input, select, textarea, option {
   padding: 0;
 }
 /* line 167, ../scss/clank/components/_table-view.scss */
-.cl-table-cell .icon-arrow-right {
+.cl-table-cell .icon-ios-arrow-right {
   font-size: 19px;
   position: absolute;
   top: 26%;
@@ -1281,15 +1281,19 @@ input, select, textarea, option {
   padding: 10px;
 }
 
-/* line 232, ../scss/clank/components/_table-view.scss */
+/* line 230, ../scss/clank/components/_table-view.scss */
+.cl-table__extended {
+  width: 100%;
+}
+/* line 234, ../scss/clank/components/_table-view.scss */
 .cl-table__extended .icon-arrow-right {
   right: 10px;
 }
-/* line 235, ../scss/clank/components/_table-view.scss */
+/* line 237, ../scss/clank/components/_table-view.scss */
 .cl-table__extended a {
   display: block;
 }
-/* line 238, ../scss/clank/components/_table-view.scss */
+/* line 240, ../scss/clank/components/_table-view.scss */
 .cl-table__extended .cl-table-cell {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1299,7 +1303,7 @@ input, select, textarea, option {
   margin: 0 0 1px;
   margin: 0;
 }
-/* line 240, ../scss/clank/components/_table-view.scss */
+/* line 242, ../scss/clank/components/_table-view.scss */
 .cl-table__extended .cl-table-cell .cl-table-cell {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
