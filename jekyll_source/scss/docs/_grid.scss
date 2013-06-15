@@ -7,6 +7,17 @@ $total-columns  : 6;
 $column-width   : 140px;
 $gutter-width   : 20px;
 $grid-padding   : 20px;
+
+// For a container with completely new settings
+// simply override the initial variables:
+$container-style: fluid;
+
+// Only in this context I want to go liquid
+#layout-demo #header > .inner-content {
+  max-width: none;
+  @include container;
+}
+
 $container-style: magic;
 
 // Container
@@ -15,10 +26,4 @@ $container-style: magic;
 #footer > .inner-content {
   // page acts as a container for our grid.
   @include container;
-}
-
-// Only in this context I want to go liquid
-#layout-demo #header > .inner-content {
-  // How ??
-  // @see https://github.com/Wolfr/clank/issues/39
 }

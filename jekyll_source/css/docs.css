@@ -569,7 +569,23 @@ table {
 /*
   Grid using Susy
 */
-/* line 15, ../scss/docs/_grid.scss */
+/* line 16, ../scss/docs/_grid.scss */
+#layout-demo #header > .inner-content {
+  max-width: none;
+  *zoom: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.3-p374/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#layout-demo #header > .inner-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 26, ../scss/docs/_grid.scss */
 #header > .inner-content,
 #content > .inner-content,
 #footer > .inner-content {
