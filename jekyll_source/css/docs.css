@@ -1607,6 +1607,10 @@ body {
   *zoom: 1;
 }
 /* line 376, ../scss/docs.scss */
+.cl-docs #blog img {
+  max-width: 100%;
+}
+/* line 379, ../scss/docs.scss */
 .cl-docs #blog h2 {
   margin-top: 0;
 }
@@ -1621,46 +1625,46 @@ body {
   color: #000;
   border-bottom: none;
 }
-/* line 385, ../scss/docs.scss */
+/* line 388, ../scss/docs.scss */
 .cl-docs #blog-nav .date {
   color: #999;
   margin-right: 4px;
 }
-/* line 391, ../scss/docs.scss */
+/* line 394, ../scss/docs.scss */
 .cl-docs .bordered-list {
   margin: 0;
   padding: 0;
 }
-/* line 394, ../scss/docs.scss */
+/* line 397, ../scss/docs.scss */
 .cl-docs .bordered-list span {
   display: block;
 }
-/* line 397, ../scss/docs.scss */
+/* line 400, ../scss/docs.scss */
 .cl-docs .bordered-list li {
   list-style: none;
   padding: 0 0 4px;
   margin: 0 0 4px;
   border-bottom: 1px solid #EEE;
 }
-/* line 402, ../scss/docs.scss */
+/* line 405, ../scss/docs.scss */
 .cl-docs .bordered-list li:last-child {
   border: none;
 }
-/* line 405, ../scss/docs.scss */
+/* line 408, ../scss/docs.scss */
 .cl-docs .bordered-list li a {
   border: none;
 }
-/* line 412, ../scss/docs.scss */
+/* line 415, ../scss/docs.scss */
 .cl-docs #blog article {
   margin: 0 0 24px;
   padding: 0 0 24px;
   border-bottom: 1px solid #DDD;
 }
-/* line 414, ../scss/docs.scss */
+/* line 417, ../scss/docs.scss */
 .cl-docs #blog article header p {
   color: #999;
 }
-/* line 418, ../scss/docs.scss */
+/* line 421, ../scss/docs.scss */
 .cl-docs #blog article h1 {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1670,33 +1674,33 @@ body {
   margin: 0;
   text-transform: none;
 }
-/* line 421, ../scss/docs.scss */
+/* line 424, ../scss/docs.scss */
 .cl-docs #blog article h1 a {
   color: #164886;
   border: none;
 }
-/* line 424, ../scss/docs.scss */
+/* line 427, ../scss/docs.scss */
 .cl-docs #blog article h1 a:hover {
   color: #000;
 }
-/* line 432, ../scss/docs.scss */
+/* line 435, ../scss/docs.scss */
 .cl-docs #blog article:last-child {
   margin: 0;
   border: none;
   padding: 0;
 }
-/* line 442, ../scss/docs.scss */
+/* line 445, ../scss/docs.scss */
 .cl-docs #disqus_thread {
   max-width: 600px;
 }
-/* line 448, ../scss/docs.scss */
+/* line 451, ../scss/docs.scss */
 .cl-docs #error404 {
   background: #EEE;
   text-align: center;
   padding: 40px;
 }
 
-/* line 458, ../scss/docs.scss */
+/* line 461, ../scss/docs.scss */
 #demo-app .content-wrapper {
   overflow: hidden;
   *zoom: 1;
@@ -1713,12 +1717,12 @@ body {
 
   The bars to control the Clank demo
 ****/
-/* line 471, ../scss/docs.scss */
+/* line 474, ../scss/docs.scss */
 .cl-docs-controls {
   font-size: 13px;
 }
 
-/* line 477, ../scss/docs.scss */
+/* line 480, ../scss/docs.scss */
 .cl-docs-controls--top {
   background-color: #cad2d7;
   background-image: -moz-linear-gradient(top, #d1d6da, #c1ccd3);
@@ -1739,42 +1743,42 @@ body {
   display: table;
   clear: both;
 }
-/* line 484, ../scss/docs.scss */
+/* line 487, ../scss/docs.scss */
 .cl-docs-controls--top label {
   line-height: 44px;
 }
 
-/* line 492, ../scss/docs.scss */
+/* line 495, ../scss/docs.scss */
 .cl-docs-controls--top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   top: 0;
 }
-/* line 496, ../scss/docs.scss */
+/* line 499, ../scss/docs.scss */
 .cl-docs-controls--top > div {
   width: 33%;
   text-align: center;
   float: left;
 }
-/* line 501, ../scss/docs.scss */
+/* line 504, ../scss/docs.scss */
 .cl-docs-controls--top select {
   margin-top: 12px;
 }
-/* line 504, ../scss/docs.scss */
+/* line 507, ../scss/docs.scss */
 .cl-docs-controls--top input[type="range"] {
   position: relative;
   top: 5px;
 }
 
-/* line 510, ../scss/docs.scss */
+/* line 513, ../scss/docs.scss */
 .cl-docs-controls--top label {
   margin-right: 3px;
 }
-/* line 512, ../scss/docs.scss */
+/* line 515, ../scss/docs.scss */
 .cl-docs-controls--top label:after {
   content: ":";
 }
 
-/* line 520, ../scss/docs.scss */
+/* line 523, ../scss/docs.scss */
 .cl-demo-list,
 .cl-device-frame,
 .cl-docs-content {
@@ -1782,26 +1786,26 @@ body {
   float: left;
 }
 
-/* line 524, ../scss/docs.scss */
+/* line 527, ../scss/docs.scss */
 .cl-demo-list {
   width: 10%;
 }
 
-/* line 527, ../scss/docs.scss */
+/* line 530, ../scss/docs.scss */
 .cl-device-frame {
   width: 90%;
 }
 
-/* line 534, ../scss/docs.scss */
+/* line 537, ../scss/docs.scss */
 .docs-visible .cl-docs-content {
   width: 30%;
 }
-/* line 537, ../scss/docs.scss */
+/* line 540, ../scss/docs.scss */
 .docs-visible .cl-device-frame {
   width: 57%;
 }
 
-/* line 544, ../scss/docs.scss */
+/* line 547, ../scss/docs.scss */
 .cl-demo-list {
   font-size: 13px;
   background: #FFF;
@@ -1810,37 +1814,37 @@ body {
   height: 100%;
   line-height: 1.33;
 }
-/* line 551, ../scss/docs.scss */
+/* line 554, ../scss/docs.scss */
 .cl-demo-list h4, .cl-demo-list a {
   display: block;
   border: none;
   padding: 4px;
 }
-/* line 556, ../scss/docs.scss */
+/* line 559, ../scss/docs.scss */
 .cl-demo-list h4 {
   margin: 0;
 }
-/* line 560, ../scss/docs.scss */
+/* line 563, ../scss/docs.scss */
 .cl-demo-list a:hover {
   background: #EEE;
 }
 
-/* line 567, ../scss/docs.scss */
+/* line 570, ../scss/docs.scss */
 .cl-docs-content {
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   overflow: scroll;
   font-size: 13px;
 }
-/* line 570, ../scss/docs.scss */
+/* line 573, ../scss/docs.scss */
 .cl-docs-content .cl-docs {
   padding: 20px;
 }
-/* line 574, ../scss/docs.scss */
+/* line 577, ../scss/docs.scss */
 .cl-docs-content h3:first-child {
   margin-top: 0;
 }
 
-/* line 579, ../scss/docs.scss */
+/* line 582, ../scss/docs.scss */
 .cl-device-frame {
   /* Center with flexbox */
   display: box;

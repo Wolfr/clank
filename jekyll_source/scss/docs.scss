@@ -373,6 +373,9 @@ body {
       font-size: 14px;
       @include clearfix;
     }
+    img {
+      max-width: 100%;
+    }
     h2 {
       margin-top: 0;
     }
