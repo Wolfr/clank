@@ -1939,12 +1939,17 @@ pre {
   padding: 0;
 }
 
-/* line 337, ../scss/docs.scss */
+/* line 338, ../scss/docs.scss */
+#disqus_thread {
+  max-width: 600px;
+}
+
+/* line 345, ../scss/docs.scss */
 body, html {
   height: 100%;
 }
 
-/* line 340, ../scss/docs.scss */
+/* line 348, ../scss/docs.scss */
 #demo-app {
   height: 600px;
   height: -moz-calc(100% - 59px);
@@ -1954,7 +1959,9 @@ body, html {
   position: relative;
 }
 
-/* line 346, ../scss/docs.scss */
-#disqus_thread {
-  max-width: 600px;
+/* line 356, ../scss/docs.scss */
+#error404 {
+  background: #EEE;
+  text-align: center;
+  padding: 40px;
 }

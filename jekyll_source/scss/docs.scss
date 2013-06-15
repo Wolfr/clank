@@ -332,6 +332,14 @@ pre {
   }
 }
 
+// blog comments
+
+
+#disqus_thread {
+  max-width: 600px;
+}
+
+
 // demo specific
 
 body, html {
@@ -343,6 +351,10 @@ body, html {
   position: relative;
 }
 
-#disqus_thread {
-  max-width: 600px;
+// 404
+
+#error404 {
+  background: #EEE;
+  text-align: center;
+  padding: 40px;
 }
