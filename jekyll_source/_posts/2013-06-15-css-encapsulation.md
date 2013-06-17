@@ -13,19 +13,19 @@ I want the styles within this device frame to be independent of the rest of the 
 See, in Clank there are CSS styles (applied to all clank components):
 
 {% highlight scss %}
-  p {
-    font-size: 14px;
-    color: #333;
-  }
+p {
+  font-size: 14px;
+  color: #333;
+}
 {% endhighlight %}
 
 But then in the docs there are also styles
 
 {% highlight scss %}
-  p {
-    font-size: 15px; /* Some other font size */
-    color: #555; /* Some other color */
-  }
+p {
+  font-size: 15px; /* Some other font size */
+  color: #555; /* Some other color */
+}
 {% endhighlight %}
 
 I want the styles of to be separate; then work with the page DOM as a whole.
@@ -33,14 +33,14 @@ I want the styles of to be separate; then work with the page DOM as a whole.
 The simplest solution is to scope everything manually like this:
 
 {% highlight scss %}
-  .cl-docs p {
-    font-size: 14px;
-    color: #333;
-  }
-  .cl p {
-    font-size: 15px; /* Some other font size */
-    color: #555; /* Some other color */
-  }
+.cl-docs p {
+  font-size: 14px;
+  color: #333;
+}
+.cl p {
+  font-size: 15px; /* Some other font size */
+  color: #555; /* Some other color */
+}
 {% endhighlight %}
 
 However, this leads to a lot of unnecessary CSS. The fact that there are docs is irrelevant to people using Clank. Especially on mobile we want to keep the file size as low as possible.
