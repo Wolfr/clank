@@ -82,7 +82,6 @@ $headings-color: darken($text-color, 20%) !default;
     } @else {
       color: lighten($text-color-inverse, 20%);
     }
-    border: none;
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
@@ -147,9 +146,12 @@ $headings-color: darken($text-color, 20%) !default;
 }
 
 @mixin table-cell-skin-hover {
-  color: #FFF;
+  color: lighten($text-color-inverse, 20%);
   a {
-    color: #FFF;
+    color: lighten($text-color-inverse, 20%);
+  }
+  .disclosure-help, .icon {
+    color: lighten($text-color-inverse, 20%);
   }
   background: #0188f4;
   @include gradient-vertical(#0188f4, #0158e6);
