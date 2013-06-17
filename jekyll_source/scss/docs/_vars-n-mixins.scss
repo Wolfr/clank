@@ -99,3 +99,19 @@ $link-color: #1d60b2;
   #{$property}: -webkit-calc(#{$expression}); 
   #{$property}: calc(#{$expression}); 
 }
+
+
+/*
+  Alternate clearfix that does not rely on overflow: hidden;
+*/
+
+@mixin micro-clearfix {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
