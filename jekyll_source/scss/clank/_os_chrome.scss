@@ -115,14 +115,34 @@
 .cl-android-software-buttons {
   background: #000;
   color: #FFF;
+  & > span {
+    width: 100%;
+  }
+  span span {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+      transition: 0.25s 0 opacity ease-in-out;
+    }
+  }
   position: absolute;
-  [data-device$=landscape] & {
+  [data-device="nexus4-landscape"] & {
     top: 0;
     right: 0;
     width: 40px;
     height: 100%;
+    & > span span {
+      width: 100%;
+      height: 33.3%;
+      line-height: 122px;
+    }
   }
-  [data-device$=portrait] & {
+  [data-device$=portrait] &,
+  [data-device="nexus7-landscape"] & {
     bottom: 0;
     left: 0;
     width: 100%;

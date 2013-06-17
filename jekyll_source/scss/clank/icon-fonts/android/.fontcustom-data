@@ -13,6 +13,9 @@
     "battery-colored",
     "battery",
     "network",
+    "system-apps",
+    "system-back",
+    "system-home",
     "wifi"
   ]
 }

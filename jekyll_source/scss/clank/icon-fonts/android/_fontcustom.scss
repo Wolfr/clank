@@ -16,6 +16,9 @@
 .icon-android-battery-colored:before,
 .icon-android-battery:before,
 .icon-android-network:before,
+.icon-android-system-apps:before,
+.icon-android-system-back:before,
+.icon-android-system-home:before,
 .icon-android-wifi:before {
   font-family: "android";
   font-style: normal;
@@ -31,4 +34,7 @@
 .icon-android-battery-colored:before { content: "\f100"; }
 .icon-android-battery:before { content: "\f101"; }
 .icon-android-network:before { content: "\f102"; }
-.icon-android-wifi:before { content: "\f103"; }
+.icon-android-system-apps:before { content: "\f103"; }
+.icon-android-system-back:before { content: "\f104"; }
+.icon-android-system-home:before { content: "\f105"; }
+.icon-android-wifi:before { content: "\f106"; }
