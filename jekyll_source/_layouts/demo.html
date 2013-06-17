@@ -54,7 +54,7 @@
       {% endif %}
 
       <div class="cl-device-frame">
-        <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]});" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
+        <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]}); -webkit-transform-origin: center 2%; -moz-transform-origin: center 2%;" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
           <div class="cl-device-body">
 
             <div class="cl-ios-status" ng-show="deviceChoice.os == 'iOS'">
