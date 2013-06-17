@@ -505,6 +505,7 @@ body {
 .cl-docs-content {
   height: 100%;
   float: left;
+  @include box-sizing("border-box");
 }
 .cl-demo-list {
   width: 10%;
@@ -520,7 +521,7 @@ body {
     width: 30%;
   }
   .cl-device-frame {
-    width: 59%; // @todo recalc later
+    width: 60%;
   }
 }
 
