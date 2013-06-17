@@ -17,6 +17,7 @@
 .icon-app-arrow-left:before,
 .icon-app-arrow-right:before,
 .icon-app-arrow-up:before,
+.icon-app-circle:before,
 .icon-app-square:before {
   font-family: "app";
   font-style: normal;
@@ -33,4 +34,5 @@
 .icon-app-arrow-left:before { content: "\f101"; }
 .icon-app-arrow-right:before { content: "\f102"; }
 .icon-app-arrow-up:before { content: "\f103"; }
-.icon-app-square:before { content: "\f104"; }
+.icon-app-circle:before { content: "\f104"; }
+.icon-app-square:before { content: "\f105"; }
