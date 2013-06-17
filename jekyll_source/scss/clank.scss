@@ -14,9 +14,9 @@
 @import "clank/components/table-view";
 @import "clank/components/help-txt";
 
-@import "clank/icon-fonts/ios"; // System icons ios
-@import "clank/icon-fonts/android"; // System Android
-@import "clank/icon-fonts/my_app"; // App specific icons ios
+@import "clank/icon-fonts/ios/fontcustom"; // System icons iOs
+@import "clank/icon-fonts/android/fontcustom"; // System Android
+@import "clank/icon-fonts/app/fontcustom"; // App specific icons
 
 // Page level
 

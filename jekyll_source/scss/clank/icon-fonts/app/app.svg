@@ -1,28 +1,28 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2013-5-31: Created.
+2013-6-17: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri May 31 11:43:27 2013
+Created by FontForge 20120731 at Mon Jun 17 19:27:27 2013
  By Johan Ronsse
 Created by Johan Ronsse with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
 <defs>
-<font id="my-app-ios" horiz-adv-x="512" >
+<font id="app" horiz-adv-x="512" >
   <font-face 
-    font-family="my-app-ios"
+    font-family="app"
     font-weight="500"
     font-stretch="normal"
     units-per-em="512"
     panose-1="2 0 6 9 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="84.624 20.624 427.376 363.376"
+    bbox="32 -32 480 416"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F100-F103"
+    unicode-range="U+F100-F104"
   />
     <missing-glyph />
     <glyph glyph-name="uniF100" unicode="&#xf100;" 
@@ -33,5 +33,7 @@ d="M299.936 20.624l-175.84 167.952l178.416 174.8l53.3926 -54.4795l-122.08 -119.6
 d="M196.064 20.624l-52.6885 55.1523l118.8 113.487l-122.08 119.633l53.3926 54.4795l178.416 -174.8z" />
     <glyph glyph-name="uniF103" unicode="&#xf103;" 
 d="M84.624 132.064l167.952 175.84l174.8 -175.008l-54.4639 -53.3926l-119.648 118.672l-113.487 -118.8z" />
+    <glyph glyph-name="uniF104" unicode="&#xf104;" 
+d="M32 -32v448h448v-448h-448z" />
   </font>
 </defs></svg>
