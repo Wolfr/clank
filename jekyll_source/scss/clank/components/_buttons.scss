@@ -14,6 +14,9 @@
   text-align: center;
   font-size: 13px;
   line-height: 32px;
+  [data-os="android"] & {
+    line-height: 40px;
+  }
 
   @if $text-shadows {
     @include text-shadow-black;
@@ -28,6 +31,9 @@
   .cl-bar-footer &,
   .cl-bar & {
     padding: 0 7px;
+    [data-os="android"] & {
+      padding: 0 10px;
+    }
     margin: 5px;
     font-size: 13px;
   }

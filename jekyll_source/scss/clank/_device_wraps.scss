@@ -33,8 +33,14 @@
 .cl-content {
   height: 100%;
   @include calc(height, "100% - 44px");
+  [data-os="android"] & {
+    @include calc(height, "100% - 50px");
+  }
   &.has-footer {
     @include calc(height, "100% - 88px");
+    [data-os="android"] & {
+      @include calc(height, "100% - 100px");
+    }
   }
   overflow-x: hidden;
   overflow-y: scroll;
@@ -105,7 +111,7 @@
       height: 650px;
       .cl-page {
         position: relative;
-        height: 586px;
+        height: 590px;
       }
     }
   }
