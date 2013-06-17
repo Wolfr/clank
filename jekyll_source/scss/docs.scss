@@ -1,4 +1,4 @@
-// Plugins
+// Framework imports
 @import "compass/css3";
 @import "susy";
 
@@ -10,17 +10,6 @@
 @import "docs/image_alignment";
 @import "docs/docs-nav";
 @import "docs/pygments";
-
-// demo specific
-
-#layout-demo, html {
-  height: 100%;
-}
-
-#demo-app {
-  @include calc("height", "100% - 59px");
-  position: relative;
-}
 
 body {
   margin: 0;
@@ -336,7 +325,7 @@ body {
 
   }
 
-  // blog specific
+  // Blog specific
 
   @media all and (max-width: $breakLarge - 1) {
     #blog-nav {
@@ -411,7 +400,6 @@ body {
     }
   }
 
-
   #blog article {
     header {
       p {
@@ -439,15 +427,12 @@ body {
     }
   }
 
-  // blog comments
-
-
+  // Blog comments using Disqus
   #disqus_thread {
     max-width: 600px;
   }
 
   // 404
-
   #error404 {
     background: #EEE;
     text-align: center;
@@ -456,7 +441,7 @@ body {
 
 }
 
-// Demo layout 
+// Demo layout
 
 #demo-app .content-wrapper {
   @include clearfix;
@@ -466,36 +451,38 @@ body {
 
 /****
   Clank
-  Demo docs controls
-
-  The bars to control the Clank demo
+  demo specific
 ****/
 
-.cl-docs-controls {
-  font-size: 13px;
+#layout-demo, html {
+  height: 100%;
 }
 
-// Top AND bottom
+#demo-app {
+  @include calc("height", "100% - 59px");
+  position: relative;
+}
 
-.cl-docs-controls--top {
-  
+// Device controls
+
+.cl-device-controls {
+  font-size: 13px;
   @include gradient-vertical(#d1d6da, #c1ccd3);
   @include pie-clearfix;
   width: 100%;
   line-height: 44px;
   height: 44px;
-  label {
-    line-height: 44px;
-  }
-
-}
-
-// Top
-
-.cl-docs-controls--top {
+  
   border-bottom: 1px solid rgba(0,0,0,0.15);
   top: 0;
-  
+
+  label {
+    line-height: 44px;
+    margin-right: 3px;
+    &:after {
+      content: ":";
+    }
+  }
   & > div {
     width: 33%;
     text-align: center;
@@ -510,14 +497,9 @@ body {
   }
 }
 
-.cl-docs-controls--top label {
-  margin-right: 3px;
-  &:after {
-    content: ":";
-  }
-}
+// Content layout
 
-// No docs
+// Widths if there are no docs
 .cl-demo-list,
 .cl-device-frame,
 .cl-docs-content {
@@ -531,7 +513,7 @@ body {
   width: 90%;
 }
 
-// Docs visible
+// Widths if docs are visible
 
 .docs-visible {
   .cl-docs-content {
@@ -542,7 +524,15 @@ body {
   }
 }
 
-// Demo list
+// Center the device within the frame
+.cl-device-frame {
+  /* Compass version */
+  @include display-box;
+  @include box-align(center);
+  @include box-pack(center);
+}
+
+// Demo list (navigation)
 
 .cl-demo-list {
   font-size: 13px;
@@ -567,6 +557,7 @@ body {
 }
 
 // Docs content
+
 .cl-docs-content {
   border-right: 1px solid rgba(0,0,0,0.15);
   overflow: scroll;
@@ -579,15 +570,3 @@ body {
   }
 }
 
-.cl-device-frame {
-  
-  /* Center with flexbox */
-  display: box; display: flexbox;
-  box-align: center; flex-align: center;
-  box-pack: center; flex-pack: center;
-  
-  /* Compass version */
-  @include display-box;
-  @include box-align(center);
-  @include box-pack(center);
-}

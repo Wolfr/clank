@@ -5,7 +5,7 @@
 
   <div id="demo-app" ng-controller="DeviceCtrl">
 
-    <div class="cl-docs-controls cl-docs-controls--top">
+    <div class="cl-device-controls">
       <div>
         <label for="deviceChoice">Device</label>
         <select ng-model="deviceChoice" id="deviceChoice" ng-options="p.name for p in devices" ng-change="saveDeviceChoice()"></select>
