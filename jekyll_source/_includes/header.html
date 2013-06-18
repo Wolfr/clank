@@ -2,8 +2,10 @@
   <div id="header">
     <div class="inner-content">
       <nav id="nav">
-        <!-- All on one line to avoid inline block issues -->
-        <a href="/">Home</a><a href="/documentation.html">Documentation</a><a href="/demos/">Demo</a><a href="/blog.html">Blog</a>
+        <a {% if page.title == "Home" %}class="active"{% endif %} href="/">Home</a>
+        <a {% if page.title == "Documentation" %}class="active"{% endif %} href="/documentation.html">Documentation</a>
+        <a {% if page.title == "Demo" %}class="active"{% endif %} href="/demos/">Demo</a>
+        <a {% if page.title == "Blog" %}class="active"{% endif %} href="/blog.html">Blog</a>
       </nav>
       <div id="social">
         <span>Follow Clank on:</span>

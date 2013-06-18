@@ -2,6 +2,40 @@
 @import "compass/css3";
 @import "susy";
 
+// Fonts
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/sourcesanspro-regular-webfont.eot');
+    src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: 400;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/sourcesanspro-semibold-webfont.eot');
+    src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/sourcesanspro-bold-webfont.eot');
+    src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: bold;
+    font-style: 700;
+}
+
 // Regular imports
 @import "docs/vars-n-mixins";
 @import "docs/normalize";
@@ -19,8 +53,8 @@ body {
 .cl-docs {
 
   & {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 13px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 14px;
     color: #666;
     line-height: 1.5;
   }
@@ -160,6 +194,7 @@ body {
       color: #FFF;
       padding: 10px;
       display: inline-block;
+      margin-right: -4px; // fix inline block spacing
       &:link,
       &:visited {
         border: none;
@@ -167,9 +202,9 @@ body {
       }
       &:hover,
       &:active,
-      &:focus {
+      &:focus,
+      &.active {
         background: lighten($headerBackground, 10%);
-      
       }
       &:last-child {
         border-right: none;
@@ -195,8 +230,6 @@ body {
     }
     .intro {
       font-size: 21px;
-      font-family: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-      font-weight: 300;
       color: #999;
       line-height: 1.33;
       margin: 0 0 12px;
