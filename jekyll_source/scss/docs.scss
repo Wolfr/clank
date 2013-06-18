@@ -539,7 +539,9 @@ body {
 // Device controls
 
 .cl-device-controls {
-  font-size: 13px;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  
   @include gradient-vertical(#d1d6da, #c1ccd3);
   @include pie-clearfix;
   width: 100%;
@@ -600,6 +602,7 @@ body {
 
 // Center the device within the frame
 .cl-device-frame {
+  padding: 15px;
   /* Compass version */
   @include display-box;
   @include box-align(center);
@@ -609,7 +612,8 @@ body {
 // Demo list (navigation)
 
 .cl-demo-list {
-  font-size: 13px;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
   background: #FFF;
   border-right: 1px solid rgba(0,0,0,0.15);
   height: 100%;
@@ -620,7 +624,7 @@ body {
     padding: 4px;
   }
   h4 {
-    margin: 0;
+    margin: 12px 0 0 0;
   }
   a {
     &:hover {
@@ -635,7 +639,7 @@ body {
   border-right: 1px solid rgba(0,0,0,0.15);
   overflow: scroll;
   .cl-docs {
-    padding: 20px;
+    padding: 15px;
   }
   font-size: 13px;
   h3:first-child {
