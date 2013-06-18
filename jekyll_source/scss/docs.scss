@@ -119,22 +119,12 @@ body {
     background: $headerBackground;
     // Nice transitions
     a {
-      transition-property: background;
+      transition-property: background, box-shadow;
       transition-duration: 0.18s;
     }
-    .github-link {
-      margin: 10px;
-      border: none;
-      color: #FFF;
-      padding: 10px 15px;
-      display: inline-block;
+    #social {
       float: right;
-      background: lighten($headerBackground, 10%);
-      border-radius: 3px;
-      &:hover,
-      &:focus {
-        background: darken($headerBackground, 20%);
-      }
+      color: lighten($headerBackground, 30%);
       @media all and(max-width: $breakMedium) {
         // Hide longer copy on medium sized screens
         span {
@@ -144,6 +134,20 @@ body {
       @media all and(max-width: $breakSmallMedium) {
         // Hide gh button altogether on small sized screens
         display: none;
+      }
+    }
+    #social a {
+      margin: 10px 0 10px 5px;
+      border: none;
+      color: #FFF;
+      padding: 10px 15px;
+      display: inline-block;
+      background: lighten($headerBackground, 10%);
+      border-radius: 3px;
+      &:hover,
+      &:focus {
+        background: darken($headerBackground, 20%);
+        @include box-shadow(0 0 0 2px #FFF);
       }
     }
   }
@@ -238,6 +242,12 @@ body {
     &:link,
     &:visited {
       color: #FFF;
+      border: none;
+    }
+    &:hover,
+    &:focus {
+      background: #000;
+      @include box-shadow(0 0 0 2px #FFF);
     }
     border-radius: 3px;
   }
