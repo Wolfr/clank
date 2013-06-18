@@ -11,7 +11,7 @@ function DeviceCtrl($scope, $cookieStore) {
     $scope.devices = [
       { name: 'iPhone 4', os: 'iOS'},
       { name: 'iPhone 5', os: 'iOS'},
-      { name: 'Nexus 4', os: 'Android'},
+      { name: 'Galaxy Nexus', os: 'Android'},
       { name: 'Nexus 7', os: 'Android'},
       { name: 'iPad 3', os: 'iOS'}
     ];
@@ -24,22 +24,12 @@ function DeviceCtrl($scope, $cookieStore) {
     
     // When you set a device, also set a cookie
     $scope.saveDeviceChoice = function() {
-      console.log($scope.deviceChoice.name);
-      
-      console.log('We changed the device');
       $cookieStore.put('savedDevice', $scope.deviceChoice.name);
-      console.log('Our cookie now reads ' +  $cookieStore.get('savedDevice'));
     }
 
-    // @todo This code is exactly like save device but breaks?
-
+    // When you set an orientation, also set a cookie
     $scope.saveDeviceOrientation = function() {
-      console.log($scope.deviceOrientation.name);
-    
-      console.log('We changed the orientation');
       $cookieStore.put('savedOrientation', $scope.deviceOrientation.name);
-      console.log('Our cookie now reads ' +  $cookieStore.get('savedOrientation'));
-      
     }
 
     // If a cookie with saved device data exists apply it

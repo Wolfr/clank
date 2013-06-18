@@ -101,10 +101,10 @@
       height: 320px;
     }
   }
-  &[data-device="nexus4-portrait"] {
+  &[data-device="galaxynexus-portrait"] {
     width: 434px;
     height: 849px;
-    background: url(../../images/portrait/nexus4.png) no-repeat 0 0;
+    background: url(../../images/portrait/galaxy-nexus.png) no-repeat 0 0;
     padding: 107px 0 0;
     .cl-device-body {
       width: 366px;
@@ -115,11 +115,11 @@
       }
     }
   }
-  &[data-device="nexus4-landscape"] {
+  &[data-device="galaxynexus-landscape"] {
     padding: 34px 40px 0 0;
     width: 849px;
     height: 434px;
-    background: url(../../images/landscape/nexus4.png) no-repeat 0 0;
+    background: url(../../images/landscape/galaxy-nexus.png) no-repeat 0 0;
     .cl-android-status {
       width: 610px;
     }
