@@ -403,9 +403,12 @@ body {
     a {
       @include muted-links;
     }
+    h4 {
+      margin-top: 12px;
+    }
     .date {
-      color: #999;
-      margin-right: 4px;
+      color: #BBB;
+      font-size: 11px;
     }
   }
 
@@ -413,9 +416,12 @@ body {
     margin: 0;
     padding: 0;
     span {
-      display: block;
+      display: inline-block;
+      text-align: right;
+      float: right;
     }
     li {
+      clear: both;
       list-style: none;
       padding: 0 0 4px;
       margin: 0 0 4px;
@@ -424,7 +430,8 @@ body {
         border: none;
       }
       a {
-        border: none;
+        @include no-underlines;
+        cursor: pointer;
       } 
     }
   }
@@ -602,4 +609,3 @@ body {
     margin-top: 0;
   }
 }
-

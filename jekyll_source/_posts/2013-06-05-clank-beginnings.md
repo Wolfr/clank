@@ -3,9 +3,7 @@
   title: Clank - Beginnings
 ---
 
-<p>
-  <img class="alignright" src="http://getclank.files.wordpress.com/2013/06/screen-shot-2013-06-05-at-19-51-38.png?w=179&amp;h=300" width="179" height="300">
-</p>
+<img class="alignright shaded" src="http://getclank.files.wordpress.com/2013/06/screen-shot-2013-06-05-at-19-51-38.png" width="129" />
 
 <p>This is the blog for the <a href="https://github.com/Wolfr/clank">Clank</a>&nbsp;open source project.</p>
 

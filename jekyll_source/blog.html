@@ -45,8 +45,8 @@
       <ul class="bordered-list">
         {% for post in site.posts %}
         <li>
-            <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="date">{{ post.date | date: "%d-%m-%Y" }}</span>
         </li>
         {% endfor %}
       </ul>
