@@ -1,3 +1,32 @@
+// Page level
+
+.cl-page {
+  text-align: left;
+  font-size: 13px;
+  word-wrap: break-word;
+  height: 100%;
+  @include calc("height","100% - 20px"); // minus status bar height
+  -webkit-font-smoothing: antialiased;
+
+}
+
+// Content
+
+.cl-content {
+  background: #EEE;
+}
+
+// Hide scorllbars in firefox
+@-moz-document url-prefix() {
+  .cl-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include calc("width", "100% + 14px");
+    -moz-box-sizing: padding-box;
+  }
+}
+
+
 // Bar layout
 
 .cl-bar-title,
@@ -66,7 +95,8 @@
 }
 
 
-/// Title, sample markup: <h1 class="cl-title"></h1>
+/// Bar title
+// sample markup: <h1 class="cl-title"></h1>
 
 .cl-title {
   font-size: $header-font-size;

@@ -5,7 +5,7 @@
 @import "clank/device_wraps";
 @import "clank/os_chrome";
 
-@import "clank/components/headers-footers";
+@import "clank/components/base-layout";
 @import "clank/components/buttons";
 @import "clank/components/forms";
 @import "clank/components/code-example";
@@ -18,17 +18,3 @@
 @import "clank/icon-fonts/android/fontcustom"; // System Android
 @import "clank/icon-fonts/app/fontcustom"; // App specific icons
 
-// Page level
-
-.cl-page {
-  text-align: left;
-  font-size: 13px;
-  word-wrap: break-word;
-  height: 100%;
-  @include calc("height","100% - 20px"); // minus status bar height
-
-  -webkit-font-smoothing: antialiased;
-  .cl-content {
-    background: #EEE;
-  }
-}
