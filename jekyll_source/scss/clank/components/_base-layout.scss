@@ -16,7 +16,7 @@
   background: #EEE;
 }
 
-// Hide scorllbars in firefox
+// Hide scrollbars in firefox
 @-moz-document url-prefix() {
   .cl-content {
     overflow-y: scroll;
