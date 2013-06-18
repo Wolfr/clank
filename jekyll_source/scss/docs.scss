@@ -512,6 +512,24 @@ body {
     padding: 40px;
   }
 
+  // Fluid vids
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 66.67%; /* 3:2 */
+    &.aspect-16-9 {
+      padding-bottom: 56.25%; /* 16:9 */
+    }
+    padding-top: 25px;
+    height: 0;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 // Demo layout
@@ -532,8 +550,12 @@ body {
 }
 
 #demo-app {
-  @include calc("height", "100% - 59px");
+  height: 100%;
   position: relative;
+}
+
+#demo-app {
+  @include calc("height", "100% - 59px");
 }
 
 // Device controls
@@ -627,6 +649,8 @@ body {
     margin: 12px 0 0 0;
   }
   a {
+    @include default-links;
+    @include no-underlines;
     &:hover {
       background: #EEE;
     }
@@ -634,7 +658,6 @@ body {
 }
 
 // Docs content
-
 .cl-docs-content {
   border-right: 1px solid rgba(0,0,0,0.15);
   overflow: scroll;

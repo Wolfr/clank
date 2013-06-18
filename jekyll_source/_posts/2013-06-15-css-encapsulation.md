@@ -53,6 +53,8 @@ I experimented a bit with scoped stylesheets and iframes but these are not real 
 
 Now I'm thinking my solution is using web components. In this Google I/O video, the concept of web components is explained very well. It's worth a watch because this *is* the future of the web.
 
-<iframe width="600" height="400" frameborder="none" src="http://www.youtube.com/embed/0g0oOOT86NY" allowfullscreen="allowfullscreen="> </iframe>
+<div class="video-wrapper">
+  <iframe width="600" height="400" frameborder="none" src="http://www.youtube.com/embed/0g0oOOT86NY" allowfullscreen="allowfullscreen="> </iframe>
+</div>
 
 I'm documenting this as I go along because the future of the web depends on use cases. If anyone has thoughts/suggestions/ideas, leave a comment!
