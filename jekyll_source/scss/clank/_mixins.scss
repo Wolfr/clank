@@ -6,7 +6,10 @@ $android-bar-size: 50px;
 $background-color: #E6E6E6 !default;
 
 $gradient: true !default;
-$shadows: true !default;
+
+$functional-shadows: true !default;
+$decorational-shadows: true !default;
+
 $button-borders: true !default;
 $text-shadows: true !default;
 
@@ -64,7 +67,7 @@ $headings-color: darken($text-color, 20%) !default;
     } @else {
       color: lighten($text-color-inverse, 20%);
     }
-    @if $shadows {
+    @if $decorational-shadows {
       @include box-shadow(0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.05));
     }
     @if $gradient {
@@ -85,7 +88,7 @@ $headings-color: darken($text-color, 20%) !default;
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
-      @if $shadows {
+      @if $decorational-shadows {
         @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
       }
     } @else {
@@ -123,7 +126,7 @@ $headings-color: darken($text-color, 20%) !default;
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
-      @if $shadows {
+      @if $decorational-shadows {
         @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
       }
     } @else {
@@ -140,7 +143,7 @@ $headings-color: darken($text-color, 20%) !default;
   &:last-child {
     @include border-bottom-radius($default-border-radius/2);
   }
-  @if $shadows {
+  @if $decorational-shadows {
     @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
   }
 }
@@ -160,14 +163,14 @@ $headings-color: darken($text-color, 20%) !default;
 
 @mixin table-cell-skin-accent {
   background: $accent-color;
-  @if $shadows {
+  @if $decorational-shadows {
     @include box-shadow(0 2px 0 darken($accent-color, 10%), inset 0 1px 0 rgba(0,0,0,.1));
   }
 }
 
 @mixin table-cell-skin-accent-secondary {
   background: $accent-color-primary;
-  @if $shadows {
+  @if $decorational-shadows {
     @include box-shadow(0 2px 0 darken($accent-color-primary, 10%), inset 0 1px 0 rgba(0,0,0,.1));
   }
 }

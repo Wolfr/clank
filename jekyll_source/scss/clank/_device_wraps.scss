@@ -36,7 +36,7 @@
   [data-os="android"] & {
     @include calc(height, "100% - 50px");
   }
-  &.has-footer {
+  &.cl-content__has-footer {
     @include calc(height, "100% - 88px");
     [data-os="android"] & {
       @include calc(height, "100% - 100px");
@@ -183,7 +183,7 @@
       right: 6px;
       .cl-page {
         position: relative;
-        height: 549px;
+        height: 554px;
         width: 977px;
       }
     }

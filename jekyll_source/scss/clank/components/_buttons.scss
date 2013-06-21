@@ -1,4 +1,3 @@
-
 .cl-btn {
   @include button-skin;
 
@@ -10,7 +9,7 @@
   z-index: 1;
 
   font-weight: 700;
-  min-width: 54px;
+  
   text-align: center;
   font-size: 13px;
   line-height: 32px;
@@ -25,12 +24,12 @@
     }
   }
 
-
   // Bar buttons
   .cl-bar-title &,
   .cl-bar-footer &,
   .cl-bar & {
     padding: 0 7px;
+    min-width: 54px;
     [data-os="android"] & {
       padding: 0 10px;
     }
@@ -106,7 +105,7 @@
   .cl-btn:hover:before {
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
-      @if $shadows {
+      @if $decorational-shadows {
         @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
       }
     } @else {
@@ -121,8 +120,6 @@
   @include button-skin-primary;
 }
 
-
-
 // CSS gradient strokes
 
 @if $button-borders {
@@ -135,8 +132,6 @@
       background: darken($accent-color, 10%);
     }
   }
-
-
 
   .cl-btn-primary:before {
     // The gradient for the background
@@ -151,7 +146,7 @@
   .cl-btn-primary:hover:before {
     @if $gradient {
       @include gradient-vertical(darken($accent-color-primary, 2%), darken($accent-color-primary, 8%));
-      @if $shadows {
+      @if $decorational-shadows {
         @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
       }
     } @else {

@@ -1,0 +1,42 @@
+.cl-alert {
+  position: absolute;
+  width: 100%;
+  height: 100%; // this is 100% of .cl-content
+  
+  // Center within container
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+
+  // Ofset
+  position: relative;
+  bottom: $ios-bar-size / 2; // this offsets to true center
+  [data-os="android"] & {
+    bottom: $android-bar-size / 2; // this offsets to true center
+  }
+  .cl-alert-box {
+    // positioning
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding: 12px;
+    background: $accent-color;
+    @include border-radius($default-border-radius);
+    @if $functional-shadows {
+      @include box-shadow(0 0 0 2px #FFF, 0 0 8px 2px rgba(0,0,0,0.25));
+    }
+  }
+  .cl-alert-title {
+    font-size: 16px;
+    padding: 0 0 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+  .cl-alert-message {
+    padding: 4px 0;
+    font-size: 13px;
+  }
+  .cl-alert-title,
+  .cl-alert-message {
+    color: #FFF; // suppossing accent color is dark @todo refactor to account for light accent color
+    margin: 0;
+  }
+}

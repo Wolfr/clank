@@ -1,5 +1,5 @@
+// Button positioning within headers
 
-// Button positioning
 .cl-bar-title,
 .cl-bar-footer,
 .cl-bar {
@@ -30,5 +30,27 @@
     top: 0;
     right: 0;
     left: auto;
+  }
+}
+
+
+// Button positioning within toolbars
+
+.cl-btn-toolbar {
+  display: -webkit-flex;
+  margin: 0 10px;
+  .cl-btn {
+    -webkit-flex: 1;
+    &:first-child {
+      margin-right: 5px;
+    }
+    &:nth-child(2):not(:last-child),
+    &:nth-child(3):not(:last-child),
+    &:nth-child(4):not(:last-child) {
+      margin: 0 5px;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
   }
 }
