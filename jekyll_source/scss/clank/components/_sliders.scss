@@ -1,0 +1,59 @@
+/* Slider styles (to be used with sliders.js)
+-------------------------------------------------- */
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Width/height of slider */
+.slider > ul,
+.slider > ul > li {
+  width: 100%;
+  @include calc(height, "100%");
+}
+
+/* Outer wrapper for slider */
+.slider {
+  overflow: hidden;
+}
+
+/* Inner wrapper for slider (width of all slides together) */
+.slider > ul {
+  position: relative;
+  white-space: nowrap;
+  -webkit-transition: all 0 linear;
+          transition: all 0 linear;
+  font-size: 0; // get rid of spaces between inline blocks
+}
+
+/* Individual slide */
+.slider > ul > li {
+  display: inline-block;
+  vertical-align: top; /* Ensure that li always aligns to top */
+  width: 100%; 
+  height: 100%;
+}
+
+/* Required reset of font-size to same as standard body */
+.slider > ul > li > * {
+  font-size: 14px;
+}
+
+// Refactor to whatever is paginated
+.paginated {
+  font-size: 14px;
+  position: relative;
+  .pagination {
+    width: 100%;
+    text-align: center;
+    a {
+      color: lighten($text-color-inverse, 30%);
+      font-size: 30px;
+      @include opacity(0.33);
+      &.active {
+        @include opacity(1);
+      }
+    }
+  }
+}
