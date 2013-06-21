@@ -65,7 +65,7 @@
 }
 
 /* Active state for toggle handle */
-.cl-toggle.active .toggle-handle {
+.cl-toggle.active .cl-toggle-handle {
   border-color: $accent-color;
   -webkit-transform: translate3d(48px,0,0);
           transform: translate3d(48px,0,0);
