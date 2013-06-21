@@ -78,7 +78,8 @@
     line-height: $android-bar-size;
   }
   .cl-bar &,
-  .cl-bar-title & {
+  .cl-bar-title &,
+  .cl-bar-footer & {
     margin: 0 10px;
   }
   color: lighten($text-color-inverse, 20%);
@@ -92,8 +93,11 @@
   &.align-left {
     margin-left: 7px;
   }
+  &.align-right {
+    text-align: right;
+    margin-right: 7px;
+  }
 }
-
 
 /// Bar title
 // sample markup: <h1 class="cl-title"></h1>

@@ -28,12 +28,13 @@
         <a href="/demos/headers-footers.html">Headers and footers</a>
         <a href="/demos/bar-text.html">Bar text</a>
         <a href="/demos/buttons.html">Buttons</a>
+        <a href="/demos/button-groups.html">Button groups</a>
         <!-- <a href="/demos/loading.html">Loading</a> -->
         <a href="/demos/table-view.html">Table view</a>
         <a href="/demos/alerts.html">Alerts</a>
         <a href="/demos/toggles.html">Toggles</a>
-        <!-- <a href="/demos/forms.html">Forms</a>
-        <a href="/demos/sliders.html">Sliders</a> -->
+        <!-- <a href="/demos/forms.html">Forms</a> -->
+        <a href="/demos/sliders.html">Sliders</a>
       </div>
 
       <!-- Show relevant docs -->
@@ -48,7 +49,13 @@
             {% when 'buttons' %}
               {% include docs/components/buttons.html %}
             {% when 'headers-footers' %}
-            {% include docs/components/headers-footers.html %}
+              {% include docs/components/headers-footers.html %}
+            {% when 'sliders' %}
+              {% include docs/components/sliders.html %}
+            {% when 'alerts' %}
+              {% include docs/components/alerts.html %}
+            {% when 'forms' %}
+              {% include docs/components/forms.html %}
             {% else %}
               <p>No documentation for this page.</p>
           {% endcase %}

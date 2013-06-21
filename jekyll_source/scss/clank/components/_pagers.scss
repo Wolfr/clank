@@ -1,0 +1,17 @@
+// Pager
+.paginated {
+  font-size: 14px;
+  position: relative;
+  .pagination {
+    width: 100%;
+    text-align: center;
+    a {
+      color: #000;
+      font-size: 30px;
+      @include opacity(0.33);
+      &.active {
+        @include opacity(1);
+      }
+    }
+  }
+}

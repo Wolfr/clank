@@ -1,3 +1,21 @@
-input, select, textarea, option {
-  font-family: "Roboto", Arial;
+// Unfinished
+
+.cl-form {
+
+  margin: 10px;
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 2px;
+    height: 24px;
+  }
+
+  input, select, textarea, option {
+    font-family: Arial, sans-serif;
+    [data-os="android"] & {
+      font-family: Roboto, Droid Sans, sans-serif;
+    }
+  }
+
 }

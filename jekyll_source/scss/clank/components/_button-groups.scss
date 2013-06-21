@@ -1,0 +1,44 @@
+// Button group aka segmented control
+
+.cl-btn-group {
+  @include pie-clearfix;
+  padding: 0 10px;
+  display: -webkit-flex;
+  .cl-btn {
+    -webkit-flex: 1;
+    padding: 0;
+    @include border-radius(0);
+
+    &:first-child {
+      @include border-left-radius($default-border-radius);
+    }
+    &:last-child {
+      left: -1px;
+      @include border-right-radius($default-border-radius);
+    }
+    
+    @if $button-borders {
+      &:before,
+      &:after {
+        @include border-radius(0);
+      }
+      &:first-child {
+        &:before,
+        &:after {
+          @include border-left-radius($default-border-radius);
+        }
+      }
+      &:last-child {
+        &:before,
+        &:after {
+          @include border-right-radius($default-border-radius);
+        }
+      }
+    }
+    .bar &,
+    .bar-title &,
+    .bar-footer & {
+      position: relative;
+    }
+  }
+}
