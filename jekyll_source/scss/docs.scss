@@ -590,7 +590,15 @@ body {
   }
   input[type="range"] {
     position: relative;
+    // Webkit
     top: 5px;
+  }
+}
+
+@-moz-document url-prefix() { 
+  .cl-device-controls input[type="range"] {
+    // Firefox positioning switch
+    top: 2px;
   }
 }
 
