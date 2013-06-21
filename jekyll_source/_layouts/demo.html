@@ -23,7 +23,7 @@
     <div class="content-wrapper {% if page.docs %} docs-visible{% endif %}">
   
       <div class="cl-demo-list">
-        <h4>Demos:</h4>
+        <h4>Components:</h4>
         <a href="/demos/index.html">Index</a>
         <a href="/demos/headers-footers.html">Headers and footers</a>
         <a href="/demos/bar-text.html">Bar text</a>
@@ -56,6 +56,8 @@
               {% include docs/components/alerts.html %}
             {% when 'forms' %}
               {% include docs/components/forms.html %}
+            {% when 'toggles' %}
+              {% include docs/components/toggles.html %}
             {% else %}
               <p>No documentation for this page.</p>
           {% endcase %}
