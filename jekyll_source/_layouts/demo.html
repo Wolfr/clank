@@ -29,6 +29,7 @@
         <a href="/demos/bar-text.html">Bar text</a>
         <a href="/demos/buttons.html">Buttons</a>
         <a href="/demos/button-groups.html">Button groups</a>
+        <a href="/demos/button-toolbars.html">Button toolbars</a>
         <!-- <a href="/demos/loading.html">Loading</a> -->
         <a href="/demos/table-view.html">Table view</a>
         <a href="/demos/alerts.html">Alerts</a>
@@ -48,6 +49,10 @@
               {% include docs/components/table-view.html %}
             {% when 'buttons' %}
               {% include docs/components/buttons.html %}
+            {% when 'button-groups' %}
+              {% include docs/components/button-groups.html %}
+            {% when 'button-toolbars' %}
+              {% include docs/components/button-toolbars.html %}
             {% when 'headers-footers' %}
               {% include docs/components/headers-footers.html %}
             {% when 'sliders' %}
@@ -58,6 +63,7 @@
               {% include docs/components/forms.html %}
             {% when 'toggles' %}
               {% include docs/components/toggles.html %}
+
             {% else %}
               <p>No documentation for this page.</p>
           {% endcase %}
