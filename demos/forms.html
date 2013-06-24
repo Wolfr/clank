@@ -4,4 +4,46 @@
   docs: forms
 ---
 
-{% include examples/forms.html %}
+<div class="cl-page">
+  <div class="cl-bar-title">
+    <a href="index.html" class="cl-btn">Back</a>
+    <div class="cl-title">Forms</div>
+  </div>
+  <div class="cl-content cl">
+    <div class="cl-form">
+      <input type="text">
+      <input type="text" placeholder="Input with placeholder">
+      <input type="password" value="password">
+      <input type="range">
+      <div class="cl-btn-toolbar">
+        <button class="cl-btn">A button</button>
+        <button class="cl-btn cl-btn-primary">A button</button>
+      </div>
+      <div class="radio-list">
+        <label><input type="radio" name="demo-radios" checked> Label</label>
+        <label><input type="radio" name="demo-radios"> Label</label>
+        <label><input type="radio" name="demo-radios"> Label</label>
+        <label><input type="radio" name="demo-radios" disabled> Label</label>
+      </div>
+      <div class="checkbox-list">
+        <label><input type="checkbox" name="demo-checkboxes" checked> Label</label>
+        <label><input type="checkbox" name="demo-checkboxes"> Label</label>
+        <label><input type="checkbox" name="demo-checkboxes"> Label</label>
+        <label><input type="checkbox" name="demo-checkboxes" disabled> Label</label>
+      </div>
+      <select>
+        <option>Apples</option>
+        <option>Oranges</option>
+        <option>Bananas</option>
+      </select>
+      <select multiple>
+        <option>Apples</option>
+        <option>Oranges</option>
+        <option>Bananas</option>
+      </select>
+      <textarea></textarea>
+    </div>
+  </div>
+  <!-- <div class="cl-bar-footer">
+  </div> -->
+</div>

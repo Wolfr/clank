@@ -20,7 +20,7 @@
       </div>
     </div>
     
-    <div class="content-wrapper {% if page.docs %} docs-visible{% endif %}">
+    <div class="content-wrapper {% if page.docs %}docs-visible{% endif %}">
   
       <div class="cl-demo-list">
         <h4>Components:</h4>
@@ -40,15 +40,15 @@
         <a href="/demos/data-table.html">Data table</a>
       </div>
 
-      <!-- Show relevant docs -->
       {% if page.docs %}
-
       <div class="cl-docs-content">
         <div class="cl-docs">
           
           {% case page.docs %}
             {% when 'table-view' %}
               {% include docs/components/table-view.html %}
+            {% when 'index' %}
+              {% include docs/components/index.html %}
             {% when 'article' %}
               {% include docs/components/article.html %}
             {% when 'base-layout' %}
@@ -57,6 +57,8 @@
               {% include docs/components/buttons.html %}
             {% when 'button-groups' %}
               {% include docs/components/button-groups.html %}
+            {% when 'data-table' %}
+              {% include docs/components/data-table.html %}
             {% when 'button-toolbars' %}
               {% include docs/components/button-toolbars.html %}
             {% when 'sliders' %}
@@ -78,6 +80,7 @@
       {% endif %}
 
       <div class="cl-device-frame">
+        <!-- <div class="cl-phone-wrap" style="-webkit-transform: scale(1); -moz-transform: scale(1); -webkit-transform-origin: center 2%; -moz-transform-origin: center 2%;" data-os="ios" data-device="iphone4-portrait"> -->
         <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]}); -webkit-transform-origin: center 2%; -moz-transform-origin: center 2%;" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
           <div class="cl-device-body">
 
@@ -104,14 +107,8 @@
             </div>
 
 
-            <div class="cl-android-status" ng-show="deviceChoice.os == 'Android'">
-              <!-- <span>
-                <span>Notification</span>
-                <span>Notification</span>
-                <span>Notification</span>
-              </span> -->
+            <!-- <div class="cl-android-status" ng-show="deviceChoice.os == 'Android'">
               <span>
-                <!-- <span>Bluetooth</span> -->
                 <span class="icon-android-battery"></span>
                 <span class="icon-android-network"></span>
                 <span class="icon-android-wifi"></span>
@@ -125,7 +122,7 @@
                 <span class="icon-android-system-home"></span>
                 <span class="icon-android-system-apps"></span>
               </span>
-            </div>
+            </div> -->
 
             {{ content }}
 

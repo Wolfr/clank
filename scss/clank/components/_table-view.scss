@@ -5,7 +5,7 @@
 .cl-table {
   @include pie-clearfix;
   @include unstyled;
-  padding: 10px 0;
+  margin: 10px 0;
   width: 90%;
   @include calc("width", "100% - 20px");
   & + .cl-table {

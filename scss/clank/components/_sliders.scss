@@ -2,14 +2,14 @@
    Slider styles (to be used with sliders.js)
    ========================================================================== */
 
-.slider ul {
+.cl-slider ul {
   margin: 0;
   padding: 0;
 }
 
 /* Width/height of slider */
-.slider > ul,
-.slider > ul > li {
+.cl-slider > ul,
+.cl-slider > ul > li {
   width: 100%;
   @include calc(height, "100%");
   img {
@@ -18,12 +18,12 @@
 }
 
 /* Outer wrapper for slider */
-.slider {
+.cl-slider {
   overflow: hidden;
 }
 
 /* Inner wrapper for slider (width of all slides together) */
-.slider > ul {
+.cl-slider > ul {
   position: relative;
   white-space: nowrap;
   -webkit-transition: all 0 linear;
@@ -32,7 +32,7 @@
 }
 
 /* Individual slide */
-.slider > ul > li {
+.cl-slider > ul > li {
   display: inline-block;
   vertical-align: top; /* Ensure that li always aligns to top */
   width: 100%; 
@@ -40,6 +40,6 @@
 }
 
 /* Required reset of font-size to same as standard body */
-.slider > ul > li > * {
+.cl-slider > ul > li > * {
   font-size: 14px;
 }
