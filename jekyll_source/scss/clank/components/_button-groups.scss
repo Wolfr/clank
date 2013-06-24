@@ -10,11 +10,11 @@
     @include border-radius(0);
 
     &:first-child {
-      @include border-left-radius($default-border-radius);
+      @include border-left-radius($border-radius);
     }
     &:last-child {
       left: -1px;
-      @include border-right-radius($default-border-radius);
+      @include border-right-radius($border-radius);
     }
     
     @if $button-borders {
@@ -25,13 +25,13 @@
       &:first-child {
         &:before,
         &:after {
-          @include border-left-radius($default-border-radius);
+          @include border-left-radius($border-radius);
         }
       }
       &:last-child {
         &:before,
         &:after {
-          @include border-right-radius($default-border-radius);
+          @include border-right-radius($border-radius);
         }
       }
     }

@@ -1,12 +1,32 @@
 .cl-article {
 
+  color: #333;
+  @include text-shadow-white;
+  
+  img {
+    max-width: 100%;
+  }
+
   p {
     margin: 10px; // make use of collapsing margins
     line-height: 1.33;
-    color: #333;
-    @include text-shadow-white;
     & + p {
       margin-top: 0;
+    }
+  }
+
+  ul, ol {
+    padding: 0;
+    margin: 10px; // make use of collapsing margins
+  }
+  
+  & > ul,
+  & > ol {
+    ul, ol {
+      margin: 0;
+    }
+    li {
+      margin-left: 24px;
     }
   }
   
@@ -17,6 +37,11 @@
   a {
     color: $accent-color;
     border-bottom: 1px solid lighten($accent-color, 60%);
+  }
+  
+  & > .cl-table-padded {
+    margin: 10px;
+    @include calc("width", "100% - 20px");
   }
 
 }

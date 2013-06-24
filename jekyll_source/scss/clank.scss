@@ -10,17 +10,18 @@
 @import "clank/os_chrome";
 
 // Device content
+@import "clank/components/article";
 @import "clank/components/base-layout";
 @import "clank/components/buttons";
 @import "clank/components/button-groups";
+@import "clank/components/button-positioning";
 @import "clank/components/forms";
 @import "clank/components/alerts";
+@import "clank/components/data-table";
 @import "clank/components/toggles";
 @import "clank/components/sliders";
 @import "clank/components/pagers";
 @import "clank/components/loading";
-@import "clank/components/typography";
-@import "clank/components/button-positioning";
 @import "clank/components/table-view";
 @import "clank/components/help-txt";
 

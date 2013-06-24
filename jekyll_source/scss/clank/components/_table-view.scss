@@ -50,10 +50,10 @@
 .cl-table > .cl-table-cell {
   margin: 0 10px;
   &:first-child {
-    @include border-top-radius($default-border-radius/2);
+    @include border-top-radius($border-radius/2);
   }
   &:last-child {
-    @include border-bottom-radius($default-border-radius/2);
+    @include border-bottom-radius($border-radius/2);
   }
 }
 
@@ -178,26 +178,26 @@
 .cl-table {
   .cl-table-row:first-child {
     .cl-table-cell:first-child {
-      @include border-top-left-radius($default-border-radius/2);
+      @include border-top-left-radius($border-radius/2);
     }
     .cl-table-cell:last-child {
-      @include border-top-right-radius($default-border-radius/2);
+      @include border-top-right-radius($border-radius/2);
     }
   }
   .cl-table-row:only-child {
     .cl-table-cell:first-child {
-      @include border-left-radius($default-border-radius/2);
+      @include border-left-radius($border-radius/2);
     }
     .cl-table-cell:last-child {
-      @include border-right-radius($default-border-radius/2);
+      @include border-right-radius($border-radius/2);
     }
   }
   .cl-table-row:last-child {
     .cl-table-cell:first-child {
-      @include border-bottom-left-radius($default-border-radius/2);
+      @include border-bottom-left-radius($border-radius/2);
     }
     .cl-table-cell:last-child {
-      @include border-bottom-right-radius($default-border-radius/2);
+      @include border-bottom-right-radius($border-radius/2);
     }
   }
 

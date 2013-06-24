@@ -16,9 +16,10 @@ $decorational-shadows: true !default;
 $button-borders: true !default;
 $text-shadows: true !default;
 
-$default-border-radius: 4px !default;
-$accent-color: #155663 !default; // accent color is supposed to be something like purple, red, blue
-$accent-color-primary: adjust-saturation(adjust-lightness($accent-color, 20%), 20%) !default; // move up the color chart
+$border-radius: 4px !default;
+
+$accent-color: #155663 !default; // Accent color is supposed to be something like purple, red, blue
+$accent-color-primary: adjust-saturation(adjust-lightness($accent-color, 15%),30%) !default;
 
 $accent-color-light: false !default;
 $header-font-size: 20px !default;

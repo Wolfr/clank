@@ -43,6 +43,7 @@
 @import "docs/demo-controls";
 @import "docs/image_alignment";
 @import "docs/docs-nav";
+@import "docs/data-table";
 @import "docs/pygments";
 
 body {
@@ -142,7 +143,7 @@ body {
   }
 
   .help-text {
-    color: $mutedText;
+    color: $muted-text;
     font-size: 11px;
   }
 
@@ -150,7 +151,7 @@ body {
 
 
   #header {
-    background: $headerBackground;
+    background: $dark-bg;
     // Nice transitions
     a {
       transition-property: background, box-shadow;
@@ -158,14 +159,14 @@ body {
     }
     #social {
       float: right;
-      color: lighten($headerBackground, 30%);
-      @media all and(max-width: $breakMedium) {
+      color: lighten($dark-bg, 30%);
+      @media all and(max-width: $break-medium) {
         // Hide longer copy on medium sized screens
         span {
           display: none;
         }
       }
-      @media all and(max-width: $breakSmallMedium) {
+      @media all and(max-width: $break-small-medium) {
         // Hide gh button altogether on small sized screens
         display: none;
       }
@@ -176,11 +177,11 @@ body {
       color: #FFF;
       padding: 10px 15px;
       display: inline-block;
-      background: lighten($headerBackground, 10%);
+      background: lighten($dark-bg, 10%);
       border-radius: 3px;
       &:hover,
       &:focus {
-        background: darken($headerBackground, 20%);
+        background: darken($dark-bg, 20%);
         @include box-shadow(0 0 0 2px #FFF);
       }
     }
@@ -198,13 +199,13 @@ body {
       &:link,
       &:visited {
         border: none;
-        border-right: 1px solid lighten($headerBackground, 10%);
+        border-right: 1px solid lighten($dark-bg, 10%);
       }
       &:hover,
       &:active,
       &:focus,
       &.active {
-        background: lighten($headerBackground, 10%);
+        background: lighten($dark-bg, 10%);
       }
       &:last-child {
         border-right: none;
@@ -244,7 +245,7 @@ body {
     .img-holder {
       display: none;
     }
-    @media all and (min-width: $breakLarge) {
+    @media all and (min-width: $break-large) {
       height: 303px;
       padding: 0;
       .img-holder {
@@ -290,12 +291,12 @@ body {
     margin: 0 auto;
     padding-top: 12px;
     padding-bottom: 12px;
-    color: $mutedText;
+    color: $muted-text;
     overflow: hidden;
     a {
       @include muted-links;
     }
-    @media all and (min-width: $breakLarge) {
+    @media all and (min-width: $break-large) {
       p:first-child {
         float: left;
       }
@@ -346,7 +347,7 @@ body {
     }
   }
 
-  @media all and (max-width: $breakMedium - 1) {
+  @media all and (max-width: $break-medium - 1) {
     #docs-nav {
       padding: 12px 20px 0;
     }
@@ -356,7 +357,7 @@ body {
   }
 
   // Layout
-  @media all and (min-width: $breakMedium) {
+  @media all and (min-width: $break-medium) {
 
     #docs {
       @include container;
@@ -390,7 +391,7 @@ body {
 
   // Blog specific
 
-  @media all and (max-width: $breakLarge - 1) {
+  @media all and (max-width: $break-large - 1) {
     #blog-nav {
       padding: 12px 20px 0;
     }
@@ -399,7 +400,7 @@ body {
     }
   }
 
-  @media all and (min-width: $breakLarge) {
+  @media all and (min-width: $break-large) {
     #blog {
       @include container;
       padding: 20px 0 0;
@@ -474,6 +475,14 @@ body {
     header {
       p {
         color: #999;
+      }
+    }
+    ul,
+    ol {
+      padding: 0;
+      margin: 0;
+      li {
+        margin-left: 24px;
       }
     }
     h1 {
