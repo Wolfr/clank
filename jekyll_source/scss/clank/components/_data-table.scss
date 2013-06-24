@@ -1,10 +1,9 @@
-// Tables
-// Stripped version of bootstrap component
-// --------------------------------------------------
+/* ==========================================================================
+   Tables
+   ========================================================================== */
 
-
-// BASE TABLES
-// -----------------
+/* Base tables
+   ========================================================================== */
 
 .cl-data-table {
   max-width: 100%;
@@ -12,13 +11,13 @@
   border-spacing: 0;
 }
 
-// BASELINE STYLES
-// ---------------
+/* Baseline table styles
+   ========================================================================== */
 
 .cl-data-table {
   width: 100%;
   margin-bottom: 12px;
-  // Cells
+  /* Cells */
   th,
   td {
     padding: 8px;
@@ -30,7 +29,7 @@
     font-weight: 700;
     color: #000;
   }
-  // Bottom align for column headings
+  /* Bottom align for column headings */
   thead th {
     vertical-align: bottom;
   }
@@ -43,14 +42,14 @@
   thead:first-child tr:first-child td {
     border-top: 0;
   }
-  // Account for multiple tbody instances
+  /* Account for multiple tbody instances */
   tbody + tbody {
     border-top: 2px solid $light-color;
   }
 }
 
-// CONDENSED TABLE W/ HALF PADDING
-// -------------------------------
+/* Condensed table w/ half padding
+   ========================================================================== */
 
 .cl-data-table-condensed {
   th,
@@ -60,8 +59,8 @@
 }
 
 
-// BORDERED VERSION
-// ----------------
+/* Bordered table
+   ========================================================================== */
 
 .cl-data-table-bordered {
   border: 1px solid $light-color;
@@ -72,10 +71,9 @@
   }
 }
 
-// ZEBRA-STRIPING
-// --------------
+/* Table with zebra striping
+   ========================================================================== */
 
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
 .cl-data-table-striped {
   tbody {
     > tr:nth-child(odd) > td,

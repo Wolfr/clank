@@ -1,8 +1,12 @@
+// General
+
 @mixin unstyled {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+// Base layout + buttons
 
 @mixin text-shadow-white {
   @if $text-shadows {
@@ -15,6 +19,8 @@
     text-shadow: 0 1px rgba(0,0,0,0.33);
   }
 }
+
+// Buttons
 
 @mixin gradient-vertical($startColor: #555, $endColor: #333) {
   background-color: mix($startColor, $endColor, 60%);
@@ -109,6 +115,8 @@
   }
 }
 
+// Table views
+
 @mixin table-cell-skin {
   background: lighten($background-color, 10%);
   &:first-child {
@@ -150,7 +158,7 @@
 }
 
 // Webkit-style focus
-// ------------------
+
 @mixin tab-focus() {
   // Default
   outline: thin dotted #333;
@@ -166,9 +174,7 @@
   #{$property}: calc(#{$expression}); 
 }
 
-/*
-  Alternate clearfix that does not rely on overflow: hidden;
-*/
+// Alternate clearfix that does not rely on overflow: hidden;
 
 @mixin micro-clearfix {
   &:before,

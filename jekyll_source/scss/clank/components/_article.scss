@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Article
+   ========================================================================== */
+
 .cl-article {
 
   color: #333;
@@ -8,7 +12,7 @@
   }
 
   p {
-    margin: 10px; // make use of collapsing margins
+    margin: 10px; /* make use of collapsing margins */
     line-height: 1.33;
     & + p {
       margin-top: 0;
@@ -17,7 +21,7 @@
 
   ul, ol {
     padding: 0;
-    margin: 10px; // make use of collapsing margins
+    margin: 10px; /* make use of collapsing margins */
   }
   
   & > ul,

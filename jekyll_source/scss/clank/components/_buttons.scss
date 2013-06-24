@@ -1,18 +1,20 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
 .cl-btn {
   @include button-skin;
-
-
 
   display: block;
   font-weight: 700;
   cursor: pointer;
   position: relative;
   
-  // Fixes when <button> is used
+  /* Fixes when <button> is used */
   border: none;
   -webkit-appearance: none;
 
-  // Create new stacking context for :before and :after
+  /* Create new stacking context for :before and :after */
   z-index: 1;
 
   font-weight: 700;
@@ -31,7 +33,7 @@
     }
   }
 
-  // Bar buttons
+  /* Bar buttons */
   .cl-bar-title &,
   .cl-bar-footer &,
   .cl-bar & {
@@ -48,7 +50,7 @@
     margin: 0 10px;
   }
 
-  // Less min width for icon only type buttons
+  /* Less min width for icon only type buttons */
   &.cl-btn-icon {
     min-width: 34px; // +10 = 44
   }
@@ -57,10 +59,9 @@
   }
 }
 
-// CSS gradient strokes
+/* CSS gradient strokes */
 
 @if $button-borders {
-
 
   .cl-btn:before,
   .cl-btn:after {
@@ -123,7 +124,7 @@
   }
 }
 
-// Primary buttons
+/* Primary buttons */
 .cl-btn-primary {
   @include button-skin-primary;
 }

@@ -1,10 +1,9 @@
-/**
-  OS Chrome
-**/
+/* ==========================================================================
+   OS Chrome
+   ========================================================================== */
 
-/**
-  Shared
-**/
+/* Shared
+   ========================================================================== */
 
 .cl-ios-status,
 .cl-android-status {
@@ -20,28 +19,22 @@
   white-space: nowrap;
   padding: 0 4px;
   // Layout 
-
-  & > span {
-  }
-
   & > span:first-child {
     float: left;
   }
-  
   & > span:last-child {
     float: right;
     span {
       line-height: 20px;
-      display: inline-block;
+      @include inline-block;
       vertical-align: middle;
     }
   }
   
 }
 
-/**
-  iOS only
-**/
+/* iOS only
+   ========================================================================== */
 
 .cl-ios-status {
   font-weight: 700;
@@ -56,14 +49,15 @@
   }
 }
 
-// Reception (iOS)
+/* Reception (iOS)
+   ========================================================================== */
 
 .cl-ios-status .signals {
   font-size: 0;
   margin-right: 3px;
   span {
     width: 3px;
-    display: inline-block;
+    @include inline-block;
     vertical-align: bottom;
     margin-right: 1px;
     position: relative;
@@ -87,7 +81,8 @@
   }
 }
 
-// Battery icon ios
+/* Battery icon ios
+   ========================================================================== */
 
 .icon-ios-battery {
   font-size: 20px;
@@ -100,12 +95,11 @@
 }
 
 
-/**
-  Android only
-**/
+/* Android only
+   ========================================================================== */
 
 .cl-android-status {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   background: #000;
   color: #FFF;
   height: 24px;

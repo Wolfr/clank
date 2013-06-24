@@ -1,4 +1,9 @@
-// Button positioning within headers
+/* ==========================================================================
+   Button positioning
+   ========================================================================== */
+
+/* Button positioning within page bars
+   ========================================================================== */
 
 .cl-bar-title,
 .cl-bar-footer,
@@ -33,8 +38,8 @@
   }
 }
 
-
-// Button positioning within toolbars
+/* Button positioning within toolbars (= in page content)
+   ========================================================================== */
 
 .cl-btn-toolbar {
   display: -webkit-flex;

@@ -1,3 +1,26 @@
+/* ==========================================================================
+   Loading
+   Depends on prefixfree
+   ========================================================================== */
+
+@keyframes spin {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes spin-white {
+  0% {
+    background-color: #FFF;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 .cl-loading-wrapper {
   position: absolute;
   height: 100%;
@@ -26,7 +49,6 @@
     .cl-bar-footer & {
       animation-name: spin-white;
     }
-    
   }
 }
 
@@ -76,22 +98,4 @@
   left:4px;
   bottom:4px;
   animation-delay: 1.1s;
-}
-
-@keyframes spin {
-  0% {
-    background-color: #000;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-@keyframes spin-white {
-  0% {
-    background-color: #FFF;
-  }
-  100% {
-    background-color: transparent;
-  }
 }

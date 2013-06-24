@@ -1,8 +1,18 @@
-// Unfinished
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/* Form wrapper
+   ========================================================================== */
 
 .cl-form {
   margin: 6px 0;
-  
+}
+
+/* Basic input types
+   ========================================================================== */
+
+.cl-form {
   // Fonts
   input, select, textarea, option {
     font-family: Arial, sans-serif;
@@ -58,11 +68,12 @@
       line-height: 44px;
     }
   }
+}
 
-  /*
-    Radio and checkbox lists
-  */
+/* Radio and checkbox lists
+   ========================================================================== */
 
+.cl-form {
   .radio-list,
   .checkbox-list {
     display: -webkit-flex;
