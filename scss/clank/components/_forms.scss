@@ -6,7 +6,7 @@
    ========================================================================== */
 
 .cl-form {
-  margin: 6px 0;
+  margin: 5px 0;
 }
 
 /* Basic input types
@@ -35,7 +35,11 @@
   .radio-list,
   .checkbox-list,
   .cl-btn-toolbar {
-    margin: 4px 10px;
+    margin: 5px 10px;
+  }
+  
+  .cl-btn-toolbar {
+    margin: 5px 10px 10px;
   }
 
   input[type="range"] {
@@ -108,8 +112,8 @@
         color: #FFF;
       }
       &.checked {
-        background: darken($accent-color, 15%);
-        border: 1px solid darken($accent-color, 15%);
+        background: $accent-color;
+        border: 1px solid $accent-color;
         color: #FFF;
       }
     }
