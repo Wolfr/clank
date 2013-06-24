@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <title>{{ page.title }} - Clank</title>
   {% if page.layout == "demo" %}
+    <!-- Angular -->
     <script src="/components/angular/angular.min.js"></script>
     <script src="/components/angular-cookies/angular-cookies.min.js"></script>
-    
-    <script src="/components/prefix-free/prefixfree.min.js"></script>
     <script src="/js/controllers.js"></script>
     <script src="/js/filters.js"></script>
+
+    <script src="/components/prefix-free/prefixfree.min.js"></script>
+    
+    <!-- Ratchet -->
     <script src="/js/ratchet/sliders.js"></script>
     <script src="/js/ratchet/toggles.js"></script>
+    
+    <!-- Polyfills -->
     <script src="/js/polyfills/html5slider.js" type="text/javascript"></script>
   {% endif %}
 

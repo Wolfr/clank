@@ -538,6 +538,7 @@ body {
 #demo-app .content-wrapper {
   @include clearfix;
   height: 100%;
+  width: 100%; // Firefox fix
   @include calc("height", "100% - 45px");
 }
 

@@ -30,11 +30,11 @@
         <a href="/demos/buttons.html">Buttons</a>
         <a href="/demos/button-groups.html">Button groups</a>
         <a href="/demos/button-toolbars.html">Button toolbars</a>
-        <!-- <a href="/demos/loading.html">Loading</a> -->
+        <a href="/demos/loading.html">Loading</a>
         <a href="/demos/table-view.html">Table view</a>
         <a href="/demos/alerts.html">Alerts</a>
         <a href="/demos/toggles.html">Toggles</a>
-        <!-- <a href="/demos/forms.html">Forms</a> -->
+        <a href="/demos/forms.html">Forms</a>
         <a href="/demos/sliders.html">Sliders</a>
       </div>
 
@@ -63,7 +63,8 @@
               {% include docs/components/forms.html %}
             {% when 'toggles' %}
               {% include docs/components/toggles.html %}
-
+            {% when 'loading' %}
+              {% include docs/components/loading.html %}
             {% else %}
               <p>No documentation for this page.</p>
           {% endcase %}

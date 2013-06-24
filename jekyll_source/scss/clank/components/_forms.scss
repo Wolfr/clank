@@ -1,20 +1,106 @@
 // Unfinished
 
 .cl-form {
-
-  margin: 10px;
-
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 2px;
-    height: 24px;
-  }
-
+  margin: 6px 0;
+  
+  // Fonts
   input, select, textarea, option {
     font-family: Arial, sans-serif;
     [data-os="android"] & {
       font-family: Roboto, Droid Sans, sans-serif;
+    }
+  }
+  
+  textarea {
+    min-height: 88px;
+  }
+
+  // A way to provide rhythm in forms: same margin for all
+  input[type="text"],
+  input[type="password"],
+  input[type="range"],
+  input[type="email"],
+  select,
+  textarea,
+  .radio-list,
+  .checkbox-list,
+  .cl-btn-toolbar {
+    margin: 4px 10px;
+  }
+
+  input[type="range"] {
+    @include calc("width", "100% - 20px");
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 4px;
+    height: 34px;
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    @include calc("width", "100% - 20px");
+    @include box-shadow(inset 2px 2px 0 rgba(0,0,0,0.1));
+    &:focus {
+      border-color: $accent-color-primary;
+      @include box-shadow(inset 0 0 2px rgba(0,0,0,0.1), 0 0 0 1px $accent-color-primary);
+    }
+  }
+  
+  select[multiple] {
+    min-height: 100px;
+    // Works in FF not in Webkit
+    option {
+      height: 44px;
+      line-height: 44px;
+    }
+  }
+
+  /*
+    Radio and checkbox lists
+  */
+
+  .radio-list,
+  .checkbox-list {
+    display: -webkit-flex;
+    padding: 0;
+    input {
+      visibility: hidden;
+      position: absolute;
+      top: -9000em;
+      left: -9000em;
+    }
+    label {
+      line-height: 42px;
+      -webkit-flex: 1;
+      background: #FFF;
+      border: 1px solid $light-color;
+      border-width: 1px 1px 1px 0;
+      &:first-child {
+        @include border-left-radius($default-border-radius);
+        border-width: 1px;
+      }
+      &:last-child {
+        left: -1px;
+        @include border-right-radius($default-border-radius);
+      }
+      padding: 10px;
+      line-height: 1.5;
+      position: relative;
+      right: 1px;
+      &:hover {
+        background: $accent-color;
+        border: 1px solid $accent-color;
+        color: #FFF;
+      }
+      &.checked {
+        background: darken($accent-color, 15%);
+        border: 1px solid darken($accent-color, 15%);
+        color: #FFF;
+      }
     }
   }
 

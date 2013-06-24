@@ -1,10 +1,17 @@
 .cl-btn {
   @include button-skin;
 
+
+
   display: block;
   font-weight: 700;
   cursor: pointer;
   position: relative;
+  
+  // Fixes when <button> is used
+  border: none;
+  -webkit-appearance: none;
+
   // Create new stacking context for :before and :after
   z-index: 1;
 

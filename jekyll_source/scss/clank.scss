@@ -1,10 +1,15 @@
+// Clank
 @import "compass";
 
 @import "clank/base";
+@import "clank/vars";
 @import "clank/mixins";
+
+// Devices
 @import "clank/device_wraps";
 @import "clank/os_chrome";
 
+// Device content
 @import "clank/components/base-layout";
 @import "clank/components/buttons";
 @import "clank/components/button-groups";
@@ -13,12 +18,13 @@
 @import "clank/components/toggles";
 @import "clank/components/sliders";
 @import "clank/components/pagers";
+@import "clank/components/loading";
 @import "clank/components/typography";
 @import "clank/components/button-positioning";
 @import "clank/components/table-view";
 @import "clank/components/help-txt";
 
+// Icon fonts
 @import "clank/icon-fonts/ios/fontcustom"; // System icons iOS
 @import "clank/icon-fonts/android/fontcustom"; // System Android
 @import "clank/icon-fonts/app/fontcustom"; // App specific icons
-

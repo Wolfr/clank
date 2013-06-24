@@ -1,29 +1,3 @@
-$ios-bar-size: 44px;
-$android-bar-size: 50px;
-
-// Default style variables
-
-$background-color: #E6E6E6 !default;
-
-$gradient: true !default;
-
-$functional-shadows: true !default;
-$decorational-shadows: true !default;
-
-$button-borders: true !default;
-$text-shadows: true !default;
-
-$default-border-radius: 4px !default;
-$accent-color: #155663 !default; // accent color is supposed to be something like purple, red, blue
-$accent-color-primary: adjust-saturation(adjust-lightness($accent-color, 20%), 20%) !default; // move up the color chart
-
-$accent-color-light: false !default;
-$header-font-size: 20px !default;
-
-$text-color: #333 !default;
-$text-color-inverse: #DDD !default;
-$headings-color: darken($text-color, 20%) !default;
-
 @mixin unstyled {
   margin: 0;
   padding: 0;
