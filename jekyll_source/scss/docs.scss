@@ -183,7 +183,7 @@ body {
   #banner {
     margin: 0 0 20px;
     background: #DADEE2;
-    padding: 20px;
+    padding: 20px 0;
     .inner-content {
       @include container;
       margin: 0 auto;
@@ -206,8 +206,12 @@ body {
     .btn, .intro {
       margin-left: 4px;
     }
+    .btn {
+      @include inline-block;
+    }
     img {
-      margin-top: 20px;
+      margin: 20px auto 0;
+      max-width: 90%;
     }
     .img-holder {
       display: none;
@@ -217,17 +221,15 @@ body {
       padding: 0;
       .img-holder {
         display: block;
-        @include prefix(1,8);
-        @include span-columns(3,8);
+        text-align: center;
+        @include span-columns(4,8);
         img {
-          max-width: 100%;
+          max-width: 320px;
         }
       }
       .copy {
         margin-top: 50px;
-        position: relative;
-        left: 20px;
-        @include span-columns(3,8);
+        @include span-columns(4 omega,8);
       }
     }
   }
@@ -235,7 +237,7 @@ body {
   .btn {
     @include gradient-vertical(#35393E,darken(#35393E,10%));
     border: none;
-    padding: 0 9px;
+    padding: 4px 9px;
     display: inline-block;
     line-height: 28px;
     color: #FFF;
