@@ -1,15 +1,3 @@
-// Base media queries
-$break-large: 960px;
-$break-medium: 768px;
-$break-small-medium: 480px;
-
-// Base colors
-$dark-bg: #36393E;
-$light-bg: #EDEFF1;
-$light-color: darken($light-bg, 10%);
-$muted-text: #999;
-$link-color: $dark-bg;
-
 @mixin gradient-vertical($startColor: #555, $endColor: #333) {
   background-color: mix($startColor, $endColor, 60%);
   background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
