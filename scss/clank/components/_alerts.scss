@@ -11,6 +11,12 @@
   display: -webkit-flex;
   -webkit-justify-content: center;
 
+  animation: pop-in 0.5s forwards;
+  
+  &.dismissed {
+    animation: pop-out 0.5s forwards;
+  }
+
   // Ofset
   position: relative;
   bottom: $ios-bar-size / 2; // this offsets to true center
@@ -44,4 +50,16 @@
     color: #FFF; // suppossing accent color is dark @todo refactor to account for light accent color
     margin: 0;
   }
+}
+
+@keyframes pop-in {
+  0%     { transform: scale(0);}
+  75%    { transform: scale(1.1); }
+  100%   { transform: scale(1); }
+}
+
+@keyframes pop-out {
+  0%     { transform: scale(1);}
+  25%    { transform: scale(1.1); }
+  100%   { transform: scale(0); }
 }

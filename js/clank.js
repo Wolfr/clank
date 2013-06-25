@@ -37,5 +37,14 @@ $(function() {
     }
     
   });
+  
+  /**
+   * Alerts
+   */
+  
+  $('*[data-dismiss]').click(function() {
+    var dismissWhat = $(this).attr('data-dismiss')
+    $('.' + dismissWhat).addClass('dismissed');
+  });
 
 });
