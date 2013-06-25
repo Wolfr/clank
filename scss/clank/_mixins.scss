@@ -34,13 +34,15 @@
 }
 
 @mixin button-skin {
-  @if $accent-color-light {
-    color: darken($text-color, 5%);
-  } @else {
-    color: lighten($text-color-inverse, 20%);
-  }
+  &,
   &:link,
   &:visited {
+    border: 1px solid $accent-color;
+    @if $accent-color-light {
+      color: darken($text-color, 5%);
+    } @else {
+      color: lighten($text-color-inverse, 20%);
+    }
     @include border-radius($border-radius);
     @if $accent-color-light {
       color: darken($text-color, 5%);
@@ -60,11 +62,6 @@
   &:active,
   &:focus,
   &.active {
-    @if $accent-color-light {
-      color: darken($text-color, 5%);
-    } @else {
-      color: lighten($text-color-inverse, 20%);
-    }
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
@@ -78,13 +75,15 @@
 }
 
 @mixin button-skin-primary {
-  @if $accent-color-light {
-    color: darken($text-color, 5%);
-  } @else {
-    color: lighten($text-color-inverse, 20%);
-  }
+  &,
   &:link,
   &:visited {
+    border: 1px solid $accent-color;
+    @if $accent-color-light {
+      color: darken($text-color, 5%);
+    } @else {
+      color: lighten($text-color-inverse, 20%);
+    }
     @include border-radius($border-radius);
     color: lighten($text-color-inverse, 20%);
     @if $gradient {
@@ -97,12 +96,6 @@
   &:active,
   &:focus,
   &.active {
-    @if $accent-color-light {
-      color: darken($text-color, 5%);
-    } @else {
-      color: lighten($text-color-inverse, 20%);
-    }
-    border: none;
     @include box-shadow(none);
     @if $gradient {
       @include gradient-vertical(darken($accent-color, 2%), darken($accent-color, 8%));
@@ -120,10 +113,10 @@
 @mixin table-cell-skin {
   background: lighten($background-color, 10%);
   &:first-child {
-    @include border-top-radius($border-radius/2);
+    @include border-top-radius($border-radius);
   }
   &:last-child {
-    @include border-bottom-radius($border-radius/2);
+    @include border-bottom-radius($border-radius);
   }
   @if $decorational-shadows {
     @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));

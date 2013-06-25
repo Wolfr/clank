@@ -10,32 +10,13 @@
     -webkit-flex: 1;
     padding: 0;
     @include border-radius(0);
-
+    border-right-width: 0;
     &:first-child {
       @include border-left-radius($border-radius);
     }
     &:last-child {
-      left: -1px;
       @include border-right-radius($border-radius);
-    }
-    
-    @if $button-borders {
-      &:before,
-      &:after {
-        @include border-radius(0);
-      }
-      &:first-child {
-        &:before,
-        &:after {
-          @include border-left-radius($border-radius);
-        }
-      }
-      &:last-child {
-        &:before,
-        &:after {
-          @include border-right-radius($border-radius);
-        }
-      }
+      border-right-width: 1px;
     }
     .bar &,
     .bar-title &,
