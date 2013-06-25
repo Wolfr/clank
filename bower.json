@@ -5,6 +5,6 @@
     "angular": "~1.0.7",
     "angular-cookies": "~1.0.7",
     "prefix-free": "latest",
-    "zepto": "~1.0.0"
+    "jquery": "~2.0.2"
   }
 }

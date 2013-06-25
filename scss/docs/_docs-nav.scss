@@ -3,11 +3,21 @@
   Used in clank documentation
 ****/
 
+
+@media all and (min-width: $break-large) {
+  // For Affix plugin
+  .affix {
+    position: fixed;
+    top: 20px;
+  }
+}
+
 .cl-docs {
   .nav {
     margin-left: 0;
     margin-bottom: 20px;
     list-style: none;
+    font-size: 13px;
   }
   .nav > li > a {
     display: block;

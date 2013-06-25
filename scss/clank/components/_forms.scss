@@ -133,12 +133,12 @@
       right: 1px;
       &:hover {
         background: $accent-color;
-        border: 1px solid $accent-color;
+        border-color: $accent-color;
         color: #FFF;
       }
       &.checked {
         background: $accent-color;
-        border: 1px solid $accent-color;
+        border-color: $accent-color;
         color: #FFF;
       }
     }
