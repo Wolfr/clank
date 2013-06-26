@@ -10,11 +10,14 @@
   ],
   "file_name": "app",
   "glyphs": [
+    "add",
     "arrow-down",
     "arrow-left",
     "arrow-right",
     "arrow-up",
     "circle",
+    "list",
+    "minus",
     "square"
   ]
 }

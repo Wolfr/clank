@@ -30,7 +30,6 @@
   .cl-bar-footer &,
   .cl-bar & {
     padding: 0 7px;
-    min-width: 54px;
     [data-os="android"] & {
       padding: 0 10px;
     }
@@ -43,11 +42,9 @@
   }
 
   /* Less min width for icon only type buttons */
-  &.cl-btn-icon {
-    min-width: 34px; // +10 = 44
-  }
   &.cl-btn-icon-only {
-    width: 44px;
+    width: 35px;
+    font-size: 19px;
   }
 }
 

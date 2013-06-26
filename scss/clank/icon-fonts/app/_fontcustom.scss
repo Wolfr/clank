@@ -1,6 +1,6 @@
-/* ==========================================================================
-   Application font
-   ========================================================================== */
+/* 
+ * Font Custom: bare CSS
+ */
 
 @font-face {
   font-family: "app";
@@ -13,11 +13,14 @@
   font-style: normal;
 }
 
+.icon-app-add:before,
 .icon-app-arrow-down:before,
 .icon-app-arrow-left:before,
 .icon-app-arrow-right:before,
 .icon-app-arrow-up:before,
 .icon-app-circle:before,
+.icon-app-list:before,
+.icon-app-minus:before,
 .icon-app-square:before {
   font-family: "app";
   font-style: normal;
@@ -30,9 +33,12 @@
   text-decoration: inherit;
 }
 
-.icon-app-arrow-down:before { content: "\f100"; }
-.icon-app-arrow-left:before { content: "\f101"; }
-.icon-app-arrow-right:before { content: "\f102"; }
-.icon-app-arrow-up:before { content: "\f103"; }
-.icon-app-circle:before { content: "\f104"; }
-.icon-app-square:before { content: "\f105"; }
+.icon-app-add:before { content: "\f100"; }
+.icon-app-arrow-down:before { content: "\f101"; }
+.icon-app-arrow-left:before { content: "\f102"; }
+.icon-app-arrow-right:before { content: "\f103"; }
+.icon-app-arrow-up:before { content: "\f104"; }
+.icon-app-circle:before { content: "\f105"; }
+.icon-app-list:before { content: "\f106"; }
+.icon-app-minus:before { content: "\f107"; }
+.icon-app-square:before { content: "\f108"; }

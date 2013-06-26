@@ -760,7 +760,6 @@ a {
 }
 .cl-bar-title .cl-btn, .cl-bar-footer .cl-btn, .cl-bar .cl-btn {
   padding: 0 7px;
-  min-width: 54px;
   margin: 5px;
   font-size: 13px;
 }
@@ -770,11 +769,9 @@ a {
 .cl-content > .cl-btn {
   margin: 0 10px;
 }
-.cl-btn.cl-btn-icon {
-  min-width: 34px;
-}
 .cl-btn.cl-btn-icon-only {
-  width: 44px;
+  width: 35px;
+  font-size: 19px;
 }
 
 /* Primary buttons */
@@ -1980,9 +1977,9 @@ a {
 /* ==========================================================================
    Custom application CSS
    ========================================================================== */
-/* ==========================================================================
-   Application font
-   ========================================================================== */
+/* 
+ * Font Custom: bare CSS
+ */
 @font-face {
   font-family: "app";
   src: url("../scss/clank/icon-fonts/app/app.eot");
@@ -1991,11 +1988,14 @@ a {
   font-style: normal;
 }
 
+.icon-app-add:before,
 .icon-app-arrow-down:before,
 .icon-app-arrow-left:before,
 .icon-app-arrow-right:before,
 .icon-app-arrow-up:before,
 .icon-app-circle:before,
+.icon-app-list:before,
+.icon-app-minus:before,
 .icon-app-square:before {
   font-family: "app";
   font-style: normal;
@@ -2008,26 +2008,38 @@ a {
   text-decoration: inherit;
 }
 
-.icon-app-arrow-down:before {
+.icon-app-add:before {
   content: "\f100";
 }
 
-.icon-app-arrow-left:before {
+.icon-app-arrow-down:before {
   content: "\f101";
 }
 
-.icon-app-arrow-right:before {
+.icon-app-arrow-left:before {
   content: "\f102";
 }
 
-.icon-app-arrow-up:before {
+.icon-app-arrow-right:before {
   content: "\f103";
 }
 
-.icon-app-circle:before {
+.icon-app-arrow-up:before {
   content: "\f104";
 }
 
-.icon-app-square:before {
+.icon-app-circle:before {
   content: "\f105";
+}
+
+.icon-app-list:before {
+  content: "\f106";
+}
+
+.icon-app-minus:before {
+  content: "\f107";
+}
+
+.icon-app-square:before {
+  content: "\f108";
 }
