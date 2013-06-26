@@ -1,5 +1,25 @@
 // General
 
+// CSS3 calc
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+}
+
+// Alternate clearfix that does not rely on overflow: hidden;
+@mixin micro-clearfix {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
 @mixin unstyled {
   margin: 0;
   padding: 0;
@@ -108,56 +128,12 @@
       color: $very-light-color;
     }
     @if $gradient {
-      @include gradient-vertical(#0188f4, #0158e6);
+      @include gradient-vertical(lighten($accent-color, 10%), $accent-color);
     } @else {
-      background: #0188f4;
+      background: $accent-color;
     }
     @if $text-shadows {
       @include text-shadow-black;
     }
-  }
-}
-
-@mixin table-cell-skin-accent {
-  background: $accent-color;
-  @if $decorational-shadows {
-    @include box-shadow(0 2px 0 darken($accent-color, 10%), inset 0 1px 0 rgba(0,0,0,.1));
-  }
-}
-
-@mixin table-cell-skin-accent-secondary {
-  background: $accent-color-primary;
-  @if $decorational-shadows {
-    @include box-shadow(0 2px 0 darken($accent-color-primary, 10%), inset 0 1px 0 rgba(0,0,0,.1));
-  }
-}
-
-// Webkit-style focus
-
-@mixin tab-focus() {
-  // Default
-  outline: thin dotted #333;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-@mixin calc($property, $expression) { 
-  #{$property}: -moz-calc(#{$expression}); 
-  #{$property}: -o-calc(#{$expression}); 
-  #{$property}: -webkit-calc(#{$expression}); 
-  #{$property}: calc(#{$expression}); 
-}
-
-// Alternate clearfix that does not rely on overflow: hidden;
-
-@mixin micro-clearfix {
-  &:before,
-  &:after {
-    content:"";
-    display:table;
-  }
-  &:after {
-    clear:both;
   }
 }

@@ -1651,14 +1651,14 @@ a {
 }
 .cl-table-cell:hover, .cl-table-cell:active, .cl-table-cell:focus {
   color: white;
-  background-color: #0174ee;
-  background-image: -moz-linear-gradient(top, #0188f4, #0158e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0188f4), to(#0158e6));
-  background-image: -webkit-linear-gradient(top, #0188f4, #0158e6);
-  background-image: -o-linear-gradient(top, #0188f4, #0158e6);
-  background-image: linear-gradient(to bottom, #0188f4, #0158e6);
+  background-color: #198187;
+  background-image: -moz-linear-gradient(top, #1d9299, #15696e);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d9299), to(#15696e));
+  background-image: -webkit-linear-gradient(top, #1d9299, #15696e);
+  background-image: -o-linear-gradient(top, #1d9299, #15696e);
+  background-image: linear-gradient(to bottom, #1d9299, #15696e);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF1D9299', endColorstr='#FF15696E', GradientType=0);
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
 .cl-table-cell:hover a, .cl-table-cell:hover .disclosure-help, .cl-table-cell:hover .icon, .cl-table-cell:active a, .cl-table-cell:active .disclosure-help, .cl-table-cell:active .icon, .cl-table-cell:focus a, .cl-table-cell:focus .disclosure-help, .cl-table-cell:focus .icon {
