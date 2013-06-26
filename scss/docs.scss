@@ -7,7 +7,6 @@
 @import "docs/mixins";
 @import "docs/normalize";
 @import "docs/grid";
-@import "docs/demo-controls";
 @import "docs/image_alignment";
 @import "docs/docs-nav";
 @import "docs/data-table";
@@ -559,17 +558,17 @@ body {
 // Device controls
 
 .cl-device-controls {
-  font-size: 14px;
   font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #7F8487;
   
   @include gradient-vertical(#d1d6da, #c1ccd3);
   @include pie-clearfix;
   width: 100%;
   line-height: 44px;
   height: 44px;
-  
+
   border-bottom: 1px solid rgba(0,0,0,0.15);
-  top: 0;
 
   label {
     line-height: 44px;
@@ -579,7 +578,7 @@ body {
     }
   }
   & > div {
-    width: 33%;
+    width: 25%;
     text-align: center;
     float: left;
   }

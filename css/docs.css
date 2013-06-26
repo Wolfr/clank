@@ -1630,8 +1630,9 @@ body {
 }
 
 .cl-device-controls {
-  font-size: 14px;
   font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #7F8487;
   background-color: #cad2d7;
   background-image: -moz-linear-gradient(top, #d1d6da, #c1ccd3);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1d6da), to(#c1ccd3));
@@ -1645,7 +1646,6 @@ body {
   line-height: 44px;
   height: 44px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  top: 0;
 }
 .cl-device-controls:after {
   content: "";
@@ -1660,7 +1660,7 @@ body {
   content: ":";
 }
 .cl-device-controls > div {
-  width: 33%;
+  width: 25%;
   text-align: center;
   float: left;
 }

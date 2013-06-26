@@ -16,12 +16,16 @@
       </div>
       <div>
         <label for="deviceSize">Size</label>
-        <input type="range" ng-model="deviceSize" min="0.1" max="1" step=".01">
+        <input type="range" id="deviceSize" ng-model="deviceSize" min="0.1" step=".01" max="1" ng-change="saveDeviceSize()">
+      </div>
+      <div>
+        <label for="docsVisible">Docs visible</label>
+        <input type="checkbox" id="docsVisible" ng-model="docsVisible" ng-change="saveDocsVisibility()">
       </div>
     </div>
-    
-    <div class="content-wrapper {% if page.docs %}docs-visible{% endif %}">
-  
+
+    <div class="content-wrapper" ng-class="{'docs-visible': docsVisible}">
+
       <div class="cl-demo-list">
         <h4>Components:</h4>
         <a href="/demos/index.html">Home</a>
@@ -40,8 +44,7 @@
         <a href="/demos/data-table.html">Data table</a>
       </div>
 
-      {% if page.docs %}
-      <div class="cl-docs-content">
+      <div class="cl-docs-content" ng-show="docsVisible">
         <div class="cl-docs">
           
           {% case page.docs %}
@@ -77,11 +80,9 @@
 
         </div>
       </div>
-      {% endif %}
 
       <div class="cl-device-frame">
-        <!-- <div class="cl-phone-wrap" style="-webkit-transform: scale(1); -moz-transform: scale(1); -webkit-transform-origin: center 2%; -moz-transform-origin: center 2%;" data-os="ios" data-device="iphone4-portrait"> -->
-        <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]}); -webkit-transform-origin: center 2%; -moz-transform-origin: center 2%;" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
+        <div class="cl-phone-wrap" style="-webkit-transform: scale({[{deviceSize}]}); -moz-transform: scale({[{deviceSize}]}); -webkit-transform-origin: 2% 2%; -moz-transform-origin: 2% 2%;" data-os="{[{ deviceChoice.os | lowercase | removewhitespace }]}" data-device="{[{ deviceChoice.name | lowercase | removewhitespace }]}-{[{ deviceOrientation.name | lowercase }]}">
           <div class="cl-device-body">
 
             <div class="cl-ios-status" ng-show="deviceChoice.os == 'iOS'">
