@@ -50,14 +50,14 @@
     @include calc("width", "100% - 20px");
   }
 
-}
+  .intro {
+    font-size: 16px;
+    line-height: 1.33;
+    background: $accent-color;
+    color: #FFF;
+    text-shadow: none;
+    padding: 10px;
+    margin: 0 0 10px;
+  }
 
-.cl-article-intro {
-  font-size: 16px;
-  line-height: 1.33;
-  background: $accent-color;
-  color: #FFF;
-  text-shadow: none;
-  padding: 10px;
-  margin: 0 0 10px;
 }

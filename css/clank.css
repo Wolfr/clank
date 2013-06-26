@@ -495,8 +495,7 @@ a {
   width: -webkit-calc(100% - 20px);
   width: calc(100% - 20px);
 }
-
-.cl-article-intro {
+.cl-article .intro {
   font-size: 16px;
   line-height: 1.33;
   background: #15696e;
