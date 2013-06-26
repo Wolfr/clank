@@ -15,6 +15,7 @@
 .cl-form {
   // Fonts
   input, select, textarea, option {
+    font-size: 14px;
     font-family: Arial, sans-serif;
     [data-os="android"] & {
       font-family: Roboto, Droid Sans, sans-serif;
@@ -44,13 +45,12 @@
   select,
   textarea,
   .radio-list,
-  .checkbox-list,
-  .cl-btn-toolbar {
+  .checkbox-list  {
     margin: 5px 10px;
   }
   
   .cl-btn-toolbar {
-    margin: 5px 10px 10px;
+    margin: 5px 10px;
   }
 
   input[type="range"] {

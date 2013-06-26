@@ -126,8 +126,9 @@
 
   a {
     display: block;
-    padding: 10px;
+    padding: 0 10px;
     min-height: 44px;
+    line-height: 44px;
     font-weight: 700;
     color: #000;
     border: none;
@@ -178,38 +179,40 @@
 
 }
 
-.cl-table {
-  .cl-table-row:first-child {
-    .cl-table-cell:first-child {
-      @include border-top-left-radius($border-radius/2);
-    }
-    .cl-table-cell:last-child {
-      @include border-top-right-radius($border-radius/2);
-    }
-  }
-  .cl-table-row:only-child {
-    .cl-table-cell:first-child {
-      @include border-left-radius($border-radius/2);
-    }
-    .cl-table-cell:last-child {
-      @include border-right-radius($border-radius/2);
-    }
-  }
-  .cl-table-row:last-child {
-    .cl-table-cell:first-child {
-      @include border-bottom-left-radius($border-radius/2);
-    }
-    .cl-table-cell:last-child {
-      @include border-bottom-right-radius($border-radius/2);
-    }
-  }
+@if ($border-radius) {
 
+  .cl-table {
+    .cl-table-row:first-child {
+      .cl-table-cell:first-child {
+        @include border-top-left-radius($border-radius/2);
+      }
+      .cl-table-cell:last-child {
+        @include border-top-right-radius($border-radius/2);
+      }
+    }
+    .cl-table-row:only-child {
+      .cl-table-cell:first-child {
+        @include border-left-radius($border-radius/2);
+      }
+      .cl-table-cell:last-child {
+        @include border-right-radius($border-radius/2);
+      }
+    }
+    .cl-table-row:last-child {
+      .cl-table-cell:first-child {
+        @include border-bottom-left-radius($border-radius/2);
+      }
+      .cl-table-cell:last-child {
+        @include border-bottom-right-radius($border-radius/2);
+      }
+    }
+
+  }
 }
 
 // Control to view all items
-// @todo scope this
 
-.view-all {
+.cl-view-all {
   @include pie-clearfix;
   @include table-cell-skin;
 

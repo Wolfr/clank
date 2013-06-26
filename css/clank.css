@@ -49,19 +49,393 @@ a {
 /* ==========================================================================
    OS Chrome
    ========================================================================== */
-html, body {
+/* ==========================================================================
+   iOS system font
+   ========================================================================== */
+@font-face {
+  font-family: "ios";
+  src: url("../scss/clank/icon-fonts/ios/ios.eot");
+  src: url("../scss/clank/icon-fonts/ios/ios.eot?#iefix") format("embedded-opentype"), url("../scss/clank/icon-fonts/ios/ios.woff") format("woff"), url("../scss/clank/icon-fonts/ios/ios.ttf") format("truetype"), url("../scss/clank/icon-fonts/ios/ios.svg#ios") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-ios-alarm:before,
+.icon-ios-arrow-right:before,
+.icon-ios-battery:before,
+.icon-ios-locate:before,
+.icon-ios-lock:before,
+.icon-ios-square:before {
+  font-family: "ios";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.icon-ios-alarm:before {
+  content: "\f100";
+}
+
+.icon-ios-arrow-right:before {
+  content: "\f101";
+}
+
+.icon-ios-battery:before {
+  content: "\f102";
+}
+
+.icon-ios-locate:before {
+  content: "\f103";
+}
+
+.icon-ios-lock:before {
+  content: "\f104";
+}
+
+.icon-ios-square:before {
+  content: "\f105";
+}
+
+/* ==========================================================================
+   Android system font
+   ========================================================================== */
+@font-face {
+  font-family: "android";
+  src: url("../scss/clank/icon-fonts/android/android.eot");
+  src: url("../scss/clank/icon-fonts/android/android.eot?#iefix") format("embedded-opentype"), url("../scss/clank/icon-fonts/android/android.woff") format("woff"), url("../scss/clank/icon-fonts/android/android.ttf") format("truetype"), url("../scss/clank/icon-fonts/android/android.svg#android") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-android-battery-colored:before,
+.icon-android-battery:before,
+.icon-android-network:before,
+.icon-android-system-apps:before,
+.icon-android-system-back:before,
+.icon-android-system-home:before,
+.icon-android-wifi:before {
+  font-family: "android";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.icon-android-battery-colored:before {
+  content: "\f100";
+}
+
+.icon-android-battery:before {
+  content: "\f101";
+}
+
+.icon-android-network:before {
+  content: "\f102";
+}
+
+.icon-android-system-apps:before {
+  content: "\f103";
+}
+
+.icon-android-system-back:before {
+  content: "\f104";
+}
+
+.icon-android-system-home:before {
+  content: "\f105";
+}
+
+.icon-android-wifi:before {
+  content: "\f106";
+}
+
+/* Shared
+   ========================================================================== */
+.cl-ios-status,
+.cl-android-status {
+  font-size: 13px;
+  overflow: hidden;
+  height: 20px;
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  line-height: 20px;
+  max-height: 20px;
+  white-space: nowrap;
+  padding: 0 4px;
+}
+.cl-ios-status > span:first-child,
+.cl-android-status > span:first-child {
+  float: left;
+}
+.cl-ios-status > span:last-child,
+.cl-android-status > span:last-child {
+  float: right;
+}
+.cl-ios-status > span:last-child span,
+.cl-android-status > span:last-child span {
+  line-height: 20px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+}
+
+/* iOS only
+   ========================================================================== */
+.cl-ios-status {
+  font-weight: 700;
+  font-family: Helvetica;
+  height: 20px;
+}
+.cl-ios-status .clock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+/* Reception (iOS)
+   ========================================================================== */
+.cl-ios-status .signals {
+  font-size: 0;
+  margin-right: 3px;
+}
+.cl-ios-status .signals span {
+  width: 3px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: bottom;
+  margin-right: 1px;
+  position: relative;
+  bottom: 10px;
+  background: #FFF;
+}
+.cl-ios-status .signals .signal1 {
+  height: 4px;
+}
+.cl-ios-status .signals .signal2 {
+  height: 5px;
+}
+.cl-ios-status .signals .signal3 {
+  height: 6.5px;
+}
+.cl-ios-status .signals .signal4 {
+  height: 8px;
+}
+.cl-ios-status .signals .signal5 {
+  height: 10px;
+}
+
+/* Battery icon ios
+   ========================================================================== */
+.icon-ios-battery {
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+  top: -1px;
+  height: 20px;
+  max-height: 20px;
+  margin-left: 4px;
+}
+
+/* Android only
+   ========================================================================== */
+.cl-android-status {
+  font-family: Roboto, sans-serif;
+  background: #000;
+  color: #FFF;
+  height: 24px;
+  line-height: 24px;
+}
+
+.cl-android-software-buttons {
+  background: #000;
+  color: #FFF;
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+}
+.cl-android-software-buttons > span {
+  width: 100%;
+}
+.cl-android-software-buttons span span {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.4;
+}
+.cl-android-software-buttons span span:hover {
+  opacity: 1;
+  transition: 0.25s 0 opacity ease-in-out;
+}
+[data-device="galaxynexus-landscape"] .cl-android-software-buttons {
+  top: 0;
+  right: 0;
+  width: 40px;
   height: 100%;
+}
+[data-device="galaxynexus-landscape"] .cl-android-software-buttons > span span {
+  width: 100%;
+  height: 33.3%;
+  line-height: 122px;
+}
+[data-device$=portrait] .cl-android-software-buttons, [data-device="nexus7-landscape"] .cl-android-software-buttons {
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .cl-phone-wrap {
-  width: 100%;
-  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-y: hidden;
+  position: relative;
 }
-
-.cl-ios-status,
-.cl-android-status,
-.cl-android-software-buttons {
-  display: none;
+.cl-phone-wrap[data-device="iphone4-portrait"] {
+  width: 396px;
+  height: 734px;
+  background: url(../../images/portrait/iphone4.png) no-repeat 0 0;
+  padding: 127px 0 0 2px;
+}
+.cl-phone-wrap[data-device="iphone4-portrait"] .cl-device-body {
+  width: 320px;
+  height: 480px;
+}
+.cl-phone-wrap[data-device="iphone4-landscape"] {
+  padding: 37px 0 0;
+  width: 734px;
+  height: 396px;
+  background: url(../../images/landscape/iphone4.png) no-repeat 0 0;
+}
+.cl-phone-wrap[data-device="iphone4-landscape"] .cl-device-body {
+  width: 480px;
+  height: 320px;
+}
+.cl-phone-wrap[data-device="iphone5-portrait"] {
+  width: 396px;
+  height: 822px;
+  background: url(../../images/portrait/iphone5.png) no-repeat 0 0;
+  padding: 127px 0 0 0;
+}
+.cl-phone-wrap[data-device="iphone5-portrait"] .cl-device-body {
+  width: 320px;
+  height: 568px;
+}
+.cl-phone-wrap[data-device="iphone5-landscape"] {
+  padding: 38px 0 0;
+  width: 822px;
+  height: 396px;
+  background: url(../../images/landscape/iphone5.png) no-repeat 0 0;
+}
+.cl-phone-wrap[data-device="iphone5-landscape"] .cl-device-body {
+  width: 568px;
+  height: 320px;
+}
+.cl-phone-wrap[data-device="galaxynexus-portrait"] {
+  width: 434px;
+  height: 849px;
+  background: url(../../images/portrait/galaxy-nexus.png) no-repeat 0 0;
+  padding: 107px 0 0;
+}
+.cl-phone-wrap[data-device="galaxynexus-portrait"] .cl-device-body {
+  width: 366px;
+  height: 650px;
+}
+.cl-phone-wrap[data-device="galaxynexus-portrait"] .cl-device-body .cl-page {
+  position: relative;
+  height: 590px;
+}
+.cl-phone-wrap[data-device="galaxynexus-landscape"] {
+  padding: 34px 40px 0 0;
+  width: 849px;
+  height: 434px;
+  background: url(../../images/landscape/galaxy-nexus.png) no-repeat 0 0;
+}
+.cl-phone-wrap[data-device="galaxynexus-landscape"] .cl-android-status {
+  width: 610px;
+}
+.cl-phone-wrap[data-device="galaxynexus-landscape"] .cl-page {
+  width: 610px;
+  height: 346px;
+  position: relative;
+}
+.cl-phone-wrap[data-device="galaxynexus-landscape"] .cl-device-body {
+  width: 650px;
+  height: 366px;
+  position: relative;
+  right: -27px;
+}
+.cl-phone-wrap[data-device="ipad3-portrait"] {
+  width: 970px;
+  height: 1260px;
+  background: url(../../images/portrait/ipad3.png) no-repeat 0 0;
+  padding: 118px 0 0;
+}
+.cl-phone-wrap[data-device="ipad3-portrait"] .cl-device-body {
+  width: 768px;
+  height: 1024px;
+}
+.cl-phone-wrap[data-device="ipad3-landscape"] {
+  padding: 101px 0 0;
+  width: 1260px;
+  height: 970px;
+  background: url(../../images/landscape/ipad3.png) no-repeat 0 0;
+}
+.cl-phone-wrap[data-device="ipad3-landscape"] .cl-device-body {
+  width: 1024px;
+  height: 768px;
+}
+.cl-phone-wrap[data-device="nexus7-portrait"] {
+  width: 970px;
+  height: 1260px;
+  background: url(../../images/portrait/nexus7.png) no-repeat center center;
+  padding: 134px 0 0;
+  background-size: contain;
+}
+.cl-phone-wrap[data-device="nexus7-portrait"] .cl-device-body {
+  width: 610px;
+  height: 977px;
+}
+.cl-phone-wrap[data-device="nexus7-portrait"] .cl-device-body .cl-page {
+  height: 913px;
+}
+.cl-phone-wrap[data-device="nexus7-landscape"] {
+  width: 1260px;
+  height: 970px;
+  background: url(../../images/landscape/nexus7.png) no-repeat center center;
+  background-size: contain;
+  padding: 176px 0 0;
+}
+.cl-phone-wrap[data-device="nexus7-landscape"] .cl-device-body {
+  width: 977px;
+  height: 614px;
+  position: relative;
+  right: 6px;
+}
+.cl-phone-wrap[data-device="nexus7-landscape"] .cl-device-body .cl-page {
+  position: relative;
+  height: 554px;
+  width: 977px;
 }
 
 /* ==========================================================================
@@ -125,6 +499,11 @@ html, body {
   word-wrap: break-word;
   height: 100%;
   width: 100%;
+  height: -moz-calc(100% - 20px);
+  height: -o-calc(100% - 20px);
+  height: -webkit-calc(100% - 20px);
+  height: calc(100% - 20px);
+  /* minus status bar height */
   -webkit-font-smoothing: antialiased;
 }
 
