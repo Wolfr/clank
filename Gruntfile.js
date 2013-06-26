@@ -25,7 +25,17 @@ module.exports = function(grunt) {
               rename: function(dest, src) {
                 return dest + src.substring(0, src.indexOf('-')) + '.html';
               }
+          },
+          {
+              expand:true,
+              cwd:'',
+              dest:'build/',
+              src:['config-build.rb'],
+              rename: function(dest, src) {
+                return dest + src.substring(0, src.indexOf('-')) + '.rb';
+              }
           }
+          
         ]
       }
     }
