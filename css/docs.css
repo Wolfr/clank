@@ -1721,8 +1721,9 @@ body {
 }
 
 .cl-demo-list {
-  font-size: 14px;
+  font-size: 13px;
   font-family: Arial, sans-serif;
+  overflow: hidden;
   background: #FFF;
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   height: 100%;
