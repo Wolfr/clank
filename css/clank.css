@@ -1,6 +1,12 @@
 /* ==========================================================================
    Clank CSS framework
    ========================================================================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -8,10 +14,13 @@ a {
 /* ==========================================================================
    Device wraps
    ========================================================================== */
-.cl-phone-wrap[data-os="ios"] .cl-device-body {
+/* No device wraps 
+   ========================================================================== */
+*[data-os="ios"] .cl-device-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.cl-phone-wrap[data-os="android"] .cl-device-body {
+
+*[data-os="android"] .cl-device-body {
   font-family: 'Roboto', 'Droid Sans', sans-serif;
 }
 
@@ -36,6 +45,8 @@ a {
   margin: 0 auto;
 }
 
+/* Device wraps 
+   ========================================================================== */
 .cl-phone-wrap {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

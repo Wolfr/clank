@@ -2,13 +2,15 @@
    Device wraps
    ========================================================================== */
 
-.cl-phone-wrap {
-  &[data-os="ios"] .cl-device-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-  &[data-os="android"] .cl-device-body {
-    font-family: 'Roboto', 'Droid Sans', sans-serif;
-  }
+/* No device wraps 
+   ========================================================================== */
+
+*[data-os="ios"] .cl-device-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+*[data-os="android"] .cl-device-body {
+  font-family: 'Roboto', 'Droid Sans', sans-serif;
 }
 
 .cl-device-body * {
@@ -31,6 +33,9 @@
     margin: 0 auto;
   }
 }
+
+/* Device wraps 
+   ========================================================================== */
 
 .cl-phone-wrap {
   @include box-sizing(border-box);
