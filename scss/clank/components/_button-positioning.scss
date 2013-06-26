@@ -57,5 +57,8 @@
     &:last-child {
       margin-left: 5px;
     }
+    &:only-child {
+      margin: 0;
+    }
   }
 }
