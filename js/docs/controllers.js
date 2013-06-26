@@ -74,9 +74,9 @@ function DeviceCtrl($scope, $cookieStore) {
   
   // If a cookie with saved docs visibility exists apply it
   if ($cookieStore.get('docsVisible')) {
-    $scope.docsVisible = true;
+    $scope.docsVisible = $cookieStore.get('docsVisible');
   } else {
-    $scope.docsVisible = false;
+    $scope.docsVisible = true;
   }
 
   // Cookie for size
