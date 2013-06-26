@@ -17,7 +17,32 @@
 /* Content */
 
 .cl-content {
-  background: #EEE;
+  background: $background-color;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+
+  height: 100%;
+
+  @include calc(height, "100% - 44px");
+  [data-os="android"] & {
+    @include calc(height, "100% - 50px");
+  }
+
+  &.cl-content__has-footer {
+    @include calc(height, "100% - 88px");
+    [data-os="android"] & {
+      @include calc(height, "100% - 100px");
+    }
+  }
+
+  &.cl-content__full-height {
+    .full-height {
+      height: 100%;
+    }
+  }
 }
 
 /* Hide scrollbars in firefox */

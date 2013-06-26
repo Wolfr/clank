@@ -32,32 +32,6 @@
   }
 }
 
-.cl-content {
-  height: 100%;
-  @include calc(height, "100% - 44px");
-  [data-os="android"] & {
-    @include calc(height, "100% - 50px");
-  }
-  &.cl-content__has-footer {
-    @include calc(height, "100% - 88px");
-    [data-os="android"] & {
-      @include calc(height, "100% - 100px");
-    }
-  }
-  overflow-x: hidden;
-  overflow-y: scroll;
-  .cl-content-inner {
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-  }
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  .full-height {
-    height: 100%;
-  }
-}
-
 .cl-phone-wrap {
   @include box-sizing(border-box);
   margin: 0 auto;
