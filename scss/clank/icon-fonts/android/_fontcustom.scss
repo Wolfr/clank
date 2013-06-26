@@ -1,40 +1,44 @@
-/* ==========================================================================
-   Android system font
-   ========================================================================== */
+@if ($device-wraps) {
 
-@font-face {
-  font-family: "android";
-  src: url("../scss/clank/icon-fonts/android/android.eot");
-  src: url("../scss/clank/icon-fonts/android/android.eot?#iefix") format("embedded-opentype"),
-       url("../scss/clank/icon-fonts/android/android.woff") format("woff"),
-       url("../scss/clank/icon-fonts/android/android.ttf") format("truetype"),
-       url("../scss/clank/icon-fonts/android/android.svg#android") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  /* ==========================================================================
+     Android system font
+     ========================================================================== */
+
+  @font-face {
+    font-family: "android";
+    src: url("../scss/clank/icon-fonts/android/android.eot");
+    src: url("../scss/clank/icon-fonts/android/android.eot?#iefix") format("embedded-opentype"),
+         url("../scss/clank/icon-fonts/android/android.woff") format("woff"),
+         url("../scss/clank/icon-fonts/android/android.ttf") format("truetype"),
+         url("../scss/clank/icon-fonts/android/android.svg#android") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .icon-android-battery-colored:before,
+  .icon-android-battery:before,
+  .icon-android-network:before,
+  .icon-android-system-apps:before,
+  .icon-android-system-back:before,
+  .icon-android-system-home:before,
+  .icon-android-wifi:before {
+    font-family: "android";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+
+  .icon-android-battery-colored:before { content: "\f100"; }
+  .icon-android-battery:before { content: "\f101"; }
+  .icon-android-network:before { content: "\f102"; }
+  .icon-android-system-apps:before { content: "\f103"; }
+  .icon-android-system-back:before { content: "\f104"; }
+  .icon-android-system-home:before { content: "\f105"; }
+  .icon-android-wifi:before { content: "\f106"; }
+
 }
-
-.icon-android-battery-colored:before,
-.icon-android-battery:before,
-.icon-android-network:before,
-.icon-android-system-apps:before,
-.icon-android-system-back:before,
-.icon-android-system-home:before,
-.icon-android-wifi:before {
-  font-family: "android";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  text-decoration: inherit;
-}
-
-.icon-android-battery-colored:before { content: "\f100"; }
-.icon-android-battery:before { content: "\f101"; }
-.icon-android-network:before { content: "\f102"; }
-.icon-android-system-apps:before { content: "\f103"; }
-.icon-android-system-back:before { content: "\f104"; }
-.icon-android-system-home:before { content: "\f105"; }
-.icon-android-wifi:before { content: "\f106"; }

@@ -3,16 +3,15 @@
    ========================================================================== */
 
 @import "compass";
-
-@import "clank/base";
 @import "clank/vars";
 @import "clank/mixins";
 
-// Devices
-@import "clank/device_wraps";
-@import "clank/os_chrome";
+@import "clank/base";
 
-// Device content
+// Devices
+@import "clank/components/device_wraps";
+
+// Components
 @import "clank/components/article";
 @import "clank/components/base-layout";
 @import "clank/components/buttons";
@@ -28,7 +27,13 @@
 @import "clank/components/help-txt";
 @import "clank/components/page-animations";
 
-// Icon fonts
-@import "clank/icon-fonts/ios/fontcustom"; // System icons iOS
-@import "clank/icon-fonts/android/fontcustom"; // System Android
-@import "clank/icon-fonts/app/fontcustom"; // App specific icons
+
+/* ==========================================================================
+   Custom application CSS
+   ========================================================================== */
+
+// App specific icons
+@import "clank/icon-fonts/app/fontcustom"; 
+
+// App specific screens (list your custom CSS per screen here)
+@import "clank/screens/index"; // Empty sample file

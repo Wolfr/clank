@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Device wraps
+   ========================================================================== */
+
+// Load OS chrome
+@import "clank/components/os_chrome";
+
+@if ($device-wraps) {
+
+  .cl-phone-wrap {
+    @include box-sizing(border-box);
+    margin: 0 auto;
+    overflow-y: hidden;
+    position: relative;
+    &[data-device="iphone4-portrait"] {
+      width: 396px;
+      height: 734px;
+      background: url(../../images/portrait/iphone4.png) no-repeat 0 0;
+      padding: 127px 0 0 2px;
+      .cl-device-body {
+        width: 320px;
+        height: 480px;
+      }
+    }
+    &[data-device="iphone4-landscape"] {
+      padding: 37px 0 0;
+      width: 734px;
+      height: 396px;
+      background: url(../../images/landscape/iphone4.png) no-repeat 0 0;
+      .cl-device-body {
+        width: 480px;
+        height: 320px;
+      }
+    }
+    &[data-device="iphone5-portrait"] {
+      width: 396px;
+      height: 822px;
+      background: url(../../images/portrait/iphone5.png) no-repeat 0 0;
+      padding: 127px 0 0 0;
+      .cl-device-body {
+        width: 320px;
+        height: 568px;
+      }
+    }
+    &[data-device="iphone5-landscape"] {
+      padding: 38px 0 0;
+      width: 822px;
+      height: 396px;
+      background: url(../../images/landscape/iphone5.png) no-repeat 0 0;
+      .cl-device-body {
+        width: 568px;
+        height: 320px;
+      }
+    }
+    &[data-device="galaxynexus-portrait"] {
+      width: 434px;
+      height: 849px;
+      background: url(../../images/portrait/galaxy-nexus.png) no-repeat 0 0;
+      padding: 107px 0 0;
+      .cl-device-body {
+        width: 366px;
+        height: 650px;
+        .cl-page {
+          position: relative;
+          height: 590px;
+        }
+      }
+    }
+    &[data-device="galaxynexus-landscape"] {
+      padding: 34px 40px 0 0;
+      width: 849px;
+      height: 434px;
+      background: url(../../images/landscape/galaxy-nexus.png) no-repeat 0 0;
+      .cl-android-status {
+        width: 610px;
+      }
+      .cl-page {
+        width: 610px;
+        height: 346px;
+        position: relative;
+      }
+      .cl-device-body {
+        width: 650px;
+        height: 366px;
+        position: relative;
+        right: -27px;
+      }
+    }
+    &[data-device="ipad3-portrait"] {
+      width: 970px;
+      height: 1260px;
+
+      background: url(../../images/portrait/ipad3.png) no-repeat 0 0;
+      padding: 118px 0 0;
+      .cl-device-body {
+        width: 768px;
+        height: 1024px;
+      }
+    }
+    &[data-device="ipad3-landscape"] {
+      padding: 101px 0 0;
+      width: 1260px;
+      height: 970px;
+      background: url(../../images/landscape/ipad3.png) no-repeat 0 0;
+      .cl-device-body {
+        width: 1024px;
+        height: 768px;
+      }
+    }
+    &[data-device="nexus7-portrait"] {
+      width: 970px;
+      height: 1260px;
+      background: url(../../images/portrait/nexus7.png) no-repeat center center;
+      padding: 134px 0 0;
+      background-size: contain;
+      .cl-device-body {
+        width: 610px;
+        height: 977px;
+        .cl-page {
+          height: 913px;
+        }
+      }
+    }
+    &[data-device="nexus7-landscape"] {
+      width: 1260px;
+      height: 970px;
+      background: url(../../images/landscape/nexus7.png) no-repeat center center;
+      background-size: contain;
+      padding: 176px 0 0;
+      .cl-device-body {
+        width: 977px;
+        height: 614px;
+        position: relative;
+        right: 6px;
+        .cl-page {
+          position: relative;
+          height: 554px;
+          width: 977px;
+        }
+      }
+    }
+  }
+
+} @else {
+
+  // Device wraps set to false
+  
+  // Make sure we extend html and body to full height so our background extends
+  html, body {
+    height: 100%;
+  }
+  
+  .cl-phone-wrap {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cl-ios-status,
+  .cl-android-status,
+  .cl-android-software-buttons {
+    display: none;
+  }
+
+}

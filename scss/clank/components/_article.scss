@@ -4,6 +4,9 @@
 
 .cl-article {
 
+  // Set global line height within articles
+  line-height: 1.4;
+  
   color: #333;
   @include text-shadow-white;
   
@@ -13,7 +16,6 @@
 
   p {
     margin: 10px; /* make use of collapsing margins */
-    line-height: 1.33;
     & + p {
       margin-top: 0;
     }
@@ -52,6 +54,7 @@
 
 .cl-article-intro {
   font-size: 16px;
+  line-height: 1.33;
   background: $accent-color;
   color: #FFF;
   text-shadow: none;

@@ -1,9 +1,43 @@
+/* ==========================================================================
+  Base
+   ========================================================================== */
+
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 a {
   text-decoration: none;
+}
+
+
+*[data-os="ios"] .cl-device-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+*[data-os="android"] .cl-device-body {
+  font-family: 'Roboto', 'Droid Sans', sans-serif;
+}
+
+.cl-device-body * {
+  @include box-sizing(border-box);
+}
+
+.cl-device-body {
+  padding: 0;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  & > .cl-bar-title,
+  & > .cl-content,
+  & > .cl-bar-footer {
+    margin: 0 auto;
+  }
 }
