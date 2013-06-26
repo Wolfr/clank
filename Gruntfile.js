@@ -13,6 +13,7 @@ module.exports = function(grunt) {
           { expand: true, src: ['js/clank/**'], dest: 'build/'}, // includes files in path and its subdirs
           { expand: true, src: ['scss/clank/**'], dest: 'build/'},
           { expand: true, src: ['scss/clank.scss'], dest: 'build/'},
+          { expand: true, src: ['README.md'], dest: 'build/'},
           { expand: true, src: ['css/clank.css'], dest: 'build/'},
           { expand: true, src: ['components/jquery/**'], dest: 'build/'},
           { expand: true, src: ['components/prefix-free/**'], dest: 'build/'},
