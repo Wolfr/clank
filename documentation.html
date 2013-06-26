@@ -14,7 +14,6 @@
   <div id="docs">
     <div id="docs-nav">
       <div data-spy="affix" data-offset-top="145">
-        <h4>General</h4>
         <ul class="nav nav-tabs nav-stacked">
           <li><a href="#what-is">What is Clank?</a></li>
           <li><a href="#why">Why Clank?</a></li>
@@ -22,6 +21,10 @@
           <li><a href="#device-wraps">Device wraps</a></li>
           <li><a href="#support">Browser support</a></li>
           <li><a href="#scss-conventions">(S)CSS conventions</a></li>
+          <li><a href="#templates">Starter templates</a></li>
+        </ul>
+        <h4>Future</h4>
+        <ul class="nav nav-tabs nav-stacked">
           <li><a href="#component-includes">Component includes</a></li>
           <li><a href="#generators">Generators</a></li>
         </ul>
@@ -93,12 +96,6 @@ $decorational-shadows: false;
   
         <hr>
   
-        <h3 id="component-includes">Component includes</h3>
-
-        <p><em>Component includes is a planned feature where you can swap components in your prototypes depending on the operating system. E.g. for your Android application you might want to use Android style tabs, but the same functionality in the iOS version uses a segmented control.</em></p>
-
-        <hr>
-  
         <h3 id="browser-support">Browser support</h3>
         <p>It's not advisable to use Clank for production work since it only supports new and modern browsers like Google Chrome, Firefox and Safari. A lot of the techniques used in Clank depend on newer CSS properties such as Flexbox. For now, Clank is a prototyping tool and testbed for modern web technologies.</p>
 
@@ -134,25 +131,184 @@ $decorational-shadows: false;
         
         <p>Inspired by <a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS</a>.</p>
 
-        <hr />
-      
+        <hr>
+        
+        <h3 id="templates">Starter templates</h3>
+
+        <p>These are some templates to help you get started. Copy/paste this code in the body of your .html files to see the results.</p>
+        
+        <h4>Empty iOS styled page</h4>
+
+{% highlight html %}
+<div data-os="ios">
+  <!-- Change data-os to android to switch to an Android look -->
+  <div class="cl-page">
+    <div class="cl-bar-title">
+      <h1 class="cl-title">Getting started!</h1>
+    </div>
+    <div class="cl-content">
+      <div class="cl-article">
+        <p>Put your article content here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+        
+        <h4>Page with iPhone 4 device wrap</h4>
+        
+        <p>Make sure <code>$device-wraps</code> is set to <code>true</code>.
+
+{% highlight html %}
+<div class="cl-device-frame">
+  <div class="cl-phone-wrap" data-os="ios" data-device="iphone4-portrait">
+    <div class="cl-device-body">
+      <div class="cl-ios-status">
+        <span>
+        <span class="signals">
+          <span class="signal1"></span>
+          <span class="signal2"></span>
+          <span class="signal3"></span>
+          <span class="signal4"></span>
+          <span class="signal5"></span>
+        </span>
+        <span class="carrier">Bell</span>
+        </span>
+        <span class="clock">20:49</span>
+        <span>
+        <span>3G</span>
+        <span class="icon-ios-alarm"></span>
+        <span class="icon-ios-locate"></span>
+        <span class="icon-ios-lock"></span>
+        <span class="icon-ios-battery"></span>
+        </span>
+      </div>
+
+      <div class="cl-page">
+        <div class="cl-bar-title">
+          <h1 class="cl-title">App title</h1>
+        </div>
+        <div class="cl-content">
+          <!-- Content here -->
+        </div>
+        <div class="cl-bar-footer">
+          <!-- Footer content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+        <h4>Page with galaxy nexus device wrap</h4>
+        
+        <p>Make sure <code>$device-wraps</code> is set to <code>true</code>.
+
+{% highlight html %}
+<div class="cl-device-frame">
+  <div class="cl-phone-wrap" data-os="android" data-device="galaxynexus-portrait">
+    <div class="cl-device-body">
+      <div class="cl-android-status">
+        <span>
+        <span class="icon-android-battery"></span>
+        <span class="icon-android-network"></span>
+        <span class="icon-android-wifi"></span>
+        <span>20:49</span>
+        </span>
+      </div>
+    
+      <div class="cl-android-software-buttons">
+        <span>
+        <span class="icon-android-system-back"></span>
+        <span class="icon-android-system-home"></span>
+        <span class="icon-android-system-apps"></span>
+        </span>
+      </div>
+
+      <div class="cl-page">
+        <div class="cl-bar-title">
+          <h1 class="cl-title">App title</h1>
+        </div>
+        <div class="cl-content">
+          <!-- Content here -->
+        </div>
+        <div class="cl-bar-footer">
+          <!-- Footer content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+        <hr>
+
+        <h2>Clank: future plans</h2>
+        
+        <p>These are some of the future plans, most are related to a better workflow. If you are interested in working on these check out the <a href="https://github.com/Wolfr/clank/issues">issues on Github</a>.</p>
+
+        <h3 id="grunt">Grunt + Jekyll based workflow</h3>
+        
+        <p>A grunt workflow for Clank projects with automatic tasks:</p>
+        
+        <table class="table table-bordered table-zebra">
+          <tr>
+            <th>
+              <strong>grunt</strong>
+            </th>
+            <td>
+              Default action - compiles Compass, Jekyll, does automatic Livereload. This is what you to use the work on the application.
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <strong>grunt dist</strong>
+            </th>
+            <td>
+              Creates a build for distribution - optimizes the CSS files and images. Concatenates and minified the JS. Allows you to generate a CSS file targetd at a single platform (for CSS optimization purposes)
+            </td>
+          </tr>
+        </table>
+        
+
+        <h3 id="autoFont">Automatic icon fonts</h3>
+        
+        <p>Using <a href="http://fontcustom.com/">fontcustom</a> and a <a href="http://gruntjs.com/">grunt</a> workflow, any .svg files within a specific folder will automatically be transformed to an icon font you can use in your Clank projects.</p>
+
+        <hr>
+
         <h3 id="generators">Generators</h3>
 
         <p><em>Note that generators are a work in progress and they do not exist yet. If you are good at bash scripting and interested in working in generators, get in touch</em>.</p>
-      
+
         <h4>What is a generator?</h4>
         <p>A generator is simply a bash script that generates code for you. This makes it easy to, for example, add new screens or components to your project.</p>
-        <h4>Available generators</h4>
-        <ul class="bordered-list">
-          <li>
-            <p><strong>generate-page.sh</strong></p>
-            <p>Creates a new page.</p>
-          </li>
-          <li>
-            <p><strong>generate-component.sh</strong></p>
-            <p>Creates a new component.</p>
-          </li>
-        </ul>
+
+        <h4>Possible generators</h4>
+        <table class="table table-bordered table-zebra">
+          <tr>
+            <th>
+              <strong>generate-page.sh</strong>
+            </th>
+            <td>
+              Creates a new page and its corresponding SCSS files.
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <strong>generate-component.sh</strong>
+            </th>
+            <td>
+              Creates a new component and its corresponding SCSS files.
+            </td>
+          </tr>
+        </table>
+        
+        <hr>
+        
+        <h3 id="component-includes">Component includes</h3>
+
+        <p><em>Component includes is a planned feature where you can swap components in your prototypes depending on the operating system. E.g. for your Android application you might want to use Android style tabs, but the same functionality in the iOS version uses a segmented control.</em></p>
 
       </article>
     </div>

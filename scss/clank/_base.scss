@@ -11,11 +11,11 @@ a {
   text-decoration: none;
 }
 
-*[data-os="ios"] .cl-device-body {
+[data-os="ios"] .cl-device-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-*[data-os="android"] .cl-device-body {
+[data-os="android"] .cl-device-body {
   font-family: 'Roboto', 'Droid Sans', sans-serif;
 }
 
