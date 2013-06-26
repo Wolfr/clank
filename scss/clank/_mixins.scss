@@ -33,81 +33,51 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
 }
 
-@mixin button-skin {
-  &,
-  &:link,
-  &:visited {
-    border: 1px solid darken($accent-color, 5%);
-    @if $accent-color-light {
-      color: darken($text-color, 5%);
-    } @else {
-      color: lighten($text-color-inverse, 20%);
-    }
-    @include border-radius($border-radius);
-    @if $accent-color-light {
-      color: darken($text-color, 5%);
-    } @else {
-      color: lighten($text-color-inverse, 20%);
-    }
-    @if $decorational-shadows {
-      @include box-shadow(0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.05));
-    }
-    @if $gradient {
-      @include gradient-vertical(lighten($accent-color, 15%), $accent-color);
-    } @else {
-      background: $accent-color;
-    }
-  }
-  &:hover,
-  &:active,
-  &:focus,
-  &.active {
-    @include box-shadow(none);
-    @if $gradient {
-      @include gradient-vertical(darken($accent-color, 5%), darken($accent-color, 15%));
-      @if $decorational-shadows {
-        @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
-      }
-    } @else {
-      background: darken($accent-color, 10%);
-    }
+@mixin determine-text-color($color) {
+  @if(lightness($color) <= 75%) {
+    color: lighten($text-color-inverse, 20%);
+    @include text-shadow-black;
+  } @else {
+    color: darken($text-color, 5%);
+    @include text-shadow-white;
   }
 }
 
-@mixin button-skin-primary {
+@mixin button-skin($color) {
   &,
   &:link,
   &:visited {
-    border: 1px solid darken($accent-color-primary, 10%);
-    @if $accent-color-light {
-      color: darken($text-color, 5%);
-    } @else {
-      color: lighten($text-color-inverse, 20%);
-    }
+    border: 1px solid darken($color, 5%);
     @include border-radius($border-radius);
-    color: lighten($text-color-inverse, 20%);
-    @if $gradient {
-      @include gradient-vertical(lighten($accent-color-primary, 15%), $accent-color-primary);
-    } @else {
-      background: $accent-color-primary;
+    @if $decorational-shadows {
+      @include box-shadow(0 1px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2));
     }
+    @if $gradient {
+      @include gradient-vertical(lighten($color, 15%),$color);
+    } @else {
+      background: $color;
+    }
+    @include determine-text-color($color);
   }
-  // Same as regular button
+}
+
+@mixin button-skin-hover($color) {
   &:hover,
   &:active,
   &:focus,
   &.active {
-    border: 1px solid darken($accent-color, 5%);
-    
-    @include box-shadow(none);
+    @if $decorational-shadows {
+      @include box-shadow(0 1px 0 rgba(0,0,0,0.2));
+    }
     @if $gradient {
-      @include gradient-vertical(darken($accent-color, 5%), darken($accent-color, 15%));
+      @include gradient-vertical(darken($color, 5%), darken($color, 15%));
       @if $decorational-shadows {
         @include box-shadow(inset 0 1px 0 rgba(0,0,0,0.15));
       }
     } @else {
-      background: darken($accent-color, 10%);
+      background: darken($color, 10%);
     }
+    @include determine-text-color($color);
   }
 }
 

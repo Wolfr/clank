@@ -18,7 +18,8 @@ $border-radius: 4px !default;
 
 $accent-color: #15696e !default; // Accent color is supposed to be something like purple, red, blue
 $accent-color-primary: if(lightness($accent-color) >= 50%, scale-saturation(scale-lightness($accent-color, -25%),25%), scale-saturation(scale-lightness($accent-color, 25%),25%));
-    
+$subtle-color: darken($background-color, 5%);
+
 $accent-color-light: false !default;
 $header-font-size: 20px !default;
 

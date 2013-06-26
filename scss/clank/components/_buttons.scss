@@ -3,7 +3,8 @@
    ========================================================================== */
 
 .cl-btn {
-  @include button-skin;
+  @include button-skin($accent-color);
+  @include button-skin-hover($accent-color);
 
   display: block;
   font-weight: 700;
@@ -22,13 +23,6 @@
 
   [data-os="android"] & {
     line-height: 40px;
-  }
-
-  @if $text-shadows {
-    @include text-shadow-black;
-    @if $accent-color-light {
-      @include text-shadow-white;
-    }
   }
 
   /* Bar buttons */
@@ -59,5 +53,12 @@
 
 /* Primary buttons */
 .cl-btn-primary {
-  @include button-skin-primary;
+  @include button-skin($accent-color-primary);
+  @include button-skin-hover($accent-color);
+}
+
+/* Subtle buttons */
+.cl-btn-subtle {
+  @include button-skin($subtle-color);
+  @include button-skin-hover($accent-color);
 }
