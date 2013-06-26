@@ -9,8 +9,8 @@
 @import "clank/mixins";
 
 // Devices
-@import "clank/device_wraps";
-@import "clank/os_chrome";
+@import "clank/components/device_wraps";
+@import "clank/components/os_chrome";
 
 // Device content
 @import "clank/components/article";
