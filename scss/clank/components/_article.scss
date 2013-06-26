@@ -7,7 +7,7 @@
   // Set global line height within articles
   line-height: 1.4;
   
-  color: #333;
+  color: $dark-color;
   @include text-shadow-white;
   
   img {

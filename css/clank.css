@@ -1,6 +1,23 @@
 /* ==========================================================================
    Clank CSS framework
    ========================================================================== */
+/**
+ * Device wraps
+ * Set this to true if you are using device frames i.e. like the demo at getclank.com
+ */
+/**
+ * Operating system defaults
+ * Used to determine the sizing of elements
+ */
+/**
+ * Colors
+ * Quickly change the colors of your app using these variables
+ * Note that a "light text on dark background" scheme is not fully supported yet
+ */
+/**
+ * Stylistic choices
+ * Quickly change the style of your app using these variables
+ */
 /* ==========================================================================
   Base
    ========================================================================== */
@@ -443,7 +460,7 @@ a {
    ========================================================================== */
 .cl-article {
   line-height: 1.4;
-  color: #333;
+  color: #333333;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .cl-article img {
@@ -509,7 +526,7 @@ a {
 
 /* Content */
 .cl-content {
-  background: #e6e6e6;
+  background: #eeeeee;
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
@@ -604,8 +621,8 @@ a {
 .cl-bar-text {
   margin: 0;
   padding: 0;
-  line-height: 44px;
   color: white;
+  line-height: 44px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
 [data-os="android"] .cl-bar-text {
@@ -632,9 +649,9 @@ a {
   font-weight: 700;
   white-space: nowrap;
   text-align: center;
-  line-height: 44px;
   color: white;
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
+  line-height: 44px;
 }
 [data-os="android"] .cl-title {
   line-height: 50px;
@@ -665,7 +682,7 @@ a {
   content: " ";
   height: 1px;
   width: 100%;
-  background: #1d9299;
+  background: #21a6ae;
   position: absolute;
   top: 0;
   left: 0;
@@ -676,7 +693,7 @@ a {
   content: " ";
   height: 1px;
   width: 100%;
-  background: black;
+  background: #092c2e;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -804,7 +821,7 @@ a {
 
 /* Subtle buttons */
 .cl-btn-subtle, .cl-btn-subtle:link, .cl-btn-subtle:visited {
-  border: 1px solid #cdcdcd;
+  border: 1px solid #d4d4d4;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -813,15 +830,15 @@ a {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  background-color: #efefef;
-  background-image: -moz-linear-gradient(top, white, #d9d9d9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(top, white, #d9d9d9);
-  background-image: -o-linear-gradient(top, white, #d9d9d9);
-  background-image: linear-gradient(to bottom, #ffffff, #d9d9d9);
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, white, #e1e1e1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e1e1e1));
+  background-image: -webkit-linear-gradient(top, white, #e1e1e1);
+  background-image: -o-linear-gradient(top, white, #e1e1e1);
+  background-image: linear-gradient(to bottom, #ffffff, #e1e1e1);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
-  color: #262626;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE1E1E1', GradientType=0);
+  color: black;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .cl-btn-subtle:hover, .cl-btn-subtle:active, .cl-btn-subtle:focus, .cl-btn-subtle.active {
@@ -948,6 +965,9 @@ a {
 .cl-btn-toolbar .cl-btn:last-child {
   margin-left: 5px;
 }
+.cl-btn-toolbar .cl-btn:only-child {
+  margin: 0;
+}
 
 /* ==========================================================================
    Forms
@@ -961,6 +981,7 @@ a {
 /* Basic input types
    ========================================================================== */
 .cl-form input, .cl-form select, .cl-form textarea, .cl-form option {
+  font-size: 14px;
   font-family: Arial, sans-serif;
 }
 [data-os="android"] .cl-form input, [data-os="android"] .cl-form select, [data-os="android"] .cl-form textarea, [data-os="android"] .cl-form option {
@@ -987,12 +1008,11 @@ a {
 .cl-form select,
 .cl-form textarea,
 .cl-form .radio-list,
-.cl-form .checkbox-list,
-.cl-form .cl-btn-toolbar {
+.cl-form .checkbox-list {
   margin: 5px 10px;
 }
 .cl-form .cl-btn-toolbar {
-  margin: 5px 10px 10px;
+  margin: 5px 10px;
 }
 .cl-form input[type="range"] {
   width: -moz-calc(100% - 20px);
@@ -1227,7 +1247,7 @@ a {
 }
 .cl-data-table th {
   font-weight: 700;
-  color: #000;
+  color: #333333;
 }
 .cl-data-table thead th {
   vertical-align: bottom;
@@ -1589,7 +1609,7 @@ a {
   margin: 10px 10px 0 20px;
   font-size: 12px;
   font-weight: 700;
-  color: #666;
+  color: #666666;
 }
 .cl-table-title + .cl-table, .cl-table-title-extended + .cl-table, .cl-table-title + .cl-table__extended, .cl-table-title-extended + .cl-table__extended {
   padding-top: 5px;
@@ -1631,7 +1651,6 @@ a {
 }
 .cl-table-cell:hover, .cl-table-cell:active, .cl-table-cell:focus {
   color: white;
-  background: #0188f4;
   background-color: #0174ee;
   background-image: -moz-linear-gradient(top, #0188f4, #0158e6);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0188f4), to(#0158e6));
@@ -1642,10 +1661,7 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0188F4', endColorstr='#FF0158E6', GradientType=0);
   text-shadow: 0 1px rgba(0, 0, 0, 0.33);
 }
-.cl-table-cell:hover a, .cl-table-cell:active a, .cl-table-cell:focus a {
-  color: white;
-}
-.cl-table-cell:hover .disclosure-help, .cl-table-cell:hover .icon, .cl-table-cell:active .disclosure-help, .cl-table-cell:active .icon, .cl-table-cell:focus .disclosure-help, .cl-table-cell:focus .icon {
+.cl-table-cell:hover a, .cl-table-cell:hover .disclosure-help, .cl-table-cell:hover .icon, .cl-table-cell:active a, .cl-table-cell:active .disclosure-help, .cl-table-cell:active .icon, .cl-table-cell:focus a, .cl-table-cell:focus .disclosure-help, .cl-table-cell:focus .icon {
   color: white;
 }
 
@@ -1746,10 +1762,11 @@ a {
 
 .cl-table-cell a {
   display: block;
-  padding: 10px;
+  padding: 0 10px;
   min-height: 44px;
+  line-height: 44px;
   font-weight: 700;
-  color: #000;
+  color: black;
   border: none;
 }
 .cl-table-cell > p, .cl-article .cl-table-cell > h4 {
@@ -1825,7 +1842,7 @@ a {
   border-bottom-right-radius: 2px;
 }
 
-.view-all {
+.cl-view-all {
   *zoom: 1;
   background: white;
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 0, 0, 0.1);
@@ -1844,12 +1861,12 @@ a {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-align: center;
 }
-.view-all:after {
+.cl-view-all:after {
   content: "";
   display: table;
   clear: both;
 }
-.view-all:first-child {
+.cl-view-all:first-child {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -1857,7 +1874,7 @@ a {
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
 }
-.view-all:last-child {
+.cl-view-all:last-child {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -1865,11 +1882,11 @@ a {
   -webkit-border-bottom-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.view-all > a {
+.cl-view-all > a {
   display: block;
   padding: 10px;
 }
-.view-all > label {
+.cl-view-all > label {
   display: block;
   padding: 10px;
 }

@@ -6,7 +6,8 @@
   list-style: none;
 }
 
-// Base layout + buttons
+// Text shadows
+// @todo make this dependant on text color
 
 @mixin text-shadow-white {
   @if $text-shadows {
@@ -35,10 +36,10 @@
 
 @mixin determine-text-color($color) {
   @if(lightness($color) <= 75%) {
-    color: lighten($text-color-inverse, 20%);
+    color: $very-light-color;
     @include text-shadow-black;
   } @else {
-    color: darken($text-color, 5%);
+    color: $very-dark-color;
     @include text-shadow-white;
   }
 }
@@ -84,12 +85,14 @@
 // Table views
 
 @mixin table-cell-skin {
-  background: lighten($background-color, 10%);
-  &:first-child {
-    @include border-top-radius($border-radius);
-  }
-  &:last-child {
-    @include border-bottom-radius($border-radius);
+  background: $very-light-color;
+  @if $border-radius {
+    &:first-child {
+      @include border-top-radius($border-radius);
+    }
+    &:last-child {
+      @include border-bottom-radius($border-radius);
+    }
   }
   @if $decorational-shadows {
     @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
@@ -97,16 +100,22 @@
 }
 
 @mixin table-cell-skin-hover {
-  color: lighten($text-color-inverse, 20%);
-  a {
-    color: lighten($text-color-inverse, 20%);
+  &:hover,
+  &:active,
+  &:focus {
+    color: $very-light-color;
+    a, .disclosure-help, .icon {
+      color: $very-light-color;
+    }
+    @if $gradient {
+      @include gradient-vertical(#0188f4, #0158e6);
+    } @else {
+      background: #0188f4;
+    }
+    @if $text-shadows {
+      @include text-shadow-black;
+    }
   }
-  .disclosure-help, .icon {
-    color: lighten($text-color-inverse, 20%);
-  }
-  background: #0188f4;
-  @include gradient-vertical(#0188f4, #0158e6);
-  @include text-shadow-black;
 }
 
 @mixin table-cell-skin-accent {

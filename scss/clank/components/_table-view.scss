@@ -20,7 +20,7 @@
   margin: 10px 10px 0 20px;
   font-size: 12px;
   font-weight: 700;
-  color: #666;
+  color: $medium-color;
   & + .cl-table {
     padding-top: 5px;
     margin-top: 0;
@@ -43,11 +43,7 @@
   position: relative;
   width: 100%;
   @include table-cell-skin;
-  &:hover,
-  &:active,
-  &:focus {
-    @include table-cell-skin-hover;
-  }
+  @include table-cell-skin-hover;
 }
 
 .cl-table > .cl-table-cell {
@@ -130,7 +126,7 @@
     min-height: 44px;
     line-height: 44px;
     font-weight: 700;
-    color: #000;
+    color: $very-dark-color;
     border: none;
   }
   

@@ -1,30 +1,42 @@
-$device-wraps: true;
+/**
+ * Device wraps
+ * Set this to true if you are using device frames i.e. like the demo at getclank.com
+ */
 
-$ios-bar-size: 44px;
-$android-bar-size: 50px;
+$device-wraps:           true;
 
-// Default style variables
+/**
+ * Operating system defaults
+ * Used to determine the sizing of elements
+ */
 
-$background-color: #E6E6E6 !default;
+$ios-bar-size:           44px;
+$android-bar-size:       50px;
 
-$light-color: #DDD !default;
-$muted-color: #666 !default;
+/**
+ * Colors
+ * Quickly change the colors of your app using these variables
+ * Note that a "light text on dark background" scheme is not fully supported yet
+ */
 
-$gradient: true !default;
+$very-light-color:       #FFF    !default;
+$light-color:            #DDD    !default;
+$medium-color:           #666    !default;
+$dark-color:             #333    !default;
+$very-dark-color:        #000    !default;
 
-$functional-shadows: true !default;
-$decorational-shadows: true !default;
-$text-shadows: true !default;
+$background-color:       mix($very-light-color, $light-color, 50%) !default;
+$accent-color:           #15696E !default;
+$accent-color-primary:   if(lightness($accent-color) >= 50%, scale-saturation(scale-lightness($accent-color, -25%),25%), scale-saturation(scale-lightness($accent-color, 25%),25%)) !default;
+$subtle-color:           darken($background-color, 5%) !default;
 
-$border-radius: 4px !default;
+/**
+ * Stylistic choices
+ * Quickly change the style of your app using these variables
+ */
 
-$accent-color: #15696e !default; // Accent color is supposed to be something like purple, red, blue
-$accent-color-primary: if(lightness($accent-color) >= 50%, scale-saturation(scale-lightness($accent-color, -25%),25%), scale-saturation(scale-lightness($accent-color, 25%),25%));
-$subtle-color: darken($background-color, 5%);
-
-$accent-color-light: false !default;
-$header-font-size: 20px !default;
-
-$text-color: #333 !default;
-$text-color-inverse: #DDD !default;
-$headings-color: darken($text-color, 20%) !default;
+$functional-shadows:     true !default; // Shadows (and highlights) that are functional e.g. a drop shadow on a modal
+$decorational-shadows:   true !default; // Shadows (and highlights) that are decorational e.g. an inset on a button
+$gradient:               true !default; // Whether gradients should be rendered or not, set this to false for a flatter design
+$border-radius:          4px !default; // The radii of common borders e.g. the borders on buttons
+$text-shadows:           true !default; // Whether text should have shadows or not
