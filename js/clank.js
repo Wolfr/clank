@@ -1,7 +1,11 @@
+/**
+ * Clank JS
+ */
+
 $(function() {
 
   /**
-   * Temp code to try and implement anims/page transitions
+   * Make toggles and sliders work on non touch devices
    */
 
   // Fingerblast!
@@ -12,9 +16,6 @@ $(function() {
   if ($('.cl-slider').length > 0) {
       var fb = new FingerBlast('.cl-slider');
   }
-
-  // Add data ignore push to links unrelated to demo
-  // $('#header a, .cl-demo-list a').attr('data-ignore', 'push');
   
   /**
    * Radio and checkbox lists
