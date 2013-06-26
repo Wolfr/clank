@@ -9,7 +9,10 @@
   font-size: 13px;
   word-wrap: break-word;
   height: 100%;
-  @include calc("height","100% - 20px"); /* minus status bar height */
+  width: 100%;
+  @if $device-wraps {
+    @include calc("height","100% - 20px"); /* minus status bar height */
+  }
   -webkit-font-smoothing: antialiased;
 
 }

@@ -3,14 +3,13 @@
    ========================================================================== */
 
 @import "compass";
-
-@import "clank/base";
 @import "clank/vars";
 @import "clank/mixins";
 
+@import "clank/base";
+
 // Devices
 @import "clank/components/device_wraps";
-@import "clank/components/os_chrome";
 
 // Components
 @import "clank/components/article";

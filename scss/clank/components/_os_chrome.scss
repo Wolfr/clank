@@ -5,145 +5,150 @@
 @import "clank/icon-fonts/ios/fontcustom"; // System icons iOS
 @import "clank/icon-fonts/android/fontcustom"; // System Android
 
-/* Shared
-   ========================================================================== */
+// Only loaded if device wraps is set to true
+@if ($device-wraps) {
 
-.cl-ios-status,
-.cl-android-status {
-  font-size: 13px;
-  // Style
-  overflow: hidden;
-  height: 20px;
-  background: #000;
-  color: #FFF;
-  text-align: center;
-  line-height: 20px;
-  max-height: 20px;
-  white-space: nowrap;
-  padding: 0 4px;
-  // Layout 
-  & > span:first-child {
-    float: left;
-  }
-  & > span:last-child {
-    float: right;
-    span {
-      line-height: 20px;
-      @include inline-block;
-      vertical-align: middle;
-    }
-  }
-  
-}
+  /* Shared
+     ========================================================================== */
 
-/* iOS only
-   ========================================================================== */
-
-.cl-ios-status {
-  font-weight: 700;
-  font-family: Helvetica;
-  height: 20px;
-  
-  .clock {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-}
-
-/* Reception (iOS)
-   ========================================================================== */
-
-.cl-ios-status .signals {
-  font-size: 0;
-  margin-right: 3px;
-  span {
-    width: 3px;
-    @include inline-block;
-    vertical-align: bottom;
-    margin-right: 1px;
-    position: relative;
-    bottom: 10px;
-    background: #FFF;
-  }
-  .signal1 {
-    height: 4px;
-  }
-  .signal2 {
-    height: 5px;
-  }  
-  .signal3 {
-    height: 6.5px;
-  }
-  .signal4 {
-    height: 8px;
-  }
-  .signal5 {
-    height: 10px;
-  }
-}
-
-/* Battery icon ios
-   ========================================================================== */
-
-.icon-ios-battery {
-  font-size: 20px;
-  line-height: 20px;
-  position: relative;
-  top: -1px;
-  height: 20px;
-  max-height: 20px;
-  margin-left: 4px;
-}
-
-
-/* Android only
-   ========================================================================== */
-
-.cl-android-status {
-  font-family: Roboto, sans-serif;
-  background: #000;
-  color: #FFF;
-  height: 24px;
-  line-height: 24px;
-}
-  
-.cl-android-software-buttons {
-  background: #000;
-  color: #FFF;
-  & > span {
-    width: 100%;
-  }
-  span span {
-    width: 33.3%;
-    float: left;
+  .cl-ios-status,
+  .cl-android-status {
+    font-size: 13px;
+    // Style
+    overflow: hidden;
+    height: 20px;
+    background: #000;
+    color: #FFF;
     text-align: center;
-    font-size: 25px;
-    opacity: 0.4;
-    &:hover {
-      opacity: 1;
-      transition: 0.25s 0 opacity ease-in-out;
+    line-height: 20px;
+    max-height: 20px;
+    white-space: nowrap;
+    padding: 0 4px;
+    // Layout 
+    & > span:first-child {
+      float: left;
+    }
+    & > span:last-child {
+      float: right;
+      span {
+        line-height: 20px;
+        @include inline-block;
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+  /* iOS only
+     ========================================================================== */
+
+  .cl-ios-status {
+    font-weight: 700;
+    font-family: Helvetica;
+    height: 20px;
+
+    .clock {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
     }
   }
-  position: absolute;
-  [data-device="galaxynexus-landscape"] & {
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 100%;
-    & > span span {
+
+  /* Reception (iOS)
+     ========================================================================== */
+
+  .cl-ios-status .signals {
+    font-size: 0;
+    margin-right: 3px;
+    span {
+      width: 3px;
+      @include inline-block;
+      vertical-align: bottom;
+      margin-right: 1px;
+      position: relative;
+      bottom: 10px;
+      background: #FFF;
+    }
+    .signal1 {
+      height: 4px;
+    }
+    .signal2 {
+      height: 5px;
+    }  
+    .signal3 {
+      height: 6.5px;
+    }
+    .signal4 {
+      height: 8px;
+    }
+    .signal5 {
+      height: 10px;
+    }
+  }
+
+  /* Battery icon ios
+     ========================================================================== */
+
+  .icon-ios-battery {
+    font-size: 20px;
+    line-height: 20px;
+    position: relative;
+    top: -1px;
+    height: 20px;
+    max-height: 20px;
+    margin-left: 4px;
+  }
+
+
+  /* Android only
+     ========================================================================== */
+
+  .cl-android-status {
+    font-family: Roboto, sans-serif;
+    background: #000;
+    color: #FFF;
+    height: 24px;
+    line-height: 24px;
+  }
+
+  .cl-android-software-buttons {
+    background: #000;
+    color: #FFF;
+    & > span {
       width: 100%;
-      height: 33.3%;
-      line-height: 122px;
     }
+    span span {
+      width: 33.3%;
+      float: left;
+      text-align: center;
+      font-size: 25px;
+      opacity: 0.4;
+      &:hover {
+        opacity: 1;
+        transition: 0.25s 0 opacity ease-in-out;
+      }
+    }
+    position: absolute;
+    [data-device="galaxynexus-landscape"] & {
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 100%;
+      & > span span {
+        width: 100%;
+        height: 33.3%;
+        line-height: 122px;
+      }
+    }
+    [data-device$=portrait] &,
+    [data-device="nexus7-landscape"] & {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    height: 40px;
+    line-height: 40px;
   }
-  [data-device$=portrait] &,
-  [data-device="nexus7-landscape"] & {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  height: 40px;
-  line-height: 40px;
+
 }
