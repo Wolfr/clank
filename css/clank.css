@@ -334,6 +334,7 @@ a {
    Article
    ========================================================================== */
 .cl-article {
+  line-height: 1.4;
   color: #333;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
@@ -343,7 +344,6 @@ a {
 .cl-article p, .cl-article h4 {
   margin: 10px;
   /* make use of collapsing margins */
-  line-height: 1.33;
 }
 .cl-article p + p, .cl-article h4 + p, .cl-article p + h4, .cl-article h4 + h4 {
   margin-top: 0;
@@ -373,6 +373,7 @@ a {
 
 .cl-article-intro {
   font-size: 16px;
+  line-height: 1.33;
   background: #15696e;
   color: #FFF;
   text-shadow: none;
