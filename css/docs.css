@@ -506,8 +506,8 @@ table {
 #layout-demo .cl-docs #header > .inner-content {
   max-width: none;
   *zoom: 1;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -523,8 +523,8 @@ table {
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1026,8 +1026,8 @@ body {
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 12px;
@@ -1202,8 +1202,8 @@ body {
   *zoom: 1;
   max-width: 940px;
   _width: 940px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
@@ -1223,7 +1223,7 @@ body {
   font-stretch: condensed;
   line-height: 1;
   margin: 0;
-  font-size: 122px;
+  font-size: 102px;
   line-height: 0.9;
 }
 .cl-docs #banner .intro {
@@ -1256,6 +1256,9 @@ body {
   .cl-docs #banner {
     height: 303px;
     padding: 0;
+  }
+  .cl-docs #banner h1 {
+    font-size: 122px;
   }
   .cl-docs #banner .img-holder {
     display: block;
@@ -1364,10 +1367,10 @@ body {
 }
 @media all and (max-width: 767px) {
   .cl-docs #docs-nav {
-    padding: 12px 20px 0;
+    padding: 12px 10px 0;
   }
   .cl-docs #docs #content {
-    padding: 0 20px 12px 20px;
+    padding: 0 10px 12px 10px;
   }
 }
 @media all and (min-width: 768px) {
@@ -1375,8 +1378,8 @@ body {
     *zoom: 1;
     max-width: 940px;
     _width: 940px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1424,7 +1427,7 @@ body {
     padding: 12px 20px 0;
   }
   .cl-docs #blog-content {
-    padding: 20px;
+    padding: 10px;
   }
 }
 @media all and (min-width: 960px) {
@@ -1432,8 +1435,8 @@ body {
     *zoom: 1;
     max-width: 940px;
     _width: 940px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0 0;

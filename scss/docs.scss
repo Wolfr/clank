@@ -203,7 +203,7 @@ body {
     }
     h1 {
       @include display-font;
-      font-size: 122px;
+      font-size: 102px;
       line-height: 0.9;
     }
     .intro {
@@ -234,6 +234,9 @@ body {
       display: none;
     }
     @media all and (min-width: $break-large) {
+      h1 {
+        font-size: 122px;
+      }
       height: 303px;
       padding: 0;
       .img-holder {
@@ -335,10 +338,10 @@ body {
 
   @media all and (max-width: $break-medium - 1) {
     #docs-nav {
-      padding: 12px 20px 0;
+      padding: 12px 10px 0;
     }
     #docs #content {
-      padding: 0 20px 12px 20px;
+      padding: 0 10px 12px 10px;
     }
   }
 
@@ -382,7 +385,7 @@ body {
       padding: 12px 20px 0;
     }
     #blog-content {
-      padding: 20px;
+      padding: 10px;
     }
   }
 

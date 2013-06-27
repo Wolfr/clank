@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <title>{{ page.title }} - Clank</title>
 
+  {% unless page.layout == "demo" %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  {% endunless %}
+
   <!-- jQuery (needed for affix) -->
   <script src="/components/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 
