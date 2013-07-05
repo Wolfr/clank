@@ -1,6 +1,7 @@
 ---
   layout: post
   title: Clank - Beginnings
+  date: 2013-06-05 10:10:00 GMT+1
 ---
 
 <img class="alignright shaded" src="http://getclank.files.wordpress.com/2013/06/screen-shot-2013-06-05-at-19-51-38.png" width="129" />

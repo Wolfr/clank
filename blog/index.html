@@ -13,7 +13,7 @@
 
   <div id="blog">
     <div id="blog-content">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
       <article>
         <header>
           <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
@@ -25,16 +25,25 @@
       </article>
       {% endfor %}
     
-      {% if paginator.page %}
-      <div id="paginator" class="content">
-        {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}/">Older entries</a>
-        {% endif %}
+      <div class="pagination">
         {% if paginator.previous_page %}
-        <a href="/page{{ paginator.previous_page }}/">Newer entries</a>
+          {% if paginator.previous_page == 1 %}
+              <a href="/blog/" class="previous">Previous</a>
+            {% else %}
+              <a href="/blog/page{{ paginator.previous_page }}" class="previous">Previous</a>
+            {% endif %}
+        {% else %}
+          <span class="previous">Previous</span>
+        {% endif %}
+
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+        {% if paginator.next_page %}
+          <a href="/blog/page{{ paginator.next_page }}" class="next">Next</a>
+        {% else %}
+          <span class="next ">Next</span>
         {% endif %}
       </div>
-      {% endif %}
 
     </div>
     <div id="blog-nav">

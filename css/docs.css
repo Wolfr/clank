@@ -1776,3 +1776,27 @@ body {
 .cl-docs-content h3:first-child {
   margin-top: 0;
 }
+
+.pagination {
+  padding-bottom: 24px;
+  text-align: center;
+}
+.pagination span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.pagination span.previous {
+  display: none;
+}
+.pagination .previous {
+  text-align: left;
+  float: left;
+}
+.pagination .next {
+  text-align: right;
+  float: right;
+}

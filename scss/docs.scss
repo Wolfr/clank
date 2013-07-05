@@ -678,3 +678,22 @@ body {
     margin-top: 0;
   }
 }
+
+.pagination {
+  padding-bottom: 24px;
+  text-align: center;
+  span {
+    @include inline-block;
+  }
+  span.previous {
+    display: none;
+  }
+  .previous {
+    text-align: left;
+    float: left;
+  }
+  .next {
+    text-align: right;
+    float: right;
+  }
+}
