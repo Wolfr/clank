@@ -1804,8 +1804,8 @@ a {
 .cl-table-cell .disclosure-help {
   font-weight: 400;
   position: absolute;
-  top: 25%;
   right: 30px;
+  top: 0;
   color: #AAA;
 }
 .cl-table-cell .meta {
@@ -1819,7 +1819,7 @@ a {
 .cl-table-cell .icon-ios-arrow-right {
   font-size: 19px;
   position: absolute;
-  top: 26%;
+  top: 0;
   right: 10px;
   font-weight: 700;
   color: #AAA;
