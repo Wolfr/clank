@@ -211,20 +211,25 @@
 .cl-view-all {
   @include pie-clearfix;
   @include table-cell-skin;
-
-  @include gradient-vertical(#DADADA,#CECECE);
-  text-transform: uppercase;
-  font-size: 12px;
+  @include gradient-vertical($subtle-color,darken($subtle-color, 10%));
   @include text-shadow-white;
+  width: 100%;
+  margin: 0 10px;
+  line-height: 33px;
+  font-size: 12px;
+  text-align: center;
+  position: relative; // move up in z-index stack above shadow
+  top: 0;
   & > a {
     display: block;
-    padding: 10px;
+    color: #000;
+    font-weight: 700;
+    &:hover {
+      @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
+      @include gradient-vertical(darken($subtle-color, 10%), darken($subtle-color, 20%));
+      @include border-bottom-radius($border-radius);
+    }
   }
-  & > label {
-    display: block;
-    padding: 10px;
-  }
-  text-align: center;
 }
 
 // Cells that extend to the window/screen edges
