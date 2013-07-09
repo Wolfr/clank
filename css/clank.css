@@ -1035,6 +1035,7 @@ a {
   width: 100%;
   padding: 4px;
   height: 34px;
+  background: #FFF;
   border-radius: 3px;
   border: 1px solid #AAA;
   width: -moz-calc(100% - 20px);
@@ -1068,6 +1069,10 @@ a {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(27, 189, 199, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(27, 189, 199, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(27, 189, 199, 0.6);
+}
+.cl-form input[disabled],
+.cl-form textarea[disabled] {
+  background: #DDD;
 }
 .cl-form select[multiple] {
   min-height: 100px;

@@ -76,6 +76,7 @@
     width: 100%;
     padding: 4px;
     height: 34px;
+    background: #FFF;
     border-radius: 3px;
     border: 1px solid #AAA;
     @include calc("width", "100% - 20px");
@@ -87,6 +88,11 @@
       @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($accent-color-primary,.6));
     }
 
+  }
+  
+  input[disabled],
+  textarea[disabled] {
+    background: #DDD;
   }
   
   select[multiple] {
