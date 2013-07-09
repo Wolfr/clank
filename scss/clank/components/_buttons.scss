@@ -59,3 +59,20 @@
   @include button-skin($subtle-color);
   @include button-skin-hover($accent-color);
 }
+
+/* Subtle buttons */
+.cl-btn-disabled {
+  &,
+  &:link,
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid darken($background-color, 10%);
+    @include border-radius($border-radius);
+    @include box-shadow(0 1px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2));
+    background: darken($background-color, 5%);
+    color: #AAA;
+    text-shadow: none;
+    pointer-events: none;
+  }
+}
