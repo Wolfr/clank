@@ -1528,52 +1528,76 @@ a {
   animation-name: spin-white;
 }
 
+.cl-loading-8 {
+  animation-delay: 0.88s;
+}
+
+.cl-loading-7 {
+  animation-delay: 0.77s;
+}
+
+.cl-loading-6 {
+  animation-delay: 0.66s;
+}
+
+.cl-loading-5 {
+  animation-delay: 0.55s;
+}
+
+.cl-loading-4 {
+  animation-delay: 0.44s;
+}
+
+.cl-loading-3 {
+  animation-delay: 0.33s;
+}
+
+.cl-loading-2 {
+  animation-delay: 0.22s;
+}
+
+.cl-loading-1 {
+  animation-delay: 0.11s;
+}
+
 .cl-loading-1 {
   left: 0;
   top: 13px;
-  animation-delay: 0.33s;
 }
 
 .cl-loading-2 {
   left: 4px;
   top: 4px;
-  animation-delay: 0.44s;
 }
 
 .cl-loading-3 {
   left: 13px;
   top: 0;
-  animation-delay: 0.55s;
 }
 
 .cl-loading-4 {
   right: 4px;
   top: 4px;
-  animation-delay: 0.66s;
 }
 
 .cl-loading-5 {
   right: 0;
   top: 13px;
-  animation-delay: 0.77s;
 }
 
 .cl-loading-6 {
   right: 4px;
   bottom: 4px;
-  animation-delay: 0.88s;
 }
 
 .cl-loading-7 {
   left: 13px;
   bottom: 0;
-  animation-delay: 0.99s;
 }
 
 .cl-loading-8 {
   left: 4px;
   bottom: 4px;
-  animation-delay: 1.1s;
 }
 
 /* ==========================================================================

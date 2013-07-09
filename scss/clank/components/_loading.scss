@@ -52,50 +52,50 @@
   }
 }
 
+$i: 8;
+@while $i > 0 {
+  .cl-loading-#{$i} {
+    animation-delay: 0.11s * $i;
+  }
+  $i: $i - 1;
+}
+
 .cl-loading-1 {
   left: 0;
   top: 13px;
-  animation-delay: 0.33s;
 }
 
 .cl-loading-2 {
   left: 4px;
   top: 4px;
-  animation-delay: 0.44s;
 }
 
 .cl-loading-3 {
-  left :13px;
+  left: 13px;
   top: 0;
-  animation-delay: 0.55s;
 }
 
 .cl-loading-4 {
-  right:4px;
-  top:4px;
-  animation-delay:0.66s;
+  right: 4px;
+  top: 4px;
 }
 
 .cl-loading-5 {
   right:0;
-  top:13px;
-  animation-delay: 0.77s;
+  top: 13px;
 }
 
 .cl-loading-6{
-  right:4px;
-  bottom:4px;
-  animation-delay: 0.88s;
+  right: 4px;
+  bottom: 4px;
 }
 
 .cl-loading-7 {
-  left:13px;
+  left :13px;
   bottom:0;
-  animation-delay: 0.99s;
 }
 
-.cl-loading-8{
-  left:4px;
-  bottom:4px;
-  animation-delay: 1.1s;
+.cl-loading-8 {
+  left: 4px;
+  bottom: 4px;
 }
