@@ -1,10 +1,12 @@
-// Gruntfile to make a build of Clank based on the documentation site
+/*
+   Gruntfile for Clank
+  Tasks: run grunt -h to see available tasks or read source.
+*/
 
 'use strict';
 
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     copy: {
@@ -38,13 +40,43 @@ module.exports = function(grunt) {
           
         ]
       }
+    },
+
+    uglify: {
+      options: {
+        mangle: false
+      },
+      files: {
+        src : [
+               'components/jquery/jquery.js',
+               'components/angular/angular.js',
+               'components/angular-cookies/angular-cookies.js',
+               'components/prefix-free/prefixfree.js',
+               'js/docs/**.js',
+               'js/clank/**.js'
+               ],
+        dest : 'js/all.min.js'
+      }
+    },
+    
+    shell: {
+        buildLive: {
+            command: 'jekyll build -w --config _config-live.yml --no-auto',
+            options: {
+                stdout: true
+            }
+        }
     }
+    
   });
 
   // Load contrib tasks...
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Register task aliases
-  grunt.registerTask('default', 'make a build of Clank based on the documentation site', ['copy']);
+  grunt.registerTask('default', 'Make a build of Clank based on the documentation site', ['copy']);
+  grunt.registerTask('build-docs', 'Generate minified JS for docs site and build with Jekyll', ['uglify','shell:buildLive']);
 
 };

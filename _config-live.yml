@@ -5,4 +5,4 @@ pagination_dir: blog
 
 markdown: kramdown
 
-devmode: true
+devmode: false
