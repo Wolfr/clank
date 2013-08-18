@@ -1,7 +1,7 @@
 permalink: /blog/:year/:month/:title
 
-paginate: 5
-pagination_dir: blog
+paginate: 7
+paginate_path: "blog/page:num"
 
 markdown: kramdown
 
