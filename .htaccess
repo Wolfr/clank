@@ -1,16 +1,2 @@
 RewriteEngine On
 ErrorDocument 404 /404.html
-
-RewriteCond %{HTTP_HOST} ^[^\.]+\.andrewho\.co\.uk$ [NC]
-RewriteRule ^(.*)$ http://getclank.com/$1 [R=301,L]
-
-RewriteRule ^(.+)/$ http://%{HTTP_HOST}/$1 [R=301,]
-Options -Indexes
-DirectorySlash Off
-
-RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
-RewriteRule ^(.+)\.html$ http://%{HTTP_HOST}/$1 [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^.+$ %{REQUEST_FILENAME}.html [L]
