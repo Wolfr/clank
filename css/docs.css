@@ -1086,6 +1086,9 @@ body {
   background: rgba(54, 57, 62, 0.2);
   color: brighten(#36393e, 30%);
 }
+.cl-docs blockquote {
+  font-style: italic;
+}
 .cl-docs pre {
   padding: 10px;
   margin: 0 0 1px;

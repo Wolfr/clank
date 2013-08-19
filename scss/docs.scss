@@ -91,6 +91,10 @@ body {
   a {
     @include default-links;
   }
+  
+  blockquote { 
+    font-style: italic;
+  }
 
   pre {
     padding: 10px;
