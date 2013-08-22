@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <link rel="stylesheet" href="css/clank.css">
+  <link rel="stylesheet" href="css/clank.css" />
+  <link rel="stylesheet" href="css/animations.css" />
   <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="components/prefix-free/prefixfree.min.js"></script>
-
   <script type="text/javascript" src="js/clank/ratchet/fingerblast.js"></script>
-  <script type="text/javascript" src="js/clank/ratchet/slider.js"></script>
+  <script type="text/javascript" src="js/clank/ratchet/sliders.js"></script>
   <script type="text/javascript" src="js/clank/ratchet/toggles.js"></script>
   <script type="text/javascript" src="js/clank/clank.js"></script>
 </head>
@@ -22,7 +22,8 @@
       <div class="cl-bar-title">
         <h1 class="cl-title">Getting started!</h1>
       </div>
-      <div class="cl-content">
+      <div class="cl-content" data-entrance="bounceInLeft" data-exit="bounceOutRight">
+      <a href="/static/pg2.html">Page2</a>
         <div class="cl-article">
           <p>This is the starter template for Clank. This file contains CSS and JS references to all the files you need to get started to build your own Clank-based project.</p>
           <p>More example files are coming soon.</p>

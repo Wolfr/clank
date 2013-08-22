@@ -49,3 +49,35 @@ $(function() {
   });
 
 });
+
+// event handler
+$(document).ready(function(){
+ $("a").on("click", function(e){
+    e.preventDefault();
+    loadPage($(this));
+  });
+});
+
+function loadPage(link){
+  var _container = $(".cl-content");
+  //create our dummy 
+  var href = link.attr("href");
+  href.indexOf("index") > -1 ? href = href.replace("index", "indexContent") : null;
+  // Fetch the template
+  var newContainer = _container.clone().empty();
+    newContainer.load(href, function(data){
+      var entranceAnim  =   "animated " + $(_container).data("entrance");
+      var exitAnim      =   "animated " + $(_container).data("exit");
+      _container.addClass(exitAnim);
+     setTimeout(function(){
+       _container.replaceWith(newContainer);
+       newContainer.addClass(entranceAnim);
+       $("a").click(function(e){ 
+          e.preventDefault();
+          loadPage($(this)); 
+        })
+     },500);
+    });     
+}
+
+
