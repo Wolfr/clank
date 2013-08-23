@@ -53,28 +53,43 @@ $(function() {
 // event handler
 $(document).ready(function(){
  $("a").on("click", function(e){
-    e.preventDefault();
-    loadPage($(this));
+    checkURL($(this).attr("href"), e);
   });
 });
 
-function loadPage(link){
-  var _container = $(".cl-content");
+function checkURL(href, e){
+  var test = new RegExp();
+    // check to see if target shares origin
+    if(href.indexOf("http") === -1 && href.indexOf("www") === -1){
+        e.preventDefault();
+        loadPage(href);
+    }
+    else{
+      var urlFragment = href.match(/http?(s|)\:\/\/[(www.)a-zA-Z0-9]{1,}[\.\:]{1}/)[0].split("."),
+          originTarget  = urlFragment[originTarget.length - 1]; 
+      if( window.location.origin.indexOf(originTarget) === -1 ){
+        e.preventDefault();
+        loadPage(href);
+      }
+    }
+}
+
+function loadPage(href){
+  var _container = $(".cl-content"),
+      newContainer = _container.clone().empty();;
   //create our dummy 
-  var href = link.attr("href");
+  console.log( href )
   href.indexOf("index") > -1 ? href = href.replace("index", "indexContent") : null;
   // Fetch the template
-  var newContainer = _container.clone().empty();
     newContainer.load(href, function(data){
-      var entranceAnim  =   "animated " + $(_container).data("entrance");
-      var exitAnim      =   "animated " + $(_container).data("exit");
+      var entranceAnim  =   "animated " + $(_container).data("entrance"),
+          exitAnim      =   "animated " + $(_container).data("exit");
       _container.addClass(exitAnim);
      setTimeout(function(){
        _container.replaceWith(newContainer);
        newContainer.addClass(entranceAnim);
        $("a").click(function(e){ 
-          e.preventDefault();
-          loadPage($(this)); 
+          checkURL($(this).attr("href"), e);
         })
      },500);
     });     
