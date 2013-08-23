@@ -2,8 +2,8 @@
    OS Chrome
    ========================================================================== */
 
-@import "clank/icon-fonts/ios/fontcustom"; // System icons iOS
-@import "clank/icon-fonts/android/fontcustom"; // System Android
+@import "../icon-fonts/ios/fontcustom"; // System icons iOS
+@import "../icon-fonts/android/fontcustom"; // System Android
 
 // Only loaded if device wraps is set to true
 @if ($device-wraps) {

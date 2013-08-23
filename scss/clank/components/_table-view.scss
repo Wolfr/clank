@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .cl-table {
-  @include pie-clearfix;
+  @include clearfix;
   @include unstyled;
   margin: 10px 0;
   width: 90%;
@@ -62,14 +62,14 @@
 
 .cl-table-row {
   margin: 0 10px;
-  @include pie-clearfix;
+  @include clearfix;
 
   // Flex for eq heights
   display: -webkit-flex;
   -webkit-align-items: stretch;
 
   & > .cl-table-cell {
-    @include pie-clearfix;
+    @include clearfix;
     &:first-child {
       float: left;
     }
@@ -161,7 +161,7 @@
   // Smaller meta info
   .meta {
     font-weight: 400;
-    @include opacity(0.66);
+    opacity: 0.66;
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -184,26 +184,26 @@
   .cl-table {
     .cl-table-row:first-child {
       .cl-table-cell:first-child {
-        @include border-top-left-radius($border-radius/2);
+        border-top-left-radius: ($border-radius/2);
       }
       .cl-table-cell:last-child {
-        @include border-top-right-radius($border-radius/2);
+        border-top-right-radius: ($border-radius/2);
       }
     }
     .cl-table-row:only-child {
       .cl-table-cell:first-child {
-        @include border-left-radius($border-radius/2);
+        border-left-radius: ($border-radius/2);
       }
       .cl-table-cell:last-child {
-        @include border-right-radius($border-radius/2);
+        border-right-radius: ($border-radius/2);
       }
     }
     .cl-table-row:last-child {
       .cl-table-cell:first-child {
-        @include border-bottom-left-radius($border-radius/2);
+        border-bottom-left-radius: ($border-radius/2);
       }
       .cl-table-cell:last-child {
-        @include border-bottom-right-radius($border-radius/2);
+        border-bottom-right-radius: ($border-radius/2);
       }
     }
 
@@ -213,7 +213,7 @@
 // Control to view all items
 
 .cl-view-all {
-  @include pie-clearfix;
+  @include clearfix;
   @include table-cell-skin;
 
   @include gradient-vertical(#DADADA,#CECECE);
@@ -244,9 +244,9 @@
     display: block;
   }
   .cl-table-cell {
-    @include border-radius(0);
+    border-radius: 0;
     .cl-table-cell {
-      @include border-radius(0);
+      border-radius: 0;
     }
     margin: 0 0 1px;
     @if $decorational-shadows {
