@@ -87,9 +87,9 @@
     a {
       color: #000;
       font-size: 30px;
-      @include opacity(0.33);
+      opacity: 0.33;
       &.active {
-        @include opacity(1);
+        opacity: 1;
       }
     }
   }

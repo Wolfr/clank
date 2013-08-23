@@ -64,7 +64,7 @@
 .cl-bar-title,
 .cl-bar,
 .cl-bar-footer {
-  @include pie-clearfix;
+  @include clearfix;
   overflow: hidden;
   width: 100%;
   // default

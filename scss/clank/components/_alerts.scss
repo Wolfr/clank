@@ -30,10 +30,8 @@
     text-align: center;
     padding: 12px;
     background: $accent-color;
-    @include border-radius($border-radius);
-    @if $functional-shadows {
-      @include box-shadow(0 0 0 2px #FFF, 0 0 8px 2px rgba(0,0,0,0.25));
-    }
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 2px #FFF, 0 0 8px 2px rgba(0,0,0,0.25);
   }
   .cl-alert-title {
     font-size: 16px;
