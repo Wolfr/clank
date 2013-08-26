@@ -77,7 +77,7 @@ function checkURL(href, e){
 function loadPage(href){
   var _container = $(".cl-content"),
       newContainer = _container.clone().empty();;
-  href.indexOf("index") > -1 ? href = href.replace("index", "indexContent") : null;
+  href.indexOf("index") > -1 ? href = href.replace("index", "index-content") : null;
   // Fetch the template
     newContainer.load(href, function(data){
       var entranceAnim  =   "animated " + $(_container).data("entrance"),
