@@ -1,6 +1,10 @@
 {
   "name": "clank",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wolfr/clank.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
