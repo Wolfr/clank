@@ -20,10 +20,10 @@
 .cl-toggle:before {
   position: absolute;
   right: 13px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 28px;
   color: #777;
-  text-shadow: 0 1px #fff;
+  text-shadow: 0 1px #FFF;
   text-transform: uppercase;
   content: "Off";
 }
@@ -38,7 +38,11 @@
   height: 28px;
   background-color: #fff;
 
-  @include gradient-vertical(#FFF, #F2F2F2);
+  @if $gradient {
+    @include gradient-vertical(#FFF, #F2F2F2);
+  } @else {
+    background: #FFF;
+  }
 
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
@@ -76,7 +80,7 @@
 .cl-toggle.active:before {
   right: auto;
   left: 15px;
-  color: #fff;
+  color: #FFF;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
   content: "On";
 }

@@ -1,8 +1,0 @@
-permalink: /blog/:year/:month/:title
-
-paginate: 5
-pagination_dir: blog
-
-markdown: kramdown
-
-devmode: false

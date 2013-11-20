@@ -1,0 +1,73 @@
+// Custom template for stylesheet generation for Clank
+// Based on https://github.com/endtwist/fontcustom/blob/master/lib/fontcustom/templates/fontcustom.css
+
+@font-face {
+	font-family:"android-icons";
+	src:url("../fonts/android-icons.eot");
+	src:url("../fonts/android-icons.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/android-icons.woff") format("woff"),
+		url("../fonts/android-icons.ttf") format("truetype"),
+		url("../fonts/android-icons.svg?#android-icons") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+
+[class^="icon-android4-"]:before,
+[class*=" icon-android4-"]:before {
+	font-family:"android-icons";
+	display:inline-block;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+
+.icon-android4-battery-colored, 
+.icon-android4-battery, 
+.icon-android4-chevron, 
+.icon-android4-network, 
+.icon-android4-system-apps, 
+.icon-android4-system-back, 
+.icon-android4-system-home, 
+.icon-android4-wifi { 
+	&:before {
+		font-family:"android-icons";
+		display:inline-block;
+		font-weight:normal;
+		font-style:normal;
+		text-decoration:inherit;
+	}
+}
+
+// Icons
+.icon-android4-battery-colored:before {
+	content:"\f100";
+}
+.icon-android4-battery:before {
+	content:"\f101";
+}
+.icon-android4-chevron:before {
+	content:"\f102";
+}
+.icon-android4-network:before {
+	content:"\f103";
+}
+.icon-android4-system-apps:before {
+	content:"\f104";
+}
+.icon-android4-system-back:before {
+	content:"\f105";
+}
+.icon-android4-system-home:before {
+	content:"\f106";
+}
+.icon-android4-wifi:before {
+	content:"\f107";
+}

@@ -1,6 +1,36 @@
-// General
+/* Fonts 
+   ========================================================================== */
 
-// CSS3 calc
+@mixin reading-font {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400; font-style: normal;
+}
+
+@mixin reading-font-italic {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400; font-style: italic;
+}
+
+@mixin reading-font-bold {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+@mixin heading-font-book {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin heading-font {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* CSS3 calc
+   ========================================================================== */
+
 @mixin calc($property, $expression) { 
   #{$property}: -moz-calc(#{$expression}); 
   #{$property}: -o-calc(#{$expression}); 
@@ -8,7 +38,9 @@
   #{$property}: calc(#{$expression}); 
 }
 
-// Alternate clearfix that does not rely on overflow: hidden;
+/* Alternate clearfix that does not rely on overflow: hidden;
+   ========================================================================== */
+
 @mixin micro-clearfix {
   &:before,
   &:after {
@@ -20,14 +52,18 @@
   }
 }
 
+/* Unstyled
+   ========================================================================== */
+
 @mixin unstyled {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
-// Text shadows
-// @todo make this dependant on text color
+ 
+/* Text shadows
+  @todo make this dependant on text color
+   ========================================================================== */
 
 @mixin text-shadow-white {
   @if $text-shadows {
@@ -41,7 +77,8 @@
   }
 }
 
-// Buttons
+/* Gradients
+   ========================================================================== */
 
 @mixin gradient-vertical($startColor: #555, $endColor: #333) {
   background-color: mix($startColor, $endColor, 60%);
@@ -54,6 +91,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
 }
 
+
 @mixin determine-text-color($color) {
   @if(lightness($color) <= 75%) {
     color: $very-light-color;
@@ -64,12 +102,17 @@
   }
 }
 
+/* Buttons
+   ========================================================================== */
+
 @mixin button-skin($color) {
   &,
   &:link,
   &:visited {
-    border: 1px solid darken($color, 5%);
     @include border-radius($border-radius);
+    @if $button-borders {
+      border: 1px solid darken($color, 5%);
+    }
     @if $decorational-shadows {
       @include box-shadow(0 1px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2));
     }
@@ -102,38 +145,163 @@
   }
 }
 
-// Table views
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code — one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
 
-@mixin table-cell-skin {
-  background: $very-light-color;
-  @if $border-radius {
-    &:first-child {
-      @include border-top-radius($border-radius);
-    }
-    &:last-child {
-      @include border-bottom-radius($border-radius);
-    }
-  }
-  @if $decorational-shadows {
-    @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
-  }
+// Baseline, measured in pixels
+// The value should be the same as the font-size value for the html element
+// If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
+// then the variable below would be 10px.
+$baseline_px: $base-font-size;
+
+@mixin rem($property, $px_values) {
+
+	// Convert the baseline into rems
+	$baseline_rem: ($baseline_px / 1rem);
+
+	// Print the first line in pixel values
+	#{$property}: $px_values;
+
+	// If there is only one (numeric) value, return the property/value line for it.
+	@if type-of($px_values) == 'number' {
+		#{$property}: $px_values / $baseline_rem;
+	}
+
+	// If there is more than one value, create a list and perform equations on each value
+	@else {
+
+		// Create an empty list that we can dump values into
+		$rem_values: ();
+
+		@each $value in $px_values {
+
+			// If the value is zero, return 0
+			@if $value == 0 {
+				$rem_values: append($rem_values, $value);
+			}
+
+			// If the value is not zero, convert it from px to rem
+			@else {
+				$rem_values: append($rem_values, ($value / $baseline_rem) );
+			}
+
+		}
+
+		// Return the property and its list of converted values
+		#{$property}: $rem_values;
+
+	}
+
 }
 
-@mixin table-cell-skin-hover {
+
+/* Links
+   ========================================================================== */
+
+@mixin default-links {
+  @include single-transition(color, 0.2s);
+  & {
+    text-decoration: none;
+  }
+  &:link {
+    color: #1d60b2;
+    border-bottom: 1px solid #bad9ff;
+  }
+  &:visited {
+    color: #513c90; // purple
+    border-bottom: 1px solid #8e75da;
+  }
   &:hover,
   &:active,
   &:focus {
-    color: $very-light-color;
-    a, .disclosure-help, .icon {
-      color: $very-light-color;
+    color: #1876e6;
+    .content p &,
+    .content li & {
+      background: #e7f2ff;
     }
-    @if $gradient {
-      @include gradient-vertical(lighten($accent-color, 10%), $accent-color);
-    } @else {
-      background: $accent-color;
-    }
-    @if $text-shadows {
-      @include text-shadow-black;
-    }
+    border-bottom: 1px solid #68adff;
+  }
+}
+
+@mixin swap-underlines {
+  &:link {
+    text-decoration: none;
+    border: none !important;
+  }
+  &:visited {
+    text-decoration: none;
+    border: none !important;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    border-bottom: 1px solid #ABCDF6;
+  }
+}
+
+@mixin no-underlines {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    border: none !important;
+  }
+}
+
+@mixin muted-links {
+  &:link,
+  &:visited {
+    color: #7F7F7F;
+    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid rgba(0,0,0,0.33);
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: #000;
+    border-bottom: none;
+  }
+}
+
+/* Links when color inversed */
+@mixin inverse-links {
+  @include single-transition(color, 0.2s);
+  &:link {
+    color: #FFF;
+    color: rgba(255,255,255,1);
+    border-bottom: 1px solid #444;
+    border-color: rgba(255,255,255,0.33);
+  }
+  &:visited {
+    color: #DDD;
+    color: rgba(255,255,255,1);
+    border-bottom: 1px solid #444;
+    border-color: rgba(255,255,255,0.33);
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: #FFF;
+    border-bottom: 1px solid #444;
+    border-color: rgba(255,255,255,0.88);
   }
 }

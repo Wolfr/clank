@@ -1,0 +1,54 @@
+
+/* Popover
+   Requires .align-left or .align-right class
+   ========================================================================== */
+
+.cl-popover {
+  padding: 5px 0;
+  background: #FFF;
+  border-radius: 8px;
+  position: absolute;
+
+  width: 300px;
+  z-index: $cl-popover-z-index;
+
+  &:after {
+    @include inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: "";
+  }
+  &.align-right {
+    right: 10px;
+    &:after {
+      right: 15%;
+    }
+  }
+  &.align-left {
+    left: 10px;
+    &:after {
+      left: 15%;
+    }
+  }
+  
+  &.pop-from-header {
+    top: 55px;
+    &:after {
+      top: -10px;
+      border-width: 0 10px 10px 10px;
+      border-color:  transparent transparent #FFF transparent;
+    }
+  }
+  
+  &.pop-from-footer {
+    bottom: 55px;
+    &:after {
+      bottom: -10px;
+      border-width: 10px 10px 0 10px;
+      border-color: #FFF stransparent transparent transparent;
+    }
+  }
+
+}

@@ -1,55 +1,78 @@
 /* ==========================================================================
-   Alerts
+   Alerts (iOS type alerts similar to a javascript alert)
    ========================================================================== */
 
 .cl-alert {
-  position: absolute;
   width: 100%;
   height: 100%; // this is 100% of .cl-content
-  
+  position: absolute;
+
+  z-index: $cl-alert-z-index;
   // Center within container
   display: -webkit-flex;
   -webkit-justify-content: center;
 
-  animation: pop-in 0.5s forwards;
-  
-  &.dismissed {
-    animation: pop-out 0.5s forwards;
-  }
+  bottom: 0;
 
-  // Ofset
-  position: relative;
-  bottom: $ios-bar-size / 2; // this offsets to true center
-  [data-os="android"] & {
-    bottom: $android-bar-size / 2; // this offsets to true center
-  }
   .cl-alert-box {
+    
+    animation: pop-in 0.5s forwards;
+  
+    &.hide {
+      animation: pop-out 0.5s forwards;
+    }
+    
+    z-index: $cl-alert-box-z-index;
+    
     // positioning
     margin: auto;
     width: 90%;
-    text-align: center;
-    padding: 12px;
-    background: $accent-color;
-    @include border-radius($border-radius);
-    @if $functional-shadows {
-      @include box-shadow(0 0 0 2px #FFF, 0 0 8px 2px rgba(0,0,0,0.25));
+    padding: 12px 0 0;
+    @media all and (min-width: 768px) {
+      width: 300px;
     }
+    text-align: center;
+    background: $very-light-color;
+    @include border-radius($border-radius);
   }
   .cl-alert-title {
     font-size: 16px;
-    padding: 0 0 6px;
-    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding: 0 12px 6px;
   }
+
   .cl-alert-message {
-    padding: 4px 0;
+    padding: 4px 12px 12px;
     font-size: 13px;
     line-height: 1.5;
   }
+
   .cl-alert-title,
   .cl-alert-message {
-    color: #FFF; // suppossing accent color is dark @todo refactor to account for light accent color
     margin: 0;
   }
+  // Make buttons and button group more minimal
+  // Instead of undoing button code maybe this should be written from scratch
+  .cl-alert-btn-group {
+    padding: 0;
+    border-top: 1px solid #B3B5B9;
+    display: -webkit-flex;
+  }
+  .cl-alert-btn {
+    -webkit-flex: 1;
+    flex: 1;
+    color: $accent-color;
+    padding: 12px 0;
+    font-size: 17px;
+    &:first-child {
+      border-right: 1px solid #B3B5B9;
+      @include border-bottom-left-radius($border-radius);
+    }
+    &:last-child {
+      font-weight: 700;
+      @include border-bottom-right-radius($border-radius);
+    }
+  }
+
 }
 
 @keyframes pop-in {

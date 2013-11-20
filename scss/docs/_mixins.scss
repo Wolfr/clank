@@ -1,14 +1,5 @@
-@mixin gradient-vertical($startColor: #555, $endColor: #333) {
-  background-color: mix($startColor, $endColor, 60%);
-  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
-  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
-  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
-  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
-}
-
+/* Mixins for docs 
+   ========================================================================== */
 
 @mixin default-links {
   @include single-transition(color, 0.2s);
@@ -56,33 +47,9 @@
 }
 
 
-@mixin display-font {
-  text-transform: uppercase;
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight:700;
-  font-stretch:condensed;
-  line-height: 1;
-  margin: 0;
-}
-
 @mixin calc($property, $expression) { 
   #{$property}: -moz-calc(#{$expression}); 
   #{$property}: -o-calc(#{$expression}); 
   #{$property}: -webkit-calc(#{$expression}); 
   #{$property}: calc(#{$expression}); 
-}
-
-/*
-  Alternate clearfix that does not rely on overflow: hidden;
-*/
-
-@mixin micro-clearfix {
-  &:before,
-  &:after {
-    content:"";
-    display:table;
-  }
-  &:after {
-    clear:both;
-  }
 }

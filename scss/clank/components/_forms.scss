@@ -6,7 +6,9 @@
    ========================================================================== */
 
 .cl-form {
-  margin: 5px 0;
+  &.padded {
+    margin: 10px;
+  }
 }
 
 /* Basic input types
@@ -46,15 +48,16 @@
   textarea,
   .radio-list,
   .checkbox-list  {
-    margin: 5px 10px;
+    margin-bottom: 10px;
   }
   
-  .cl-btn-toolbar {
-    margin: 5px 10px;
+  > .cl-btn-toolbar,
+  > .cl-btn {
+    margin-bottom: 10px;
   }
 
   input[type="range"] {
-    @include calc("width", "100% - 20px");
+    width: 100%;
   }
 
   input[type="text"],
@@ -79,8 +82,9 @@
     background: #FFF;
     border-radius: 3px;
     border: 1px solid #AAA;
-    @include calc("width", "100% - 20px");
-    @include box-shadow(inset 2px 2px 0 rgba(0,0,0,0.1));
+    @if $decorational-shadows {
+      @include box-shadow(inset 2px 2px 0 rgba(0,0,0,0.1));
+    }
     &:focus {
       border-color: rgba($accent-color-primary,.8);
       outline: 0;
@@ -122,6 +126,7 @@
     label {
       line-height: 42px;
       -webkit-flex: 1;
+      flex: 1;
       background: #FFF;
       border: 1px solid $light-color;
       border-width: 1px 1px 1px 0;
@@ -150,4 +155,39 @@
     }
   }
 
+}
+
+/* Range input (slider)
+   ========================================================================== */
+
+.cl-form {
+  input[type="range"] {
+    -webkit-appearance: none;
+    height: 30px;
+    background: none;
+    position: relative;
+    &:after {
+      content: " .";
+      background-color: #888;
+      height: 2px;
+      font-size: 0;
+      display: block;
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    position: relative;
+    border-radius: 100%;
+    border: 1px solid #444;
+    background: #FFF;
+  }
 }

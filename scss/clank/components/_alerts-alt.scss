@@ -1,0 +1,44 @@
+/* ==========================================================================
+  Alerts (bootstrap style alerts)
+   ========================================================================== */
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 8px 34px 8px 14px;
+  position: relative;
+  margin: 0 0 12px;
+  background-color: $light-color;
+  border: 1px solid $light-medium-color;
+  font-size: 14px;
+  font-weight: 700;
+  @include border-radius($border-radius);
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+// Alternate styles: success & error
+// -------------------------
+
+.alert-success,
+.alert-error {
+  a {
+    color: $very-light-color;
+    @include inverse-links;
+  }
+}
+
+.alert-success {
+  background-color: $success-color;
+  border-color: $success-color;
+  color: $very-light-color;
+}
+
+.alert-error {
+  background-color: $error-color;
+  border-color: $error-color;
+  color: $very-light-color;
+}

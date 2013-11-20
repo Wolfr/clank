@@ -2,50 +2,42 @@
 <html ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} - Clank</title>
+  <title>{{ page.title }} - {{ site.title }}</title>
 
-  {% unless page.layout == "demo" %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-  {% endunless %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
+  
+  <link rel="apple-touch-icon-precomposed" href="/images/app-icon/Icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/app-icon/Icon-72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/app-icon/Icon@2x.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/app-icon/Icon-72@2x.png">
 
+  <script src="/bower_components/prefix-free/prefixfree.min.js"></script>
+  <script src="/bower_components/jquery/jquery.js"></script>
+  <script src="/bower_components/jquery.extendedinput.js/js/jquery.extendedinput.js"></script>
 
-  {% if page.layout == "demo" and site.devmode %}
-
-    <script src="/components/prefix-free/prefixfree.min.js"></script>
-
-    <!-- Angular -->
-    <script src="/components/angular/angular.min.js"></script>
-    <script src="/components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="/js/docs/controllers.js"></script>
-    <script src="/js/docs/filters.js"></script>
-
-    <!-- Polyfills -->
-    <script src="/js/docs/polyfills/html5slider.js" type="text/javascript"></script>
-
-    <!-- Ratchet -->
-    <script src="/js/clank/ratchet/sliders.js"></script>
-    <script src="/js/clank/ratchet/toggles.js"></script>
-    <!-- <script src="/js/ratchet/push.js"></script> -->
-
-    <!-- Clank -->
-    <script src="/js/clank/ratchet/fingerblast.js"></script>
-    <script src="/js/clank/clank.js"></script>
-
+  {% if page.device == "dynamic" %}
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="/js/docs/controllers.js"></script>
+  <script src="/js/docs/filters.js"></script>
   {% endif %}
 
-  {% if page.layout == "demo" and site.devmode != "true" %}
-    <script src="/js/all.min.js"></script>
-  {% else %}
+  <!-- Ratchet -->
+  <script src="/js/clank/ratchet/sliders.js"></script>
+  <script src="/js/clank/ratchet/toggles.js"></script>
+  <!-- <script src="/js/ratchet/push.js"></script> -->
 
-    <!-- jQuery (needed for affix) -->
-    <script src="/components/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <!-- Bootstrap (for docs) -->
-    <script src="/js/docs/bootstrap/bootstrap-affix.js" type="text/javascript"></script>
+  <!-- Clank -->
+  <script src="/js/clank/ratchet/fingerblast.js"></script>
+  <script src="/js/clank/clank.js"></script>
+  
+  <script src="/js/app.js"></script>
 
-  {% endif %}
-
-  <link rel="stylesheet" href="/css/docs.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="/css/clank.css" type="text/css" media="screen">
+  <link href="/css/docs.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="/css/clank.css" rel="stylesheet" type="text/css" media="screen">
 
 </head>

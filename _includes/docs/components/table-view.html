@@ -5,7 +5,7 @@
 <h4>Table titles</h4>
 {% highlight html %}<h3 class="cl-table-title">table title</h3>{% endhighlight %}
 
-<h4>Grouped table view (default with <code>.cl-view-all</code>)</h4>
+<h4>Grouped table view (default with <code>.cl-table-view-btn</code>)</h4>
 
 {% highlight html %}
 <div class="cl-table">
@@ -14,12 +14,12 @@
       <span class="label">Item 1</span>
     </a>
   </div>
-  <div class="cl-table-cell">
+  <div class="cl-table-cell last-of-type">
     <a href="#">
       <span class="label">Item 2</span>
     </a>
   </div>
-  <div class="cl-view-all">
+  <div class="cl-table-view-btn">
     <a href="#">View all</a>
   </div>
 </div>
@@ -80,14 +80,3 @@
 </div>
 {% endhighlight %}
 
-<h4>Table view (extended)</h4>
-
-{% highlight html %}
-<div class="cl-table__extended">
-  <div class="cl-table-cell">
-    <a href="#">
-      <span class="label">Item 1</span>
-    </a>
-  </div>
-</div>
-{% endhighlight %}

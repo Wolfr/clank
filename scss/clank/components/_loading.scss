@@ -1,25 +1,30 @@
 /* ==========================================================================
-   Loading
-   Depends on prefixfree
+   Loading spinner
    ========================================================================== */
 
-@keyframes spin {
-  0% {
-    background-color: #000;
-  }
-  100% {
-    background-color: transparent;
-  }
+// border size of small spinner
+$spinner-size: 2px;
+// border size of big spinner
+$spinner-big-size: 6px;
+
+
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+   from {-moz-transform: rotate(0deg);}
+   to {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+   from {-o-transform: rotate(0deg);}
+   to {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(359deg);}
 }
 
-@keyframes spin-white {
-  0% {
-    background-color: #FFF;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
 
 .cl-loading-wrapper {
   position: absolute;
@@ -31,71 +36,57 @@
   align-items: center;
 }
 
+
 .cl-loading {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
   position:relative;
-  width: 32px;
-  height: 32px;
-  transform:scale(0.6);
-  & > div {
-    position:absolute;
-    height: 6px;
-    width: 6px;
-    border-radius: 3px;
-    animation-name: spin;
-    animation-duration:0.88s;
-    animation-iteration-count:infinite;
-    animation-direction:linear;
-    .cl-bar-title  &,
-    .cl-bar-footer & {
-      animation-name: spin-white;
-    }
+  -webkit-animation: rotation 1s infinite linear;
+  -moz-animation: rotation .1s infinite linear;
+  -o-animation: rotation 1s infinite linear;
+  animation: rotation 1s infinite linear;
+  border: $spinner-size solid rgba($accent-color,.15);
+  border-radius: 100%;
+  &:before {
+     content:"";
+     display:block;
+     position:absolute;
+     left:-$spinner-size;
+     top:-$spinner-size;
+     height: 100%;
+     width: 100%;
+     border-top: $spinner-size solid rgba($accent-color,.8);
+     border-left: $spinner-size solid transparent;
+     border-bottom: $spinner-size solid transparent;
+     border-right: $spinner-size solid transparent;
+     border-radius: 100%;
   }
 }
 
-$i: 8;
-@while $i > 0 {
-  .cl-loading-#{$i} {
-    animation-delay: 0.11s * $i;
+.cl-loading-big {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  position:relative;
+  -webkit-animation: rotation 1s infinite linear;
+  -moz-animation: rotation .1s infinite linear;
+  -o-animation: rotation 1s infinite linear;
+  animation: rotation 1s infinite linear;
+  border: $spinner-big-size solid rgba($accent-color,.15);
+  border-radius: 100%;
+  &:before {
+     content:"";
+     display:block;
+     position:absolute;
+     left:-$spinner-big-size;
+     top:-$spinner-big-size;
+     height: 100%;
+     width: 100%;
+     border-top: $spinner-big-size solid rgba($accent-color,.8);
+     border-left: $spinner-big-size solid transparent;
+     border-bottom: $spinner-big-size solid transparent;
+     border-right: $spinner-big-size solid transparent;
+     border-radius: 100%;
   }
-  $i: $i - 1;
-}
-
-.cl-loading-1 {
-  left: 0;
-  top: 13px;
-}
-
-.cl-loading-2 {
-  left: 4px;
-  top: 4px;
-}
-
-.cl-loading-3 {
-  left: 13px;
-  top: 0;
-}
-
-.cl-loading-4 {
-  right: 4px;
-  top: 4px;
-}
-
-.cl-loading-5 {
-  right:0;
-  top: 13px;
-}
-
-.cl-loading-6{
-  right: 4px;
-  bottom: 4px;
-}
-
-.cl-loading-7 {
-  left :13px;
-  bottom:0;
-}
-
-.cl-loading-8 {
-  left: 4px;
-  bottom: 4px;
 }

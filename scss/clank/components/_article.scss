@@ -1,63 +1,309 @@
 /* ==========================================================================
-   Article
+  Typography
    ========================================================================== */
 
 .cl-article {
+  
+  &.padded {
+    margin: 10px;
+  }
 
-  // Set global line height within articles
-  line-height: 1.4;
-  
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+
+  line-height: $base-line-height;
   color: $dark-color;
-  @include text-shadow-white;
-  
-  img {
-    max-width: 100%;
+
+  @include reading-font;
+
+  a {
+    @include default-links;
+  }
+
+  // Override for buttons
+  .cl-btn:link,
+  .cl-btn:visited {
+    border: none;
+    color: $very-light-color;
+  }
+
+  /* Typography */
+
+  strong {
+    font-weight: 700;
+    color: $very-dark-color;
   }
 
   p {
-    margin: 10px; /* make use of collapsing margins */
+    @include rem("margin", 0 0 12px);
     & + p {
       margin-top: 0;
+    }
+    &.intro {
+      @include heading-font-book;
+      @include rem("font-size", 19px);
+      line-height: 1.33;
+    }
+  }
+
+  blockquote {
+    @include reading-font-italic;
+    @include rem("margin", 0 0 12px 24px);
+    color: $medium-color;
+    a {
+      @include muted-links;
+    }
+    cite {
+      @include reading-font-bold;
+      color: #000;
+      display: block;
+      text-align: right;
+      font-style: normal;
+      @include rem("font-size", 13px);
+    }
+  }
+
+  h1, h2, h3, h4 {
+    color: $very-dark-color;
+    padding: 0;
+    @include rem("margin", 0 0 12px);
+  }
+
+  h1, h2, h3 {
+    @include heading-font-book;
+    line-height: 1.1;
+  }
+
+  h1, h2 {
+    @include rem("font-size", 32px);
+  }
+
+  h3 {
+    @include rem("font-size", 19px);
+    @include rem("margin", 0 0 12px);
+  }
+
+  h4 {
+    margin: 0;
+    @include rem("font-size", $base-font-size);
+    @include rem("margin", 0 0 12px);
+  }
+
+  h1, h2, h3 {
+    a,
+    a:link,
+    a:visited {
+      border: none;
+      color: #000;
+    }
+    a:hover,
+    a:active,
+    a:focus {
+      border-bottom: 1px solid #9CC6F9;
+      color: #0067E3;
+    }
+  }
+
+  .content ul,
+  .content ol {
+    @include rem("padding", 0 0 12px);
+    @include rem("margin", 0 0 0 24px);
+    ul, ol {
+      padding: 0;
+    }
+  }
+
+  .content ul li {
+    list-style: disc;
+    ol li {
+      list-style: decimal;
+    }
+  }
+
+  .content ol li {
+    list-style: decimal;
+    ul li {
+      list-style: disc;
+    }
+  }
+
+  /* For footnotes */
+  .footnotes {
+    border-top: 1px solid $divider-color;
+    @include rem("padding-top", 8px);
+  }
+
+  ol li:target,
+  sup:target {
+    background: #FFA;
+    @include reading-font-bold;
+  }
+
+  /* Code
+     ========================================================================== */
+
+  pre {
+    @include rem("margin", 0 0 12px);
+    @include rem("padding", 10px);
+    @include rem("font-size", 14px);
+    @include border-radius(4px);
+    background: $light-color;
+    line-height: 1.3;
+
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    & + pre {
+      @include rem("border-bottom-radius", 4px);
+    }
+  }
+
+  code {
+    font-family: Menlo, Consolas, "Courier New", monospace;
+    font-size: 87%;
+  }
+
+  em code {
+    font-style: normal;
+  }
+
+  .footnotes ol {
+    width: 90%;
+    position: relative;
+    @include rem("left", 32px);
+    @include rem("font-size", 13px);
+    li {
+      @include rem("margin-bottom", 4px);
+    }
+    p {
+      margin: 0;
     }
   }
 
   ul, ol {
     padding: 0;
-    margin: 10px; /* make use of collapsing margins */
+    @include rem("margin-bottom", 12px); /* make use of collapsing margins */
   }
-  
+
+  ol > li {
+    list-style: decimal;
+  }
+
+  ul > li {
+    list-style: disc;
+  }
+
   & > ul,
   & > ol {
     ul, ol {
       margin: 0;
     }
     li {
-      margin-left: 24px;
+      @include rem("margin-left", 24px);
     }
-  }
-  
-  h4 {
-    @extend p;
-  }
-  
-  a {
-    color: $accent-color;
-    border-bottom: 1px solid lighten($accent-color, 60%);
-  }
-  
-  & > .cl-table-padded {
-    margin: 10px;
-    @include calc("width", "100% - 20px");
-  }
-
-  .intro {
-    font-size: 16px;
-    line-height: 1.33;
-    background: $accent-color;
-    color: #FFF;
-    text-shadow: none;
-    padding: 10px;
-    margin: 0 0 10px;
   }
 
 }
+
+/* Article width layout
+   ========================================================================== */
+
+// How much % of the full width should a blog post take (reading length)
+$line-length-xs: 92%;
+$line-length: 80%;
+$line-length-lg: 70%;
+
+@mixin center-max-width-by-percentage {
+
+  width: 100%;
+  max-width: $line-length-xs;
+
+  [data-device="nexus7-portrait"] & {
+    max-width: $line-length;
+  }
+
+  [data-device="ipad3-portrait"] & {
+    max-width: $line-length;
+  }
+
+  [data-device="nexus7-landscape"] & {
+    max-width: $line-length-lg;
+  }
+
+  [data-device="ipad3-landscape"] & {
+    max-width: $line-length-lg;
+  }
+
+}
+
+@mixin center-width-by-percentage {
+
+  [data-device="nexus7-portrait"] & {
+    width: $line-length;
+  }
+
+  [data-device="ipad3-portrait"] & {
+    width: $line-length;
+  }
+
+  [data-device="nexus7-landscape"] & {
+    width: $line-length-lg;
+  }
+
+  [data-device="ipad3-landscape"] & {
+    width: $line-length-lg;
+  }
+
+}
+
+.cl-article-centered {
+  margin: 12px 0;
+  img {
+    max-width: 100%;
+  }
+  // Center dat to be able to autostretch images
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > p,
+  & > ul,
+  & > ol,
+  & > header,
+  & > footer,
+  & > blockquote,
+  & > .dont-stretch,
+  & > .highlight,
+  & > .table,
+  & > .footnotes,
+  & > pre,
+  & > .video-outer-wrap {
+    @include center-max-width-by-percentage;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & > .cl-data-table,
+  & > .dont-stretch {
+    @include center-width-by-percentage;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & > img.dont-stretch {
+    display: block;
+  }
+  & > hr {
+    width: 58%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & > blockquote {
+    width: 80%;
+    position: relative;
+    @include rem("left", 12px);
+  }
+}
+

@@ -1,0 +1,77 @@
+/* ==========================================================================
+  Tab bar
+   ========================================================================== */
+
+.tab-bar {
+  bottom: 0;
+  height: $ios-bar-size;
+  padding: 0;
+  > ul {
+    width: 300px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    @include pie-clearfix;
+  }
+}
+
+// Navigational tab
+.tab-item {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  float: left;
+
+  .tab-label,
+  .icon {
+    color: $medium-color;
+    position: relative;
+  }
+
+  // Label for tab
+  .tab-label {
+    margin-top: -2px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  // Active states for the tab bar
+  &.active,
+  &:active {
+    .tab-label,
+    .icon {
+      color: $accent-color;
+    }
+  }
+}
+
+/* ==========================================================================
+  Notifications
+   ========================================================================== */
+
+$notification-size: 15px;
+.notification {
+  background: #E42C31;
+  z-index: 100;
+  border-radius: $notification-size / 2;
+  min-width: $notification-size;
+  min-height: $notification-size;
+  line-height: $notification-size;
+  font-size: 10px;
+  color: #FFF;
+  @include inline-block;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  right: -$notification-size/2;
+}

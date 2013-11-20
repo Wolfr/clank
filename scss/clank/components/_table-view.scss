@@ -1,3 +1,30 @@
+/* Table views
+   ========================================================================== */
+
+@mixin table-cell-skin {
+  background: $very-light-color;
+}
+
+@mixin table-cell-skin-hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    color: $very-light-color;
+    a, .disclosure-help, .icon {
+      color: $very-light-color;
+    }
+    @if $gradient {
+      @include gradient-vertical(lighten($accent-color, 10%), $accent-color);
+    } @else {
+      background: $accent-color;
+    }
+    @if $text-shadows {
+      @include text-shadow-black;
+    }
+  }
+}
+
 /* ==========================================================================
    Table view
    ========================================================================== */
@@ -6,8 +33,7 @@
   @include pie-clearfix;
   @include unstyled;
   margin: 10px 0;
-  width: 90%;
-  @include calc("width", "100% - 20px");
+  width: 100%;
   & + .cl-table {
     padding-top: 0;
   }
@@ -17,9 +43,9 @@
 
 .cl-table-title {
   padding: 0;
-  margin: 10px 10px 0 20px;
+  margin: 10px 10px 0 10px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   color: $medium-color;
   & + .cl-table {
     padding-top: 5px;
@@ -28,11 +54,6 @@
   & + .input-group {
     padding-top: 5px;
   }
-}
-
-.cl-table-title-extended {
-  @extend .cl-table-title;
-  margin-left: 10px;
 }
 
 
@@ -46,23 +67,15 @@
   @include table-cell-skin-hover;
 }
 
-.cl-table > .cl-table-cell {
-  margin: 0 10px;
-  &:first-child {
-    @include border-top-radius($border-radius/2);
-  }
-  &:last-child {
-    @include border-bottom-radius($border-radius/2);
-  }
-}
-
 .cl-table-row {
-  margin: 0 10px;
+  margin: 0 15px;
   @include pie-clearfix;
 
   // Flex for eq heights
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: stretch;
+  align-items: stretch;
 
   & > .cl-table-cell {
     @include pie-clearfix;
@@ -119,20 +132,38 @@
 // Different components of a cell
 
 .cl-table-cell {
+  position: relative;
+  &:after {
+    content: " ";
+    width: 100%;
+    @include calc("width", "100% - 15px");
+    height: 0;
+    border-bottom: 1px solid #CCC;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:last-of-type,
+  &.last-of-type {
+    &:after {
+      content: none;
+    }
+  }
 
   a {
     display: block;
-    padding: 0 10px;
+    padding: 0 15px;
     min-height: 44px;
-    line-height: 44px;
-    font-weight: 700;
     color: $very-dark-color;
     border: none;
   }
   
   & > p {
     display: block;
-    padding: 10px;
+    padding: 0 15px;
     margin: 0;
   }
 
@@ -140,9 +171,9 @@
   .label {
     font-size: 16px;
     line-height: 24px; // based on iOS @todo refactor android
-    font-weight: 700;
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
+    display: inline-block;
   }
   
   // Secondary help
@@ -175,46 +206,15 @@
 
 }
 
-@if ($border-radius) {
+// Button at the bottom of a table e.g. to view all items
 
-  .cl-table {
-    .cl-table-row:first-child {
-      .cl-table-cell:first-child {
-        @include border-top-left-radius($border-radius/2);
-      }
-      .cl-table-cell:last-child {
-        @include border-top-right-radius($border-radius/2);
-      }
-    }
-    .cl-table-row:only-child {
-      .cl-table-cell:first-child {
-        @include border-left-radius($border-radius/2);
-      }
-      .cl-table-cell:last-child {
-        @include border-right-radius($border-radius/2);
-      }
-    }
-    .cl-table-row:last-child {
-      .cl-table-cell:first-child {
-        @include border-bottom-left-radius($border-radius/2);
-      }
-      .cl-table-cell:last-child {
-        @include border-bottom-right-radius($border-radius/2);
-      }
-    }
-
-  }
-}
-
-// Control to view all items
-
-.cl-view-all {
+.cl-table-view-btn {
   @include pie-clearfix;
   @include table-cell-skin;
-  @include gradient-vertical($subtle-color,darken($subtle-color, 10%));
-  @include text-shadow-white;
+  @if $text-shadows {
+    @include text-shadow-white;
+  }
   width: 100%;
-  margin: 0 10px;
   line-height: 33px;
   font-size: 12px;
   text-align: center;
@@ -222,36 +222,10 @@
   top: 0;
   & > a {
     display: block;
-    color: #000;
-    font-weight: 700;
+    color: $accent-color;
     &:hover {
-      @include box-shadow(0 2px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(0,0,0,.1));
-      @include gradient-vertical(darken($subtle-color, 10%), darken($subtle-color, 20%));
-      @include border-bottom-radius($border-radius);
-    }
-  }
-}
-
-// Cells that extend to the window/screen edges
-
-.cl-table__extended {
-  @extend .cl-table;
-  // overwrite extended .cl-table
-  width: 100%;
-  .icon-arrow-right {
-    right: 10px;
-  }
-  a {
-    display: block;
-  }
-  .cl-table-cell {
-    @include border-radius(0);
-    .cl-table-cell {
-      @include border-radius(0);
-    }
-    margin: 0 0 1px;
-    @if $decorational-shadows {
-      margin: 0;
+      background: $accent-color;
+      color: $very-light-color; 
     }
   }
 }

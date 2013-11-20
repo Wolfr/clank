@@ -7,7 +7,7 @@
   @include button-skin-hover($accent-color);
 
   display: block;
-  font-weight: 700;
+  font-weight: 400;
   cursor: pointer;
   position: relative;
   
@@ -15,7 +15,6 @@
   border: none;
   -webkit-appearance: none;
 
-  font-weight: 700;
   
   text-align: center;
   font-size: 13px;
@@ -23,6 +22,7 @@
 
   [data-os="android"] & {
     line-height: 40px;
+    font-weight: 700;
   }
 
   /* Bar buttons */
@@ -36,11 +36,28 @@
     margin: 5px;
     font-size: 13px;
   }
-  
+
   .cl-content > & {
     margin: 0 10px;
   }
 
+  /* Buttons with icons in */
+  &.cl-btn-icon {
+    white-space: nowrap;
+    padding: 0 7px 0 21px;
+    [data-os="android"] & {
+      padding: 0 7px 0 21px;
+    }
+    // This is a bit redundant but needed to override specificity
+    .cl-bar-title &,
+    .cl-bar-footer &,
+    .cl-bar & {
+      padding: 0 7px 0 21px;
+      [data-os="android"] & {
+        padding: 0 7px 0 21px;
+      }
+    }
+  }
   /* Less min width for icon only type buttons */
   &.cl-btn-icon-only {
     width: 35px;
@@ -67,12 +84,206 @@
   &:hover,
   &:active,
   &:focus {
-    border: 1px solid darken($background-color, 10%);
-    @include border-radius($border-radius);
-    @include box-shadow(0 1px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2));
     background: darken($background-color, 5%);
     color: #AAA;
     text-shadow: none;
     pointer-events: none;
+
+    @include border-radius($border-radius);
+    @if $button-borders {
+      border: 1px solid darken($background-color, 10%);
+    }
+    @if $decorational-shadows {
+      @include box-shadow(0 1px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2));
+    }
+  }
+}
+
+/* ==========================================================================
+   Button positioning, toolbars, groups
+   ========================================================================== */
+
+/* Button positioning within page bars
+   ========================================================================== */
+
+.cl-bar-title,
+.cl-bar-footer,
+.cl-bar {
+  // If no aligment is specified align left
+  > .cl-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > .cl-title + .btn, // if there is a button right after .title it should probably be right aligned
+  > .cl-btn:last-child { // if there is a button the last child it should probably be right aligned
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+  }
+  > .cl-btn.align-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+  > .cl-btn.align-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+  }
+  // If you have multiple buttons they should be grouped in .cl-btn-toolbar with a .float class for positioning
+  .cl-btn-toolbar {
+    &.align-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+    }
+    &.align-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      left: auto;
+    }
+  }
+  // Button group aka segemented control in middle
+  .cl-btn-group.align-center {
+    .cl-btn {
+      position: static;
+      margin: 5px -1px 5px 0;
+      width: 25%;
+    }
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+  }
+  // Title positioning
+  .cl-title.align-left {
+    position: absolute;
+    top: 0;
+    left: 12px;
+  }
+}
+
+/* Button toolbars
+   You should specify an implementation [flex|float]
+   ========================================================================== */
+
+.cl-btn-toolbar.flex {
+  display: -webkit-flex;
+  display: flex;
+  .cl-btn {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  .cl-btn {
+    &:first-child {
+      margin-right: 5px;
+    }
+    &:nth-child(2):not(:last-child),
+    &:nth-child(3):not(:last-child),
+    &:nth-child(4):not(:last-child) {
+      margin: 0 5px;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
+    &:only-child {
+      margin: 0;
+    }
+  }
+}
+
+.cl-btn-toolbar.float {
+  display: block;
+  @include pie-clearfix;
+  .cl-btn {
+    float: left;
+  }
+}
+
+/* ==========================================================================
+   Button group aka segmented control
+   ========================================================================== */
+
+.cl-btn-group {
+  @include pie-clearfix;
+  padding: 0 10px;
+  .cl-btn {
+    padding: 0;
+    background: none;
+    color: $accent-color;
+    @include border-radius(0);
+
+    line-height: 30px; // 2px less than normal to account for borders
+    [data-os="android"] & {
+      line-height: 38px; // 2px less than normal to account for borders
+    }
+
+    border: 1px solid $accent-color;
+    border-right-width: 0;
+    &.active, &:hover {
+      color: $very-light-color;
+      background: $accent-color;
+    }
+    &:first-child {
+      @include border-left-radius($border-radius);
+    }
+    &:last-child {
+      @include border-right-radius($border-radius);
+      border-right-width: 1px;
+    }
+    .bar &,
+    .bar-title &,
+    .bar-footer & {
+      position: relative;
+    }
+  }
+}
+
+/* Specify an implementation for positioning 
+   ========================================================================== */
+
+.cl-btn-group.flex {
+  display: -webkit-flex;
+  .cl-btn {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+}
+
+.cl-btn-group.float {
+  display: block;
+  @include pie-clearfix;
+  .cl-btn {
+    float: left;
+    width: 120px;
+  }
+}
+
+/* Different skin for headers
+   ========================================================================== */
+
+.cl-bar-title,
+.cl-bar-footer,
+.cl-bar {
+  .cl-btn-group {
+    .cl-btn {
+      border: 1px solid darken($accent-color, 8%);
+      color: $very-light-color;
+      &.active, &:hover {
+        background: darken($accent-color, 8%);
+      }
+    } 
   }
 }

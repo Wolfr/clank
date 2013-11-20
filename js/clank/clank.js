@@ -47,5 +47,5 @@ $(function() {
     var dismissWhat = $(this).attr('data-dismiss')
     $('.' + dismissWhat).addClass('dismissed');
   });
-
+  
 });

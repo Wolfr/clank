@@ -1,0 +1,42 @@
+/* Custom template for stylesheet generation for Clank */
+/* Based on https://github.com/endtwist/fontcustom/blob/master/lib/fontcustom/templates/fontcustom.css */
+
+<% if (fontfaceStyles) { %>@font-face {
+	font-family:"<%= fontBaseName %>";<% if (fontSrc1) { %>
+	src:<%= fontSrc1 %>;<% }%>
+	src:<%= fontSrc2 %>;
+	font-weight:normal;
+	font-style:normal;
+}
+<% } %>
+
+<% if (baseStyles) { %>
+[class^="icon-android4-"]:before,
+[class*=" icon-android4-"]:before {
+	font-family:"<%= fontBaseName %>";
+	display:inline-block;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.icon-<%= glyphs[glyphIdx] %><% if(glyphIdx === glyphs.length-1) { %> { <% } else { %>, <% } } %>
+	&:before {
+		font-family:"<%= fontBaseName %>";
+		display:inline-block;
+		font-weight:normal;
+		font-style:normal;
+		text-decoration:inherit;
+	}
+}<% } %>
+
+/* Icons */<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.icon-<%= glyphs[glyphIdx] %>:before {
+	content:"<% if (ligatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= (61696+glyphIdx).toString(16) %><% } %>";
+}<% } %>

@@ -1,14 +1,31 @@
 {
   "name": "clank",
-  "version": "0.1.0",
+  "version": "0.2",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wolfr/clank.git"
+    "url": "git://github.com/Wolfr/clank.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wolfr/clank/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-webfont": "~0.1.10",
+    "grunt-jekyll": "~0.4.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compass": "~0.6.0",
+    "connect-livereload": "~0.3.0",
+    "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-shell": "~0.3.0"
+    "grunt-open": "~0.2.2"
   }
 }

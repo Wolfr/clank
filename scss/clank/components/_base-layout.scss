@@ -8,13 +8,10 @@
   text-align: left;
   font-size: 13px;
   word-wrap: break-word;
-  height: 100%;
   width: 100%;
-  @if $device-wraps {
-    @include calc("height","100% - 20px"); /* minus status bar height */
-  }
+  height: 100%;
+  @include calc("height","100% - 20px"); /* minus status bar height */
   -webkit-font-smoothing: antialiased;
-
 }
 
 /* Content */
@@ -34,7 +31,7 @@
     @include calc(height, "100% - 50px");
   }
 
-  &.cl-content__has-footer {
+  &.has-footer-bar {
     @include calc(height, "100% - 88px");
     [data-os="android"] & {
       @include calc(height, "100% - 100px");
@@ -57,7 +54,6 @@
     -moz-box-sizing: padding-box;
   }
 }
-
 
 /* Bar layout */
 
@@ -85,10 +81,13 @@
 }
 
 .cl-bar-title {
-  .title {
+  .cl-title {
     text-align: center;
     // default
     line-height: $ios-bar-size;
+    [data-os="ios"] & {
+      font-weight: 500;
+    }
     [data-os="android"] & {
       line-height: $android-bar-size;
     }
@@ -160,33 +159,63 @@
 .cl-bar-title,
 .cl-bar-footer,
 .cl-bar {
-  // Backgrounds
-  background: $accent-color;
   @if $gradient {
     @include gradient-vertical(lighten($accent-color, 10%), $accent-color);
+    /* iOS styles insets highlight and bottom border on header */
+    /* The upper highlight */
+    &:before {
+      content: " ";
+      height: 1px;
+      width: 100%;
+      background: lighten($accent-color, 15%);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    /* The darker bottom */
+    &:after {
+      content: " ";
+      height: 1px;
+      width: 100%;
+      background: darken($accent-color, 15%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   } @else {
     background: $accent-color;
   }
-  /* iOS styles insets highlight and bottom border on header */
+}
+
+.cl-bar-footer {
+  background: #FFF;
   /* The upper highlight */
   &:before {
     content: " ";
     height: 1px;
     width: 100%;
-    background: lighten($accent-color, 15%);
+    background: darken($subtle-color, 15%);
     position: absolute;
     top: 0;
     left: 0;
   }
-  /* The darker bottom */
-  &:after {
-    content: " ";
-    height: 1px;
-    width: 100%;
-    background: darken($accent-color, 15%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
+}
 
+/* Addition - back chevron
+   ========================================================================== */
+
+.cl-btn {
+  [class^="icon-app-"],
+  [class*=" icon-app-"] {
+   position: absolute;
+   top: 0;
+   left: 10px;
+ }
+ .icon-ios7-back-chevron,
+ .icon-android4-back-chevron {
+   font-size: 140%;
+   position: absolute;
+   top: 0;
+   left: 4px;
+ }
 }

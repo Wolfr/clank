@@ -1,12 +1,15 @@
 ---
-  layout: demo
+  layout: base
   title: Demo
   docs: alerts
 ---
 
 <div class="cl-page">
   <div class="cl-bar-title">
-    <a href="index.html" class="cl-btn" data-transition="slide-out"><i class="icon-app-arrow-left"></i>Back</a>
+    <a href="index.html" class="cl-btn cl-btn-icon">
+      <i class="icon-ios7-back-chevron"></i>
+      Demo index
+    </a>
     <h1 class="cl-title">Alerts</h1>
   </div>
   <div class="cl-content">
@@ -33,14 +36,12 @@
       <div class="cl-alert-box">
         <h3 class="cl-alert-title">This is an alert title.</h3>
         <p class="cl-alert-message">This is an alert message. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <div class="cl-btn-toolbar">
-          <a href="#" class="cl-btn" data-dismiss="cl-alert">Cancel</a>
-          <a href="#" class="cl-btn cl-btn-primary" data-dismiss="cl-alert">OK</a>
+        <div class="cl-alert-btn-group flex">
+          <a href="#" class="cl-alert-btn" data-dismiss="cl-alert-btn">Cancel</a>
+          <a href="#" class="cl-alert-btn" data-dismiss="cl-alert">OK</a>
         </div>
       </div>
     </div>
 
   </div>
-  <!-- <div class="cl-bar-footer">
-  </div> -->
 </div>

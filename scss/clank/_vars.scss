@@ -1,42 +1,86 @@
-/**
- * Device wraps
- * Set this to true if you are using device frames i.e. like the demo at getclank.com
- */
+/*  Device wraps
+    Set this to true if you are using device frames i.e. like the demo at getclank.com
+   ========================================================================== */
 
 $device-wraps:           true;
 
-/**
- * Operating system defaults
- * Used to determine the sizing of elements
- */
+/*  Operating system defaults
+    Used to determine the sizing of elements
+   ========================================================================== */
 
 $ios-bar-size:           44px;
 $android-bar-size:       50px;
 
-/**
- * Colors
- * Quickly change the colors of your app using these variables
- * Note that a "light text on dark background" scheme is not fully supported yet
- */
+/*  Default style variables 
+   ========================================================================== */
 
-$very-light-color:       #FFF    !default;
-$light-color:            #DDD    !default;
-$medium-color:           #666    !default;
-$dark-color:             #333    !default;
-$very-dark-color:        #000    !default;
+$base-font-size:                    13px;
+$base-font-value:                   13;
+$base-line-height:                  1.5;
 
-$background-color:       mix($very-light-color, $light-color, 50%) !default;
-$accent-color:           #15696E !default;
-$accent-color-primary:   if(lightness($accent-color) >= 50%, scale-saturation(scale-lightness($accent-color, -25%),25%), scale-saturation(scale-lightness($accent-color, 25%),25%)) !default;
-$subtle-color:           darken($background-color, 5%) !default;
+/* Colors
+   Quickly change the colors of your app using these variables
+   Note that a "light text on dark background" scheme is not fully supported yet
+   ========================================================================== */
 
-/**
- * Stylistic choices
- * Quickly change the style of your app using these variables
- */
 
-$functional-shadows:     true !default; // Shadows (and highlights) that are functional e.g. a drop shadow on a modal
-$decorational-shadows:   true !default; // Shadows (and highlights) that are decorational e.g. an inset on a button
-$gradient:               true !default; // Whether gradients should be rendered or not, set this to false for a flatter design
-$border-radius:          4px !default; // The radii of common borders e.g. the borders on buttons
-$text-shadows:           true !default; // Whether text should have shadows or not
+$very-light-color:                   #FFF    !default;
+$light-color:                        #DDD    !default;
+$light-medium-color:                 #AAA    !default;
+$medium-color:                       #666    !default;
+$dark-color:                         #333    !default;
+$very-dark-color:                    #000    !default;
+                                     
+$divider-color:                      $light-medium-color;
+                                     
+$background-color:                   mix($very-light-color, $light-color, 50%) !default;
+$accent-color:                       #18788b !default;
+$accent-color-primary:               if(lightness($accent-color) >= 50%, scale-saturation(scale-lightness($accent-color, -25%),25%), scale-saturation(scale-lightness($accent-color, 25%),25%)) !default;
+$subtle-color:                       darken($background-color, 5%) !default;
+
+// Colors with semantic meaning e.g. red for error
+$success-color:                     darken($accent-color, 20%)   !default;
+$success-color-alt:                 #8FAE1F   !default;
+$error-color:                       invert($accent-color)   !default;
+$danger-color:                      #FC6C2B   !default;
+$help-color:                        #643ABF   !default;
+$highlight-color:                   #F9F3AC   !default;
+
+
+/* Stylistic choices
+   Quickly change the style of your app using these variables
+   ========================================================================== */
+
+$functional-shadows:            true !default; // Shadows (and highlights) that are functional e.g. a drop shadow on a modal
+$decorational-shadows:          true !default; // Shadows (and highlights) that are decorational e.g. an inset on a button
+$gradient:                      true !default; // Whether gradients should be rendered or not, set this to false for a flatter design
+$border-radius:                 4px !default; // The radii of common borders e.g. the borders on buttons
+$text-shadows:                  true !default; // Whether text should have shadows or not
+$button-borders:                true !default;
+
+/* For this release we are focussing on iOS7
+   Enforce iOS7 flatness
+   ========================================================================== */
+
+$gradient: false;
+$decorational-shadows: false;
+$button-borders: false;
+$text-shadows: false;
+
+/* Media queries, always based on 16px base value.
+   ========================================================================== */
+
+$break-small:                  320 / 16 * 1em;
+$break-small-medium:           480 / 16 * 1em;
+$break-medium:                 768 / 16 * 1em;
+$break-large:                  1024px;
+$break-x-large:                1200 / 16 * 1em;
+$break-xx-large:               1440 / 16 * 1em;
+$break-xxx-large:              1650 / 16 * 1em;
+
+/* Master z-index list
+   ========================================================================== */
+
+$cl-alert-z-index:             1202000202;
+$cl-alert-box-z-index:         120203202;
+$cl-popover-z-index:           1100202;
