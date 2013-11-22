@@ -15,7 +15,6 @@
   border: none;
   -webkit-appearance: none;
 
-  
   text-align: center;
   font-size: 13px;
   line-height: 32px;
@@ -217,7 +216,6 @@
    ========================================================================== */
 
 .cl-btn-group {
-  @include pie-clearfix;
   padding: 0 10px;
   .cl-btn {
     padding: 0;
