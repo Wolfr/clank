@@ -48,4 +48,26 @@ $(function() {
     $('.' + dismissWhat).addClass('dismissed');
   });
   
+  /*
+    Prevent body scrolling when popover context is open
+  */
+
+  $('[data-toggle-element="popover-context"]').click(function(e) {
+      if ($('.cl-popover').is(':visible')) {
+          $('.cl-content').css('overflow', 'hidden');
+      } else {
+          $('.cl-content').css('overflow', 'scroll');
+      }
+  });
+
+  /*
+    Prevent body scrolling when popover context is open
+  */
+
+  if ($('.cl-modal').is(':visible')) {
+    $('.cl-content').css('overflow', 'hidden');
+  } else {
+    $('.cl-content').css('overflow', 'scroll');
+  }
+  
 });
