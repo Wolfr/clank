@@ -70,4 +70,11 @@ $(function() {
     $('.cl-content').css('overflow', 'scroll');
   }
   
+  
+  /**
+   * Init extended input
+   */
+  
+  $('body').extendedInput();
+  
 });
