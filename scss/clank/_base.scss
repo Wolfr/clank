@@ -19,9 +19,12 @@ a {
   font-family: 'Roboto', 'Droid Sans', sans-serif;
 }
 
-.cl-device-body * {
-  @include box-sizing(border-box);
+.cl-device-body {
+  *, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
 }
+
 
 .cl-device-body {
   padding: 0;
