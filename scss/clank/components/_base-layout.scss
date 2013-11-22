@@ -45,16 +45,6 @@
   }
 }
 
-/* Hide scrollbars in firefox */
-@-moz-document url-prefix() {
-  .cl-content {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    @include calc("width", "100% + 14px");
-    -moz-box-sizing: padding-box;
-  }
-}
-
 /* Bar layout */
 
 .cl-bar-title,
