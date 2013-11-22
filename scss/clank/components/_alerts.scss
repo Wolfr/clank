@@ -10,12 +10,14 @@
   z-index: $cl-alert-z-index;
   // Center within container
   display: -webkit-flex;
+  display: flex;
+
   -webkit-justify-content: center;
+  justify-content: center;
 
   bottom: 0;
 
   .cl-alert-box {
-    
     animation: pop-in 0.5s forwards;
   
     &.hide {
@@ -23,7 +25,7 @@
     }
     
     z-index: $cl-alert-box-z-index;
-    
+
     // positioning
     margin: auto;
     width: 90%;
@@ -56,6 +58,7 @@
     padding: 0;
     border-top: 1px solid #B3B5B9;
     display: -webkit-flex;
+    display: flex;
   }
   .cl-alert-btn {
     -webkit-flex: 1;
@@ -63,6 +66,11 @@
     color: $accent-color;
     padding: 12px 0;
     font-size: 17px;
+    &:hover,
+    &:active,
+    &:focus {
+      background: rgba($accent-color, 0.25);
+    }
     &:first-child {
       border-right: 1px solid #B3B5B9;
       @include border-bottom-left-radius($border-radius);
