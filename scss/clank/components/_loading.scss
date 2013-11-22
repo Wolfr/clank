@@ -32,6 +32,8 @@ $spinner-big-size: 6px;
   width: 100%;
   text-align: center;
   display: -webkit-flex;
+  display: flex;
+  
   justify-content: center;
   align-items: center;
 }
