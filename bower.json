@@ -2,7 +2,6 @@
   "name": "clank",
   "version": "0.1.0",
   "dependencies": {
-    "prefix-free": "gh-pages",
     "jquery": "~2.0.2"
   },
   "devDependencies": {
