@@ -1,16 +1,17 @@
-# Clank 0.2 README
+# Clank README
 
-To set Clank up run:
+## What is Clank?
 
-    npm install
-    bower install
-    grunt watch
+Clank is an open source HTML/CSS prototyping framework for tablet and smartphone apps. Think of it as Twitter Bootstrap but for prototyping native apps.
 
-Make sure you have installed node JS, bower and Grunt.
+## Demos
 
-You will also need to have the Jekyll, Sass and Compass ruby gems on your system. Install them through [RubyGems](http://rubygems.org/):
+[View the demos](http://getclank.com/demos/)
 
-    gem install jekyll
-    gem install sass
-    gem install compass
+## Acknowledgements
 
+Clank was inspired and uses parts of [Ratchet](http://maker.github.io/ratchet/).
+
+## Contributing
+
+Open a [Github issue](https://github.com/Wolfr/clank/issues) if you have any feedback or ideas.
