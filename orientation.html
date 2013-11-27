@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/clank.css" type="text/css" media="screen" title="no title" charset="utf-8">
   
   <script src="bower_components/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
-  
+
   <script src="js/clank/ratchet/fingerblast.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/clank/ratchet/sliders.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/clank/ratchet/toggles.js" type="text/javascript" charset="utf-8"></script>
@@ -17,41 +17,41 @@
 <body>
 
   <div class="cl-device-frame">
-    <div class="cl-device-wrap" style="-webkit-transform: scale(1); -moz-transform: scale(1); -webkit-transform-origin: 0% 0%; -moz-transform-origin: 0% 0%;" data-os="ios" data-device="iphone4-portrait">
+    <div class="cl-device-wrap" data-os="android" data-device="nexus7-portrait">
 
       <div class="cl-device-body">
 
-        <div class="cl-ios-status">
+        <div class="cl-android-status">
           <span>
-            <span class="signals">
-              <span class="signal1"></span>
-              <span class="signal2"></span>
-              <span class="signal3"></span>
-              <span class="signal4"></span>
-              <span class="signal5"></span>
-            </span>
-            <span class="carrier">Bell</span>
+            <span class="icon-android4-battery"></span>
+            <span class="icon-android4-network"></span>
+            <span class="icon-android4-wifi"></span>
+            <span>20:49</span>
           </span>
-          <span class="clock">20:49</span>
+        </div>
+  
+        <div class="cl-android-software-buttons">
           <span>
-            <span>3G</span>
-            <span class="icon-ios6-alarm"></span>
-            <span class="icon-ios6-locate"></span>
-            <span class="icon-ios6-lock"></span>
-            <span class="icon-ios6-battery"></span>
+            <span class="icon-android4-system-back"></span>
+            <span class="icon-android4-system-home"></span>
+            <span class="icon-android4-system-apps"></span>
           </span>
         </div>
 
         <div class="cl-device">
         <div class="cl-page">
           <div class="cl-bar-title">
-            <div class="cl-title">Welcome</div>
+            <a href="os-switch.html" class="cl-btn cl-btn-icon">
+              <i class="icon-android4-back-chevron"></i>
+              OS switch
+            </a>
+            <div class="cl-title">Orientation</div>
           </div>
           <div class="cl-content">
             <div class="cl-article cl-article-centered">
-              <p>Welcome to Clank. his is the first demo page in iOS style.</p>
+              <p>You can also change the orientation: between this and the previous step <code>data-device=""</code> changed from <code>nexus7-landscape</code> to <code>nexus7-portrait</code>.</p>
               <div class="cl-btn-group flex">
-                <a class="cl-btn" href="os-switch.html">Next: OS switch</a>
+                <a class="cl-btn" href="device-wraps.html">Next: device wraps</a>
               </div>
             </div>
           </div>

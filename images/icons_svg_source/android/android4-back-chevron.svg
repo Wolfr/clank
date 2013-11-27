@@ -3,14 +3,5 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<g>
-	<defs>
-		<polygon id="SVGID_1_" points="24,30.111 14.051,16.003 24,1.889 17.949,1.889 8,16.003 17.949,30.111 		"/>
-	</defs>
-	<use xlink:href="#SVGID_1_"  overflow="visible" fill-rule="evenodd" clip-rule="evenodd"/>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  overflow="visible"/>
-	</clipPath>
-	<rect x="1.258" y="-4.853" clip-path="url(#SVGID_2_)" fill-rule="evenodd" clip-rule="evenodd" width="29.484" height="41.706"/>
-</g>
+<polygon points="24.441,30.111 14.218,15.614 24.441,1.111 18.223,1.111 8,15.614 18.223,30.111 "/>
 </svg>

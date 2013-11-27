@@ -16,7 +16,7 @@
     &[data-device="iphone4-portrait"] {
       width: 396px;
       height: 734px;
-      background: url(../../images/portrait/iphone4.png) no-repeat 0 0;
+      background: url(../images//portrait/iphone4.png) no-repeat 0 0;
       padding: 127px 0 0 2px;
       .cl-device-body {
         width: 320px;
@@ -27,7 +27,7 @@
       padding: 37px 0 0;
       width: 734px;
       height: 396px;
-      background: url(../../images/landscape/iphone4.png) no-repeat 0 0;
+      background: url(../images//landscape/iphone4.png) no-repeat 0 0;
       .cl-device-body {
         width: 480px;
         height: 320px;
@@ -36,7 +36,7 @@
     &[data-device="iphone5-portrait"] {
       width: 396px;
       height: 822px;
-      background: url(../../images/portrait/iphone5.png) no-repeat 0 0;
+      background: url(../images//portrait/iphone5.png) no-repeat 0 0;
       padding: 127px 0 0 0;
       .cl-device-body {
         width: 320px;
@@ -47,7 +47,7 @@
       padding: 38px 0 0;
       width: 822px;
       height: 396px;
-      background: url(../../images/landscape/iphone5.png) no-repeat 0 0;
+      background: url(../images//landscape/iphone5.png) no-repeat 0 0;
       .cl-device-body {
         width: 568px;
         height: 320px;
@@ -56,7 +56,7 @@
     &[data-device="galaxynexus-portrait"] {
       width: 434px;
       height: 849px;
-      background: url(../../images/portrait/galaxy-nexus.png) no-repeat 0 0;
+      background: url(../images//portrait/galaxy-nexus.png) no-repeat 0 0;
       padding: 107px 0 0;
       .cl-device-body {
         width: 366px;
@@ -71,7 +71,7 @@
       padding: 34px 40px 0 0;
       width: 849px;
       height: 434px;
-      background: url(../../images/landscape/galaxy-nexus.png) no-repeat 0 0;
+      background: url(../images//landscape/galaxy-nexus.png) no-repeat 0 0;
       .cl-android-status {
         width: 610px;
       }
@@ -91,7 +91,7 @@
       width: 970px;
       height: 1260px;
 
-      background: url(../../images/portrait/ipad3.png) no-repeat 0 0;
+      background: url(../images//portrait/ipad3.png) no-repeat 0 0;
       padding: 118px 0 0;
       .cl-device-body {
         width: 768px;
@@ -102,7 +102,7 @@
       padding: 101px 0 0;
       width: 1260px;
       height: 970px;
-      background: url(../../images/landscape/ipad3.png) no-repeat 0 0;
+      background: url(../images//landscape/ipad3.png) no-repeat 0 0;
       .cl-device-body {
         width: 1024px;
         height: 768px;
@@ -111,7 +111,7 @@
     &[data-device="nexus7-portrait"] {
       width: 970px;
       height: 1260px;
-      background: url(../../images/portrait/nexus7.png) no-repeat center center;
+      background: url(../images//portrait/nexus7.png) no-repeat center center;
       padding: 134px 0 0;
       background-size: contain;
       .cl-device-body {
@@ -125,7 +125,7 @@
     &[data-device="nexus7-landscape"] {
       width: 1260px;
       height: 970px;
-      background: url(../../images/landscape/nexus7.png) no-repeat center center;
+      background: url(../images//landscape/nexus7.png) no-repeat center center;
       background-size: contain;
       padding: 176px 0 0;
       .cl-device-body {

@@ -1,1 +1,0 @@
-This is the second screen documentation just for example purposes.

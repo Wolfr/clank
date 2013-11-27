@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Fri Nov 22 09:31:51 2013
+ By Johan Ronsse
+Created by Johan Ronsse with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="android-icons" horiz-adv-x="512" >
+  <font-face 
+    font-family="android-icons"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 -142 528 526"
+    underline-thickness="25"
+    underline-position="-52"
+    unicode-range="U+F100-F107"
+  />
+<missing-glyph horiz-adv-x="187" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="187" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="170" 
+ />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="289" 
+d="M0 -32v345h289v-345h-289z" />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="289" 
+d="M289 -32h-289v405h80v43h129v-43h80v-405z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" horiz-adv-x="472" 
+d="M364 -34h-97l-159 226l159 226h97l-159 -226zM0 -142v668h472v-668h-472z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" 
+d="M512 446v-508h-101v431l80 77h21zM0 -62l143 151v-151h-143zM160 112l100 105v-279h-100v174zM286 241l100 105v-408h-100v303z" />
+    <glyph glyph-name="uniF104" unicode="&#xf104;" 
+d="M0 64v180h421v-180h-421zM30 215v-121h361v121h-361zM120 320h392v-181h-30v151h-362v30z" />
+    <glyph glyph-name="uniF105" unicode="&#xf105;" horiz-adv-x="528" 
+d="M416 250q52 0 82 -25.5t30 -70.5t-30 -70.5t-82 -25.5h-176v32h176q80 0 80 64t-80 64h-358l70 -80h-44l-84 96l84 96h44l-70 -80h358z" />
+    <glyph glyph-name="uniF106" unicode="&#xf106;" 
+d="M256 327l256 -94v-176h-512v177zM483 86v128l-227 82l-227 -82v-128h454z" />
+    <glyph glyph-name="uniF107" unicode="&#xf107;" 
+d="M462 223q-91 70 -206 70q-114 0 -205 -70l-51 59q112 86 256 86t256 -86zM190 61q29 24 66 24t66 -24l-66 -77zM125 137q57 44 131 44t131 -44l-53 -62q-33 28 -78 28t-78 -28zM256 275q109 0 194 -66l-51 -58q-62 48 -143 48t-143 -48l-51 58q85 66 194 66z" />
+  </font>
+</defs></svg>

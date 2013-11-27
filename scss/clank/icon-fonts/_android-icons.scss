@@ -29,9 +29,9 @@
 }
 
 
+.icon-android4-back-chevron, 
 .icon-android4-battery-colored, 
 .icon-android4-battery, 
-.icon-android4-chevron, 
 .icon-android4-network, 
 .icon-android4-system-apps, 
 .icon-android4-system-back, 
@@ -47,13 +47,13 @@
 }
 
 // Icons
-.icon-android4-battery-colored:before {
+.icon-android4-back-chevron:before {
 	content:"\f100";
 }
-.icon-android4-battery:before {
+.icon-android4-battery-colored:before {
 	content:"\f101";
 }
-.icon-android4-chevron:before {
+.icon-android4-battery:before {
 	content:"\f102";
 }
 .icon-android4-network:before {

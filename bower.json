@@ -5,9 +5,6 @@
     "jquery": "~2.0.2"
   },
   "devDependencies": {
-    "angular": "~1.0.7",
-    "angular-cookies": "~1.0.7",
-    "jquery": "~2.0.2",
-    "jquery.extendedinput.js": "*"
+    "jquery": "~2.0.2"
   }
 }
