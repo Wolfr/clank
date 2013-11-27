@@ -1,6 +1,5 @@
 _site
 build
-css
 .tmp
 bower_components
 node_modules
