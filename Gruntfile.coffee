@@ -27,7 +27,7 @@ module.exports = (grunt) ->
         webfont:
             iconsapp:
                 src: 'images/icons_svg_source/app/*.svg'
-                dest: '.tmp/fonts'
+                dest: 'fonts'
                 destCss: 'scss/clank/icon-fonts'
                 options:
                     font: 'app-icons'
@@ -38,7 +38,7 @@ module.exports = (grunt) ->
                     template: 'font-generation-templates/custom-app.css'
             iconsandroid:
                 src: 'images/icons_svg_source/android/*.svg'
-                dest: '.tmp/fonts'
+                dest: 'fonts'
                 destCss: 'scss/clank/icon-fonts'
                 options:
                     font: 'android-icons'
@@ -49,7 +49,7 @@ module.exports = (grunt) ->
                     template: 'font-generation-templates/custom-android.css'
             iconsios:
                 src: 'images/icons_svg_source/ios/*.svg'
-                dest: '.tmp/fonts'
+                dest: 'fonts'
                 destCss: 'scss/clank/icon-fonts'
                 options:
                     font: 'ios-icons'

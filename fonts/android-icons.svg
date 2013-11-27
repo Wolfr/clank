@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri Nov 22 09:31:51 2013
+Created by FontForge 20120731 at Wed Nov 27 18:17:15 2013
  By Johan Ronsse
 Created by Johan Ronsse with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
@@ -16,7 +16,7 @@ Created by Johan Ronsse with FontForge 2.0 (http://fontforge.sf.net)
     panose-1="2 0 6 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="0 -142 528 526"
+    bbox="0 -62 528 446"
     underline-thickness="25"
     underline-position="-52"
     unicode-range="U+F100-F107"
@@ -29,12 +29,12 @@ d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
  />
     <glyph glyph-name="nonmarkingreturn" horiz-adv-x="170" 
  />
-    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="289" 
-d="M0 -32v345h289v-345h-289z" />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="231" 
+d="M231 -12h-87l-144 204l144 204h87l-144 -204z" />
     <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="289" 
+d="M0 -32v345h289v-345h-289z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" horiz-adv-x="289" 
 d="M289 -32h-289v405h80v43h129v-43h80v-405z" />
-    <glyph glyph-name="uniF102" unicode="&#xf102;" horiz-adv-x="472" 
-d="M364 -34h-97l-159 226l159 226h97l-159 -226zM0 -142v668h472v-668h-472z" />
     <glyph glyph-name="uniF103" unicode="&#xf103;" 
 d="M512 446v-508h-101v431l80 77h21zM0 -62l143 151v-151h-143zM160 112l100 105v-279h-100v174zM286 241l100 105v-408h-100v303z" />
     <glyph glyph-name="uniF104" unicode="&#xf104;" 
