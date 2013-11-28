@@ -3,3 +3,4 @@ build
 .tmp
 bower_components
 node_modules
+.sass-cache
