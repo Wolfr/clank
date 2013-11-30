@@ -305,3 +305,24 @@ $baseline_px: $base-font-size;
     border-color: rgba(255,255,255,0.88);
   }
 }
+
+/* Keyframes
+   ========================================================================== */
+
+@mixin keyframes ($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+
+  @-o-keyframes $animation_name {
+    @content;
+  }
+
+  @keyframes $animation_name {
+    @content;
+  }
+}
