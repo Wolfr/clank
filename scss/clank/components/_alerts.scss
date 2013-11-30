@@ -18,12 +18,6 @@
   bottom: 0;
 
   .cl-alert-box {
-    animation: pop-in 0.5s forwards;
-  
-    &.hide {
-      animation: pop-out 0.5s forwards;
-    }
-    
     z-index: $cl-alert-box-z-index;
 
     // positioning
@@ -81,16 +75,4 @@
     }
   }
 
-}
-
-@keyframes pop-in {
-  0%     { transform: scale(0);}
-  75%    { transform: scale(1.1); }
-  100%   { transform: scale(1); }
-}
-
-@keyframes pop-out {
-  0%     { transform: scale(1);}
-  25%    { transform: scale(1.1); }
-  100%   { transform: scale(0); }
 }

@@ -5,34 +5,6 @@
   <title>Clank</title>
 
   <style>
-    .cl-animation-reverse {
-      -webkit-animation-direction: reverse;
-    }
-
-    @-webkit-keyframes slidein {
-      from { margin-left: 100%; } 
-      to { margin-left: 0; }
-    }
-
-    @-webkit-keyframes slideout {
-      from { margin-left: 0; }
-      to { margin-left: -100% }
-    }
-
-    *[data-animate='slide'] > div {
-      width: 100%;
-    }
-
-    .slide-enter {
-      -webkit-animation-name: slidein;
-      -webkit-animation-duration: 350ms;
-    }
-
-    .slide-leave {
-      -webkit-animation-name: slideout;
-      -webkit-animation-duration: 350ms;
-    }
-
   </style> 
 
   <link rel="stylesheet" href="css/clank.css" media="screen">
@@ -83,8 +55,8 @@
 
         <div class="cl-page">
           <div class="cl-bar-title" data-state-container='title'></div>
-          <div data-state-container='page' data-animate='slide'></div>
-          <span data-state-container='popup'></span>
+          <div data-state-container='page' data-animate='cl-slide'></div>
+          <span data-state-container='pop' data-animate='cl-pop'></span>
         </div>
       </div>
 
