@@ -4,20 +4,30 @@
   <meta charset="utf-8">
   <title>Clank</title>
 
+  <style>
+  </style> 
+
   <link rel="stylesheet" href="css/clank.css" media="screen">
 
   <script src="bower_components/jquery/jquery.min.js"></script>
   <script src="bower_components/jquery.extendedinput.js/js/jquery.extendedinput.min.js"></script>
+  <script src="bower_components/state-loader/build/state-loader.js"></script>
   
   <script src="js/clank/ratchet/fingerblast.js"></script>
   <script src="js/clank/ratchet/sliders.js"></script>
   <script src="js/clank/ratchet/toggles.js"></script>
   <script src="js/clank/clank.js"></script>
+  <script src="js/clank/state-loader.js"></script>
+
+  <script>
+    window.location = 'animation.html#page=states/page1.html&title=states/title1.html';
+  </script>
   
 </head>
 <body>
 
   <div class="cl-device-frame">
+
     <div class="cl-device-wrap" data-os="ios" data-device="iphone4-portrait">
 
       <div class="cl-device-body">
@@ -44,22 +54,14 @@
         </div>
 
         <div class="cl-page">
-          <div class="cl-bar-title">
-            <div class="cl-title">Welcome</div>
-          </div>
-          <div class="cl-content">
-            <div class="cl-article cl-article-centered">
-              <p>Welcome to Clank. This is the first demo page in iOS style. To make everything run properly refer to the README.md (hint: <code>bower install</code> + <code>npm install</code>)</p>
-              <div class="cl-btn-group flex">
-                <a class="cl-btn" href="os-switch.html">Next: OS switch</a>
-              </div>
-            </div>
-          </div>
+          <div class="cl-bar-title" data-state-container='title'></div>
+          <div data-state-container='page' data-animate='cl-slide'></div>
+          <span data-state-container='pop' data-animate='cl-pop'></span>
         </div>
-        
       </div>
 
     </div>
+
   </div>
 
 </body>

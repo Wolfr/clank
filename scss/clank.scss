@@ -3,7 +3,6 @@
    ========================================================================== */
 
 @import "compass";
-@import "susy";
 @import "clank/vars";
 @import "clank/mixins";
 @import "clank/base";
@@ -23,7 +22,6 @@
 @import "clank/components/loading";
 @import "clank/components/table-view";
 @import "clank/components/help-txt";
-@import "clank/components/page-animations";
 @import "clank/components/utilities";
 @import "clank/components/popover";
 @import "clank/components/badge";
@@ -31,6 +29,7 @@
 @import "clank/components/close";
 @import "clank/components/alerts-alt"; // Bootstrap
 @import "clank/components/modal";
+@import "clank/components/animations";
 
 /* ==========================================================================
    Custom application CSS
@@ -43,5 +42,3 @@
 // List your components here
 
 // App specific screens (list your custom CSS per screen here)
-@import "clank/screens/demo1";
-

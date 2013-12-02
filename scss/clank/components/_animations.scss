@@ -1,0 +1,56 @@
+/* General */
+
+.cl-animation-reverse {
+  @include animation-direction(reverse);
+}
+
+/* Slide */
+
+@include keyframes (slide-in) {
+  from { margin-left: 100%; } 
+  to { margin-left: 0; }
+}
+
+@include keyframes (slide-out) {
+  from { margin-left: 0; }
+  to { margin-left: -100% }
+}
+
+*[data-animate*='cl-slide'] > div {
+  position: absolute;
+  width: 100%;
+}
+
+.cl-slide-enter {
+  @include animation-name(slide-in);
+  @include animation-duration(350ms);
+}
+
+.cl-slide-leave {
+  @include animation-name(slide-out);
+  @include animation-duration(350ms);
+}
+
+/* Pop */
+
+@include keyframes(pop-in) {
+  0%   { @include transform(scale(0));}
+  50%  { @include transform(scale(1.2)); }
+  100% { @include transform(scale(1)); }
+}
+
+@include keyframes(pop-out) {
+  0%   { @include transform(scale(1)); }
+  50%  { @include transform(scale(1.2)); }
+  100% { @include transform(scale(0)); }
+}
+
+.cl-pop-enter {
+  @include animation-name(pop-in);
+  @include animation-duration(350ms);
+}
+
+.cl-pop-leave {
+  @include animation-name(pop-out);
+  @include animation-duration(350ms);
+}
