@@ -1230,6 +1230,7 @@ a {
    You should specify an implementation [flex|float]
    ========================================================================== */
 .cl-btn-toolbar.flex {
+  padding: 0 10px;
   display: -webkit-flex;
   display: flex;
 }
