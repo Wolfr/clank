@@ -1,6 +1,6 @@
 {
   "name": "clank",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "dependencies": {
     "jquery.extendedinput.js": "~1.1.0",
     "jquery": "~2.0.2",
