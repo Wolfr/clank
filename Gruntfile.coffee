@@ -11,6 +11,7 @@ module.exports = (grunt) ->
     @loadNpmTasks('grunt-contrib-watch')
     @loadNpmTasks('grunt-contrib-uglify')
     @loadNpmTasks('grunt-contrib-concat')
+    @loadNpmTasks('grunt-contrib-cssmin')
     @loadNpmTasks('grunt-webfont')
 
     @initConfig
@@ -83,10 +84,15 @@ module.exports = (grunt) ->
             all:
                 files:
                     'dist/clank.min.js': ['dist/clank.js']
-        
+
+        cssmin:
+            add_banner:
+                options:
+                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                files:
+                    'dist/clank.min.css': ['css/clank.css']
 
     @renameTask 'watch', 'doWatch'
-
     @registerTask('watch', ['build', 'doWatch'])
-    @registerTask('build', ['compass', 'concat', 'uglify'])
+    @registerTask('build', ['compass', 'concat', 'uglify', 'cssmin'])
     @registerTask('default', ['build'])
