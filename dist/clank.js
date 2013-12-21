@@ -1,4 +1,4 @@
-/*! clank - v0.3.0 - 2013-12-21 */// FINGERBLAST.js
+/*! clank - v0.3.1 - 2013-12-21 */// FINGERBLAST.js
 // --------------
 // Adapted from phantom limb by brian cartensen
 

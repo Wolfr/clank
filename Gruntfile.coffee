@@ -16,6 +16,9 @@ module.exports = (grunt) ->
 
     @initConfig
         doWatch:
+            css:
+                files: ['scss/**/*.scss']
+                tasks: ['compass']
             iconsapp:
                 files: ['images/icons_svg_source/app/*.svg']
                 tasks: ['webfont']
@@ -63,7 +66,7 @@ module.exports = (grunt) ->
                     template: 'font-generation-templates/custom-ios.css'
 
         compass:
-            dist:
+            all:
                 options:
                     sassDir: 'scss'
                     cssDir: 'css'
@@ -93,6 +96,6 @@ module.exports = (grunt) ->
                     'dist/clank.min.css': ['css/clank.css']
 
     @renameTask 'watch', 'doWatch'
-    @registerTask('watch', ['build', 'doWatch'])
+    @registerTask('watch', ['compass', 'doWatch'])
     @registerTask('build', ['compass', 'concat', 'uglify', 'cssmin'])
     @registerTask('default', ['build'])

@@ -219,7 +219,6 @@
   padding: 0 10px;
   .cl-btn {
     padding: 0;
-    color: $accent-color;
     @include border-radius(0);
 
     line-height: 30px; // 2px less than normal to account for borders
@@ -227,11 +226,11 @@
       line-height: 38px; // 2px less than normal to account for borders
     }
 
-    border: 1px solid $accent-color;
+    border: 1px solid darken($accent-color, 5%);
     border-right-width: 0;
     &.active, &:hover {
       color: $very-light-color;
-      background: $accent-color;
+      background: darken($accent-color, 5%);
     }
     &:first-child {
       @include border-left-radius($border-radius);

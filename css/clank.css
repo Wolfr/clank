@@ -1271,14 +1271,13 @@ a {
 }
 .cl-btn-group .cl-btn {
   padding: 0;
-  color: #18788b;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
   line-height: 30px;
-  border: 1px solid #18788b;
+  border: 1px solid #146575;
   border-right-width: 0;
 }
 [data-os="android"] .cl-btn-group .cl-btn {
@@ -1286,7 +1285,7 @@ a {
 }
 .cl-btn-group .cl-btn.active, .cl-btn-group .cl-btn:hover {
   color: white;
-  background: #18788b;
+  background: #146575;
 }
 .cl-btn-group .cl-btn:first-child {
   -moz-border-radius-topleft: 4px;
