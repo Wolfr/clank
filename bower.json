@@ -2,12 +2,12 @@
   "name": "clank",
   "version": "0.3.4",
   "dependencies": {
-    "jquery.extendedinput.js": "~1.0.0",
+    "jquery.extendedinput.js": "~1.1.0",
     "jquery": "~2.0.2",
     "state-loader": "*"
   },
   "devDependencies": {
-    "jquery.extendedinput.js": "~1.0.0",
+    "jquery.extendedinput.js": "~1.1.0",
     "jquery": "~2.0.2"
   }
 }

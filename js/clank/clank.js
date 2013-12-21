@@ -5,12 +5,13 @@
 $(function() {
 
   /**
-   * New Fingerblast context
+   * Simulate touch
    * Make toggles and sliders work on non touch devices
+   * ! The touch context can only be used once per page
    */
 
-  if ($('.cl-page').length > 0) {
-    var fb = new FingerBlast('.cl-page');
+  if ($('.simulate-touch').length > 0) {
+    var fb = new FingerBlast('.simulate-touch');
   }
   
   /**

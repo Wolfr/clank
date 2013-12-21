@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Clank</title>
+
+  <link rel="stylesheet" href="../css/clank.css" media="screen">
+  
+  <script src="../bower_components/jquery/jquery.min.js"></script>
+  <script src="../bower_components/jquery.extendedinput.js/js/jquery.extendedinput.min.js"></script>
+
+  <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+  
+    /*
+      Invoke extended input plugin with default options exposed
+    */
+    
+    $('body').extendedInput({
+      hideClass: 'hide'
+    });
+
+  });
+  </script>
+  <script src="../js/clank/ratchet/fingerblast.js"></script>
+  <script src="../js/clank/ratchet/sliders.js"></script>
+  <script src="../js/clank/ratchet/toggles.js"></script>
+  <script src="../js/clank/clank.js"></script>
+  
+</head>
+<body>
+
+  <div class="cl-device-frame">
+    <div class="cl-device-wrap" data-os="android" data-device="nexus7-portrait">
+      <div class="cl-device-body">
+
+        <div class="cl-android-status">
+          <span>
+            <span class="icon-android4-battery"></span>
+            <span class="icon-android4-network"></span>
+            <span class="icon-android4-wifi"></span>
+            <span>20:49</span>
+          </span>
+        </div>
+  
+        <div class="cl-android-software-buttons">
+          <span>
+            <span class="icon-android4-system-back"></span>
+            <span class="icon-android4-system-home"></span>
+            <span class="icon-android4-system-apps"></span>
+          </span>
+        </div>
+
+        <div class="cl-page">
+          <div class="cl-bar-title">
+            <div class="cl-btn-toolbar float align-left">
+              <a href="index.html" class="cl-btn cl-btn-icon">
+                <i class="icon-ios7-back-chevron"></i>
+                Demo index
+              </a>
+              <a href="#" data-toggle-element="popover-context-4" class="cl-btn">Spawn a popover from title bar</a>
+            </div>
+            <h1 class="cl-title">Popovers</h1>
+            <a href="#" data-toggle-element="popover-context" class="cl-btn">Spawn a popover from title bar</a>
+          </div>
+          <div class="cl-content" style="overflow: scroll;">
+            ...
+          </div>
+          <div class="cl-bar-footer">
+            <a href="#" data-toggle-element="popover-context-2" class="cl-btn">Spawn another popover from footer bar</a>
+            <a href="#" data-toggle-element="popover-context-3" class="cl-btn">Spawn a popover from footer bar</a>
+          </div>
+        </div>
+        
+        <div id="popover-context" class="hide" data-element-to-be-toggled="popover-context" data-element-to-be-closed="popover-context">
+          <div class="cl-popover align-right pop-from-header">
+            <div class="cl-article padded">
+              <p>This is a popover!</p>
+              <a href="#" class="cl-btn" data-close-element="popover-context">Close</a>
+            </div>
+          </div>
+          <div class="cl-modal-backdrop"></div>
+        </div>
+
+        <div id="popover-context-2" class="hide" data-element-to-be-toggled="popover-context-2" data-element-to-be-closed="popover-context-2">
+          <div class="cl-popover align-left pop-from-footer">
+            <div class="cl-article padded">
+              <p>This is a popover!</p>
+              <a href="#" class="cl-btn" data-close-element="popover-context-2">Close</a>
+            </div>
+          </div>
+          <div class="cl-modal-backdrop"></div>
+        </div>
+
+        <div id="popover-context-3" class="hide" data-element-to-be-toggled="popover-context-3" data-element-to-be-closed="popover-context-3">
+          <div class="cl-popover align-right pop-from-footer">
+            <div class="cl-article padded">
+              <p>This is a popover!</p>
+              <a href="#" class="cl-btn" data-close-element="popover-context-3">Close</a>
+            </div>
+          </div>
+          <div class="cl-modal-backdrop"></div>
+        </div>
+
+        <div id="popover-context-4" class="hide" data-element-to-be-toggled="popover-context-4" data-element-to-be-closed="popover-context-4">
+          <div class="cl-popover align-left pop-from-header">
+            <div class="cl-article padded">
+              <p>This is a popover! Unfortunately we don't have exact positioning yet.</p>
+              <a href="#" class="cl-btn" data-close-element="popover-context-4">Close</a>
+            </div>
+          </div>
+          <div class="cl-modal-backdrop"></div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
