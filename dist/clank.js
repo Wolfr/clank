@@ -1,4 +1,4 @@
-/*! clank - v0.3.1 - 2013-12-21 */// FINGERBLAST.js
+/*! clank - v0.3.3 - 2013-12-21 */// FINGERBLAST.js
 // --------------
 // Adapted from phantom limb by brian cartensen
 
@@ -420,16 +420,12 @@ FingerBlast.prototype = {
 $(function() {
 
   /**
+   * New Fingerblast context
    * Make toggles and sliders work on non touch devices
    */
 
-  // Fingerblast!
-  if ($('.cl-toggle').length > 0) {
-      var fb = new FingerBlast('.cl-toggle');
-  }
-
-  if ($('.cl-slider').length > 0) {
-      var fb = new FingerBlast('.cl-slider');
+  if ($('.cl-page').length > 0) {
+    var fb = new FingerBlast('.cl-page');
   }
   
   /**
