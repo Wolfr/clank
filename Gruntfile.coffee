@@ -9,6 +9,8 @@ module.exports = (grunt) ->
     @loadNpmTasks('grunt-contrib-compass')
     @loadNpmTasks('grunt-contrib-copy')
     @loadNpmTasks('grunt-contrib-watch')
+    @loadNpmTasks('grunt-contrib-uglify')
+    @loadNpmTasks('grunt-contrib-concat')
     @loadNpmTasks('grunt-webfont')
 
     @initConfig
@@ -65,8 +67,26 @@ module.exports = (grunt) ->
                     sassDir: 'scss'
                     cssDir: 'css'
 
+        pkg: grunt.file.readJSON('package.json')
+
+        concat:
+            options:
+                stripBanners: true,
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */'
+            dist:
+                src: ['js/clank/ratchet/fingerblast.js', 'js/clank/ratchet/sliders.js', 'js/clank/ratchet/toggles.js', 'js/clank/clank.js', 'js/clank/stateloader.js']
+                dest: 'dist/clank.js'
+
+        uglify:
+            options:
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */'
+            all:
+                files:
+                    'dist/clank.min.js': ['dist/clank.js']
+        
+
     @renameTask 'watch', 'doWatch'
 
     @registerTask('watch', ['build', 'doWatch'])
-    @registerTask('build', ['webfont', 'compass'])
+    @registerTask('build', ['compass', 'concat', 'uglify'])
     @registerTask('default', ['build'])

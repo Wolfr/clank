@@ -731,6 +731,8 @@ a {
   font-size: 1.07692rem;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   background: #dddddd;
   line-height: 1.3;
@@ -1047,6 +1049,8 @@ a {
 .cl-btn, .cl-btn:link, .cl-btn:visited {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   background: #18788b;
   color: white;
@@ -1092,6 +1096,8 @@ a {
 .cl-btn-primary, .cl-btn-primary:link, .cl-btn-primary:visited {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   background: #1cbede;
   color: white;
@@ -1105,6 +1111,8 @@ a {
 .cl-btn-subtle, .cl-btn-subtle:link, .cl-btn-subtle:visited {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   background: #e1e1e1;
   color: black;
@@ -1122,6 +1130,8 @@ a {
   pointer-events: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -1264,6 +1274,8 @@ a {
   color: #18788b;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   line-height: 30px;
   border: 1px solid #18788b;
@@ -1560,6 +1572,8 @@ a {
   background: white;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 @media all and (min-width: 768px) {
@@ -2269,6 +2283,8 @@ a {
   text-align: center;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
   border-radius: 7px;
   font-size: 11px;
   font-weight: 400;
@@ -2377,6 +2393,8 @@ a {
   opacity: 40;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 .close:link, .close:visited {
@@ -2411,6 +2429,8 @@ button.close {
   font-weight: 700;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 .alert p:last-child {
@@ -2526,9 +2546,9 @@ button.close {
 
 /* General */
 .cl-animation-reverse {
-  -webkit-animation-direction: reverse;
-  -moz-animation-direction: reverse;
   -o-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }
 
@@ -2619,24 +2639,24 @@ button.close {
 }
 
 .cl-slide-enter {
-  -webkit-animation-name: slide-in;
-  -moz-animation-name: slide-in;
   -o-animation-name: slide-in;
+  -moz-animation-name: slide-in;
+  -webkit-animation-name: slide-in;
   animation-name: slide-in;
-  -webkit-animation-duration: 350ms;
-  -moz-animation-duration: 350ms;
   -o-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -webkit-animation-duration: 350ms;
   animation-duration: 350ms;
 }
 
 .cl-slide-leave {
-  -webkit-animation-name: slide-out;
-  -moz-animation-name: slide-out;
   -o-animation-name: slide-out;
+  -moz-animation-name: slide-out;
+  -webkit-animation-name: slide-out;
   animation-name: slide-out;
-  -webkit-animation-duration: 350ms;
-  -moz-animation-duration: 350ms;
   -o-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -webkit-animation-duration: 350ms;
   animation-duration: 350ms;
 }
 
@@ -2850,24 +2870,24 @@ button.close {
 }
 
 .cl-pop-enter {
-  -webkit-animation-name: pop-in;
-  -moz-animation-name: pop-in;
   -o-animation-name: pop-in;
+  -moz-animation-name: pop-in;
+  -webkit-animation-name: pop-in;
   animation-name: pop-in;
-  -webkit-animation-duration: 350ms;
-  -moz-animation-duration: 350ms;
   -o-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -webkit-animation-duration: 350ms;
   animation-duration: 350ms;
 }
 
 .cl-pop-leave {
-  -webkit-animation-name: pop-out;
-  -moz-animation-name: pop-out;
   -o-animation-name: pop-out;
+  -moz-animation-name: pop-out;
+  -webkit-animation-name: pop-out;
   animation-name: pop-out;
-  -webkit-animation-duration: 350ms;
-  -moz-animation-duration: 350ms;
   -o-animation-duration: 350ms;
+  -moz-animation-duration: 350ms;
+  -webkit-animation-duration: 350ms;
   animation-duration: 350ms;
 }
 
