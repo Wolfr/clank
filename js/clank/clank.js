@@ -5,16 +5,12 @@
 $(function() {
 
   /**
+   * New Fingerblast context
    * Make toggles and sliders work on non touch devices
    */
 
-  // Fingerblast!
-  if ($('.cl-toggle').length > 0) {
-      var fb = new FingerBlast('.cl-toggle');
-  }
-
-  if ($('.cl-slider').length > 0) {
-      var fb = new FingerBlast('.cl-slider');
+  if ($('.cl-page').length > 0) {
+    var fb = new FingerBlast('.cl-page');
   }
   
   /**
